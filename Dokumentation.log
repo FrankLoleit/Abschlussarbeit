@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.16)  12 APR 2021 14:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.16)  12 APR 2021 14:46
 entering extended mode
 **c:/Abschlussarbeit/Dokumentation.tex
 (c:/Abschlussarbeit/Dokumentation.tex
@@ -1084,40 +1084,38 @@ File: ./src/images//argusLogo.png Graphic file (type png)
 Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 386.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 389--390
+Underfull \hbox (badness 10000) in paragraph at lines 388--389
 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 405.
+(Font)              <10.95> on input line 404.
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 448.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 447.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
-[4
-
-]
+[4]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 460.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 459.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [5]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 461.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 460.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [6]
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     461.
+(LaTeX3)     460.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     461.
+(LaTeX3)     460.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     461.
+(LaTeX3)     460.
 
  (c:/Abschlussarbeit\Dokumentation.aux)
 Package rerunfilecheck Info: File `Dokumentation.out' has not changed.
@@ -1126,7 +1124,7 @@ Package rerunfilecheck Info: File `Dokumentation.out' has not changed.
 Here is how much of TeX's memory you used:
  28067 strings out of 479799
  603367 string characters out of 2879575
- 1159311 words of memory out of 3000000
+ 1159308 words of memory out of 3000000
  44444 multiletter control sequences out of 15000+200000
  570361 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
