@@ -1,0 +1,402 @@
+\documentclass[12pt,toc=sectionentrywithoutdots, headheight=44pt, headings=optiontoheadandtoc]{scrartcl}
+
+%Packages
+
+\usepackage{geometry}
+\usepackage{ucs}
+\usepackage{times}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[headsepline]{scrlayer-scrpage}
+\usepackage{blindtext}
+\usepackage[hidelinks]{hyperref}
+
+%Function for getting sectionName---------------------------------------------------
+
+\usepackage{nameref}
+\newcounter{secautolabel}
+\AddtoDoHook{heading/endgroup}{\setautolabel}
+\newcommand*{\setautolabel}[1]{%
+  \stepcounter{secautolabel}%
+  \label{sec:autolabel:\thesecautolabel}%
+  \expandafter\xdef\csname #1title\endcsname{%
+    \noexpand\nameref{sec:autolabel:\thesecautolabel}%
+  }%
+}
+
+\newcommand\sectionRefs{%
+	\sectiontitle  
+}
+
+
+%Function for getting sectionName----------------------------------------------------
+
+
+
+
+%Images path
+\graphicspath{{./src/images/}}
+
+%Document meta data
+\geometry{bottom=25mm, right=25mm, left=25mm, top=35mm}
+
+%Set page numbering font
+\renewcommand{\headfont}{\normalfont}
+
+ 
+\begin{document}
+
+
+\thispagestyle{empty}
+\cfoot[]{}
+%\ofoot{Seite \thepage\:von \pageref{LastPage}}
+\ofoot{\thepage}
+\ifoot{© Frank Loleit}
+\ohead{\includegraphics[scale=0.125]{argusLogo}}
+
+
+
+\ihead
+{%	
+	\begin{small}%
+		MASCHINELLE ANALYSE VON SOCIAL MEDIA POSTS%		
+		\newline\
+		\textit\sectionRefs
+	\end{small}%
+}
+
+
+
+
+%IHK-Logo
+\begin{figure}[h]
+\includegraphics[scale=0.25]{ihkLogo}
+\centering
+\end{figure}
+
+\begin{center}
+\begin{large}
+
+Abschlussprüfung Winter 2021
+\linebreak
+
+Fachinformatiker (Anwendungsentwicklung)\linebreak
+Dokumentation der betrieblichen Projektarbeit
+\linebreak\linebreak
+\end{large}
+
+
+\begin{huge}
+\begin{bfseries}
+Maschinelle Analyse von\linebreak Social Media Posts
+\linebreak\linebreak
+\end{bfseries}
+\end{huge}
+
+\begin{large}
+Backend-Applikation zur algorithmusbasierten 
+Erfassung von\linebreak Meldungen in sozialen Netzwerken
+\linebreak
+
+Abgabetermin: 22.11.2021
+\linebreak\linebreak
+\begin{bfseries}
+Auszubildender:\linebreak
+\end{bfseries}
+Frank Loleit\linebreak
+Wildenbruchstr. 43\linebreak
+12435 Berlin\linebreak
+
+\begin{figure}[h]
+\includegraphics[scale=0.25]{argusLogo}
+\centering
+\end{figure}
+
+
+
+\begin{bfseries}
+Ausbildungsbetrieb:\linebreak
+\end{bfseries}
+ARGUS DATA INSIGHTS® Deutschland GmbH\linebreak
+Gneisenaustr. 66\linebreak
+10961 Berlin
+
+
+\end{large}
+
+\end{center}
+
+
+
+
+\newpage
+\setcounter{page}{1}
+\pagenumbering{Roman}
+
+
+\tableofcontents
+
+
+\setcounter{secnumdepth}{0}
+
+\newpage
+\section{Abbildungsverzeichnis}
+\blindtext\blindtext\blindtext\blindtext\blindtext
+\newpage
+
+\section{Tabellenverzeichnis}
+\blindtext\blindtext\blindtext\blindtext\blindtext\blindtext
+
+\section{Listings}
+\blindtext\blindtext\blindtext\blindtext\blindtext\blindtext
+\newpage
+
+\section{Abkürzungsverzeichnis}
+\blindtext\blindtext\blindtext\blindtext
+\newpage
+
+\section{Begriffserläuterung}
+\blindtext\blindtext\blindtext\blindtext
+\newpage
+
+%\setcounter{secnumdepth}{1}
+\pagenumbering{arabic}
+\setcounter{secnumdepth}{4}
+\ofoot{Seite\:\thepage\:von \pageref{myLastPage}}
+
+\section{Einleitung}
+Dies ist der erste Satz. es braucht noch eine Weile
+
+\subsection{Projektbeschreibung}
+\blindtext
+
+
+\subsection{Projektziel}
+\blindtext
+
+\subsection{Projektumfeld}
+\blindtext\blindtext\
+
+\subsection{Projektbegründung}
+\blindtext\blindtext\
+
+\subsection{Projektabgrenzung}
+\blindtext\blindtext\
+
+\section{Projektplanung}
+\blindtext\blindtext\
+
+\subsection{Projektphasen}
+\blindtext\
+
+\subsection{Ressourcenplanung}
+\blindtext\
+
+\subsection{Entwicklungsprozess}
+\blindtext\
+
+\section{Analysephase}
+\blindtext\
+
+\subsection{IST-Zustand}
+\blindtext\
+
+\subsection{Wirtschaftlichkeitsanalyse}
+\blindtext\
+
+\subsubsection{Beschaffung der Ausgangsdaten}
+\blindtext\
+
+\subsubsection{Ermitteln der Kostenstruktur}
+\blindtext\
+
+\subsubsection{Kostenberechnung}
+\blindtext\
+
+\subsubsection{Zusammenstellen des Kostenplans}
+\blindtext\
+
+\subsubsection{Nicht-monetäre Vorteile}
+\blindtext\
+
+\subsection{Anwendungsfälle}
+\blindtext\
+
+\subsection{Lastenheft}
+\blindtext\
+
+\subsection{Risikomanagement}
+\blindtext\
+
+\subsubsection{Risikoerkennung}
+\blindtext\
+
+\subsubsection{Risikoanalyse}
+\blindtext\
+
+\subsubsection{Risikominimierung}
+\blindtext\
+
+\section{Entwurfsphase}
+\blindtext\
+
+\subsection{Zielplattform}
+\blindtext\
+
+\subsection{Architekturdesign}
+\blindtext\
+
+\subsection{Entwurf des Datenmodells}
+\blindtext\
+
+\subsection{Entwurf Geschäftslogik}
+\blindtext\
+
+\subsubsection{Entwurf Geschäftslogik}
+\blindtext\
+
+\subsubsection{Entwurf Modul Extraktion}
+\blindtext\
+
+\subsubsection{Entwurf Modul Laden}
+\blindtext\
+
+\subsubsection{Entwurf Modul Transformation}
+\blindtext\
+
+\subsection{Roundtrip Engineering}
+\blindtext\
+
+\subsection{Pflichtenheft}
+\blindtext\
+
+\section{Implementierung}
+\blindtext\
+
+\subsection{Implementierung Extraktion}
+\blindtext\
+
+\subsection{Implementierung Laden}
+\blindtext\
+
+\subsection{Implementierung der Datenstrukturen}
+\blindtext\
+
+\subsection{Implementierung Transformation}
+\blindtext\
+
+\subsection{Implementierung Hilfsklassen und Interfaces}
+\blindtext\
+
+\section{Qualitätssicherung}
+\blindtext\
+
+\subsection{Systemtest}
+\blindtext\
+
+\subsection{Tests gegen das System}
+\blindtext\
+
+\subsection{Testprotokolle}
+\blindtext\
+
+\section{Abnahme}
+\blindtext\
+
+\subsection{Soll/Ist-Vergleich}
+\blindtext\
+
+\subsection{Abnahme durch den technischen Leiter}
+\blindtext\
+
+\section{Dokumentation}
+\blindtext\
+
+\subsection{Technische Dokumentation}
+\blindtext\
+
+\subsection{Nutzerdokumentation}
+\blindtext\
+
+\section{Fazit}
+\blindtext\
+
+\subsection{Im Laufe des Projektes gewonnene Erkenntnisse}
+\blindtext\
+
+\subsection{Ausblick}
+\blindtext\
+
+\subsubsection{Von Anfang an geplante Weiterentwicklung}
+\blindtext\
+
+\subsubsection{Im Laufe des Projektes erkannter Weiterentwicklungsbedarf}
+\blindtext\
+
+
+\newpage
+\setcounter{secnumdepth}{0}
+\section{Literaturverzeichnis}
+\blindtext\label{myLastPage}
+
+\newpage
+
+\pagenumbering{roman}
+
+\setcounter{page}{1}
+\setcounter{secnumdepth}{2}
+\setcounter{section}{1}
+\renewcommand{\thesection}{A}
+
+
+\ofoot{\thepage}
+
+
+
+
+\section{Anhang}
+\subsection{Detaillierte Zeitplanung}
+\blindtext
+
+\subsection{Ressourcenplan}
+\blindtext\blindtext\blindtext
+
+\subsection{Projektkosten Details}
+\blindtext\blindtext\blindtext
+
+\subsection{Anwendungsfalldiagramm}
+\blindtext\blindtext\blindtext
+
+\subsection{Lastenheft (Auszug)}
+\blindtext\blindtext\blindtext
+
+\subsection{Quell- und Zieldatenschema}
+\blindtext\blindtext\blindtext
+
+\subsection{Sequenzdiagramm}
+\blindtext\blindtext\blindtext
+
+\subsection{Klassendiagramm}
+\blindtext\blindtext\blindtext
+
+\subsection{Pflichtenheft (Auszug)}
+\blindtext\blindtext\blindtext
+
+\subsection{Laufzeitdiagnose}
+\blindtext\blindtext
+
+\subsection{Ganttdiagramm}
+\blindtext\blindtext
+
+\subsection{Projektstrukturplan}
+\blindtext\blindtext
+
+\subsection{Arbeitspakete}
+\blindtext\blindtext
+
+\subsection{Arbeitspaketressourcen im Detail}
+\blindtext\blindtext
+
+\end{document}
