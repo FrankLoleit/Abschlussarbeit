@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.16)  12 APR 2021 11:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.16)  12 APR 2021 12:01
 entering extended mode
 **./Dokumentation.tex
 (Dokumentation.tex
@@ -239,10 +239,16 @@ File: uni-global.def 2013/05/13 UCS: Unicode global data
 ("C:\Program Files\MiKTeX\tex/latex/psnfss\times.sty"
 Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
 )
+("C:\Program Files\MiKTeX\tex/latex/tools\verbatim.sty"
+Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks20
+\verbatim@line=\toks21
+\verbatim@in@stream=\read2
+)
 ("C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty"
 Package: inputenc 2020/08/01 v1.3d Input encoding file
-\inpenc@prehook=\toks20
-\inpenc@posthook=\toks21
+\inpenc@prehook=\toks22
+\inpenc@posthook=\toks23
 
 ("C:\Program Files\MiKTeX\tex/latex/ucs\utf8x.def"
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
@@ -265,7 +271,7 @@ File: babel.def 2020/10/27 3.51 Babel common definitions
 \l@babelnohyphens=\language79
 
 ("C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def")
-\bbl@readstream=\read2
+\bbl@readstream=\read3
 )
 \bbl@dirlevel=\count189
 
@@ -475,7 +481,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 ("C:\Program Files\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty"
 ("C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty"
 ("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex"
-\pgfutil@everybye=\toks22
+\pgfutil@everybye=\toks24
 \pgfutil@tempdima=\dimen154
 \pgfutil@tempdimb=\dimen155
 
@@ -495,11 +501,11 @@ Package: pgf 2020/10/01 v3.1.6a (3.1.6a)
 Package: pgfsys 2020/10/01 v3.1.6a (3.1.6a)
 
 ("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex"
-\pgfkeys@pathtoks=\toks23
-\pgfkeys@temptoks=\toks24
+\pgfkeys@pathtoks=\toks25
+\pgfkeys@temptoks=\toks26
 
 ("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex"
-\pgfkeys@tmptoks=\toks25
+\pgfkeys@tmptoks=\toks27
 ))
 \pgf@x=\dimen156
 \pgf@y=\dimen157
@@ -512,14 +518,14 @@ Package: pgfsys 2020/10/01 v3.1.6a (3.1.6a)
 \pgf@xd=\dimen164
 \pgf@yd=\dimen165
 \w@pgf@writea=\write3
-\r@pgf@reada=\read3
+\r@pgf@reada=\read4
 \c@pgf@counta=\count284
 \c@pgf@countb=\count285
 \c@pgf@countc=\count286
 \c@pgf@countd=\count287
-\t@pgf@toka=\toks26
-\t@pgf@tokb=\toks27
-\t@pgf@tokc=\toks28
+\t@pgf@toka=\toks28
+\t@pgf@tokb=\toks29
+\t@pgf@tokc=\toks30
 \pgf@sys@id@count=\count288
 ("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg"
 File: pgf.cfg 2020/10/01 v3.1.6a (3.1.6a)
@@ -566,9 +572,9 @@ Package: pgfcore 2020/10/01 v3.1.6a (3.1.6a)
 \pgfmath@dimen=\dimen166
 \pgfmath@count=\count291
 \pgfmath@box=\box50
-\pgfmath@toks=\toks29
-\pgfmath@stack@operand=\toks30
-\pgfmath@stack@operation=\toks31
+\pgfmath@toks=\toks31
+\pgfmath@stack@operand=\toks32
+\pgfmath@stack@operation=\toks33
 )
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex"
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex"
@@ -698,8 +704,8 @@ Package: pgffor 2020/10/01 v3.1.6a (3.1.6a)
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex")
 \pgffor@iter=\dimen193
 \pgffor@skip=\dimen194
-\pgffor@stack=\toks32
-\pgffor@toks=\toks33
+\pgffor@stack=\toks34
+\pgffor@toks=\toks35
 ))
 ("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex"
 Package: tikz 2020/10/01 v3.1.6a (3.1.6a)
@@ -763,8 +769,8 @@ LaTeX Info: Redefining \addtolength on input line 81.
 )
 ("C:\Program Files\MiKTeX\tex/latex/pgfopts\pgfopts.sty"
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
-\pgfopts@list@add@a@toks=\toks34
-\pgfopts@list@add@b@toks=\toks35
+\pgfopts@list@add@a@toks=\toks36
+\pgfopts@list@add@b@toks=\toks37
 ) (tikz-uml.sty
 Package: tikz-uml 2011/01/26
 
@@ -1009,22 +1015,22 @@ File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 (Dokumentation.aux)
 \openout1 = `Dokumentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1070,21 +1076,21 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 \scratchbox=\box122
 \nofMPsegments=\count356
 \nofMParguments=\count357
-\everyMPshowfont=\toks36
+\everyMPshowfont=\toks38
 \MPscratchCnt=\count358
 \MPscratchDim=\dimen272
 \MPnumerator=\count359
 \makeMPintoPDFobject=\count360
-\everyMPtoPDFconversion=\toks37
+\everyMPtoPDFconversion=\toks39
 ) ("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-Package hyperref Info: Link coloring OFF on input line 52.
-LaTeX Info: Redefining \ref on input line 52.
-LaTeX Info: Redefining \pageref on input line 52.
-LaTeX Info: Redefining \nameref on input line 52.
+Package hyperref Info: Link coloring OFF on input line 53.
+LaTeX Info: Redefining \ref on input line 53.
+LaTeX Info: Redefining \pageref on input line 53.
+LaTeX Info: Redefining \nameref on input line 53.
 
 (Dokumentation.out) (Dokumentation.out)
 \@outlinefile=\write4
@@ -1097,7 +1103,7 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 52.
+(scrartcl)           before \begin{document} on input line 53.
 
 ("C:\Program Files\MiKTeX\tex/latex/bookmark\bookmark.sty"
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
@@ -1109,7 +1115,7 @@ File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
 <./src/images//ihkLogo.png, id=30, 563.85657pt x 281.55188pt>
 File: ./src/images//ihkLogo.png Graphic file (type png)
 <use ./src/images//ihkLogo.png>
-Package pdftex.def Info: ./src/images//ihkLogo.png  used on input line 78.
+Package pdftex.def Info: ./src/images//ihkLogo.png  used on input line 79.
 (pdftex.def)             Requested size: 140.96379pt x 70.38779pt.
 
 ("C:\Program Files\MiKTeX\tex/latex/ucs\uni-0.def"
@@ -1118,10 +1124,10 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 <./src/images//argusLogo.png, id=31, 1061.46562pt x 164.11313pt>
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 116.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 117.
 (pdftex.def)             Requested size: 265.36575pt x 41.02817pt.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-25.
+26.
 
 ("C:\Program Files\MiKTeX\tex/latex/psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -1130,7 +1136,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 {C:/Users/Frank Loleit/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./src/im
 ages//ihkLogo.png> <./src/images//argusLogo.png>]
 LaTeX Font Info:    Trying to load font information for T1+phv on input line 14
-2.
+3.
  ("C:\Program Files\MiKTeX\tex/latex/psnfss\t1phv.fd"
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 ) (Dokumentation.toc
@@ -1150,227 +1156,210 @@ Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 41.
 
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 147.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 148.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [2]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 150.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 151.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [3]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 157.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 158.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [4]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 157.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 158.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [5]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 161.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 162.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [6]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 165.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 166.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [7]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 187.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 188.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.187 
+l.188 
        [1]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 199.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 200.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [2]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 211.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 212.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [3]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 223.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 224.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [4]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 235.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 236.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [5]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 247.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 248.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [6]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 257.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 258.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [7]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 268.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 269.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [8]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 280.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 281.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [9]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 292.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 293.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [10]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 302.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 303.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [11]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 313.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 314.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [12]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 325.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 326.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [13]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 337.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 338.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [14]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 342.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 343.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [15]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 347.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 348.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
 
 [16]pdfTeX warning (ext4): destination with the same identifier (name{section.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.362 \section{Anhang}
+l.363 \section{Anhang}
                       pdfTeX warning (ext4): destination with the same identifi
 er (name{subsection.2.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.363 \subsection{Detaillierte Zeitplanung}
+l.364 \subsection{Detaillierte Zeitplanung}
                                            pdfTeX warning (ext4): destination w
 ith the same identifier (name{subsection.2.2}) has been already used, duplicate
  ignored
 <to be read again> 
                    \relax 
-l.366 \subsection{Ressourcenplan}
+l.367 \subsection{Ressourcenplan}
                                  pdfTeX warning (ext4): destination with the sa
 me identifier (name{subsection.2.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.369 \subsection{Projektkosten Details}
+l.370 \subsection{Projektkosten Details}
                                         
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 371.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 372.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [1]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 378.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 379.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [2]
-Missing character: There is no F in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no ' in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no C in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no F in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no ' in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no C in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no s in font nullfont!
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 388.
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 392.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 385.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [3]
+Underfull \hbox (badness 10000) in paragraph at lines 388--389
+
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 402.
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 403.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 429.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
- [4]
+[4
+
+]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 410.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 441.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [5]
+File: ./src/images//argusLogo.png Graphic file (type png)
+<use ./src/images//argusLogo.png>
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 442.
+(pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
+ [6]
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     410.
+(LaTeX3)     442.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     410.
+(LaTeX3)     442.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     410.
+(LaTeX3)     442.
 
  (Dokumentation.aux)
 Package rerunfilecheck Info: File `Dokumentation.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27688 strings out of 479799
- 593490 string characters out of 2879575
- 1135108 words of memory out of 3000000
- 44069 multiletter control sequences out of 15000+200000
+ 27916 strings out of 479799
+ 599551 string characters out of 2879575
+ 1145183 words of memory out of 3000000
+ 44294 multiletter control sequences out of 15000+200000
  570361 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 106i,24n,124p,10610b,891s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 106i,24n,124p,10610b,971s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX
 /fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/t
 imes/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/P
 rogram Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Dokumentation.pdf (29 pages, 198168 bytes).
+Output written on Dokumentation.pdf (30 pages, 200049 bytes).
 PDF statistics:
- 629 PDF objects out of 1000 (max. 8388607)
- 109 named destinations out of 1000 (max. 500000)
+ 634 PDF objects out of 1000 (max. 8388607)
+ 110 named destinations out of 1000 (max. 500000)
  735 words of extra memory for PDF output out of 10000 (max. 10000000)
 

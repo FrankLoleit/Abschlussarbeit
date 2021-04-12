@@ -5,6 +5,7 @@
 \usepackage{geometry}
 \usepackage{ucs}
 \usepackage{times}
+\usepackage{verbatim}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
@@ -381,11 +382,42 @@ hallo
 \subsection{Sequenzdiagramm}
 \blindtext\blindtext
 
+\clearpage
 \subsection{Klassendiagramm}
 
+Dies ist ein Beispiel für ein UML-Klassendiagramm:\\
+
 \begin{tikzpicture}
-\begin{umlpackage}[x=0, y=0]{Franks's-Class}
-\end{umlpackage}
+
+	\umlclass[x=8, y= 0]{Person}	
+		{
+			- kontostand : double\\
+			- vorerkrankungen : String\\
+			- religion : string\\
+			- alter : int\\
+			
+		}
+		{
+			+ halloSagen() : void		\\	
+		}
+		
+		
+	\umlclass[x=12, y= -8]{Erwachsener}	
+		{
+			- beruf: String\\
+		}
+		{
+			- zurArbeitGehen() : void	\\
+			- autoFahren() : void\\
+			+ getBeruf() : String\\
+			
+		}
+		
+		
+		\umlinherit[geometry=-|]{Erwachsener}{Person}
+		
+
+
 \end{tikzpicture}
 
 
