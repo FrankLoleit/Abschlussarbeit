@@ -12,6 +12,9 @@
 \usepackage[headsepline]{scrlayer-scrpage}
 \usepackage{blindtext}
 \usepackage[hidelinks]{hyperref}
+\usepackage{tikz,ifthen,xstring,calc,pgfkeys,pgfopts}
+\usepackage{tikz-uml}
+
 
 %Function for getting sectionName---------------------------------------------------
 
@@ -143,22 +146,22 @@ Gneisenaustr. 66\linebreak
 
 \newpage
 \section{Abbildungsverzeichnis}
-\blindtext\blindtext\blindtext\blindtext\blindtext
+\blindtext\blindtext\blindtext
 \newpage
 
 \section{Tabellenverzeichnis}
-\blindtext\blindtext\blindtext\blindtext\blindtext\blindtext
+\blindtext\blindtext\blindtext
 
 \section{Listings}
-\blindtext\blindtext\blindtext\blindtext\blindtext\blindtext
+\blindtext\blindtext\blindtext
 \newpage
 
 \section{Abkürzungsverzeichnis}
-\blindtext\blindtext\blindtext\blindtext
+\blindtext\blindtext
 \newpage
 
 \section{Begriffserläuterung}
-\blindtext\blindtext\blindtext\blindtext
+\blindtext\blindtext
 \newpage
 
 %\setcounter{secnumdepth}{1}
@@ -177,16 +180,16 @@ hallo
 \blindtext
 
 \subsection{Projektumfeld}
-\blindtext\blindtext\
+\blindtext\
 
 \subsection{Projektbegründung}
-\blindtext\blindtext\
+\blindtext\
 
 \subsection{Projektabgrenzung}
-\blindtext\blindtext\
+\blindtext\
 
 \section{Projektplanung}
-\blindtext\blindtext\
+\blindtext\
 
 \subsection{Projektphasen}
 \blindtext\
@@ -361,42 +364,47 @@ hallo
 \blindtext
 
 \subsection{Ressourcenplan}
-\blindtext\blindtext\blindtext
+\blindtext\blindtext
 
 \subsection{Projektkosten Details}
-\blindtext\blindtext\blindtext
+\blindtext\blindtext
 
 \subsection{Anwendungsfalldiagramm}
-\blindtext\blindtext\blindtext
+\blindtext\blindtext
 
 \subsection{Lastenheft (Auszug)}
-\blindtext\blindtext\blindtext
+\blindtext\blindtext
 
 \subsection{Quell- und Zieldatenschema}
-\blindtext\blindtext\blindtext
+\blindtext\blindtext
 
 \subsection{Sequenzdiagramm}
-\blindtext\blindtext\blindtext
+\blindtext\blindtext
 
 \subsection{Klassendiagramm}
-\blindtext\blindtext\blindtext
+
+\begin{tikzpicture}
+\begin{umlpackage}[x=0, y=0]{Franks's-Class}
+\end{umlpackage}
+\end{tikzpicture}
+
 
 \subsection{Pflichtenheft (Auszug)}
-\blindtext\blindtext\blindtext
+\blindtext
 
 \subsection{Laufzeitdiagnose}
-\blindtext\blindtext
+\blindtext
 
 \subsection{Ganttdiagramm}
-\blindtext\blindtext
+\blindtext
 
 \subsection{Projektstrukturplan}
-\blindtext\blindtext
+\blindtext
 
 \subsection{Arbeitspakete}
-\blindtext\blindtext
+\blindtext
 
 \subsection{Arbeitspaketressourcen im Detail}
-\blindtext\blindtext
+\blindtext
 
 \end{document}
