@@ -389,22 +389,40 @@ Dies ist ein Beispiel für ein UML-Klassendiagramm:\\
 
 \begin{tikzpicture}
 
-	\umlclass[x=8, y= 0]{Person}	
+	\umlclass[x=5, y= 0]{Person}	
 		{
-			- kontostand : double\\
 			- vorerkrankungen : String\\
 			- religion : string\\
-			- alter : int\\
+			+ alter : int\\
+			+ name : String\\
+			+ geschlecht : String\\
 			
 		}
 		{
 			+ halloSagen() : void		\\	
+			+ freundlichLaecheln() : void		\\	
 		}
 		
 		
-	\umlclass[x=12, y= -8]{Erwachsener}	
+	\umlclass[x=0, y= -6]{Kind}	
+		{
+			- kinderGarten: String\\
+			+ hobbys : String \\
+			+ magNutella : bool \\
+		}
+		{
+			- zurArbeitGehen() : void	\\
+			- dreiradFahren() : void\\
+			+ getKindergarten() : String\\
+			
+		}	
+		
+		
+	\umlclass[x=10, y= -6]{Erwachsener}	
 		{
 			- beruf: String\\
+			- kontostand : double\\
+			+ hatKinder : bool\\
 		}
 		{
 			- zurArbeitGehen() : void	\\
@@ -414,7 +432,10 @@ Dies ist ein Beispiel für ein UML-Klassendiagramm:\\
 		}
 		
 		
-		\umlinherit[geometry=-|]{Erwachsener}{Person}
+		\umlinherit[geometry=|-]{Erwachsener}{Person}
+		\umlinherit[geometry=|-]{Kind}{Person}
+		\umlassoc[geometry=-|, arg1=0..*, arg2=2..*, pos1=0.1, pos2=0.6]{Kind}{Erwachsener}
+		
 		
 
 
