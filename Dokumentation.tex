@@ -432,14 +432,11 @@ Dies ist ein Beispiel für ein UML-Klassendiagramm:\\
 			
 		}
 		
-		\umlnote{Person}{Dies ist offensichtlich eine Klasse}
+		\umlnote{Person}{Dies ist offensichtlich eine Klasse}		
 		
-		\umlinherit[geometry=|-, very thick]{Erwachsener}{Person}
 		\umlinherit[geometry=-|, very thick]{Kind}{Person}
-		\umldep[very thick, arg1=0..*, arg2=2..*, pos1=0.05, pos2=0.48, anchor1=-20, anchor2=-20]{Kind}{Erwachsener}
-		
-		
-
+		\umldep[very thick, arg1=0..*, arg2=2..*, pos1=0.05, pos2=0.48, 
+		anchor1=-20, anchor2=-20]{Kind}{Erwachsener}
 
 \end{tikzpicture}
 
