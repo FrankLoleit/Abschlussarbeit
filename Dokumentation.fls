@@ -1048,9 +1048,6 @@ INPUT .\src\images\\argusLogo.png
 INPUT .\src\images\\argusLogo.png
 INPUT src\images\\argusLogo.png
 INPUT .\src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
@@ -1058,11 +1055,11 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
 INPUT .\src\images\\argusLogo.png
 INPUT src\images\\argusLogo.png
 INPUT .\src\images\\argusLogo.png
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
 INPUT .\src\images\\argusLogo.png
 INPUT src\images\\argusLogo.png
 INPUT .\src\images\\argusLogo.png
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
 INPUT .\src\images\\argusLogo.png
 INPUT src\images\\argusLogo.png
 INPUT .\src\images\\argusLogo.png

@@ -2,6 +2,9 @@
 
 %Packages
 
+
+
+
 \usepackage{geometry}
 \usepackage{ucs}
 \usepackage{times}
@@ -13,8 +16,15 @@
 \usepackage[headsepline]{scrlayer-scrpage}
 \usepackage{blindtext}
 \usepackage[hidelinks]{hyperref}
+
 \usepackage{tikz,ifthen,xstring,calc,pgfkeys,pgfopts}
 \usepackage{tikz-uml}
+
+%\usetikzlibrary{external}
+%\tikzexternalize %
+
+
+
 
 
 
@@ -172,7 +182,7 @@ Gneisenaustr. 66\linebreak
 \ofoot{Seite\:\thepage\:von \pageref{myLastPage}}
 
 \section{Einleitung}
-hallo
+\blindtext
 
 \subsection{Projektbeschreibung}
 \blindtext
@@ -257,7 +267,7 @@ hallo
 \blindtext\
 
 \subsection{Entwurf Geschäftslogik}
-\blindtext\
+\blindtext\blindmarkup
 
 \subsubsection{Entwurf Geschäftslogik}
 \blindtext\
@@ -383,7 +393,7 @@ hallo
 \subsection{Sequenzdiagramm}
 \blindtext\blindtext
 
-\newpage
+
 \subsection{Klassendiagramm}
 Dies ist ein Beispiel für ein UML-Klassendiagramm:\\%
 
@@ -432,9 +442,9 @@ Dies ist ein Beispiel für ein UML-Klassendiagramm:\\%
 		}
 		
 		\umlnote{Person}{Dies ist offensichtlich eine Klasse}		
-		\umlinherit[geometry=|-, very thick]{Erwachsener}{Person}
-		\umlinherit[geometry=-|, very thick]{Kind}{Person}
-		\umldep[very thick, arg1=0..*, arg2=2..*, pos1=0.05, pos2=0.48,anchor1=-20, anchor2=-20]{Kind}{Erwachsener}
+		\umlinherit[geometry=|-]{Erwachsener}{Person}
+		\umlinherit[geometry=-|]{Kind}{Person}
+		\umldep[very thick, arg1=0..*, arg2=1..*, pos1=0.05, pos2=0.48,anchor1=-20, anchor2=-20]{Kind}{Erwachsener}
 
 \end{tikzpicture}
 
