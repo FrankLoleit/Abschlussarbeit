@@ -1,10 +1,6 @@
 \documentclass[12pt,toc=sectionentrywithoutdots, headheight=44pt, headings=optiontoheadandtoc]{scrartcl}
 
 %Packages
-
-
-
-
 \usepackage{geometry}
 \usepackage{ucs}
 \usepackage{times}
@@ -16,17 +12,13 @@
 \usepackage[headsepline]{scrlayer-scrpage}
 \usepackage{blindtext}
 \usepackage[hidelinks]{hyperref}
+\usepackage[printonlyused]{acronym}
 
 \usepackage{tikz,ifthen,xstring,calc,pgfkeys,pgfopts}
 \usepackage{tikz-uml}
 
 %\usetikzlibrary{external}
 %\tikzexternalize %
-
-
-
-
-
 
 %Function for getting sectionName---------------------------------------------------
 
@@ -47,9 +39,6 @@
 
 
 %Function for getting sectionName----------------------------------------------------
-
-
-
 
 %Images path
 \graphicspath{{./src/images/}}
@@ -158,7 +147,11 @@ Gneisenaustr. 66\linebreak
 
 \newpage
 \section{Abbildungsverzeichnis}
-\blindtext\blindtext\blindtext
+\blindtext
+
+
+
+
 \newpage
 
 \section{Tabellenverzeichnis}
@@ -169,7 +162,11 @@ Gneisenaustr. 66\linebreak
 \newpage
 
 \section{Abkürzungsverzeichnis}
-\blindtext\blindtext
+
+\begin{acronym}
+	\acro{GUI}{Graphical User Interface}
+\end{acronym}
+
 \newpage
 
 \section{Begriffserläuterung}
@@ -189,10 +186,11 @@ Gneisenaustr. 66\linebreak
 
 
 \subsection{Projektziel}
-\blindtext
+Ein wichtiges Ziel ist es, die \acs{GUI} so zu gestalten, dass am Ende keine Unstimmigkeiten mit dem 
+Webinterface auftreten.
 
 \subsection{Projektumfeld}
-\blindtext\
+\blindtext
 
 \subsection{Projektbegründung}
 \blindtext\
@@ -267,7 +265,7 @@ Gneisenaustr. 66\linebreak
 \blindtext\
 
 \subsection{Entwurf Geschäftslogik}
-\blindtext\blindmarkup
+\blindtext\
 
 \subsubsection{Entwurf Geschäftslogik}
 \blindtext\
@@ -395,7 +393,7 @@ Gneisenaustr. 66\linebreak
 
 
 \subsection{Klassendiagramm}
-Dies ist ein Beispiel für ein UML-Klassendiagramm:\\%
+Dies ist ein Beispiel für ein UML-Klassendiagramm:
 
 \begin{tikzpicture}
 
