@@ -13,9 +13,24 @@
 \usepackage{blindtext}
 \usepackage[hidelinks]{hyperref}
 \usepackage[printonlyused]{acronym}
+\usepackage{setspace}
+
+\hypersetup{
+    colorlinks=false,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
 
 \usepackage{tikz,ifthen,xstring,calc,pgfkeys,pgfopts}
 \usepackage{tikz-uml}
+
+%%%%%%%%%%%%%% Set line Spacing for Abbreviation %%%%%%%%%%%%%%%%%%
+%\renewenvironment{description}
+%{\list{}{\labelwidth0pt\itemindent-\leftmargin
+%    \parsep0pt\itemsep0pt\let\makelabel\descriptionlabel}}
+%               {\endlist}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\usetikzlibrary{external}
 %\tikzexternalize %
@@ -163,8 +178,13 @@ Gneisenaustr. 66\linebreak
 
 \section{Abkürzungsverzeichnis}
 
-\begin{acronym}
-	\acro{GUI}{Graphical User Interface}
+
+\begin{acronym}[xxxxxxx]
+
+\acro{ADI}{Argus Data Insights Deutschland GmbH}
+\acro{GUI}{Graphical User Interface}
+\acro{XAML}{Extensible Application Markup Language}
+
 \end{acronym}
 
 \newpage
@@ -187,7 +207,7 @@ Gneisenaustr. 66\linebreak
 
 \subsection{Projektziel}
 Ein wichtiges Ziel ist es, die \acs{GUI} so zu gestalten, dass am Ende keine Unstimmigkeiten mit dem 
-Webinterface auftreten.
+Webinterface auftreten. Die \acs{ADI} ist daher bemüht weitere Schritte einzuleiten. Man hat sich entschieden \acs{XAML} zu verwenden.
 
 \subsection{Projektumfeld}
 \blindtext
