@@ -11,13 +11,14 @@
 \usepackage{graphicx}
 \usepackage[headsepline]{scrlayer-scrpage}
 \usepackage{blindtext}
-\usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
 \usepackage[printonlyused]{acronym}
 \usepackage{setspace}
 \usepackage{relsize}
 
 \hypersetup{
-    colorlinks=false,
+    colorlinks=true,
+    linktoc=page,
     linkcolor=blue,
     filecolor=magenta,      
     urlcolor=cyan,
@@ -45,7 +46,7 @@
   \stepcounter{secautolabel}%
   \label{sec:autolabel:\thesecautolabel}%
   \expandafter\xdef\csname #1title\endcsname{%
-    \noexpand\nameref{sec:autolabel:\thesecautolabel}%
+    \noexpand\nameref*{sec:autolabel:\thesecautolabel}%
   }%
 }
 
@@ -198,7 +199,7 @@ Gneisenaustr. 66\linebreak
 %\setcounter{secnumdepth}{1}
 \pagenumbering{arabic}
 \setcounter{secnumdepth}{4}
-\ofoot{Seite\:\thepage\:von \pageref{myLastPage}}
+\ofoot{Seite\:\thepage\:von \pageref*{myLastPage}}
 
 \section{Einleitung}
 \blindtext
@@ -415,7 +416,7 @@ Webinterface auftreten. Die \acs{ADI} ist daher bemüht weitere Schritte einzule
 
 
 \subsection{Klassendiagramm}
-Dies ist ein Beispiel für ein UML-Klassendiagramm:
+Dies ist ein Beispiel für ein UML-Klassendiagramm:\\
 
 \begin{tikzpicture}
 
