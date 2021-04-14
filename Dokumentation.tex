@@ -27,6 +27,11 @@
 \usepackage{tikz,ifthen,xstring,calc,pgfkeys,pgfopts}
 \usepackage{tikz-uml}
 
+\usetikzlibrary{external}
+\tikzexternalize[prefix=figures/] % activate and define figures/ as cache folder
+
+
+
 %%%%%%%%%%%%%% Set line Spacing for Abbreviation %%%%%%%%%%%%%%%%%%
 %\renewenvironment{description}
 %{\list{}{\labelwidth0pt\itemindent-\leftmargin
@@ -176,24 +181,26 @@ Gneisenaustr. 66\linebreak
 \blindtext\blindtext\blindtext
 
 \section{Listings}
-\blindtext\blindtext\blindtext
+\blindtext\
 \newpage
 
 \section{Abkürzungsverzeichnis}
 
 
-\begin{acronym}[xxxxxxx]
+\begin{acronym}[xxxxxxxx]
 
 \acro{ADI}{Argus Data Insights Deutschland GmbH}
 \acro{GUI}{Graphical User Interface}
+\acro{SDL2}{Simple Direct Media Layer Version 2.0}
 \acro{XAML}{Extensible Application Markup Language}
+
 
 \end{acronym}
 
 \newpage
 
 \section{Begriffserläuterung}
-\blindtext\blindtext
+\blindtext
 \newpage
 
 %\setcounter{secnumdepth}{1}
@@ -210,166 +217,166 @@ Gneisenaustr. 66\linebreak
 
 \subsection{Projektziel}
 Ein wichtiges Ziel ist es, die \acs{GUI} so zu gestalten, dass am Ende keine Unstimmigkeiten mit dem 
-Webinterface auftreten. Die \acs{ADI} ist daher bemüht weitere Schritte einzuleiten. Man hat sich entschieden \acs{XAML} zu verwenden.
+Webinterface auftreten. Die \acs{ADI} ist daher bemüht weitere Schritte einzuleiten. Man hat sich entschieden \acs{XAML} zu verwenden. Für die grafische Darstellung wird \acs{SDL2} verwendet.
 
 \subsection{Projektumfeld}
 \blindtext
 
 \subsection{Projektbegründung}
-\blindtext\
+\blindtext
 
 \subsection{Projektabgrenzung}
-\blindtext\
+\blindtext
 
 \section{Projektplanung}
-\blindtext\
+\blindtext
 
 \subsection{Projektphasen}
-\blindtext\
+\blindtext
 
 \subsection{Ressourcenplanung}
-\blindtext\
+\blindtext
 
 \subsection{Entwicklungsprozess}
-\blindtext\
+\blindtext
 
 \section{Analysephase}
-\blindtext\
+\blindtext
 
 \subsection{IST-Zustand}
-\blindtext\
+\blindtext
 
 \subsection{Wirtschaftlichkeitsanalyse}
-\blindtext\
+\blindtext
 
 \subsubsection{Beschaffung der Ausgangsdaten}
-\blindtext\
+\blindtext
 
 \subsubsection{Ermitteln der Kostenstruktur}
-\blindtext\
+\blindtext
 
 \subsubsection{Kostenberechnung}
-\blindtext\
+\blindtext
 
 \subsubsection{Zusammenstellen des Kostenplans}
-\blindtext\
+\blindtext
 
 \subsubsection{Nicht-monetäre Vorteile}
-\blindtext\
+\blindtext
 
 \subsection{Anwendungsfälle}
-\blindtext\
+\blindtext
 
 \subsection{Lastenheft}
-\blindtext\
+\blindtext
 
 \subsection{Risikomanagement}
-\blindtext\
+\blindtext
 
 \subsubsection{Risikoerkennung}
-\blindtext\
+\blindtext
 
 \subsubsection{Risikoanalyse}
-\blindtext\
+\blindtext
 
 \subsubsection{Risikominimierung}
-\blindtext\
+\blindtext
 
 \section{Entwurfsphase}
-\blindtext\
+\blindtext
 
 \subsection{Zielplattform}
-\blindtext\
+\blindtext
 
 \subsection{Architekturdesign}
-\blindtext\
+\blindtext
 
 \subsection{Entwurf des Datenmodells}
-\blindtext\
+\blindtext
 
 \subsection{Entwurf Geschäftslogik}
-\blindtext\
+\blindtext
 
 \subsubsection{Entwurf Geschäftslogik}
-\blindtext\
+\blindtext
 
 \subsubsection{Entwurf Modul Extraktion}
-\blindtext\
+\blindtext
 
 \subsubsection{Entwurf Modul Laden}
-\blindtext\
+\blindtext
 
 \subsubsection{Entwurf Modul Transformation}
-\blindtext\
+\blindtext
 
 \subsection{Roundtrip Engineering}
-\blindtext\
+\blindtext
 
 \subsection{Pflichtenheft}
-\blindtext\
+\blindtext
 
 \section{Implementierung}
-\blindtext\
+\blindtext
 
 \subsection{Implementierung Extraktion}
-\blindtext\
+\blindtext
 
 \subsection{Implementierung Laden}
-\blindtext\
+\blindtext
 
 \subsection{Implementierung der Datenstrukturen}
-\blindtext\
+\blindtext
 
 \subsection{Implementierung Transformation}
-\blindtext\
+\blindtext
 
 \subsection{Implementierung Hilfsklassen und Interfaces}
-\blindtext\
+\blindtext
 
 \section{Qualitätssicherung}
-\blindtext\
+\blindtext
 
 \subsection{Systemtest}
-\blindtext\
+\blindtext
 
 \subsection{Tests gegen das System}
-\blindtext\
+\blindtext
 
 \subsection{Testprotokolle}
 \blindtext\
 
 \section{Abnahme}
-\blindtext\
+\blindtext
 
 \subsection{Soll/Ist-Vergleich}
-\blindtext\
+\blindtext
 
 \subsection{Abnahme durch den technischen Leiter}
-\blindtext\
+\blindtext
 
 \section{Dokumentation}
-\blindtext\
+\blindtext
 
 \subsection{Technische Dokumentation}
-\blindtext\
+\blindtext
 
 \subsection{Nutzerdokumentation}
-\blindtext\
+\blindtext
 
 \section{Fazit}
-\blindtext\
+\blindtext
 
 \subsection{Im Laufe des Projektes gewonnene Erkenntnisse}
-\blindtext\
+\blindtext
 
 \subsection{Ausblick}
-\blindtext\
+\blindtext
 
 \subsubsection{Von Anfang an geplante Weiterentwicklung}
-\blindtext\
+\blindtext
 
 \subsubsection{Im Laufe des Projektes erkannter Weiterentwicklungsbedarf}
-\blindtext\
+\blindtext
 
 
 \newpage
