@@ -88,11 +88,11 @@ INPUT C:\Program Files\MiKTeX\tex\latex\koma-script\typearea.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\koma-script\typearea.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\footmisc\footmisc.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\footmisc\footmisc.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\koma-script\scrsize12pt.clo
-INPUT C:\Program Files\MiKTeX\tex\latex\koma-script\scrsize12pt.clo
-INPUT C:\Program Files\MiKTeX\tex\latex\koma-script\scrsize12pt.clo
-INPUT C:\Program Files\MiKTeX\tex\latex\koma-script\scrsize12pt.clo
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\koma-script\scrsize11pt.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\koma-script\scrsize11pt.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\koma-script\scrsize11pt.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\koma-script\scrsize11pt.clo
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\koma-script\typearea.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\koma-script\typearea.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\koma-script\typearea.sty
@@ -548,6 +548,16 @@ INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
 INPUT C:\Program Files\MiKTeX\tex\generic\xstring\xstring.tex
+INPUT C:\Program Files\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\setspace\setspace.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\pgf\frontendlayer\tikz.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\pgf\frontendlayer\tikz.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\pgf\frontendlayer\tikz.sty
@@ -969,7 +979,7 @@ INPUT c:\Abschlussarbeit\Dokumentation.toc
 INPUT c:\Abschlussarbeit\Dokumentation.toc
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
@@ -1002,12 +1012,12 @@ INPUT .\src\images\\argusLogo.png
 INPUT .\src\images\\argusLogo.png
 INPUT src\images\\argusLogo.png
 INPUT .\src\images\\argusLogo.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
 INPUT .\src\images\\argusLogo.png
 INPUT src\images\\argusLogo.png
 INPUT .\src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
 INPUT .\src\images\\argusLogo.png
 INPUT src\images\\argusLogo.png
 INPUT .\src\images\\argusLogo.png
@@ -1062,19 +1072,7 @@ INPUT .\src\images\\argusLogo.png
 INPUT .\src\images\\argusLogo.png
 INPUT src\images\\argusLogo.png
 INPUT .\src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
 INPUT .\src\images\\argusLogo.png
 INPUT src\images\\argusLogo.png
 INPUT .\src\images\\argusLogo.png

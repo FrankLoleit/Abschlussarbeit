@@ -12,68 +12,68 @@
 \contentsline {subsection}{\numberline {1.5}Projektabgrenzung}{2}{subsection.1.5}%
 \contentsline {section}{\numberline {2}Projektplanung}{2}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Projektphasen}{2}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Ressourcenplanung}{3}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Entwicklungsprozess}{3}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.2}Ressourcenplanung}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Entwicklungsprozess}{2}{subsection.2.3}%
 \contentsline {section}{\numberline {3}Analysephase}{3}{section.3}%
 \contentsline {subsection}{\numberline {3.1}IST-Zustand}{3}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Wirtschaftlichkeitsanalyse}{4}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Beschaffung der Ausgangsdaten}{4}{subsubsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2}Wirtschaftlichkeitsanalyse}{3}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Beschaffung der Ausgangsdaten}{3}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Ermitteln der Kostenstruktur}{4}{subsubsection.3.2.2}%
 \contentsline {subsubsection}{\numberline {3.2.3}Kostenberechnung}{4}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Zusammenstellen des Kostenplans}{5}{subsubsection.3.2.4}%
-\contentsline {subsubsection}{\numberline {3.2.5}Nicht-monet\IeC {\"a}re Vorteile}{5}{subsubsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.3}Anwendungsf\IeC {\"a}lle}{5}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Zusammenstellen des Kostenplans}{4}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}Nicht-monet\IeC {\"a}re Vorteile}{4}{subsubsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.3}Anwendungsf\IeC {\"a}lle}{4}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Lastenheft}{5}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Risikomanagement}{6}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Risikoerkennung}{6}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}Risikoanalyse}{6}{subsubsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5}Risikomanagement}{5}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Risikoerkennung}{5}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Risikoanalyse}{5}{subsubsection.3.5.2}%
 \contentsline {subsubsection}{\numberline {3.5.3}Risikominimierung}{6}{subsubsection.3.5.3}%
-\contentsline {section}{\numberline {4}Entwurfsphase}{7}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Zielplattform}{7}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Architekturdesign}{7}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Entwurf des Datenmodells}{8}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Entwurf Gesch\IeC {\"a}ftslogik}{8}{subsection.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.1}Entwurf Gesch\IeC {\"a}ftslogik}{8}{subsubsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.2}Entwurf Modul Extraktion}{8}{subsubsection.4.4.2}%
-\contentsline {subsubsection}{\numberline {4.4.3}Entwurf Modul Laden}{9}{subsubsection.4.4.3}%
-\contentsline {subsubsection}{\numberline {4.4.4}Entwurf Modul Transformation}{9}{subsubsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.5}Roundtrip Engineering}{9}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Pflichtenheft}{9}{subsection.4.6}%
-\contentsline {section}{\numberline {5}Implementierung}{10}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Implementierung Extraktion}{10}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Implementierung Laden}{10}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Implementierung der Datenstrukturen}{10}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Implementierung Transformation}{11}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Implementierung Hilfsklassen und Interfaces}{11}{subsection.5.5}%
-\contentsline {section}{\numberline {6}Qualit\IeC {\"a}tssicherung}{11}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Systemtest}{11}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Tests gegen das System}{12}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Testprotokolle}{12}{subsection.6.3}%
-\contentsline {section}{\numberline {7}Abnahme}{12}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Soll/Ist-Vergleich}{12}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Abnahme durch den technischen Leiter}{13}{subsection.7.2}%
-\contentsline {section}{\numberline {8}Dokumentation}{13}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Technische Dokumentation}{13}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Nutzerdokumentation}{14}{subsection.8.2}%
-\contentsline {section}{\numberline {9}Fazit}{14}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Im Laufe des Projektes gewonnene Erkenntnisse}{14}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Ausblick}{14}{subsection.9.2}%
-\contentsline {subsubsection}{\numberline {9.2.1}Von Anfang an geplante Weiterentwicklung}{15}{subsubsection.9.2.1}%
-\contentsline {subsubsection}{\numberline {9.2.2}Im Laufe des Projektes erkannter Weiterentwicklungsbedarf}{15}{subsubsection.9.2.2}%
-\contentsline {section}{\nonumberline Literaturverzeichnis}{16}{section*.13}%
+\contentsline {section}{\numberline {4}Entwurfsphase}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Zielplattform}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Architekturdesign}{6}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Entwurf des Datenmodells}{6}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Entwurf Gesch\IeC {\"a}ftslogik}{7}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Entwurf Gesch\IeC {\"a}ftslogik}{7}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Entwurf Modul Extraktion}{7}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.3}Entwurf Modul Laden}{7}{subsubsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.4}Entwurf Modul Transformation}{8}{subsubsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.5}Roundtrip Engineering}{8}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Pflichtenheft}{8}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Implementierung}{8}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Implementierung Extraktion}{8}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Implementierung Laden}{9}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Implementierung der Datenstrukturen}{9}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Implementierung Transformation}{9}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Implementierung Hilfsklassen und Interfaces}{9}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Qualit\IeC {\"a}tssicherung}{10}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Systemtest}{10}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Tests gegen das System}{10}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Testprotokolle}{10}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Abnahme}{10}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Soll/Ist-Vergleich}{11}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Abnahme durch den technischen Leiter}{11}{subsection.7.2}%
+\contentsline {section}{\numberline {8}Dokumentation}{11}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Technische Dokumentation}{11}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Nutzerdokumentation}{12}{subsection.8.2}%
+\contentsline {section}{\numberline {9}Fazit}{12}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Im Laufe des Projektes gewonnene Erkenntnisse}{12}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Ausblick}{12}{subsection.9.2}%
+\contentsline {subsubsection}{\numberline {9.2.1}Von Anfang an geplante Weiterentwicklung}{12}{subsubsection.9.2.1}%
+\contentsline {subsubsection}{\numberline {9.2.2}Im Laufe des Projektes erkannter Weiterentwicklungsbedarf}{13}{subsubsection.9.2.2}%
+\contentsline {section}{\nonumberline Literaturverzeichnis}{14}{section*.13}%
 \contentsline {section}{\numberline {A}Anhang}{i}{section.2}%
 \contentsline {subsection}{\numberline {A.1}Detaillierte Zeitplanung}{i}{subsection.2.1}%
 \contentsline {subsection}{\numberline {A.2}Ressourcenplan}{i}{subsection.2.2}%
 \contentsline {subsection}{\numberline {A.3}Projektkosten Details}{i}{subsection.2.3}%
 \contentsline {subsection}{\numberline {A.4}Anwendungsfalldiagramm}{ii}{subsection.2.4}%
 \contentsline {subsection}{\numberline {A.5}Lastenheft (Auszug)}{ii}{subsection.2.5}%
-\contentsline {subsection}{\numberline {A.6}Quell- und Zieldatenschema}{iii}{subsection.2.6}%
+\contentsline {subsection}{\numberline {A.6}Quell- und Zieldatenschema}{ii}{subsection.2.6}%
 \contentsline {subsection}{\numberline {A.7}Sequenzdiagramm}{iii}{subsection.2.7}%
 \contentsline {subsection}{\numberline {A.8}Klassendiagramm}{iii}{subsection.2.8}%
 \contentsline {subsection}{\numberline {A.9}Pflichtenheft (Auszug)}{iv}{subsection.2.9}%
 \contentsline {subsection}{\numberline {A.10}Laufzeitdiagnose}{iv}{subsection.2.10}%
-\contentsline {subsection}{\numberline {A.11}Ganttdiagramm}{v}{subsection.2.11}%
-\contentsline {subsection}{\numberline {A.12}Projektstrukturplan}{v}{subsection.2.12}%
-\contentsline {subsection}{\numberline {A.13}Arbeitspakete}{v}{subsection.2.13}%
+\contentsline {subsection}{\numberline {A.11}Ganttdiagramm}{iv}{subsection.2.11}%
+\contentsline {subsection}{\numberline {A.12}Projektstrukturplan}{iv}{subsection.2.12}%
+\contentsline {subsection}{\numberline {A.13}Arbeitspakete}{iv}{subsection.2.13}%
 \contentsline {subsection}{\numberline {A.14}Arbeitspaketressourcen im Detail}{v}{subsection.2.14}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
