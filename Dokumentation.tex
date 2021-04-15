@@ -1,6 +1,9 @@
-\documentclass[11pt,toc=sectionentrywithoutdots, headheight=44pt, headings=optiontoheadandtoc]{scrartcl}
+\documentclass[11pt,toc=sectionentrywithoutdots, headheight=44pt, headings=optiontoheadandtoc, hyperfootnotes=false]{scrartcl}
 
 %Packages
+
+
+
 \usepackage{geometry}
 \usepackage{ucs}
 \usepackage{times}
@@ -11,9 +14,15 @@
 \usepackage{graphicx}
 \usepackage[headsepline]{scrlayer-scrpage}
 \usepackage{blindtext}
-\usepackage{hyperref}
+
+\usepackage{footnotebackref}
 \usepackage[printonlyused]{acronym}
+
+
+\usepackage{nameref}
 \usepackage{setspace}
+\usepackage{hyperref}
+
 
 %\usepackage{relsize}
 %\usepackage{apacite}
@@ -42,7 +51,6 @@
 
 %Function for getting sectionName---------------------------------------------------
 
-\usepackage{nameref}
 \newcounter{secautolabel}
 \AddtoDoHook{heading/endgroup}{\setautolabel}
 \newcommand*{\setautolabel}[1]{%
@@ -59,6 +67,8 @@
 
 
 %Function for getting sectionName----------------------------------------------------
+
+
 
 %Images path
 \graphicspath{{./src/images/}}
@@ -208,8 +218,8 @@ Gneisenaustr. 66\linebreak
 \blindtext
 
 \subsection{Projektbeschreibung}
-Softwareentwicklung ist eine tolle Sache. Der Computer arbeitet dann wie von alleine und man muss kaum noch etwas machen \cite{Theis2014}.
-
+Softwareentwicklung ist eine tolle Sache. 
+Der Computer arbeitet dann wie von alleine und man muss kaum noch etwas machen\footnote{vgl. \cite{Theis2014}}.
 
 \subsection{Projektziel}
 Ein wichtiges Ziel ist es, die \acs{GUI} so zu gestalten, dass am Ende keine Unstimmigkeiten mit dem 
@@ -379,7 +389,7 @@ Webinterface auftreten. Die \acs{ADI} ist daher bemüht weitere Schritte einzule
 \setcounter{secnumdepth}{0}
 \addcontentsline{toc}{section}{Literatur}
 
-\bibliographystyle{plain}
+\bibliographystyle{siam}
 
 \bibliography{literatur}
 
