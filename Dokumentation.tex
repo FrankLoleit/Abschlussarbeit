@@ -14,7 +14,9 @@
 \usepackage{hyperref}
 \usepackage[printonlyused]{acronym}
 \usepackage{setspace}
-\usepackage{relsize}
+
+%\usepackage{relsize}
+%\usepackage{apacite}
 
 \hypersetup{
     colorlinks=true,
@@ -22,10 +24,11 @@
     linkcolor=blue,
     filecolor=magenta,      
     urlcolor=cyan,
+    citecolor=blue
 }
 
-\usepackage{tikz,ifthen,xstring,calc,pgfkeys,pgfopts}
-\usepackage{tikz-uml}
+%\usepackage{tikz,ifthen,xstring,calc,pgfkeys,pgfopts}
+%\usepackage{tikz-uml}
 
 %%%%%%%%%%%%%% Set line Spacing for Abbreviation %%%%%%%%%%%%%%%%%%
 %\renewenvironment{description}
@@ -205,7 +208,7 @@ Gneisenaustr. 66\linebreak
 \blindtext
 
 \subsection{Projektbeschreibung}
-\blindtext
+Softwareentwicklung ist eine tolle Sache. Der Computer arbeitet dann wie von alleine und man muss kaum noch etwas machen \cite{Theis2014}.
 
 
 \subsection{Projektziel}
@@ -374,8 +377,13 @@ Webinterface auftreten. Die \acs{ADI} ist daher bemüht weitere Schritte einzule
 
 \newpage
 \setcounter{secnumdepth}{0}
-\section{Literaturverzeichnis}
-\blindtext\label{myLastPage}
+\addcontentsline{toc}{section}{Literatur}
+
+\bibliographystyle{plain}
+
+\bibliography{literatur}
+
+\label{myLastPage}
 
 \newpage
 
@@ -416,6 +424,7 @@ Webinterface auftreten. Die \acs{ADI} ist daher bemüht weitere Schritte einzule
 
 
 \subsection{Klassendiagramm}
+\begin{comment}
 Dies ist ein Beispiel für ein UML-Klassendiagramm:\\
 
 \begin{tikzpicture}
@@ -469,7 +478,7 @@ Dies ist ein Beispiel für ein UML-Klassendiagramm:\\
 
 \end{tikzpicture}
 
-
+\end{comment}
 \subsection{Pflichtenheft (Auszug)}
 \blindtext
 

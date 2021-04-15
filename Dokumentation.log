@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.16)  14 APR 2021 11:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.16)  15 APR 2021 12:55
 entering extended mode
 **./Dokumentation.tex
 (Dokumentation.tex
@@ -495,521 +495,8 @@ Package: xstring 2019/02/06 v1.83 String manipulations (CT)
 ("C:\Program Files\MiKTeX\tex/latex/setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-("C:\Program Files\MiKTeX\tex/latex/relsize\relsize.sty"
-Package: relsize 2013/03/29 ver 4.1
-)
-Package hyperref Info: Option `colorlinks' set `true' on input line 25.
+Package hyperref Info: Option `colorlinks' set `true' on input line 28.
 
-("C:\Program Files\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty"
-("C:\Program Files\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty"
-("C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty"
-("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex"
-\pgfutil@everybye=\toks25
-\pgfutil@tempdima=\dimen154
-\pgfutil@tempdimb=\dimen155
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-common-lists.tex"))
-("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def"
-\pgfutil@abb=\box49
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex"
-("C:\Program Files\MiKTeX\tex/generic/pgf\pgf.revision.tex")
-Package: pgfrcs 2020/10/01 v3.1.6a (3.1.6a)
-))
-Package: pgf 2020/10/01 v3.1.6a (3.1.6a)
-
-("C:\Program Files\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty"
-("C:\Program Files\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty"
-("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex"
-Package: pgfsys 2020/10/01 v3.1.6a (3.1.6a)
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex"
-\pgfkeys@pathtoks=\toks26
-\pgfkeys@temptoks=\toks27
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex"
-\pgfkeys@tmptoks=\toks28
-))
-\pgf@x=\dimen156
-\pgf@y=\dimen157
-\pgf@xa=\dimen158
-\pgf@ya=\dimen159
-\pgf@xb=\dimen160
-\pgf@yb=\dimen161
-\pgf@xc=\dimen162
-\pgf@yc=\dimen163
-\pgf@xd=\dimen164
-\pgf@yd=\dimen165
-\w@pgf@writea=\write3
-\r@pgf@reada=\read4
-\c@pgf@counta=\count286
-\c@pgf@countb=\count287
-\c@pgf@countc=\count288
-\c@pgf@countd=\count289
-\t@pgf@toka=\toks29
-\t@pgf@tokb=\toks30
-\t@pgf@tokc=\toks31
-\pgf@sys@id@count=\count290
-("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg"
-File: pgf.cfg 2020/10/01 v3.1.6a (3.1.6a)
-)
-Driver file for pgf: pgfsys-pdftex.def
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-pdftex.def"
-File: pgfsys-pdftex.def 2020/10/01 v3.1.6a (3.1.6a)
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def"
-File: pgfsys-common-pdf.def 2020/10/01 v3.1.6a (3.1.6a)
-))) ("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.t
-ex"
-File: pgfsyssoftpath.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgfsyssoftpath@smallbuffer@items=\count291
-\pgfsyssoftpath@bigbuffer@items=\count292
-) ("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
-"
-File: pgfsysprotocol.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-)) ("C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty"
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
-("C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg"
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: pdftex.def on input line 225.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex"
-Package: pgfcore 2020/10/01 v3.1.6a (3.1.6a)
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex"
-("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex"
-("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex")
-("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex"
-\pgfmath@dimen=\dimen166
-\pgfmath@count=\count293
-\pgfmath@box=\box50
-\pgfmath@toks=\toks32
-\pgfmath@stack@operand=\toks33
-\pgfmath@stack@operation=\toks34
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex"
-("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex"
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.c
-ode.tex")
-("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex
-")
-("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code
-.tex")
-("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex")
-("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex"
-) ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex
-")
-("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmet
-ics.code.tex")))
-("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count294
-))
-("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfint.code.tex")
-("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex"
-File: pgfcorepoints.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgf@picminx=\dimen167
-\pgf@picmaxx=\dimen168
-\pgf@picminy=\dimen169
-\pgf@picmaxy=\dimen170
-\pgf@pathminx=\dimen171
-\pgf@pathmaxx=\dimen172
-\pgf@pathminy=\dimen173
-\pgf@pathmaxy=\dimen174
-\pgf@xx=\dimen175
-\pgf@xy=\dimen176
-\pgf@yx=\dimen177
-\pgf@yy=\dimen178
-\pgf@zx=\dimen179
-\pgf@zy=\dimen180
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.
-tex"
-File: pgfcorepathconstruct.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgf@path@lastx=\dimen181
-\pgf@path@lasty=\dimen182
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex"
-File: pgfcorepathusage.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgf@shorten@end@additional=\dimen183
-\pgf@shorten@start@additional=\dimen184
-) ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex"
-File: pgfcorescopes.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgfpic=\box51
-\pgf@hbox=\box52
-\pgf@layerbox@main=\box53
-\pgf@picture@serial@count=\count295
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.t
-ex"
-File: pgfcoregraphicstate.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgflinewidth=\dimen185
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.cod
-e.tex"
-File: pgfcoretransformations.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgf@pt@x=\dimen186
-\pgf@pt@y=\dimen187
-\pgf@pt@temp=\dimen188
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex"
-File: pgfcorequick.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex"
-File: pgfcoreobjects.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code
-.tex"
-File: pgfcorepathprocessing.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex"
-File: pgfcorearrows.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgfarrowsep=\dimen189
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex"
-File: pgfcoreshade.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgf@max=\dimen190
-\pgf@sys@shading@range@num=\count296
-\pgf@shadingcount=\count297
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex"
-File: pgfcoreimage.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex"
-File: pgfcoreexternal.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgfexternal@startupbox=\box54
-)) ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex"
-File: pgfcorelayers.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.t
-ex"
-File: pgfcoretransparency.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex"
-File: pgfcorepatterns.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-) ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex"
-File: pgfcorerdf.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-)))
-("C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex"
-File: pgfmoduleshapes.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgfnodeparttextbox=\box55
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex"
-File: pgfmoduleplot.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-)
-("C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty"
-Package: pgfcomp-version-0-65 2020/10/01 v3.1.6a (3.1.6a)
-\pgf@nodesepstart=\dimen191
-\pgf@nodesepend=\dimen192
-) ("C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.st
-y"
-Package: pgfcomp-version-1-18 2020/10/01 v3.1.6a (3.1.6a)
-)) ("C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgffor.sty"
-("C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty"
-("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex"))
-("C:\Program Files\MiKTeX\tex/latex/pgf/math\pgfmath.sty"
-("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex"))
-("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex"
-Package: pgffor 2020/10/01 v3.1.6a (3.1.6a)
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex")
-\pgffor@iter=\dimen193
-\pgffor@skip=\dimen194
-\pgffor@stack=\toks35
-\pgffor@toks=\toks36
-))
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex"
-Package: tikz 2020/10/01 v3.1.6a (3.1.6a)
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code
-.tex"
-File: pgflibraryplothandlers.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgf@plot@mark@count=\count298
-\pgfplotmarksize=\dimen195
-)
-\tikz@lastx=\dimen196
-\tikz@lasty=\dimen197
-\tikz@lastxsaved=\dimen198
-\tikz@lastysaved=\dimen199
-\tikz@lastmovetox=\dimen256
-\tikz@lastmovetoy=\dimen257
-\tikzleveldistance=\dimen258
-\tikzsiblingdistance=\dimen259
-\tikz@figbox=\box56
-\tikz@figbox@bg=\box57
-\tikz@tempbox=\box58
-\tikz@tempbox@bg=\box59
-\tikztreelevel=\count299
-\tikznumberofchildren=\count300
-\tikznumberofcurrentchild=\count301
-\tikz@fig@count=\count302
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex"
-File: pgfmodulematrix.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgfmatrixcurrentrow=\count303
-\pgfmatrixcurrentcolumn=\count304
-\pgf@matrix@numberofcolumns=\count305
-)
-\tikz@expandcount=\count306
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-arytopaths.code.tex"
-File: tikzlibrarytopaths.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-))) ("C:\Program Files\MiKTeX\tex/latex/base\ifthen.sty"
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-("C:\Program Files\MiKTeX\tex/latex/tools\calc.sty"
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count307
-\calc@Bcount=\count308
-\calc@Adimen=\dimen260
-\calc@Bdimen=\dimen261
-\calc@Askip=\skip64
-\calc@Bskip=\skip65
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count309
-\calc@Cskip=\skip66
-)
-("C:\Program Files\MiKTeX\tex/latex/pgfopts\pgfopts.sty"
-Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
-\pgfopts@list@add@a@toks=\toks37
-\pgfopts@list@add@b@toks=\toks38
-) (tikz-uml.sty
-Package: tikz-uml 2011/01/26
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-arybackgrounds.code.tex"
-File: tikzlibrarybackgrounds.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgf@layerbox@background=\box60
-\pgf@layerboxsaved@background=\box61
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-aryarrows.code.tex"
-File: tikzlibraryarrows.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.code.tex"
-File: pgflibraryarrows.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\arrowsize=\dimen262
-))
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-aryshapes.code.tex"
-File: tikzlibraryshapes.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-aryshapes.geometric.code.tex"
-File: tikzlibraryshapes.geometric.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.geo
-metric.code.tex"
-File: pgflibraryshapes.geometric.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-))
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-aryshapes.misc.code.tex"
-File: tikzlibraryshapes.misc.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.mis
-c.code.tex"
-File: pgflibraryshapes.misc.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-))
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-aryshapes.symbols.code.tex"
-File: tikzlibraryshapes.symbols.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.sym
-bols.code.tex"
-File: pgflibraryshapes.symbols.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-))
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-aryshapes.arrows.code.tex"
-File: tikzlibraryshapes.arrows.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.arr
-ows.code.tex"
-File: pgflibraryshapes.arrows.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-))
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-aryshapes.callouts.code.tex"
-("C:\Program Files\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.cal
-louts.code.tex"))
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-aryshapes.multipart.code.tex"
-File: tikzlibraryshapes.multipart.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.mul
-tipart.code.tex"
-File: pgflibraryshapes.multipart.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-\pgfnodepartlowerbox=\box62
-\pgfnodeparttwobox=\box63
-\pgfnodepartthreebox=\box64
-\pgfnodepartfourbox=\box65
-\pgfnodeparttwentybox=\box66
-\pgfnodepartnineteenbox=\box67
-\pgfnodeparteighteenbox=\box68
-\pgfnodepartseventeenbox=\box69
-\pgfnodepartsixteenbox=\box70
-\pgfnodepartfifteenbox=\box71
-\pgfnodepartfourteenbox=\box72
-\pgfnodepartthirteenbox=\box73
-\pgfnodeparttwelvebox=\box74
-\pgfnodepartelevenbox=\box75
-\pgfnodeparttenbox=\box76
-\pgfnodepartninebox=\box77
-\pgfnodeparteightbox=\box78
-\pgfnodepartsevenbox=\box79
-\pgfnodepartsixbox=\box80
-\pgfnodepartfivebox=\box81
-)))
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-aryfit.code.tex"
-File: tikzlibraryfit.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-aryshadows.code.tex"
-File: tikzlibraryshadows.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-aryfadings.code.tex"
-File: tikzlibraryfadings.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryfadings.code.tex"
-File: pgflibraryfadings.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-)))
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-arydecorations.markings.code.tex"
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-arydecorations.code.tex"
-("C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduledecorations.code.tex
-"
-\pgfdecoratedcompleteddistance=\dimen263
-\pgfdecoratedremainingdistance=\dimen264
-\pgfdecoratedinputsegmentcompleteddistance=\dimen265
-\pgfdecoratedinputsegmentremainingdistance=\dimen266
-\pgf@decorate@distancetomove=\dimen267
-\pgf@decorate@repeatstate=\count310
-\pgfdecorationsegmentamplitude=\dimen268
-\pgfdecorationsegmentlength=\dimen269
-)
-\tikz@lib@dec@box=\box82
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecor
-ations.markings.code.tex"))
-\c@tikzumlPackageLayers=\count311
-\pgf@layerbox@package0=\box83
-\pgf@layerboxsaved@package0=\box84
-\pgf@layerbox@package1=\box85
-\pgf@layerboxsaved@package1=\box86
-\pgf@layerbox@package2=\box87
-\pgf@layerboxsaved@package2=\box88
-\pgf@layerbox@package3=\box89
-\pgf@layerboxsaved@package3=\box90
-\c@tikzumlFragmentLayers=\count312
-\pgf@layerbox@fragment0=\box91
-\pgf@layerboxsaved@fragment0=\box92
-\pgf@layerbox@fragment1=\box93
-\pgf@layerboxsaved@fragment1=\box94
-\pgf@layerbox@fragment2=\box95
-\pgf@layerboxsaved@fragment2=\box96
-\pgf@layerbox@fragment3=\box97
-\pgf@layerboxsaved@fragment3=\box98
-\c@tikzumlStateLayers=\count313
-\pgf@layerbox@state0=\box99
-\pgf@layerboxsaved@state0=\box100
-\pgf@layerbox@state1=\box101
-\pgf@layerboxsaved@state1=\box102
-\pgf@layerbox@state2=\box103
-\pgf@layerboxsaved@state2=\box104
-\pgf@layerbox@state3=\box105
-\pgf@layerboxsaved@state3=\box106
-\c@tikzumlComponentLayers=\count314
-\pgf@layerbox@component0=\box107
-\pgf@layerboxsaved@component0=\box108
-\pgf@layerbox@component1=\box109
-\pgf@layerboxsaved@component1=\box110
-\pgf@layerbox@component2=\box111
-\pgf@layerboxsaved@component2=\box112
-\pgf@layerbox@component3=\box113
-\pgf@layerboxsaved@component3=\box114
-\pgf@layerbox@lifelines=\box115
-\pgf@layerboxsaved@lifelines=\box116
-\pgf@layerbox@activity=\box117
-\pgf@layerboxsaved@activity=\box118
-\pgf@layerbox@connections=\box119
-\pgf@layerboxsaved@connections=\box120
-\c@tikzumlPackageClassNum=\count315
-\c@tikzumlPackageSubPackageNum=\count316
-\c@tikzumlRelationNum=\count317
-\c@tikzumlNoteNum=\count318
-\c@pos=\count319
-\c@posT=\count320
-\c@posStereo=\count321
-\c@tikzumlPackageLevel=\count322
-\tikzumlNestingSymbolSize=\dimen270
-\c@tikzumlSystemUseCaseNum=\count323
-\c@tikzumlSystemLevel=\count324
-\c@tikzumlUseCaseNum=\count325
-\c@tikzumlActorNum=\count326
-\c@tikzumlStateJoinNum=\count327
-\c@tikzumlStateDecisionNum=\count328
-\c@tikzumlStateInitialNum=\count329
-\c@tikzumlStateFinalNum=\count330
-\c@tikzumlStateEnterNum=\count331
-\c@tikzumlStateExitNum=\count332
-\c@tikzumlStateEndNum=\count333
-\c@tikzumlStateHistoryNum=\count334
-\c@tikzumlStateDeepHistoryNum=\count335
-\c@tikzumlStateLevel=\count336
-\c@tikzumlStateSubStateNum=\count337
-\c@tikzumlStateText=\count338
-\c@tikzumlObjectNum=\count339
-\c@tikzumlCallLevel=\count340
-\c@tikzumlCallNum=\count341
-\c@tikzumlFragmentLevel=\count342
-\c@tikzumlFragmentLevelNum=\count343
-\c@tikzumlFragmentNum=\count344
-\c@tikzumlFragmentPartNum=\count345
-\c@tikzumlCallStartFragmentNum=\count346
-\c@tikzumlCallEndFragmentNum=\count347
-\c@tikzumlSDNodeNum=\count348
-\tikzumlCall@xa=\skip67
-\tikzumlCall@xb=\skip68
-\c@tikzumlComponentLevel=\count349
-\c@tikzumlComponentSubComponentNum=\count350
-\c@tikzumlConnectorNum=\count351
-\tikzuml@AC@xa=\skip69
-\tikzuml@AC@ya=\skip70
-\tikzuml@AC@xb=\skip71
-\tikzuml@AC@yb=\skip72
-\tikzuml@AC@xi=\skip73
-\tikzuml@AC@yi=\skip74
-\tikzuml@AC@xic=\skip75
-\tikzuml@AC@yic=\skip76
-\tikzuml@AC@xio=\skip77
-\tikzuml@AC@yio=\skip78
-\tikzuml@AC@AB=\skip79
-\tikzuml@AC@lambda=\skip80
-\tikzuml@AC@xtrc=\skip81
-\tikzuml@AC@ytrc=\skip82
-\tikzuml@AC@xtlc=\skip83
-\tikzuml@AC@ytlc=\skip84
-\tikzuml@AC@xblc=\skip85
-\tikzuml@AC@yblc=\skip86
-\tikzuml@AC@xbrc=\skip87
-\tikzuml@AC@ybrc=\skip88
-\tikzuml@AC@middleArm=\skip89
-)
 ("C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -1019,34 +506,34 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ("C:\Program Files\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count352
+\c@section@level=\count286
 )
-\c@secautolabel=\count353
+\c@secautolabel=\count287
 
 ("C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def"
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count354
-\l__pdf_internal_box=\box121
+\l__kernel_color_stack_int=\count288
+\l__pdf_internal_box=\box49
 )
 (Dokumentation.aux)
 \openout1 = `Dokumentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1087,30 +574,38 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count355
-\scratchdimen=\dimen271
-\scratchbox=\box122
-\nofMPsegments=\count356
-\nofMParguments=\count357
-\everyMPshowfont=\toks39
-\MPscratchCnt=\count358
-\MPscratchDim=\dimen272
-\MPnumerator=\count359
-\makeMPintoPDFobject=\count360
-\everyMPtoPDFconversion=\toks40
+\scratchcounter=\count289
+\scratchdimen=\dimen154
+\scratchbox=\box50
+\nofMPsegments=\count290
+\nofMParguments=\count291
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count292
+\MPscratchDim=\dimen155
+\MPnumerator=\count293
+\makeMPintoPDFobject=\count294
+\everyMPtoPDFconversion=\toks26
 ) ("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-Package hyperref Info: Link coloring ON on input line 70.
-LaTeX Info: Redefining \ref on input line 70.
-LaTeX Info: Redefining \pageref on input line 70.
-LaTeX Info: Redefining \nameref on input line 70.
+("C:\Program Files\MiKTeX\tex/latex/graphics\color.sty"
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+
+("C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+Package hyperref Info: Link coloring ON on input line 73.
+LaTeX Info: Redefining \ref on input line 73.
+LaTeX Info: Redefining \pageref on input line 73.
+LaTeX Info: Redefining \nameref on input line 73.
 
 (Dokumentation.out) (Dokumentation.out)
-\@outlinefile=\write4
-\openout4 = `Dokumentation.out'.
+\@outlinefile=\write3
+\openout3 = `Dokumentation.out'.
 
 Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           Using `bookmark' together with `hyperref' is recommended,
@@ -1119,31 +614,31 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 70.
+(scrartcl)           before \begin{document} on input line 73.
 
 ("C:\Program Files\MiKTeX\tex/latex/bookmark\bookmark.sty"
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 
 ("C:\Program Files\MiKTeX\tex/latex/bookmark\bkm-pdftex.def"
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count361
+\BKM@id=\count295
 ))
-<./src/images//ihkLogo.png, id=30, 563.85657pt x 281.55188pt>
+<./src/images//ihkLogo.png, id=3, 563.85657pt x 281.55188pt>
 File: ./src/images//ihkLogo.png Graphic file (type png)
 <use ./src/images//ihkLogo.png>
-Package pdftex.def Info: ./src/images//ihkLogo.png  used on input line 95.
+Package pdftex.def Info: ./src/images//ihkLogo.png  used on input line 98.
 (pdftex.def)             Requested size: 140.96379pt x 70.38779pt.
 
 ("C:\Program Files\MiKTeX\tex/latex/ucs\uni-0.def"
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-<./src/images//argusLogo.png, id=31, 1061.46562pt x 164.11313pt>
+<./src/images//argusLogo.png, id=4, 1061.46562pt x 164.11313pt>
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 133.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 136.
 (pdftex.def)             Requested size: 265.36575pt x 41.02817pt.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-42.
+45.
 
 ("C:\Program Files\MiKTeX\tex/latex/psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -1152,7 +647,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 {C:/Users/Frank Loleit/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./src/im
 ages//ihkLogo.png> <./src/images//argusLogo.png>]
 LaTeX Font Info:    Trying to load font information for T1+phv on input line 16
-1.
+4.
  ("C:\Program Files\MiKTeX\tex/latex/psnfss\t1phv.fd"
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 ) (Dokumentation.toc
@@ -1167,203 +662,191 @@ File: ./src/images//argusLogo.png Graphic file (type png)
 Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 44.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [1])
-\tf@toc=\write5
-\openout5 = `Dokumentation.toc'.
+\tf@toc=\write4
+\openout4 = `Dokumentation.toc'.
 
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 166.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 169.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [2]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 173.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 176.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [3]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 180.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 183.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [4]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 180.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 183.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [5]
 
-LaTeX Warning: Hyper reference `acro:ADI' on page VI undefined on input line 18
-7.
+LaTeX Warning: Hyper reference `acro:ADI' on page VI undefined on input line 19
+0.
 
 
-LaTeX Warning: Hyper reference `acro:ADI' on page VI undefined on input line 18
-7.
+LaTeX Warning: Hyper reference `acro:ADI' on page VI undefined on input line 19
+0.
 
 
-LaTeX Warning: Hyper reference `acro:GUI' on page VI undefined on input line 18
-8.
+LaTeX Warning: Hyper reference `acro:GUI' on page VI undefined on input line 19
+1.
 
 
-LaTeX Warning: Hyper reference `acro:GUI' on page VI undefined on input line 18
-8.
-
-
-LaTeX Warning: Hyper reference `acro:XAML' on page VI undefined on input line 1
-89.
+LaTeX Warning: Hyper reference `acro:GUI' on page VI undefined on input line 19
+1.
 
 
 LaTeX Warning: Hyper reference `acro:XAML' on page VI undefined on input line 1
-89.
+92.
+
+
+LaTeX Warning: Hyper reference `acro:XAML' on page VI undefined on input line 1
+92.
 
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 193.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 196.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
 [6]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 197.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 200.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [7]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 223.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 226.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.223 
+l.226 
        [1]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 235.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 241.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [2]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 250.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 253.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [3]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 262.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 268.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [4]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 277.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 280.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [5]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 289.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 295.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [6]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 304.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 307.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [7]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 316.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 322.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [8]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 331.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 334.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [9]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 343.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 349.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [10]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 358.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 361.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [11]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 370.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 376.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [12]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 375.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 378.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [13]
+(Dokumentation.bbl)
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 380.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 388.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [14]pdfTeX warning (ext4): destination with the same identifier (name{section.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.395 \section{Anhang}
+l.403 \section{Anhang}
                       pdfTeX warning (ext4): destination with the same identifi
 er (name{subsection.2.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.396 \subsection{Detaillierte Zeitplanung}
+l.404 \subsection{Detaillierte Zeitplanung}
                                            pdfTeX warning (ext4): destination w
 ith the same identifier (name{subsection.2.2}) has been already used, duplicate
  ignored
 <to be read again> 
                    \relax 
-l.399 \subsection{Ressourcenplan}
+l.407 \subsection{Ressourcenplan}
                                  pdfTeX warning (ext4): destination with the sa
 me identifier (name{subsection.2.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.402 \subsection{Projektkosten Details}
+l.410 \subsection{Projektkosten Details}
                                         
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 407.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 415.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [1]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 413.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 421.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 419--420
-
- []
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 435.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 435.
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 475.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 490.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
-[3]
+ [3]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 487.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 500.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [4]
-File: ./src/images//argusLogo.png Graphic file (type png)
-<use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 491.
-(pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
- [5]
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     491.
+(LaTeX3)     500.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     491.
+(LaTeX3)     500.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     491.
+(LaTeX3)     500.
 
  (Dokumentation.aux)
 Package rerunfilecheck Info: File `Dokumentation.out' has not changed.
@@ -1374,20 +857,20 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 28438 strings out of 479799
- 607937 string characters out of 2879575
- 1168637 words of memory out of 3000000
- 44801 multiletter control sequences out of 15000+200000
- 572251 words of font info for 64 fonts, out of 3000000 for 9000
+ 12890 strings out of 479799
+ 243916 string characters out of 2879575
+ 752338 words of memory out of 3000000
+ 29552 multiletter control sequences out of 15000+200000
+ 572296 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 106i,24n,124p,10610b,1046s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 106i,24n,124p,10610b,732s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX
 /fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/t
 imes/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/P
 rogram Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Dokumentation.pdf (27 pages, 188992 bytes).
+Output written on Dokumentation.pdf (26 pages, 176756 bytes).
 PDF statistics:
- 583 PDF objects out of 1000 (max. 8388607)
- 110 named destinations out of 1000 (max. 500000)
- 735 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 553 PDF objects out of 1000 (max. 8388607)
+ 109 named destinations out of 1000 (max. 500000)
+ 627 words of extra memory for PDF output out of 10000 (max. 10000000)
 
