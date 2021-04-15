@@ -1,50 +1,19 @@
-This is BibTeX, Version 0.99d
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: Dokumentation.aux
-Reallocating 'name_of_file' (item size: 1) to 6 items.
-The style file: abbrv.bst
-Reallocating 'name_of_file' (item size: 1) to 10 items.
-Database file #1: literatur.bib
-Warning--empty publisher in Theis2014
-You've used 1 entry,
-            2118 wiz_defined-function locations,
-            502 strings with 3779 characters,
-and the built_in function-call counts, 236 in all, are:
-= -- 18
-> -- 7
-< -- 0
-+ -- 3
-- -- 2
-* -- 12
-:= -- 46
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 3
-chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 12
-empty$ -- 23
-format.name$ -- 2
-if$ -- 46
-int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 2
-newline$ -- 8
-num.names$ -- 2
-pop$ -- 9
-preamble$ -- 1
-purify$ -- 3
-quote$ -- 0
-skip$ -- 6
-stack$ -- 0
-substring$ -- 5
-swap$ -- 1
-text.length$ -- 0
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 2
-warning$ -- 1
-while$ -- 2
-width$ -- 2
-write$ -- 11
-(There was 1 warning)
+[0] Config.pm:312> INFO - This is Biber 2.15 (beta)
+[0] Config.pm:315> INFO - Logfile is 'Dokumentation.blg'
+[112] biber-MSWIN64:330> INFO - === 
+[130] Biber.pm:415> INFO - Reading 'Dokumentation.bcf'
+[233] Biber.pm:952> INFO - Found 4 citekeys in bib section 0
+[249] Biber.pm:4334> INFO - Processing section 0
+[263] Biber.pm:4523> INFO - Looking for bibtex format file 'literatur.bib' for section 0
+[271] bibtex.pm:1682> INFO - LaTeX decoding ...
+[282] bibtex.pm:1494> INFO - Found BibTeX data source 'literatur.bib'
+[319] Utils.pm:395> WARN - ISBN '378-3-540-77431-0' in entry 'GeraldTeschl2008' is invalid - run biber with '--validate_datamodel' for details.
+[323] Utils.pm:395> WARN - ISBN '378-3-243-63454-0' in entry 'Schrepel2011' is invalid - run biber with '--validate_datamodel' for details.
+[328] Utils.pm:395> WARN - ISBN '378-2-545-64589-0' in entry 'Weigel2015' is invalid - run biber with '--validate_datamodel' for details.
+[345] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[345] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[345] Biber.pm:4162> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[345] Biber.pm:4168> INFO - No sort tailoring available for locale 'de-DE'
+[349] bbl.pm:651> INFO - Writing 'Dokumentation.bbl' with encoding 'UTF-8'
+[351] bbl.pm:754> INFO - Output to Dokumentation.bbl
+[352] Biber.pm:128> INFO - WARNINGS: 3

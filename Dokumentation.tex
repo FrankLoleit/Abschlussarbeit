@@ -5,10 +5,10 @@
 
 
 \usepackage{geometry}
-\usepackage{ucs}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
 \usepackage{times}
 \usepackage{verbatim}
-\usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 \usepackage{graphicx}
@@ -21,6 +21,15 @@
 
 \usepackage{nameref}
 \usepackage{setspace}
+
+\usepackage[
+backend=biber,
+style=authortitle,
+citestyle=authoryear
+]{biblatex}
+
+\addbibresource{literatur.bib}
+
 \usepackage{hyperref}
 
 
@@ -223,16 +232,16 @@ Der Computer arbeitet dann wie von alleine und man muss kaum noch etwas machen\f
 
 \subsection{Projektziel}
 Ein wichtiges Ziel ist es, die \acs{GUI} so zu gestalten, dass am Ende keine Unstimmigkeiten mit dem 
-Webinterface auftreten. Die \acs{ADI} ist daher bemüht weitere Schritte einzuleiten. Man hat sich entschieden \acs{XAML} zu verwenden.
+Webinterface auftreten. Die \acs{ADI} ist daher bemüht weitere Schritte einzuleiten. Man hat sich entschieden \acs{XAML} zu verwenden. Auch Mathematisch ist dies wichtig\footnote{vgl. \cite{GeraldTeschl2008}}.
 
 \subsection{Projektumfeld}
-\blindtext
+Hier ist natürlich die Schach-KI entscheidend\footnote{vgl. \cite{Schrepel2011}}.
 
 \subsection{Projektbegründung}
 \blindtext\
 
 \subsection{Projektabgrenzung}
-\blindtext\
+Wichtig ist natürlich die logische Planung\footnote{vgl. \cite{Weigel2015}}.
 
 \section{Projektplanung}
 \blindtext\
@@ -389,9 +398,9 @@ Webinterface auftreten. Die \acs{ADI} ist daher bemüht weitere Schritte einzule
 \setcounter{secnumdepth}{0}
 \addcontentsline{toc}{section}{Literatur}
 
-\bibliographystyle{siam}
+\printbibliography
 
-\bibliography{literatur}
+
 
 \label{myLastPage}
 
