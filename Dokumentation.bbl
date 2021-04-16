@@ -18,7 +18,35 @@
 
 
 \refsection{0}
-  \datalist[entry]{nyt/global//global/global}
+  \datalist[entry]{nty/global//global/global}
+    \entry{GeraldTeschl2008}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=82e63e51b5285525dded060cc033485c}{%
+           family={Gerald\bibnamedelima Teschl},
+           familyi={G\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Susanne\bibnamedelima Teschl},
+           giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag Berlin Heidelberg}%
+      }
+      \strng{namehash}{82e63e51b5285525dded060cc033485c}
+      \strng{fullhash}{82e63e51b5285525dded060cc033485c}
+      \strng{bibnamehash}{82e63e51b5285525dded060cc033485c}
+      \strng{authorbibnamehash}{82e63e51b5285525dded060cc033485c}
+      \strng{authornamehash}{82e63e51b5285525dded060cc033485c}
+      \strng{authorfullhash}{82e63e51b5285525dded060cc033485c}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{378-3-540-77431-0}
+      \field{title}{Mathematik für Informatiker - Band 1 diskrete Mathematik und Lineare Algebra}
+      \field{year}{2008}
+    \endentry
     \entry{Schrepel2011}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=e1db39995fc2bf59289670bf7a79f424}{%
@@ -74,40 +102,6 @@
       \field{isbn}{378-2-545-64589-0}
       \field{title}{Schach in der fünften Dimension kodieren}
       \field{year}{2015}
-    \endentry
-    \entry{GeraldTeschl2008}{book}{}
-      \name{author}{2}{}{%
-        {{un=1,uniquepart=given,hash=bfd95d4a44a527a2547850d8c4728e5d}{%
-           family={Teschl},
-           familyi={T\bibinitperiod},
-           given={Gerald},
-           giveni={G\bibinitperiod},
-           givenun=1}}%
-        {{un=1,uniquepart=given,hash=71b8ca49f3c02b6780508c1cee2d647e}{%
-           family={Teschl},
-           familyi={T\bibinitperiod},
-           given={Susanne},
-           giveni={S\bibinitperiod},
-           givenun=1}}%
-      }
-      \list{publisher}{1}{%
-        {Springer-Verlag Berlin Heidelberg}%
-      }
-      \strng{namehash}{937d1ce79c8ccbf038305c3ab206ade6}
-      \strng{fullhash}{937d1ce79c8ccbf038305c3ab206ade6}
-      \strng{bibnamehash}{937d1ce79c8ccbf038305c3ab206ade6}
-      \strng{authorbibnamehash}{937d1ce79c8ccbf038305c3ab206ade6}
-      \strng{authornamehash}{937d1ce79c8ccbf038305c3ab206ade6}
-      \strng{authorfullhash}{937d1ce79c8ccbf038305c3ab206ade6}
-      \field{sortinit}{T}
-      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{378-3-540-77431-0}
-      \field{title}{Mathematik für Informatiker - Band 1 diskrete Mathematik und Lineare Algebra}
-      \field{year}{2008}
     \endentry
     \entry{Theis2014}{book}{}
       \name{author}{1}{}{%
