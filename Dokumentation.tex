@@ -23,11 +23,19 @@ citestyle=authoryear
 
 \addbibresource{literatur.bib}
 
+\usepackage{tikz,ifthen,xstring,calc,pgfkeys,pgfopts}
+\usepackage{tikz-uml}
+\usetikzlibrary{external}
+\tikzexternalize[prefix=figures/] % activate and define figures/ as cache folder
+
 \usepackage{hyperref}
 \usepackage[printonlyused, withpage]{acronym}
 
-%\usepackage{relsize}
-%\usepackage{apacite}
+%%%%%%%%%%%%%%%%%% Compile optimization - Kill for release!!!%%%%%%%%%%%%%%
+% Kill draft in Dokumentclass!!!
+%\pdfcompresslevel=0
+%\pdfobjcompresslevel=0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \hypersetup{
     colorlinks=true,
@@ -38,8 +46,7 @@ citestyle=authoryear
     citecolor=blue
 }
 
-\usepackage{tikz,ifthen,xstring,calc,pgfkeys,pgfopts}
-\usepackage{tikz-uml}
+
 
 %%%%%%%%%%%%%% Set line Spacing for Abbreviation %%%%%%%%%%%%%%%%%%
 %\renewenvironment{description}
@@ -242,6 +249,7 @@ Aber auch die IT-Systeme spielen eine Rolle\footnote{vgl. \cite{Gettner2015}}.
 \blindtext\
 
 \subsection{Projektphasen}
+\blindtext\
 \blindtext\
 
 \subsection{Ressourcenplanung}
@@ -490,7 +498,7 @@ Dies ist ein Beispiel für ein UML-Klassendiagramm:\\
 		\umlnote{Person}{Dies ist offensichtlich eine Klasse}		
 		\umlinherit[geometry=|-]{Erwachsener}{Person}
 		\umlinherit[geometry=-|]{Kind}{Person}
-		\umldep[very thick, arg1=0..*, arg2=1..*, pos1=0.05, pos2=0.50,anchor1=-20, anchor2=-20]{Kind}{Erwachsener}
+		\umldep[very thick, arg1=0..*, arg2=1..*, pos1=0.05, pos2=0.52,anchor1=-20, anchor2=-20]{Kind}{Erwachsener}
 
 	
 \end{tikzpicture}

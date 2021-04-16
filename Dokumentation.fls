@@ -666,37 +666,6 @@ INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\cbx\authoryear.cbx
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\biblatex.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\biblatex.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\biblatex.cfg
-INPUT C:\Program Files\MiKTeX\tex\latex\acronym\acronym.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\acronym\acronym.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\acronym\acronym.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\acronym\acronym.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\acronym\acronym.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\acronym\acronym.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\acronym\acronym.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\acronym\acronym.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\acronym\acronym.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\acronym\acronym.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\bigfoot\suffix.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\bigfoot\suffix.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\bigfoot\suffix.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\bigfoot\suffix.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\bigfoot\suffix.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\bigfoot\suffix.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\bigfoot\suffix.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\bigfoot\suffix.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\bigfoot\suffix.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\bigfoot\suffix.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
-INPUT C:\Program Files\MiKTeX\tex\generic\xstring\xstring.tex
 INPUT C:\Program Files\MiKTeX\tex\latex\pgf\frontendlayer\tikz.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\pgf\frontendlayer\tikz.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\pgf\frontendlayer\tikz.sty
@@ -898,6 +867,17 @@ INPUT C:\Program Files\MiKTeX\tex\generic\pgf\libraries\pgflibraryplothandlers.c
 INPUT C:\Program Files\MiKTeX\tex\generic\pgf\modules\pgfmodulematrix.code.tex
 INPUT C:\Program Files\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths.code.tex
 INPUT C:\Program Files\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths.code.tex
+INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\xstring\xstring.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\xstring\xstring.tex
 INPUT C:\Program Files\MiKTeX\tex\latex\tools\calc.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\tools\calc.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\tools\calc.sty
@@ -976,6 +956,31 @@ INPUT C:\Program Files\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzl
 INPUT C:\Program Files\MiKTeX\tex\generic\pgf\modules\pgfmoduledecorations.code.tex
 INPUT C:\Program Files\MiKTeX\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.markings.code.tex
 INPUT C:\Program Files\MiKTeX\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.markings.code.tex
+INPUT C:\Program Files\MiKTeX\tex\latex\pgf\frontendlayer\libraries\tikzlibraryexternal.code.tex
+INPUT C:\Program Files\MiKTeX\tex\latex\pgf\frontendlayer\libraries\tikzlibraryexternal.code.tex
+INPUT C:\Program Files\MiKTeX\tex\latex\atveryend\atveryend.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzexternalshared.code.tex
+OUTPUT c:\Abschlussarbeit\Dokumentation.auxlock
+INPUT C:\Program Files\MiKTeX\tex\latex\acronym\acronym.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\acronym\acronym.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\acronym\acronym.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\acronym\acronym.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\acronym\acronym.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\acronym\acronym.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\acronym\acronym.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\acronym\acronym.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\acronym\acronym.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\acronym\acronym.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\bigfoot\suffix.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\bigfoot\suffix.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\bigfoot\suffix.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\bigfoot\suffix.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\bigfoot\suffix.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\bigfoot\suffix.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\bigfoot\suffix.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\bigfoot\suffix.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\bigfoot\suffix.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\bigfoot\suffix.sty
 INPUT c:\Abschlussarbeit\Dokumentation.aux
 INPUT c:\Abschlussarbeit\Dokumentation.aux
 INPUT c:\Abschlussarbeit\Dokumentation.aux
@@ -994,16 +999,16 @@ INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
-INPUT c:\Abschlussarbeit\Dokumentation.out
-INPUT c:\Abschlussarbeit\Dokumentation.out
-INPUT c:\Abschlussarbeit\Dokumentation.out
-INPUT c:\Abschlussarbeit\Dokumentation.out
-INPUT c:\Abschlussarbeit\Dokumentation.out
-INPUT c:\Abschlussarbeit\Dokumentation.out
-INPUT c:\Abschlussarbeit\Dokumentation.out
-INPUT c:\Abschlussarbeit\Dokumentation.out
-INPUT c:\Abschlussarbeit\Dokumentation.out
-INPUT c:\Abschlussarbeit\Dokumentation.out
+INPUT C:\Program Files\MiKTeX\tex\latex\grfext\grfext.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\grfext\grfext.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\grfext\grfext.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\grfext\grfext.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\grfext\grfext.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\grfext\grfext.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\grfext\grfext.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\grfext\grfext.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\grfext\grfext.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\grfext\grfext.sty
 OUTPUT c:\Abschlussarbeit\Dokumentation.out
 INPUT C:\Program Files\MiKTeX\tex\latex\bookmark\bookmark.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\bookmark\bookmark.sty
@@ -1029,12 +1034,6 @@ INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\german.lbx
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\german.lbx
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\german.lbx
 OUTPUT c:\Abschlussarbeit\Dokumentation.bcf
-INPUT c:\Abschlussarbeit\Dokumentation.bbl
-INPUT c:\Abschlussarbeit\Dokumentation.bbl
-INPUT c:\Abschlussarbeit\Dokumentation.bbl
-INPUT c:\Abschlussarbeit\Dokumentation.bbl
-INPUT c:\Abschlussarbeit\Dokumentation.bbl
-INPUT c:\Abschlussarbeit\Dokumentation.bbl
 INPUT .\src\images\\ihkLogo.png
 INPUT src\images\\ihkLogo.png
 INPUT .\src\images\\ihkLogo.png
@@ -1071,9 +1070,10 @@ INPUT C:\Program Files\MiKTeX\tex\latex\psnfss\t1phv.fd
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
-INPUT c:\Abschlussarbeit\Dokumentation.toc
-INPUT c:\Abschlussarbeit\Dokumentation.toc
-INPUT c:\Abschlussarbeit\Dokumentation.toc
+OUTPUT c:\Abschlussarbeit\Dokumentation.toc
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
@@ -1082,30 +1082,19 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8t.tfm
 INPUT .\src\images\\argusLogo.png
 INPUT src\images\\argusLogo.png
 INPUT .\src\images\\argusLogo.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8c.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmri8t.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8c.vf
-OUTPUT c:\Abschlussarbeit\Dokumentation.toc
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT c:\Abschlussarbeit\Dokumentation.lof
-INPUT c:\Abschlussarbeit\Dokumentation.lof
-INPUT c:\Abschlussarbeit\Dokumentation.lof
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
 OUTPUT c:\Abschlussarbeit\Dokumentation.lof
 INPUT .\src\images\\argusLogo.png
 INPUT src\images\\argusLogo.png
@@ -1120,8 +1109,6 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
 INPUT .\src\images\\argusLogo.png
 INPUT src\images\\argusLogo.png
 INPUT .\src\images\\argusLogo.png
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
 INPUT .\src\images\\argusLogo.png
 INPUT src\images\\argusLogo.png
 INPUT .\src\images\\argusLogo.png
@@ -1132,6 +1119,7 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr9.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi9.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy9.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
 INPUT .\src\images\\argusLogo.png
 INPUT src\images\\argusLogo.png
 INPUT .\src\images\\argusLogo.png
@@ -1139,67 +1127,67 @@ INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8t.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmrc8t.tfm
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmri8t.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmrc8t.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
+INPUT .\src\images\\argusLogo.png
+INPUT src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
+INPUT .\src\images\\argusLogo.png
+INPUT src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
+INPUT c:\Abschlussarbeit\figures\Dokumentation-figure0.md5
+OUTPUT c:\Abschlussarbeit\Dokumentation.auxlock
+OUTPUT c:\Abschlussarbeit\Dokumentation.auxlock
+INPUT .\src\images\\argusLogo.png
+INPUT src\images\\argusLogo.png
+INPUT .\src\images\\argusLogo.png
 INPUT .\src\images\\argusLogo.png
 INPUT src\images\\argusLogo.png
 INPUT .\src\images\\argusLogo.png
@@ -1215,5 +1203,3 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmb8a.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmb8a.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmr8a.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmr8a.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmri8a.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmri8a.pfb
