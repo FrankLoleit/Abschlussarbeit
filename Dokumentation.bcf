@@ -2352,6 +2352,7 @@
     <bcf:citekey order="2">GeraldTeschl2008</bcf:citekey>
     <bcf:citekey order="3">Schrepel2011</bcf:citekey>
     <bcf:citekey order="4">Weigel2015</bcf:citekey>
+    <bcf:citekey order="5">Gettner2015</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

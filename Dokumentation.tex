@@ -1,9 +1,6 @@
 \documentclass[11pt,toc=sectionentrywithoutdots, headheight=44pt, headings=optiontoheadandtoc, hyperfootnotes=false]{scrartcl}
 
 %Packages
-
-
-
 \usepackage{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{csquotes}
@@ -14,11 +11,7 @@
 \usepackage{graphicx}
 \usepackage[headsepline]{scrlayer-scrpage}
 \usepackage{blindtext}
-
 \usepackage{footnotebackref}
-
-
-
 \usepackage{nameref}
 \usepackage{setspace}
 
@@ -33,7 +26,6 @@ citestyle=authoryear
 \usepackage{hyperref}
 \usepackage[printonlyused, withpage]{acronym}
 
-
 %\usepackage{relsize}
 %\usepackage{apacite}
 
@@ -46,8 +38,8 @@ citestyle=authoryear
     citecolor=blue
 }
 
-%\usepackage{tikz,ifthen,xstring,calc,pgfkeys,pgfopts}
-%\usepackage{tikz-uml}
+\usepackage{tikz,ifthen,xstring,calc,pgfkeys,pgfopts}
+\usepackage{tikz-uml}
 
 %%%%%%%%%%%%%% Set line Spacing for Abbreviation %%%%%%%%%%%%%%%%%%
 %\renewenvironment{description}
@@ -187,8 +179,9 @@ Gneisenaustr. 66\linebreak
 \setcounter{secnumdepth}{0}
 
 \newpage
-\section{Abbildungsverzeichnis}
-\blindtext
+
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\listoffigures
 
 
 
@@ -242,7 +235,8 @@ Hier ist natürlich die Schach-KI entscheidend\footnote{vgl. \cite{Schrepel2011}
 \blindtext\
 
 \subsection{Projektabgrenzung}
-Wichtig ist natürlich die logische Planung\footnote{vgl. \cite{Weigel2015}}.
+Wichtig ist natürlich die logische Planung\footnote{vgl. \cite{Weigel2015}}.%
+Aber auch die IT-Systeme spielen eine Rolle\footnote{vgl. \cite{Gettner2015}}.
 
 \section{Projektplanung}
 \blindtext\
@@ -440,13 +434,15 @@ Wichtig ist natürlich die logische Planung\footnote{vgl. \cite{Weigel2015}}.
 \blindtext\blindtext
 
 \subsection{Sequenzdiagramm}
-\blindtext\blindtext
-
+\blindtext
+\clearpage
 
 \subsection{Klassendiagramm}
-\begin{comment}
+
 Dies ist ein Beispiel für ein UML-Klassendiagramm:\\
 
+\begin{figure}[ht]
+\centering
 \begin{tikzpicture}
 
 	\umlclass[x=5, y= 0]{Person}	
@@ -494,11 +490,16 @@ Dies ist ein Beispiel für ein UML-Klassendiagramm:\\
 		\umlnote{Person}{Dies ist offensichtlich eine Klasse}		
 		\umlinherit[geometry=|-]{Erwachsener}{Person}
 		\umlinherit[geometry=-|]{Kind}{Person}
-		\umldep[very thick, arg1=0..*, arg2=1..*, pos1=0.05, pos2=0.48,anchor1=-20, anchor2=-20]{Kind}{Erwachsener}
+		\umldep[very thick, arg1=0..*, arg2=1..*, pos1=0.05, pos2=0.50,anchor1=-20, anchor2=-20]{Kind}{Erwachsener}
 
+	
 \end{tikzpicture}
 
-\end{comment}
+\caption{Klassendiagramm}
+\label{fig:Klassendiagramm}
+	
+\end{figure}
+
 \subsection{Pflichtenheft (Auszug)}
 \blindtext
 
