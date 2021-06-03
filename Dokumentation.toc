@@ -43,7 +43,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.2.3}Kostenberechnung}{3}{subsubsection.3.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.4}Zusammenstellen des Kostenplans}{4}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.4}Zusammenstellen des Kostenplans}{3}{subsubsection.3.2.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.2.5}Nicht-monetäre Vorteile}{4}{subsubsection.3.2.5}%
 \defcounter {refsection}{0}\relax 
@@ -61,7 +61,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}Entwurfsphase}{5}{section.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Zielplattform}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.1}Zielplattform}{5}{subsection.4.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2}Architekturdesign}{6}{subsection.4.2}%
 \defcounter {refsection}{0}\relax 
@@ -79,7 +79,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.5}Roundtrip Engineering}{7}{subsection.4.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6}Pflichtenheft}{8}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.6}Pflichtenheft}{7}{subsection.4.6}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5}Implementierung}{8}{section.5}%
 \defcounter {refsection}{0}\relax 
@@ -97,7 +97,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.1}Systemtest}{9}{subsection.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Tests gegen das System}{10}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.2}Tests gegen das System}{9}{subsection.6.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.3}Testprotokolle}{10}{subsection.6.3}%
 \defcounter {refsection}{0}\relax 
@@ -115,7 +115,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {9}Fazit}{11}{section.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1}Im Laufe des Projektes gewonnene Erkenntnisse}{12}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.1}Im Laufe des Projektes gewonnene Erkenntnisse}{11}{subsection.9.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {9.2}Ausblick}{12}{subsection.9.2}%
 \defcounter {refsection}{0}\relax 

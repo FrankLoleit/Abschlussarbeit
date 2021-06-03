@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.16)  3 JUN 2021 14:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.16)  3 JUN 2021 16:47
 entering extended mode
 **c:/Abschlussarbeit/Dokumentation.tex
 (c:/Abschlussarbeit/Dokumentation.tex
@@ -1273,16 +1273,16 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 231.
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 254.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 255.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.254 
-       [1]
+l.255 \subsection
+                 {Ressourcenplanung} [1]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 266.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 269.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [2]
 File: ./src/images//argusLogo.png Graphic file (type png)
@@ -1292,7 +1292,7 @@ Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 281.
  [3]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 293.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 296.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [4]
 File: ./src/images//argusLogo.png Graphic file (type png)
@@ -1302,7 +1302,7 @@ Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 308.
  [5]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 320.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 323.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [6]
 File: ./src/images//argusLogo.png Graphic file (type png)
@@ -1312,7 +1312,7 @@ Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 335.
  [7]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 347.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 350.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [8]
 File: ./src/images//argusLogo.png Graphic file (type png)
@@ -1322,7 +1322,7 @@ Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 362.
  [9]
 File: ./src/images//argusLogo.png Graphic file (type png)
 <use ./src/images//argusLogo.png>
-Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 374.
+Package pdftex.def Info: ./src/images//argusLogo.png  used on input line 377.
 (pdftex.def)             Requested size: 132.68288pt x 20.51408pt.
  [10]
 File: ./src/images//argusLogo.png Graphic file (type png)
@@ -1401,13 +1401,13 @@ Package logreq Info: Writing requests to 'Dokumentation.run.xml'.
 Here is how much of TeX's memory you used:
  35353 strings out of 479799
  749603 string characters out of 2879575
- 1729191 words of memory out of 3000000
+ 1729190 words of memory out of 3000000
  51618 multiletter control sequences out of 15000+200000
  586590 words of font info for 75 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  106i,24n,124p,10627b,2261s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Abschlussarbeit\Dokumentation.pdf (26 pages, 195374 bytes).
+Output written on c:/Abschlussarbeit\Dokumentation.pdf (26 pages, 195434 bytes).
 PDF statistics:
  607 PDF objects out of 1000 (max. 8388607)
  119 named destinations out of 1000 (max. 500000)
