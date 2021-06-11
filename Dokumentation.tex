@@ -1,4 +1,4 @@
-\documentclass[11pt,toc=sectionentrywithoutdots, headheight=44pt, headings=optiontoheadandtoc, hyperfootnotes=false]{scrartcl}
+\documentclass[draft, 11pt,toc=sectionentrywithoutdots, headheight=44pt, headings=optiontoheadandtoc, hyperfootnotes=false]{scrartcl}
 
 %Packages
 \usepackage{geometry}
@@ -23,10 +23,10 @@ citestyle=authoryear
 
 \addbibresource{literatur.bib}
 
-\usepackage{tikz,ifthen,xstring,calc,pgfkeys,pgfopts}
-\usepackage{tikz-uml}
-\usetikzlibrary{external}
-\tikzexternalize[prefix=figures/] % activate and define figures/ as cache folder
+% \usepackage{tikz,ifthen,xstring,calc,pgfkeys,pgfopts}
+% \usepackage{tikz-uml}
+% \usetikzlibrary{external}
+% \tikzexternalize[prefix=figures/] % activate and define figures/ as cache folder
 
 \usepackage{hyperref}
 \usepackage[printonlyused, withpage]{acronym}
@@ -197,6 +197,7 @@ Gneisenaustr. 66\linebreak
 
 \addcontentsline{toc}{section}{Tabellenverzeichnis}
 \listoftables
+\newpage
 
 \section{Listings}
 \blindtext\blindtext\blindtext
@@ -473,67 +474,67 @@ Die gesamte Stundenanzahl wurde wie folgt aufgeteilt:
 
 Dies ist ein Beispiel für ein UML-Klassendiagramm:\\
 
-\begin{figure}[ht]
-\centering
-\begin{tikzpicture}
+% \begin{figure}[ht]
+% \centering
+% \begin{tikzpicture}
 
-	\umlclass[x=5, y= 0]{Person}	
-		{
-			- vorerkrankungen : String\\
-			- religion : string\\
-			+ alter : int\\
-			+ name : String\\
-			+ geschlecht : String\\
+% 	\umlclass[x=5, y= 0]{Person}	
+% 		{
+% 			- vorerkrankungen : String\\
+% 			- religion : string\\
+% 			+ alter : int\\
+% 			+ name : String\\
+% 			+ geschlecht : String\\
 			
-		}
-		{
-			+ halloSagen() : void		\\	
-			+ freundlichLaecheln() : void		\\	
-		}
+% 		}
+% 		{
+% 			+ halloSagen() : void		\\	
+% 			+ freundlichLaecheln() : void		\\	
+% 		}
 		
 		
-	\umlclass[x=0, y= -6]{Kind}	
-		{
-			- kinderGarten: String\\
-			+ hobbys : String \\
-			+ magNutella : bool \\
-		}
-		{
-			- inDieSchuleGehen() : void	\\
-			- dreiradFahren() : void\\
-			+ getKindergarten() : String\\
+% 	\umlclass[x=0, y= -6]{Kind}	
+% 		{
+% 			- kinderGarten: String\\
+% 			+ hobbys : String \\
+% 			+ magNutella : bool \\
+% 		}
+% 		{
+% 			- inDieSchuleGehen() : void	\\
+% 			- dreiradFahren() : void\\
+% 			+ getKindergarten() : String\\
 			
-		}	
+% 		}	
 		
 		
-	\umlclass[x=10, y= -6]{Erwachsener}	
-		{
-			- beruf: String\\
-			- kontostand : double\\
-			+ hatKinder : bool\\
-		}
-		{
-			- zurArbeitGehen() : void	\\
-			- autoFahren() : void\\
-			+ getBeruf() : String\\
+% 	\umlclass[x=10, y= -6]{Erwachsener}	
+% 		{
+% 			- beruf: String\\
+% 			- kontostand : double\\
+% 			+ hatKinder : bool\\
+% 		}
+% 		{
+% 			- zurArbeitGehen() : void	\\
+% 			- autoFahren() : void\\
+% 			+ getBeruf() : String\\
 			
-		}
+% 		}
 		
-		\umlnote{Person}{Dies ist offensichtlich eine Klasse}		
-		\umlinherit[geometry=|-]{Erwachsener}{Person}
-		\umlinherit[geometry=-|]{Kind}{Person}
-		\umldep[very thick, arg1=0..*, arg2=1..*, pos1=0.05, pos2=0.52,anchor1=-20, anchor2=-20]{Kind}{Erwachsener}
+% 		\umlnote{Person}{Dies ist offensichtlich eine Klasse}		
+% 		\umlinherit[geometry=|-]{Erwachsener}{Person}
+% 		\umlinherit[geometry=-|]{Kind}{Person}
+% 		\umldep[very thick, arg1=0..*, arg2=1..*, pos1=0.05, pos2=0.52,anchor1=-20, anchor2=-20]{Kind}{Erwachsener}
 
 	
-\end{tikzpicture}
+% \end{tikzpicture}
 
-\caption{Klassendiagramm}
-\label{fig:Klassendiagramm}
+% \caption{Klassendiagramm}
+% \label{fig:Klassendiagramm}
 	
-\end{figure}
+% \end{figure}
 
 \subsection{Pflichtenheft (Auszug)}
-\blindtext
+Dies ist ein bisschen Text
 
 \subsection{Laufzeitdiagnose}
 \blindtext
