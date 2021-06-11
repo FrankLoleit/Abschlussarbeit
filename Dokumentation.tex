@@ -195,8 +195,8 @@ Gneisenaustr. 66\linebreak
 
 \newpage
 
-\section{Tabellenverzeichnis}
-\blindtext\blindtext\blindtext
+\addcontentsline{toc}{section}{Tabellenverzeichnis}
+\listoftables
 
 \section{Listings}
 \blindtext\blindtext\blindtext
@@ -250,7 +250,31 @@ Aber auch die IT-Systeme spielen eine Rolle\footnote{vgl. \cite{Gettner2015}}.
 Eine sinnvolle Planung für das Projekt ist natürlich wichtig. Aber man sollte es auch nicht übertreiben.
 
 \subsection{Projektphasen}
-Hier entstehen die Projektphasen.
+Das Projekt wurde in einem Zeitraum von 70 Stunden umgesetzt. 
+Die gesamte Stundenanzahl wurde wie folgt aufgeteilt:
+
+
+\begin{table}[ht]
+	\begin{center}
+		\begin{tabular}{ ||l|r|| }
+			\hline
+			\textbf{Projektphase} 		& \textbf{Geplante Zeit} \\
+			\hline
+
+			Analysephase 				& 8 h	 		\\
+			Entwurfsphase				& 11 h	 		\\
+			Implementierungsphase 		& 40 h	 		\\
+			Abnahme und Einführung		& 11 h 			\\
+			Erstellen der Dokumentation & 10 h 			\\
+			\hline
+			\textbf{Gesamt}	 			& \textbf{70 h}	\\
+			
+			\hline
+		\end{tabular}
+		\caption{Zeitplanung}
+	\end{center}
+\end{table}	
+
 
 \subsection{Ressourcenplanung}
 \blindtext\

@@ -1125,9 +1125,10 @@ OUTPUT c:\Abschlussarbeit\Dokumentation.lof
 INPUT .\src\images\\argusLogo.png
 INPUT src\images\\argusLogo.png
 INPUT .\src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
-INPUT src\images\\argusLogo.png
-INPUT .\src\images\\argusLogo.png
+INPUT c:\Abschlussarbeit\Dokumentation.lot
+INPUT c:\Abschlussarbeit\Dokumentation.lot
+INPUT c:\Abschlussarbeit\Dokumentation.lot
+OUTPUT c:\Abschlussarbeit\Dokumentation.lot
 INPUT .\src\images\\argusLogo.png
 INPUT src\images\\argusLogo.png
 INPUT .\src\images\\argusLogo.png
