@@ -1,7 +1,22 @@
-\documentclass[draft, 11pt,toc=sectionentrywithoutdots, headheight=44pt, headings=optiontoheadandtoc, hyperfootnotes=false]{scrartcl}
+\documentclass[11pt,toc=sectionentrywithoutdots, 
+headheight=44pt, headings=optiontoheadandtoc, hyperfootnotes=false]{scrartcl}
 
 %Packages
 \usepackage{geometry}
+
+\geometry{
+a4paper, 
+left=30mm, 
+right=25mm, 
+top=25mm, 
+bottom=25mm, 
+headsep=5mm, 
+footnotesep=5mm,
+headheight=15mm,
+footskip=15mm,
+marginparwidth=15mm
+}
+
 \usepackage[utf8]{inputenc}
 \usepackage{csquotes}
 \usepackage{times}
@@ -14,6 +29,9 @@
 \usepackage{footnotebackref}
 \usepackage{nameref}
 \usepackage{setspace}
+
+
+\setstretch{1.2}
 
 \usepackage[
 backend=biber,
@@ -252,7 +270,7 @@ Eine sinnvolle Planung für das Projekt ist natürlich wichtig. Aber man sollte 
 
 \subsection{Projektphasen}
 Das Projekt wurde in einem Zeitraum von 70 Stunden umgesetzt. 
-Die gesamte Stundenanzahl wurde wie folgt aufgeteilt:
+Dabei wurde die gesamte Stundenanzahl wurde wie folgt aufgeteilt:
 
 
 \begin{table}[ht]
@@ -449,7 +467,62 @@ Die gesamte Stundenanzahl wurde wie folgt aufgeteilt:
 
 \section{Anhang}
 \subsection{Detaillierte Zeitplanung}
-\blindtext
+
+\begin{table}[ht]
+	\begin{center}
+		\begin{tabular}{ ||l|r|| }
+			\hline
+			
+			\textbf{Analysephase} 										& \textbf{8 h}	\\
+			\hline			
+			1. Ist-Analyse												& 5 h			\\
+			2. Wirtschaftlichkeitsprüfung								& 2 h			\\		
+			3. Kommunikation mit dem Fachbereich						& 1 h			\\
+			\hline
+
+			\textbf{Entwurfphase} 										& \textbf{11 h}	\\
+			\hline
+			1. Frameworks auswählen										& 1 h			\\
+			2. Projektbesprechung mit Tutoren							& 2 h			\\		
+			3. Graphische Benutzeroberfläche skizzieren					& 2 h			\\
+			4. Datenbankmodell entwerfen								& 3 h			\\
+			5. Geschäftslogik ausformulieren							& 3 h			\\			
+			\hline
+
+			\textbf{Implementierungsphase} 								& \textbf{40 h}	\\
+			\hline
+			1. Datenbank aufsetzen										& 11 h 			\\
+			2. Modelle einpflegen und testen							& 11 h 			\\
+			3. Komponenten erstellen 									& 11 h 			\\
+			4. ViewModels programmieren	und an GUI andocken				& 11 h 			\\
+			5. Controller anlegen										& 11 h 			\\
+			6.1 Python-Skripte einpflegen								& 11 h 			\\
+			6.2 C\# Properties anlegen									& 11 h 			\\
+			6.3 Debuggen												& 11 h 			\\
+			6.4 Tests ausführen											& 11 h 			\\
+			6.4 Pull Requests bearbeiten								& 11 h 			\\			
+			\hline
+
+			\textbf{Abnahme und Schulung}		 						& \textbf{2 h}	\\
+			\hline
+			1. Abnahme durch Fachabteilung								& 11 h 			\\
+			2. Installation												& 11 h 			\\
+			\hline
+
+			\textbf{Erstellen der Dokumentation} 						& \textbf{10 h}	\\
+			\hline
+			1. Erstellen der Projektdokumentation						& 11 h 			\\
+			2. Erstellen der Entwicklerdokumentation					& 11 h 			\\
+			3. Erstellen Benutzerdokumentation							& 11 h 			\\
+			\hline
+
+			\textbf{Gesamt}	 											& \textbf{70 h}	\\
+			\hline
+
+		\end{tabular}
+		%\caption{Zeitplanung}
+	\end{center}
+\end{table}	
 
 \subsection{Ressourcenplan}
 \blindtext\blindtext
