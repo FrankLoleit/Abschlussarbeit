@@ -1,19 +1,19 @@
 [0] Config.pm:312> INFO - This is Biber 2.15 (beta)
 [0] Config.pm:315> INFO - Logfile is 'Dokumentation.blg'
-[98] biber-MSWIN64:330> INFO - === 
-[117] Biber.pm:415> INFO - Reading 'Dokumentation.bcf'
-[216] Biber.pm:952> INFO - Found 5 citekeys in bib section 0
-[232] Biber.pm:4334> INFO - Processing section 0
-[248] Biber.pm:4523> INFO - Looking for bibtex format file 'literatur.bib' for section 0
-[256] bibtex.pm:1682> INFO - LaTeX decoding ...
-[268] bibtex.pm:1494> INFO - Found BibTeX data source 'literatur.bib'
-[312] Utils.pm:395> WARN - ISBN '378-3-540-77431-0' in entry 'GeraldTeschl2008' is invalid - run biber with '--validate_datamodel' for details.
-[315] Utils.pm:395> WARN - ISBN '378-3-243-63454-0' in entry 'Schrepel2011' is invalid - run biber with '--validate_datamodel' for details.
-[318] Utils.pm:395> WARN - ISBN '378-2-545-64589-0' in entry 'Weigel2015' is invalid - run biber with '--validate_datamodel' for details.
-[337] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[337] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[337] Biber.pm:4162> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[337] Biber.pm:4168> INFO - No sort tailoring available for locale 'de-DE'
-[343] bbl.pm:651> INFO - Writing 'Dokumentation.bbl' with encoding 'UTF-8'
-[345] bbl.pm:754> INFO - Output to Dokumentation.bbl
-[346] Biber.pm:128> INFO - WARNINGS: 3
+[95] biber-MSWIN64:330> INFO - === 
+[114] Biber.pm:415> INFO - Reading 'Dokumentation.bcf'
+[209] Biber.pm:952> INFO - Found 4 citekeys in bib section 0
+[224] Biber.pm:4334> INFO - Processing section 0
+[239] Biber.pm:4523> INFO - Looking for bibtex format file 'literatur.bib' for section 0
+[250] bibtex.pm:1682> INFO - LaTeX decoding ...
+[261] bibtex.pm:1494> INFO - Found BibTeX data source 'literatur.bib'
+[295] Utils.pm:395> WARN - ISBN '378-3-540-77431-0' in entry 'GeraldTeschl2008' is invalid - run biber with '--validate_datamodel' for details.
+[298] Utils.pm:395> WARN - ISBN '378-3-243-63454-0' in entry 'Schrepel2011' is invalid - run biber with '--validate_datamodel' for details.
+[300] Utils.pm:395> WARN - ISBN '378-2-545-64589-0' in entry 'Weigel2015' is invalid - run biber with '--validate_datamodel' for details.
+[321] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[321] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[321] Biber.pm:4162> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[322] Biber.pm:4168> INFO - No sort tailoring available for locale 'de-DE'
+[326] bbl.pm:651> INFO - Writing 'Dokumentation.bbl' with encoding 'UTF-8'
+[329] bbl.pm:754> INFO - Output to Dokumentation.bbl
+[329] Biber.pm:128> INFO - WARNINGS: 3

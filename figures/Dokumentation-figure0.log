@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.16)  16 APR 2021 14:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.16)  22 JUL 2021 09:27
 entering extended mode
 **\def\tikzexternalrealjob{Dokumentation}\input{Dokumentation}
 (Dokumentation.tex ("C:\Program Files\MiKTeX\tex/latex/koma-script\scrartcl.cls
@@ -1168,53 +1168,53 @@ Package: suffix 2006/07/15 1.5a Variant command support
 )
 \AC@clearlist=\toks36
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 47.
+Package hyperref Info: Option `colorlinks' set `true' on input line 65.
 \c@secautolabel=\count485
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
 No file figures/Dokumentation-figure0.aux.
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
 *geometry* detected driver: <none>
 *geometry* verbose mode - [ preamble ] result:
 * driver: \Gm@driver 
-* paper: <default>
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(71.13188pt, 455.24417pt, 71.13188pt)
-* v-part:(T,H,B)=(99.58464pt, 674.33041pt, 71.13188pt)
-* \paperwidth=597.50793pt
-* \paperheight=845.04694pt
-* \textwidth=455.24417pt
-* \textheight=674.33041pt
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(99.58464pt, 674.33032pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=674.33032pt
 * \oddsidemargin=-1.1381pt
 * \evensidemargin=-1.1381pt
-* \topmargin=-37.08536pt
-* \headheight=44.0pt
-* \headsep=20.40001pt
+* \topmargin=-29.59084pt
+* \headheight=42.67912pt
+* \headsep=14.22636pt
 * \topskip=11.0pt
-* \footskip=47.6pt
-* \marginparwidth=59.7508pt
+* \footskip=42.67912pt
+* \marginparwidth=42.67912pt
 * \marginparsep=12.8401pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=14.22636pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -1249,10 +1249,10 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
 )
-Package hyperref Info: Link coloring ON on input line 92.
-LaTeX Info: Redefining \ref on input line 92.
-LaTeX Info: Redefining \pageref on input line 92.
-LaTeX Info: Redefining \nameref on input line 92.
+Package hyperref Info: Link coloring ON on input line 110.
+LaTeX Info: Redefining \ref on input line 110.
+LaTeX Info: Redefining \pageref on input line 110.
+LaTeX Info: Redefining \nameref on input line 110.
 Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           Using `bookmark' together with `hyperref' is recommended,
 (scrartcl)           because of handling of possible bookmark level gaps.
@@ -1260,7 +1260,7 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 92.
+(scrartcl)           before \begin{document} on input line 110.
 ("C:\Program Files\MiKTeX\tex/latex/bookmark\bookmark.sty"
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 ("C:\Program Files\MiKTeX\tex/latex/bookmark\bkm-pdftex.def"
@@ -1288,259 +1288,277 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'figures/Dokumentation-figure0.bbl' not found.
 No file figures/Dokumentation-figure0.bbl.
-Package biblatex Info: Reference section=0 on input line 92.
-Package biblatex Info: Reference segment=0 on input line 92.
+Package biblatex Info: Reference section=0 on input line 110.
+Package biblatex Info: Reference segment=0 on input line 110.
 \AC@reset@newl@bel
 The command '\includegraphics [scale=0.25]{ihkLogo}' has been optimized away. U
 se '/tikz/external/optimize=false' to disable this.
 The command '\includegraphics [scale=0.25]{argusLogo}' has been optimized away.
  Use '/tikz/external/optimize=false' to disable this.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-64.
+82.
 ("C:\Program Files\MiKTeX\tex/latex/psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 18
-3.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 20
+1.
 ("C:\Program Files\MiKTeX\tex/latex/psnfss\t1phv.fd"
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 
-LaTeX Warning: Reference `sec:autolabel:1' on page I undefined on input line 18
-8.
+LaTeX Warning: Reference `sec:autolabel:1' on page II undefined on input line 2
+06.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 188.
+(Font)              <10.95> on input line 206.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 188.
+(Font)              <8> on input line 206.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 188.
+(Font)              <6> on input line 206.
 The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
 . Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Reference `sec:autolabel:2' on page II undefined on input line 1
-96.
-
-The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
-. Use '/tikz/external/optimize=false' to disable this.
-
-LaTeX Warning: Reference `sec:autolabel:4' on page III undefined on input line 
-203.
+LaTeX Warning: Reference `sec:autolabel:2' on page III undefined on input line 
+210.
 
 The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
 . Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Reference `sec:autolabel:4' on page IV undefined on input line 2
-03.
+LaTeX Warning: Reference `sec:autolabel:3' on page IV undefined on input line 2
+14.
 
 The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
 . Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Reference `sec:autolabel:5' on page V undefined on input line 21
-6.
+LaTeX Warning: Reference `sec:autolabel:4' on page V undefined on input line 23
+1.
 
 The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
 . Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Reference `sec:autolabel:6' on page VI undefined on input line 2
-20.
+LaTeX Warning: Reference `sec:autolabel:5' on page VI undefined on input line 2
+35.
 
 The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
 . Use '/tikz/external/optimize=false' to disable this.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 232.
+(Font)              <9> on input line 246.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 232.
-
-LaTeX Warning: Citation 'Theis2014' on page 1 undefined on input line 232.
-
-
-Package acronym Warning: Acronym `GUI' is not defined on input line 235.
-
-
-Package acronym Warning: Acronym `ADI' is not defined on input line 236.
-
-
-Package acronym Warning: Acronym `XAML' is not defined on input line 236.
-
-
-LaTeX Warning: Citation 'GeraldTeschl2008' on page 1 undefined on input line 23
-6.
-
-
-LaTeX Warning: Citation 'Schrepel2011' on page 1 undefined on input line 239.
-
-
-LaTeX Warning: Citation 'Weigel2015' on page 1 undefined on input line 245.
-
+(Font)              <5> on input line 246.
 
 LaTeX Warning: Citation 'Gettner2015' on page 1 undefined on input line 246.
 
 
-LaTeX Warning: Reference `sec:autolabel:13' on page 1 undefined on input line 2
+LaTeX Warning: Citation 'Theis2014' on page 1 undefined on input line 247.
+
+
+Package acronym Warning: Acronym `GUI' is not defined on input line 250.
+
+
+Package acronym Warning: Acronym `ADI' is not defined on input line 251.
+
+
+Package acronym Warning: Acronym `XAML' is not defined on input line 251.
+
+
+LaTeX Warning: Citation 'GeraldTeschl2008' on page 1 undefined on input line 25
+1.
+
+
+LaTeX Warning: Citation 'Schrepel2011' on page 1 undefined on input line 254.
+
+
+LaTeX Warning: Citation 'Weigel2015' on page 1 undefined on input line 261.
+
+
+LaTeX Warning: Citation 'Gettner2015' on page 1 undefined on input line 262.
+
+
+LaTeX Warning: Reference `sec:autolabel:6' on page 1 undefined on input line 26
+4.
+
+The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
+. Use '/tikz/external/optimize=false' to disable this.
+
+LaTeX Warning: Reference `myLastPage' on page 1 undefined on input line 264.
+
+
+LaTeX Warning: Hyper reference `DetaillierteZeitplanung' on page 2 undefined on
+ input line 268.
+
+
+LaTeX Warning: Reference `sec:autolabel:12' on page 2 undefined on input line 2
+99.
+
+The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
+. Use '/tikz/external/optimize=false' to disable this.
+
+LaTeX Warning: Reference `myLastPage' on page 2 undefined on input line 299.
+
+
+LaTeX Warning: Reference `sec:autolabel:16' on page 3 undefined on input line 3
+14.
+
+The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
+. Use '/tikz/external/optimize=false' to disable this.
+
+LaTeX Warning: Reference `myLastPage' on page 3 undefined on input line 314.
+
+
+LaTeX Warning: Reference `sec:autolabel:16' on page 4 undefined on input line 3
+26.
+
+The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
+. Use '/tikz/external/optimize=false' to disable this.
+
+LaTeX Warning: Reference `myLastPage' on page 4 undefined on input line 326.
+
+
+LaTeX Warning: Reference `sec:autolabel:16' on page 5 undefined on input line 3
+38.
+
+The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
+. Use '/tikz/external/optimize=false' to disable this.
+
+LaTeX Warning: Reference `myLastPage' on page 5 undefined on input line 338.
+
+
+LaTeX Warning: Reference `sec:autolabel:30' on page 6 undefined on input line 3
 50.
 
 The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
 . Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Reference `myLastPage' on page 1 undefined on input line 250.
+LaTeX Warning: Reference `myLastPage' on page 6 undefined on input line 350.
 
 
-LaTeX Warning: Reference `sec:autolabel:17' on page 2 undefined on input line 2
-63.
-
-The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
-. Use '/tikz/external/optimize=false' to disable this.
-
-LaTeX Warning: Reference `myLastPage' on page 2 undefined on input line 263.
-
-
-LaTeX Warning: Reference `sec:autolabel:17' on page 3 undefined on input line 2
-78.
+LaTeX Warning: Reference `sec:autolabel:30' on page 7 undefined on input line 3
+62.
 
 The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
 . Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Reference `myLastPage' on page 3 undefined on input line 278.
+LaTeX Warning: Reference `myLastPage' on page 7 undefined on input line 362.
 
 
-LaTeX Warning: Reference `sec:autolabel:17' on page 4 undefined on input line 2
-90.
-
-The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
-. Use '/tikz/external/optimize=false' to disable this.
-
-LaTeX Warning: Reference `myLastPage' on page 4 undefined on input line 290.
-
-
-LaTeX Warning: Reference `sec:autolabel:31' on page 5 undefined on input line 3
-05.
+LaTeX Warning: Reference `sec:autolabel:30' on page 8 undefined on input line 3
+74.
 
 The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
 . Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Reference `myLastPage' on page 5 undefined on input line 305.
+LaTeX Warning: Reference `myLastPage' on page 8 undefined on input line 374.
 
 
-LaTeX Warning: Reference `sec:autolabel:31' on page 6 undefined on input line 3
-17.
-
-The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
-. Use '/tikz/external/optimize=false' to disable this.
-
-LaTeX Warning: Reference `myLastPage' on page 6 undefined on input line 317.
-
-
-LaTeX Warning: Reference `sec:autolabel:31' on page 7 undefined on input line 3
-32.
+LaTeX Warning: Reference `sec:autolabel:41' on page 9 undefined on input line 3
+86.
 
 The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
 . Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Reference `myLastPage' on page 7 undefined on input line 332.
+LaTeX Warning: Reference `myLastPage' on page 9 undefined on input line 386.
 
 
-LaTeX Warning: Reference `sec:autolabel:42' on page 8 undefined on input line 3
-44.
-
-The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
-. Use '/tikz/external/optimize=false' to disable this.
-
-LaTeX Warning: Reference `myLastPage' on page 8 undefined on input line 344.
-
-
-LaTeX Warning: Reference `sec:autolabel:48' on page 9 undefined on input line 3
-59.
-
-The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
-. Use '/tikz/external/optimize=false' to disable this.
-
-LaTeX Warning: Reference `myLastPage' on page 9 undefined on input line 359.
-
-
-LaTeX Warning: Reference `sec:autolabel:52' on page 10 undefined on input line 
-371.
-
-The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
-. Use '/tikz/external/optimize=false' to disable this.
-
-LaTeX Warning: Reference `myLastPage' on page 10 undefined on input line 371.
-
-
-LaTeX Warning: Reference `sec:autolabel:58' on page 11 undefined on input line 
-386.
-
-The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
-. Use '/tikz/external/optimize=false' to disable this.
-
-LaTeX Warning: Reference `myLastPage' on page 11 undefined on input line 386.
-
-
-LaTeX Warning: Reference `sec:autolabel:58' on page 12 undefined on input line 
+LaTeX Warning: Reference `sec:autolabel:47' on page 10 undefined on input line 
 398.
 
 The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
 . Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Reference `myLastPage' on page 12 undefined on input line 398.
+LaTeX Warning: Reference `myLastPage' on page 10 undefined on input line 398.
 
 
-LaTeX Warning: Reference `sec:autolabel:58' on page 13 undefined on input line 
-400.
-
-The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
-. Use '/tikz/external/optimize=false' to disable this.
-
-LaTeX Warning: Reference `myLastPage' on page 13 undefined on input line 400.
-
-
-LaTeX Warning: Empty bibliography on input line 404.
-
-
-LaTeX Warning: Reference `sec:autolabel:63' on page i undefined on input line 4
-37.
+LaTeX Warning: Reference `sec:autolabel:51' on page 11 undefined on input line 
+410.
 
 The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
 . Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Reference `sec:autolabel:63' on page ii undefined on input line 
-443.
+LaTeX Warning: Reference `myLastPage' on page 11 undefined on input line 410.
+
+
+LaTeX Warning: Reference `sec:autolabel:54' on page 12 undefined on input line 
+422.
 
 The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
 . Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Reference `sec:autolabel:63' on page iii undefined on input line
- 446.
+LaTeX Warning: Reference `myLastPage' on page 12 undefined on input line 422.
+
+
+LaTeX Warning: Reference `sec:autolabel:57' on page 13 undefined on input line 
+434.
 
 The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
 . Use '/tikz/external/optimize=false' to disable this.
 
-Underfull \hbox (badness 10000) in paragraph at lines 450--451
+LaTeX Warning: Reference `myLastPage' on page 13 undefined on input line 434.
+
+
+LaTeX Warning: Reference `sec:autolabel:57' on page 14 undefined on input line 
+439.
+
+The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
+. Use '/tikz/external/optimize=false' to disable this.
+
+LaTeX Warning: Reference `myLastPage' on page 14 undefined on input line 439.
+
+
+LaTeX Warning: Empty bibliography on input line 443.
+
+
+LaTeX Warning: Reference `sec:autolabel:62' on page i undefined on input line 5
+27.
+
+The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
+. Use '/tikz/external/optimize=false' to disable this.
+
+LaTeX Warning: Reference `sec:autolabel:62' on page ii undefined on input line 
+536.
+
+The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
+. Use '/tikz/external/optimize=false' to disable this.
+
+LaTeX Warning: Reference `sec:autolabel:62' on page iii undefined on input line
+ 542.
+
+The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
+. Use '/tikz/external/optimize=false' to disable this.
+
+LaTeX Warning: Reference `sec:autolabel:62' on page iv undefined on input line 
+542.
+
+The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
+. Use '/tikz/external/optimize=false' to disable this.
+
+Underfull \hbox (badness 10000) in paragraph at lines 546--547
 
  []
 
 \openout5 = `figures/Dokumentation-figure0.dpth'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 468.
-[4
+(Font)              <7> on input line 564.
+[5
 
 {C:/Users/Frank Loleit/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 
-LaTeX Warning: Reference `sec:autolabel:63' on page iv undefined on input line 
-523.
+LaTeX Warning: Reference `sec:autolabel:62' on page v undefined on input line 6
+21.
 
 The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
 . Use '/tikz/external/optimize=false' to disable this.
 
-LaTeX Warning: Reference `sec:autolabel:63' on page v undefined on input line 5
-29.
+LaTeX Warning: Reference `sec:autolabel:62' on page vi undefined on input line 
+625.
 
 The command '\includegraphics [scale=0.125]{argusLogo}' has been optimized away
 . Use '/tikz/external/optimize=false' to disable this.
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\provideco
 mmand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
 \@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\provideco
+mmand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\provideco
 mmand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
 
 LaTeX Warning: There were undefined references.
@@ -1556,17 +1574,17 @@ Package logreq Info: Writing requests to 'figures/Dokumentation-figure0.run.xml
 
  ) 
 Here is how much of TeX's memory you used:
- 35430 strings out of 479799
- 756035 string characters out of 2879575
- 1501167 words of memory out of 3000000
- 51845 multiletter control sequences out of 15000+200000
+ 35440 strings out of 479799
+ 756230 string characters out of 2879575
+ 1501364 words of memory out of 3000000
+ 51854 multiletter control sequences out of 15000+200000
  574025 words of font info for 63 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  109i,20n,113p,10651b,2229s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX
 /fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/time
 s/utmr8a.pfb>
-Output written on figures/Dokumentation-figure0.pdf (1 page, 32184 bytes).
+Output written on figures/Dokumentation-figure0.pdf (1 page, 32182 bytes).
 PDF statistics:
  47 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)

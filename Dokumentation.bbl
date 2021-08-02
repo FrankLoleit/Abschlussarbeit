@@ -149,31 +149,6 @@
       \field{title}{Mathematik für Informatiker - Band 1 diskrete Mathematik und Lineare Algebra}
       \field{year}{2008}
     \endentry
-    \entry{Theis2014}{book}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=26ed0acab4a18d4b5613ce286af2f7a2}{%
-           family={Theis},
-           familyi={T\bibinitperiod},
-           given={Thomas},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{26ed0acab4a18d4b5613ce286af2f7a2}
-      \strng{fullhash}{26ed0acab4a18d4b5613ce286af2f7a2}
-      \strng{bibnamehash}{26ed0acab4a18d4b5613ce286af2f7a2}
-      \strng{authorbibnamehash}{26ed0acab4a18d4b5613ce286af2f7a2}
-      \strng{authornamehash}{26ed0acab4a18d4b5613ce286af2f7a2}
-      \strng{authorfullhash}{26ed0acab4a18d4b5613ce286af2f7a2}
-      \field{sortinit}{T}
-      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-3-8362-2861-9}
-      \field{title}{Einführung in Python}
-      \field{year}{2014}
-    \endentry
   \enddatalist
 \endrefsection
 \endinput

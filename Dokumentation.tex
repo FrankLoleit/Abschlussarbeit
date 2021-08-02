@@ -12,7 +12,7 @@ top=25mm,
 bottom=25mm, 
 headsep=5mm, 
 footnotesep=5mm,
-headheight=15mm,
+headheight=20mm,
 footskip=15mm,
 marginparwidth=15mm
 }
@@ -41,10 +41,10 @@ citestyle=authoryear
 
 \addbibresource{literatur.bib}
 
-% \usepackage{tikz,ifthen,xstring,calc,pgfkeys,pgfopts}
-% \usepackage{tikz-uml}
-% \usetikzlibrary{external}
-% \tikzexternalize[prefix=figures/] % activate and define figures/ as cache folder
+ \usepackage{tikz,ifthen,xstring,calc,pgfkeys,pgfopts}
+ \usepackage{tikz-uml}
+ \usetikzlibrary{external}
+ \tikzexternalize[prefix=figures/] % activate and define figures/ as cache folder
 
 \usepackage{hyperref}
 \usepackage[printonlyused, withpage]{acronym}
@@ -122,8 +122,10 @@ citestyle=authoryear
 
 \ihead
 {%	
-	\begin{small}%
-		MASCHINELLE ANALYSE VON SOCIAL MEDIA POSTS%		
+	\begin{small}
+	
+	
+		MODUL FÜR GEKAPSELTE DATENBANKKOMMUNIKATION%		
 		\newline\
 		\textit\sectionRefs
 	\end{small}%
@@ -148,17 +150,17 @@ Dokumentation der betrieblichen Projektarbeit
 \end{Large}
 
 
-\begin{Huge}
+\begin{LARGE}
 \begin{bfseries}
-Maschinelle Analyse von\linebreak Social Media Posts
+	Entwicklung eines Moduls in einer Desktopanwendung zur Umstellung von direkten Datenbankzugriffen zu einer gekapselten Datenbankkommunikation mit optionaler Simulationsmöglichkeit.
 \linebreak\linebreak
 \end{bfseries}
-\end{Huge}
+\end{LARGE}
 
 \begin{Large}
-Backend-Applikation zur algorithmusbasierten 
-Erfassung von\linebreak Meldungen in sozialen Netzwerken
-\linebreak
+%Backend-Applikation zur algorithmusbasierten 
+%Erfassung von\linebreak Meldungen in sozialen Netzwerken
+%\linebreak
 
 Abgabetermin: 22.11.2021
 \linebreak\linebreak
@@ -238,17 +240,18 @@ Gneisenaustr. 66\linebreak
 \blindtext\
 \newpage
 
-%\setcounter{secnumdepth}{1}
+\setcounter{secnumdepth}{1}
 \pagenumbering{arabic}
 \setcounter{secnumdepth}{4}
-\ofoot{Seite\:\thepage\:von \pageref*{myLastPage}}
+\ofoot{Seite\:\thepage}%\:von \pageref*{myLastPage}%}
 
 \section{Einleitung}
-\blindtext\blindtext
+In dem vorliegenden Projekt wird das Ziel verfolgt, den Wartungsprozess einer Desktopanwendung zu vereinfachen. Dabei geht es in erster Linie um die Frage, wie Entwickler und Anwender auf eine einzige Datenbank zugreifen ohne sich in ihrer jeweiligen Arbeit zu beeinträchtigen. Im Vordergrund steht dabei die Möglichkeit, dass sowohl Entwickler als auch Kunden bei Verwenden der Software die Möglichkeit haben, aktuelle Daten aus der Datenbank zu lesen, bei Schreibvorgängen jedoch automatisch entschieden wird, ob die für die Kunden bestimmte Datenbank oder eine eigens dafür vorgesehene lokale Datenbank verwendet wird. Ziel ist eine größtmögliche Kundenzufriedenheit durch kürzere Bearbeitungszeit von Fehler- und Änderungsticktes, sowie Zeitersparnis bei der Wartung der Software.
 
 \subsection{Projektbeschreibung}
-Softwareentwicklung ist eine tolle Sache. So noch ein Satz\footnote{vgl. \cite{Gettner2015}}.
-Der Computer arbeitet dann wie von alleine und man muss kaum noch etwas machen\footnote{vgl. \cite{Theis2014}}.
+Ziel des Projektes ist die Entwicklung eines Moduls für eine Desktopanwendung, um die Umstellung von direkten Datenbankzugriffen auf gekapselte Zugriffe zu erreichen. Konkret handelt es sich dabei um eine .NET-Andwendung mit WinForms-Benutzeroberfläche
+%Softwareentwicklung ist eine tolle Sache. So noch ein Satz\footnote{vgl. \cite{Gettner2015}}.
+%Der Computer arbeitet dann wie von alleine und man muss kaum noch etwas %machen\footnote{vgl. \cite{Theis2014}}.
 
 \subsection{Projektziel}
 Ein wichtiges Ziel ist es, die \acs{GUI} so zu gestalten, dass am Ende keine Unstimmigkeiten mit dem 
@@ -262,8 +265,7 @@ Die Gründe für mein Projekt sind einfach. Ich wurde von der heiligen Mutter au
 um das Volk der Fachinformatiker zu erleuchten. So ist diese Arbeit entstanden.
 
 \subsection{Projektabgrenzung}
-Wichtig ist natürlich die logische Planung\footnote{vgl. \cite{Weigel2015}}.%
-Aber auch die IT-Systeme spielen eine Rolle\footnote{vgl. \cite{Gettner2015}}.
+Wichtig ist natürlich die logische Planung\footnote{vgl. \cite{Weigel2015}}. Aber auch die IT-Systeme spielen eine Rolle\footnote{vgl. \cite{Gettner2015}}.
 
 \section{Projektplanung}
 Eine sinnvolle Planung für das Projekt ist natürlich wichtig. Aber man sollte es auch nicht übertreiben.
@@ -305,7 +307,7 @@ Dabei wurde die gesamte Stundenanzahl wurde wie folgt aufgeteilt:
 \blindtext\
 
 \subsection{IST-Zustand}
-\blindtext\
+Momentan kann Arche nur
 
 \subsection{Wirtschaftlichkeitsanalyse}
 \blindtext\
@@ -547,64 +549,64 @@ Dabei wurde die gesamte Stundenanzahl wurde wie folgt aufgeteilt:
 
 Dies ist ein Beispiel für ein UML-Klassendiagramm:\\
 
-% \begin{figure}[ht]
-% \centering
-% \begin{tikzpicture}
+ \begin{figure}[ht]
+ \centering
+ \begin{tikzpicture}
 
-% 	\umlclass[x=5, y= 0]{Person}	
-% 		{
-% 			- vorerkrankungen : String\\
-% 			- religion : string\\
-% 			+ alter : int\\
-% 			+ name : String\\
-% 			+ geschlecht : String\\
+ 	\umlclass[x=5, y= 0]{Person}	
+ 		{
+ 			- vorerkrankungen : String\\
+ 			- religion : string\\
+ 			+ alter : int\\
+ 			+ name : String\\
+ 			+ geschlecht : String\\
 			
-% 		}
-% 		{
-% 			+ halloSagen() : void		\\	
-% 			+ freundlichLaecheln() : void		\\	
-% 		}
+ 		}
+ 		{
+ 			+ halloSagen() : void		\\	
+ 			+ freundlichLaecheln() : void		\\	
+ 		}
 		
 		
-% 	\umlclass[x=0, y= -6]{Kind}	
-% 		{
-% 			- kinderGarten: String\\
-% 			+ hobbys : String \\
-% 			+ magNutella : bool \\
-% 		}
-% 		{
-% 			- inDieSchuleGehen() : void	\\
-% 			- dreiradFahren() : void\\
-% 			+ getKindergarten() : String\\
+ 	\umlclass[x=0, y= -6]{Kind}	
+ 		{
+ 			- kinderGarten: String\\
+ 			+ hobbys : String \\
+ 			+ magNutella : bool \\
+ 		}
+ 		{
+ 			- inDieSchuleGehen() : void	\\
+ 			- dreiradFahren() : void\\
+ 			+ getKindergarten() : String\\
 			
-% 		}	
+ 		}	
 		
 		
-% 	\umlclass[x=10, y= -6]{Erwachsener}	
-% 		{
-% 			- beruf: String\\
-% 			- kontostand : double\\
-% 			+ hatKinder : bool\\
-% 		}
-% 		{
-% 			- zurArbeitGehen() : void	\\
-% 			- autoFahren() : void\\
-% 			+ getBeruf() : String\\
+ 	\umlclass[x=10, y= -6]{Erwachsener}	
+ 		{
+ 			- beruf: String\\
+ 			- kontostand : double\\
+ 			+ hatKinder : bool\\
+ 		}
+ 		{
+ 			- zurArbeitGehen() : void	\\
+ 			- autoFahren() : void\\
+ 			+ getBeruf() : String\\
 			
-% 		}
+ 		}
 		
-% 		\umlnote{Person}{Dies ist offensichtlich eine Klasse}		
-% 		\umlinherit[geometry=|-]{Erwachsener}{Person}
-% 		\umlinherit[geometry=-|]{Kind}{Person}
-% 		\umldep[very thick, arg1=0..*, arg2=1..*, pos1=0.05, pos2=0.52,anchor1=-20, anchor2=-20]{Kind}{Erwachsener}
+ 		\umlnote{Person}{Dies ist offensichtlich eine Klasse}		
+ 		\umlinherit[geometry=|-]{Erwachsener}{Person}
+ 		\umlinherit[geometry=-|]{Kind}{Person}
+ 		\umldep[very thick, arg1=0..*, arg2=1..*, pos1=0.05, pos2=0.52,anchor1=-20, anchor2=-20]{Kind}{Erwachsener}
 
 	
-% \end{tikzpicture}
+ \end{tikzpicture}
 
-% \caption{Klassendiagramm}
-% \label{fig:Klassendiagramm}
+ \caption{Klassendiagramm}
+ \label{fig:Klassendiagramm}
 	
-% \end{figure}
+ \end{figure}
 
 \subsection{Pflichtenheft (Auszug)}
 Dies ist ein bisschen Text
