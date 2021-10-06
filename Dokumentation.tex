@@ -29,6 +29,7 @@ marginparwidth=15mm
 \usepackage{footnotebackref}
 \usepackage{nameref}
 \usepackage{setspace}
+\usepackage[automake]{glossaries}
 
 
 \setstretch{1.2}
@@ -60,7 +61,7 @@ citestyle=authoryear
     linktoc=page,
     linkcolor=blue,
     filecolor=magenta,      
-    urlcolor=cyan,
+    urlcolor=blue,
     citecolor=blue
 }
 
@@ -106,6 +107,13 @@ citestyle=authoryear
 %Set page numbering font
 \renewcommand{\headfont}{\normalfont}
 
+\makeglossaries
+
+\newglossaryentry{Query}
+{
+	name=Query,
+	description={Datenbankanweisung, welche an einen Datenbankserver 		verschickt wird und dazu dient, Daten abzufragen, zu erstellen, zu verändern oder zu löschen}
+}
  
 \begin{document}
 
@@ -219,9 +227,9 @@ Gneisenaustr. 66\linebreak
 \listoftables
 \newpage
 
-\section{Listings}
-\blindtext\blindtext\blindtext
-\newpage
+%\section{Listings}
+%\blindtext\blindtext\blindtext
+%\newpage
 
 \section{Abkürzungsverzeichnis}
 
@@ -232,14 +240,14 @@ Gneisenaustr. 66\linebreak
 \acro{CRUD}{Create, Read, Update, Delete}
 \acro{GUI}{Graphical User Interface}
 \acro{XAML}{Extensible Application Markup Language}
+\acro{DRY}{Don't Repeat Yourself}
+\acro{SQL} {Structured Query Language}
 
 \end{acronym}
-
+\newpage
+\printglossary[nonumberlist]
 \newpage
 
-\section{Begriffserläuterung}
-\blindtext\
-\newpage
 
 \setcounter{secnumdepth}{1}
 \pagenumbering{arabic}
@@ -250,13 +258,12 @@ Gneisenaustr. 66\linebreak
 In diesem Projekt wird das Ziel verfolgt, die Datenbankkommunikation einer Desktopanwendung zu vereinheitlichen und die Arbeit der Entwickler von der Arbeit der Nutzer abzugrenzen. Obgleich es sich bei dem entwickelten Modul um ein Werkzeug handelt, das nur von Entwicklern geöffnet und verwendet werden kann, steht der Kunde im Vordergrund aller Bemühungen. Denn sowohl das Auffinden und Lösen von Programmfehlern, wie auch das Implementieren von neuen Komponenten kann durch die Vereinheitlichung und Separierung der Datenbankoperationen deutlich effizienter werden. Der Kunde erhält dadurch nicht nur ein tendenziell stabileres System, sondern kann auch damit rechnen, dass neue gewünschte Funktionalitäten schneller umgesetzt werden.
 
 \subsection{Projektbeschreibung}
-Ausgangspunkt der Arbeit ist die Desktopapplikation "Arche", entwickelt im .NET-Framework 3.5 mit WinForms-Userinterface. 
-%\footnote{vgl. \cite{Gettner2015}}.
-%Der Computer arbeitet dann wie von alleine und man muss kaum noch etwas %machen\footnote{vgl. \cite{Theis2014}}.
+Ausgangspunkt der Arbeit ist die Desktopapplikation \glqq Arche\grqq{}, entwickelt im .NET-Framework\footnote{\cite{Microsoft2020}} 3.5 mit WinForms-\acs{GUI}. Das Debugging gestaltet sich teils als recht aufwändig, da alle Funktionen umgangen werden müssen, die Kundendaten generieren, verändern oder löschen. Grund dafür ist das Fehlen von Mechanismen, durch die sich Datenbankoperationen, die von Kunden und Entwicklern vorgenommen werden, jeweils voneinander abgrenzen lassen. Auch das Implementieren von neuen datenbanksensiblen Features gestaltet sich als umständlich, da es kein einheitliches Prinzip für die Datenbankkommunikation gibt. Viel mehr hat jeder einzelne Workflow jeweils eine eigene Klasse für die Datenbankkommunikation, die sich inhaltlich aber kaum unterscheiden, sondern im Wesentlichen voneinander kopiert wurden und das \acs{DRY}-Prinzip wenig Berücksichtigung findet. Daher soll ein Modul entwickelt werden, dass die Kommunikation mit der Datenbank kapselt.\newline Zunächst soll es möglich sein, dass eine \gls{Query}, die ein beliebiger Workflow an den Datenbankserver übergibt, zurückgehalten werden kann und somit nicht Gefahr zu laufen, unerwünschte Änderungen an Datenbankeinträgen vorzunehmen. Dabei soll in einer für Entwickler bestimmten GUI die entsprechende Query mit sinnvoller Hervorhebung entsprechender Keywords erfolgen. Zudem soll der Entwickler frei entscheiden können, ob die Query verarbeitet, zurückgehalten oder in ein \acs{SQL}-Management-System übertragen werden soll. Im Anschluss soll die uneinheitliche Datenbankkommuniktation durch eine globale Logik mit Hilfe von Datenbankmodellen ersetzt werden. Aus diesen Modellen soll schlussendlich ein einheitliches Verfahren abgeleitet werden können, dass die Datenbankanbindung auf ein einziges Assembly des Projektes konzentriert und somit eine langfristige Arbeitserleichterung schafft.
+
 
 \subsection{Projektziel}
-Ein wichtiges Ziel ist es, die \acs{GUI} so zu gestalten, dass am Ende keine Unstimmigkeiten mit dem 
-Webinterface auftreten. Die \acs{ADI} ist daher bemüht weitere Schritte einzuleiten. Man hat sich entschieden \acs{XAML} zu verwenden. Auch Mathematisch ist dies wichtig\footnote{vgl. \cite{GeraldTeschl2008}}.
+Ein wichtiges Ziel ist es, die \acs{GUI} so zu gestalten, dass am Ende %keine Unstimmigkeiten mit dem 
+%Webinterface auftreten. Die \acs{ADI} ist daher bemüht weitere Schritte %einzuleiten. Man hat sich entschieden \acs{XAML} zu verwenden. Auch %Mathematisch ist dies wichtig\footnote{vgl. \cite{GeraldTeschl2008}}.
 
 \subsection{Projektumfeld}
 Hier ist natürlich die Schach-KI entscheidend\footnote{vgl. \cite{Schrepel2011}}.
