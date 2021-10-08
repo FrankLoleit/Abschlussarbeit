@@ -1,18 +1,17 @@
 [0] Config.pm:312> INFO - This is Biber 2.15 (beta)
 [0] Config.pm:315> INFO - Logfile is 'Dokumentation.blg'
-[92] biber-MSWIN64:330> INFO - === 
-[110] Biber.pm:415> INFO - Reading 'Dokumentation.bcf'
-[207] Biber.pm:952> INFO - Found 4 citekeys in bib section 0
-[222] Biber.pm:4334> INFO - Processing section 0
-[236] Biber.pm:4523> INFO - Looking for bibtex format file 'literatur.bib' for section 0
-[243] bibtex.pm:1682> INFO - LaTeX decoding ...
-[253] bibtex.pm:1494> INFO - Found BibTeX data source 'literatur.bib'
-[291] Utils.pm:395> WARN - ISBN '378-3-243-63454-0' in entry 'Schrepel2011' is invalid - run biber with '--validate_datamodel' for details.
-[293] Utils.pm:395> WARN - ISBN '378-2-545-64589-0' in entry 'Weigel2015' is invalid - run biber with '--validate_datamodel' for details.
-[314] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[314] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[314] Biber.pm:4162> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[314] Biber.pm:4168> INFO - No sort tailoring available for locale 'de-DE'
-[324] bbl.pm:651> INFO - Writing 'Dokumentation.bbl' with encoding 'UTF-8'
-[326] bbl.pm:754> INFO - Output to Dokumentation.bbl
-[326] Biber.pm:128> INFO - WARNINGS: 2
+[91] biber-MSWIN64:330> INFO - === 
+[109] Biber.pm:415> INFO - Reading 'Dokumentation.bcf'
+[201] Biber.pm:952> INFO - Found 3 citekeys in bib section 0
+[217] Biber.pm:4334> INFO - Processing section 0
+[231] Biber.pm:4523> INFO - Looking for bibtex format file 'literatur.bib' for section 0
+[239] bibtex.pm:1682> INFO - LaTeX decoding ...
+[250] bibtex.pm:1494> INFO - Found BibTeX data source 'literatur.bib'
+[286] Utils.pm:395> WARN - ISBN '378-2-545-64589-0' in entry 'Weigel2015' is invalid - run biber with '--validate_datamodel' for details.
+[308] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[308] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[309] Biber.pm:4162> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[309] Biber.pm:4168> INFO - No sort tailoring available for locale 'de-DE'
+[317] bbl.pm:651> INFO - Writing 'Dokumentation.bbl' with encoding 'UTF-8'
+[319] bbl.pm:754> INFO - Output to Dokumentation.bbl
+[319] Biber.pm:128> INFO - WARNINGS: 1

@@ -87,34 +87,6 @@
       \verb https://docs.microsoft.com/de-de/dotnet/framework/get-started/overview
       \endverb
     \endentry
-    \entry{Schrepel2011}{book}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=e1db39995fc2bf59289670bf7a79f424}{%
-           family={Schrepel},
-           familyi={S\bibinitperiod},
-           given={Cornelia},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Web-Entwickler-Verlag}%
-      }
-      \strng{namehash}{e1db39995fc2bf59289670bf7a79f424}
-      \strng{fullhash}{e1db39995fc2bf59289670bf7a79f424}
-      \strng{bibnamehash}{e1db39995fc2bf59289670bf7a79f424}
-      \strng{authorbibnamehash}{e1db39995fc2bf59289670bf7a79f424}
-      \strng{authornamehash}{e1db39995fc2bf59289670bf7a79f424}
-      \strng{authorfullhash}{e1db39995fc2bf59289670bf7a79f424}
-      \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{378-3-243-63454-0}
-      \field{title}{Niemals mit Terroristen verhandeln! - Warum kleinen Kindern nicht zu trauen ist.}
-      \field{year}{2011}
-    \endentry
     \entry{Weigel2015}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=4a22ad6cefd51d2b62c8b33912548b6e}{%

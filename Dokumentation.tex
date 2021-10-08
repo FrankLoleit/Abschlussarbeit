@@ -117,8 +117,24 @@ citestyle=authoryear
 \newglossaryentry{Assembly}
 {
 	name=Assembly,
-	description={Logische Organisationseinheit in .NET, welche einen Baustein einer größeren Anwendung darstellt. Auch \glqq Komponente\grqq  genannt.}
+	description={Logische Organisationseinheit in .NET, welche einen Baustein einer größeren Anwendung darstellt. Auch \glqq Komponente\grqq  genannt}
 }
+\newglossaryentry{Persistenz}
+{
+	name=Persistenz,
+	description={Die theoretische Möglichkeit eines Objekts unendlich und unabhängig von der Software, in der es erzeugt wurde, zu existieren. In der Praxis kann keine hundertprozentige Persistenz gewährleistet werden}
+}
+\newglossaryentry{Customer Obsession}
+{
+	name=Customer Obsession,
+	description={Wirtschaftsphilosophie, die den Kunden als Maßstab für alle Überlegungen des ökonomischen Denken und Handels emporhebt. Gemäß dieses Ansatzes gibt es keine den Wünschen des Kunden übergeordneten Maxime}
+}
+\newglossaryentry{Kanban}
+{
+	name=Kanban,
+	description={Prinzip für das Abarbeiten von Aufgaben im Team, bei dem alle anfallenden Aufgaben mit einer Karte visualisiert werden, die in Säulen von festgelegter maximaler Stückzahl abgelegt sind. Steigt eine Aufgabe im Bearbeitungsstadium auf, wird sie von links nach rechts \glqq gepullt\grqq. Die rechteste Säule trägt immer den Namen \glqq Done\grqq}
+}
+ 
  
  
 \begin{document}
@@ -248,6 +264,7 @@ Gneisenaustr. 66\linebreak
 \acro{XAML}{Extensible Application Markup Language}
 \acro{DRY}{Don't Repeat Yourself}
 \acro{SQL} {Structured Query Language}
+\acro{SSMS} {SQL Server Management Studio}
 
 \end{acronym}
 \newpage
@@ -263,21 +280,20 @@ Gneisenaustr. 66\linebreak
 \ofoot{Seite\:\thepage}%\:von \pageref*{myLastPage}%}
 
 \section{Einleitung}
-In diesem Projekt wird das Ziel verfolgt, die Datenbankkommunikation einer Desktopanwendung zu vereinheitlichen und die Arbeit der Entwickler von der Arbeit der Nutzer abzugrenzen. Obgleich es sich bei dem entwickelten Modul um ein Werkzeug handelt, das nur von Entwicklern geöffnet und verwendet werden kann, steht der Kunde im Vordergrund aller Bemühungen. Denn sowohl das Auffinden und Lösen von Programmfehlern, wie auch das Implementieren von neuen Komponenten kann durch die Vereinheitlichung und Separierung der Datenbankoperationen deutlich effizienter werden. Der Kunde erhält dadurch nicht nur ein tendenziell stabileres System, sondern kann auch damit rechnen, dass neue gewünschte Funktionalitäten schneller umgesetzt werden.
+In diesem Projekt wird das Ziel verfolgt, die Datenbankkommunikation einer Desktopanwendung zu vereinheitlichen und die Arbeit der Entwickler von der Arbeit der Nutzer abzugrenzen. Obgleich es sich bei dem entwickelten Modul um ein Werkzeug handelt, das nur von Entwicklern geöffnet und verwendet werden kann, steht der Kunde im Vordergrund aller Bemühungen. Denn sowohl das Auffinden und Lösen von Programmfehlern, wie auch das Implementieren von neuen Komponenten kann durch die Vereinheitlichung und Separierung der Datenbankoperationen deutlich effizienter werden. Der Kunde erhält dadurch nicht nur ein tendenziell stabileres System, sondern kann auch damit rechnen, dass neue gewünschte Funktionalitäten schneller umgesetzt werden. In diesem Sinne steht bei allen Bemühumgen dieses Projektes stets die \gls{Customer Obsession} im Vordergrund.
 
 \subsection{Projektbeschreibung}
-Ausgangspunkt der Arbeit ist die Desktopapplikation \glqq Arche\grqq{}, entwickelt im .NET-Framework\footnote{\cite{Microsoft2020}} 3.5 mit WinForms-\acs{GUI}. Das Debugging gestaltet sich teils als recht aufwändig, da alle Funktionen umgangen werden müssen, die Kundendaten generieren, verändern oder löschen. Grund dafür ist das Fehlen von Mechanismen, durch die sich Datenbankoperationen, die von Kunden und Entwicklern vorgenommen werden, jeweils voneinander abgrenzen lassen. Auch das Implementieren von neuen datenbanksensiblen Features gestaltet sich als umständlich, da es kein einheitliches Prinzip für die Datenbankkommunikation gibt. Viel mehr hat jeder einzelne Workflow jeweils eine eigene Klasse für die Datenbankkommunikation, die sich inhaltlich aber kaum unterscheiden, sondern im Wesentlichen voneinander kopiert wurden und das \acs{DRY}-Prinzip wenig Berücksichtigung findet. Daher soll ein Modul entwickelt werden, dass die Kommunikation mit der Datenbank kapselt.\newline Zunächst soll es möglich sein, dass eine \gls{Query}, die ein beliebiger Workflow an den Datenbankserver übergibt, zurückgehalten werden kann und somit nicht Gefahr zu laufen, unerwünschte Änderungen an Datenbankeinträgen vorzunehmen. Dabei soll in einer für Entwickler bestimmten GUI die entsprechende Query mit sinnvoller Hervorhebung entsprechender Keywords erfolgen. Zudem soll der Entwickler frei entscheiden können, ob die Query verarbeitet, zurückgehalten oder in ein \acs{SQL}-Management-System übertragen werden soll. Im Anschluss soll die uneinheitliche Datenbankkommuniktation durch eine globale Logik mit Hilfe von Datenbankmodellen ersetzt werden. Aus diesen Modellen soll schlussendlich ein einheitliches Verfahren abgeleitet werden können, dass die Datenbankanbindung auf ein einziges \gls{Assembly} des Projektes konzentriert und somit eine langfristige Arbeitserleichterung schafft.
+Ausgangspunkt der Arbeit ist die Desktopapplikation \glqq Arche\grqq{}, entwickelt im .NET-Framework\footnote{\cite{Microsoft2020}} 3.5 mit WinForms-\acs{GUI}. Das Debugging gestaltet sich teils als recht aufwändig, da alle Funktionen umgangen werden müssen, die Kundendaten generieren, verändern oder löschen. Grund dafür ist das Fehlen von Mechanismen, durch die sich Datenbankoperationen, die von Kunden und Entwicklern vorgenommen werden, jeweils voneinander abgrenzen lassen. Auch das Implementieren von neuen datenbanksensiblen Features gestaltet sich als umständlich, da es kein einheitliches Prinzip für die Datenbankkommunikation gibt. Viel mehr hat jeder einzelne Workflow jeweils eine eigene Klasse für die Datenbankkommunikation, die sich inhaltlich aber kaum unterscheiden, sondern im Wesentlichen voneinander kopiert wurden und das \acs{DRY}-Prinzip wenig Berücksichtigung findet. Daher soll ein Modul entwickelt werden, dass die Kommunikation mit der Datenbank kapselt.\newline Zunächst soll es möglich sein, dass eine \gls{Query}, die ein beliebiger Workflow an den Datenbankserver übergibt, zurückgehalten werden kann und somit nicht Gefahr zu laufen, unerwünschte Änderungen an Datenbankeinträgen vorzunehmen. Dabei soll in einer für Entwickler bestimmten GUI die entsprechende Query mit sinnvoller Hervorhebung entsprechender Keywords erfolgen. Zudem soll der Entwickler frei entscheiden können, ob die Query verarbeitet, zurückgehalten oder in ein \acs{SQL}-Management-System übertragen werden soll. Im Anschluss soll die uneinheitliche Datenbankkommuniktation durch eine globale Logik mit Hilfe von Datenbankmodellen ersetzt werden. Aus diesen Modellen soll schlussendlich ein einheitliches Verfahren abgeleitet werden können, das die Datenbankanbindung auf ein einziges \gls{Assembly} des Projektes konzentriert und somit eine langfristige Arbeitserleichterung schafft.
 
 \subsection{Projektziel}
-Ziel des Projektes ist es, eine solide %keine Unstimmigkeiten mit dem 
+Nach Abschluss des Projektes muss es möglich sein, in Arche Insert-, Update- und Delete-Funktionen auszulösen, ohne dabei Kundendaten zu beeinträchtigen. Ist das zu entwickelnde Modul aktiv und es wird in der GUI von Arche ein Speichern- oder Löschen-Button geklickt, soll Arche angehalten und stattdessen ein Fenster öffnen, das nur für Entwickler bestimmt ist. Dieses gibt nun die Query aus, welche an den Datenbankserver geschickt worden wäre. Die Möglichkeit, die Query mit einem Klick umgehend nach \acs{SSMS} zu versenden muss ebenfalls gegeben sein, wie die Funktion, frei entscheiden zu könnnen, ob die Query von Arche ausgeführt wird oder nicht. Die Entwickler müssen die Möglichkeit erhalten die Datenbank lokal zu simulieren und die entsprechenden Queries lokal auszuführen. Zudem muss ein einheitliches auf Datenbankmodellen basierendes Prinzip implementiert werden, über welches jedwede Insert-, Update- und Delete-Query mit entsprechenden Parametern generiert werden kann.%keine Unstimmigkeiten mit dem 
 %Webinterface auftreten. Die \acs{ADI} ist daher bemüht weitere Schritte %einzuleiten. Man hat sich entschieden \acs{XAML} zu verwenden. Auch %Mathematisch ist dies wichtig\footnote{vgl. \cite{GeraldTeschl2008}}.
 
 \subsection{Projektumfeld}
-Hier ist natürlich die Schach-KI entscheidend\footnote{vgl. \cite{Schrepel2011}}.
+Argus Data Insights (im Folgenden \glqq Argus\grqq{} genannt) ist darauf spezialisiert, Print- , Video- und Onlinemedien - insbesondere Zeitungen, Fernsehen und soziale Netzwerke - für angefragte Zeiträume und Themen zu durchsuchen und dem Kunden skalierbare Dossiers mit Informationen zur eigenen Person, Firma oder Einrichtung zu geben. Die Kunden erlangen auf diese Weise einen detaillierten Einblick darüber, wie viel Aufmerksamkeit der Kunde in den Medien allgemein erhält, welche Themen mit dem Kunden assoziiert werden und und die Berichterstattung tendenziell positiv, negativ oder neutral ausfällt. Die Redaktionssoftware Arche wird sowohl zum Digitalisieren, Annotieren, Aufbereiten und Versenden der für den Kunden angefertigten Dossiers verwendet. Dabei werden vor allem Print- und Onlineinhalte unterschieden. Die verschiedenen Medieninhalte werden in Fileservern abgelegt, deren Pfade sowie zahlreiche Medienparameter in Datenbanktabellen gespeichert. Darüber hinaus gibt es eine umfangreiche Kundendatenbank. Datenbankzugriffe erfolgen nicht einheitlich, sondern von verschiedenen \gls{Persistenz}-Klassen aus, deren interne Logik von jeweils der zuletzt angelegten Persistenzklasse kopiert ist (nicht vererbt). 
 
 \subsection{Projektbegründung}
-Die Gründe für mein Projekt sind einfach. Ich wurde von der heiligen Mutter auserwählt,
-um das Volk der Fachinformatiker zu erleuchten. So ist diese Arbeit entstanden.
+Die Gründe für das Projekt liegen in der erschwerten Wartung der Software, sowie dem erhöhten Aufwand, neue datenbanksensible Komponenten hinzuzufügen. Muss ein Ticket\footnote{Bei Argus wird das \gls{Kanban}-Board \href{https://www.atlassian.com/software/jira}{Atlassian Jira} verwendet.} bearbeitet werden, bei dem ein Problem mit Query und oder Datenbank vermutet wird, müssen beim Debugging sehr früh Breakpoints gesetzt werden, um nicht Gefahr zu laufen, Kundendaten irreversibel zu verändern. Es fehlt die Möglichkeit
 
 \subsection{Projektabgrenzung}
 Wichtig ist natürlich die logische Planung\footnote{vgl. \cite{Weigel2015}}. Aber auch die IT-Systeme spielen eine Rolle\footnote{vgl. \cite{Gettner2015}}.
