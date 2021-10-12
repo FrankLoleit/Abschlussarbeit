@@ -32,6 +32,7 @@ marginparwidth=15mm
 \usepackage[automake]{glossaries}
 
 
+
 \setstretch{1.2}
 
 \usepackage[
@@ -117,7 +118,7 @@ citestyle=authoryear
 \newglossaryentry{Assembly}
 {
 	name=Assembly,
-	description={Logische Organisationseinheit in .NET, welche einen Baustein einer größeren Anwendung darstellt. Auch \glqq Komponente\grqq  genannt}
+	description={Logische Organisationseinheit in .NET, welche einen Baustein einer größeren Anwendung darstellt. Auch \glqq Komponente\grqq oder \glqq Modul\grqq genannt}
 }
 \newglossaryentry{Persistenz}
 {
@@ -134,6 +135,16 @@ citestyle=authoryear
 	name=Kanban,
 	description={Prinzip für das Abarbeiten von Aufgaben im Team, bei dem alle anfallenden Aufgaben mit einer Karte visualisiert werden, die in Säulen von festgelegter maximaler Stückzahl abgelegt sind. Steigt eine Aufgabe im Bearbeitungsstadium auf, wird sie von links nach rechts \glqq gepullt\grqq. Die rechteste Säule trägt immer den Namen \glqq Done\grqq}
 }
+\newglossaryentry{Product Owner}
+{
+	name=Product Owner,
+	description={\glqq Der:die Product Owner:in ist ergebnisverantwortlich für die Maximierung des Wertes des Produkts, der
+sich aus der Arbeit des Scrum Teams ergibt. Wie dies geschieht, kann je nach Organisation, Scrum Team
+und Individuum sehr unterschiedlich sein\grqq\footnote{Entnommen aus \cite{SchwaberSutherland2020}} 
+}
+}
+
+
  
  
  
@@ -237,6 +248,7 @@ Gneisenaustr. 66\linebreak
 
 \newpage
 
+\phantomsection
 \addcontentsline{toc}{section}{Abbildungsverzeichnis}
 \listoffigures
 
@@ -245,6 +257,7 @@ Gneisenaustr. 66\linebreak
 
 \newpage
 
+\phantomsection
 \addcontentsline{toc}{section}{Tabellenverzeichnis}
 \listoftables
 \newpage
@@ -269,6 +282,7 @@ Gneisenaustr. 66\linebreak
 \end{acronym}
 \newpage
 
+\phantomsection
 \addcontentsline{toc}{section}{Glossar}
 \printglossary[nonumberlist]
 \newpage
@@ -290,13 +304,13 @@ Nach Abschluss des Projektes muss es möglich sein, in Arche Insert-, Update- un
 %Webinterface auftreten. Die \acs{ADI} ist daher bemüht weitere Schritte %einzuleiten. Man hat sich entschieden \acs{XAML} zu verwenden. Auch %Mathematisch ist dies wichtig\footnote{vgl. \cite{GeraldTeschl2008}}.
 
 \subsection{Projektumfeld}
-Argus Data Insights (im Folgenden \glqq Argus\grqq{} genannt) ist darauf spezialisiert, Print- , Video- und Onlinemedien - insbesondere Zeitungen, Fernsehen und soziale Netzwerke - für angefragte Zeiträume und Themen zu durchsuchen und dem Kunden skalierbare Dossiers mit Informationen zur eigenen Person, Firma oder Einrichtung zu geben. Die Kunden erlangen auf diese Weise einen detaillierten Einblick darüber, wie viel Aufmerksamkeit der Kunde in den Medien allgemein erhält, welche Themen mit dem Kunden assoziiert werden und und die Berichterstattung tendenziell positiv, negativ oder neutral ausfällt. Die Redaktionssoftware Arche wird sowohl zum Digitalisieren, Annotieren, Aufbereiten und Versenden der für den Kunden angefertigten Dossiers verwendet. Dabei werden vor allem Print- und Onlineinhalte unterschieden. Die verschiedenen Medieninhalte werden in Fileservern abgelegt, deren Pfade sowie zahlreiche Medienparameter in Datenbanktabellen gespeichert. Darüber hinaus gibt es eine umfangreiche Kundendatenbank. Datenbankzugriffe erfolgen nicht einheitlich, sondern von verschiedenen \gls{Persistenz}-Klassen aus, deren interne Logik von jeweils der zuletzt angelegten Persistenzklasse kopiert ist (nicht vererbt). 
+Argus Data Insights (im Folgenden \glqq Argus\grqq{} genannt) ist darauf spezialisiert, Print- , Video- und Onlinemedien - insbesondere Zeitungen, Fernsehen und soziale Netzwerke - für angefragte Zeiträume und Themen zu durchsuchen und dem Kunden skalierbare Dossiers mit Informationen zur eigenen Person, Firma oder Einrichtung zu geben. Die Kunden erlangen auf diese Weise einen detaillierten Einblick darüber, wie viel Aufmerksamkeit der Kunde in den Medien allgemein erhält, welche Themen mit dem Kunden assoziiert werden und und die Berichterstattung tendenziell positiv, negativ oder neutral ausfällt. Die Redaktionssoftware Arche wird sowohl zum Digitalisieren, Annotieren, Aufbereiten und Versenden der für den Kunden angefertigten Dossiers verwendet. Dabei werden vor allem Print- und Onlineinhalte unterschieden. Die verschiedenen Medieninhalte werden in Fileservern abgelegt, deren Pfade sowie zahlreiche Medienparameter in Datenbanktabellen gespeichert. Darüber hinaus gibt es eine umfangreiche Kundendatenbank. Datenbankzugriffe erfolgen nicht einheitlich, sondern von verschiedenen \gls{Persistenz}-Klassen aus, deren interne Logik von jeweils der zuletzt angelegten Persistenzklasse kopiert ist (nicht vererbt).
 
 \subsection{Projektbegründung}
-Die Gründe für das Projekt liegen in der erschwerten Wartung der Software, sowie dem erhöhten Aufwand, neue datenbanksensible Komponenten hinzuzufügen. Muss ein Ticket\footnote{Bei Argus wird das \gls{Kanban}-Board \href{https://www.atlassian.com/software/jira}{Atlassian Jira} verwendet.} bearbeitet werden, bei dem ein Problem mit Query und oder Datenbank vermutet wird, müssen beim Debugging sehr früh Breakpoints gesetzt werden, um nicht Gefahr zu laufen, Kundendaten irreversibel zu verändern. Es fehlt die Möglichkeit
+Die Gründe für das Projekt liegen in der erschwerten Wartung der Software, sowie dem erhöhten Aufwand, neue datenbanksensible Komponenten hinzuzufügen. Muss ein Ticket\footnote{Bei Argus wird das \gls{Kanban}-Board \href{https://www.atlassian.com/software/jira}{Atlassian Jira} verwendet.} bearbeitet werden, bei dem ein Problem mit Query und oder Datenbank vermutet wird, müssen beim Debugging sehr früh Breakpoints gesetzt werden, um nicht Gefahr zu laufen, Kundendaten irreversibel zu verändern. Es fehlt die Möglichkeit, global die Ausführung von Datenbankprozessen zurückzuhalten. Darüber hinaus ist es äußerst kompliziert, die entsprechende Query zu erhalten, welche es für das jeweilige Ticket zu analysieren gilt. Daran anschließend ist kein einheitlicher Prozess vorhanden, der die Kommunikation von .NET und MSSQL steuert. Um sowohl Wartbarkeit, als auch einfache Erweiterbarkeit zu gewährleisten, ist dieses Projekt in Absprache mit den \gls{Product Owner}n entstanden.
 
 \subsection{Projektabgrenzung}
-Wichtig ist natürlich die logische Planung\footnote{vgl. \cite{Weigel2015}}. Aber auch die IT-Systeme spielen eine Rolle\footnote{vgl. \cite{Gettner2015}}.
+Durch die komponentenorientierte Arbeitsweise in .NET lässt sich das zu entwickelnde Modul gut von bereits fertigen Projekten innerhalb der Kernapplikation Arche abgrenzen \autoref{fig:Assemblies}
 
 \section{Projektplanung}
 Eine sinnvolle Planung für das Projekt ist natürlich wichtig. Aber man sollte es auch nicht übertreiben.
@@ -475,6 +489,8 @@ Momentan kann Arche nur
 
 \newpage
 \setcounter{secnumdepth}{0}
+
+\phantomsection
 \addcontentsline{toc}{section}{Literatur}
 
 \printbibliography
@@ -497,8 +513,8 @@ Momentan kann Arche nur
 
 
 
-
 \section{Anhang}
+
 \subsection{Detaillierte Zeitplanung}
 
 \begin{table}[ht]
@@ -560,8 +576,20 @@ Momentan kann Arche nur
 \subsection{Ressourcenplan}
 \blindtext\blindtext
 
-\subsection{Projektkosten Details}
-\blindtext\blindtext
+%\subsection{Projektkosten Details}
+%\blindtext\blindtext
+\subsection{Auszüge Assemblies}
+Einige Komponenten aus Arche mit den Komponenten DBEncapsulation und DBEncapsulationTests:
+ \begin{figure}[h]
+ \centering
+
+
+
+ \label{fig:Assemblies}
+	\includegraphics[scale=0.7]{Assemblies.png}
+	 \caption{Assemblies}
+ \end{figure}
+
 
 \subsection{Anwendungsfalldiagramm}
 \blindtext\blindtext
@@ -574,7 +602,7 @@ Momentan kann Arche nur
 
 \subsection{Sequenzdiagramm}
 \blindtext
-\clearpage
+
 
 \subsection{Klassendiagramm}
 

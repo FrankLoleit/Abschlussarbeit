@@ -19,46 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
-    \entry{Gettner2015}{book}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=3abd2a4e200ecf2daeb716a6223a361b}{%
-           family={Gettner},
-           familyi={G\bibinitperiod},
-           given={Klaas},
-           giveni={K\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=a8f1f3a440c892fab8580c599e0720c8}{%
-           family={Lintermann},
-           familyi={L\bibinitperiod},
-           given={Franz-Josef},
-           giveni={F\bibinithyphendelim J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=dabf587a199dd1f5110aaac0f6802053}{%
-           family={Schaefer},
-           familyi={S\bibinitperiod},
-           given={Udo},
-           giveni={U\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Bildungverlag EINS}%
-      }
-      \strng{namehash}{298e082a5082f5ba44e20e2df1a16b88}
-      \strng{fullhash}{298e082a5082f5ba44e20e2df1a16b88}
-      \strng{bibnamehash}{298e082a5082f5ba44e20e2df1a16b88}
-      \strng{authorbibnamehash}{298e082a5082f5ba44e20e2df1a16b88}
-      \strng{authornamehash}{298e082a5082f5ba44e20e2df1a16b88}
-      \strng{authorfullhash}{298e082a5082f5ba44e20e2df1a16b88}
-      \field{sortinit}{G}
-      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-38237-1140-7}
-      \field{title}{Einfache IT-Systeme}
-      \field{year}{2015}
-    \endentry
     \entry{Microsoft2020}{online}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=8581899a0ecb7a636ae4b06b6c90fd58}{%
@@ -87,33 +47,42 @@
       \verb https://docs.microsoft.com/de-de/dotnet/framework/get-started/overview
       \endverb
     \endentry
-    \entry{Weigel2015}{book}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=4a22ad6cefd51d2b62c8b33912548b6e}{%
-           family={Sett-Weigel},
-           familyi={S\bibinithyphendelim W\bibinitperiod},
-           given={Thorsten},
-           giveni={T\bibinitperiod},
+    \entry{SchwaberSutherland2020}{online}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ee6f08fcba839e09471a0bc69152b6a5}{%
+           family={Schwaber},
+           familyi={S\bibinitperiod},
+           given={Ken},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e3f26f6f816a26c6ab36bc7a899bcde}{%
+           family={Sutherland},
+           familyi={S\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod},
            givenun=0}}%
       }
-      \list{publisher}{1}{%
-        {Umschuldozenten-Verlag}%
-      }
-      \strng{namehash}{4a22ad6cefd51d2b62c8b33912548b6e}
-      \strng{fullhash}{4a22ad6cefd51d2b62c8b33912548b6e}
-      \strng{bibnamehash}{4a22ad6cefd51d2b62c8b33912548b6e}
-      \strng{authorbibnamehash}{4a22ad6cefd51d2b62c8b33912548b6e}
-      \strng{authornamehash}{4a22ad6cefd51d2b62c8b33912548b6e}
-      \strng{authorfullhash}{4a22ad6cefd51d2b62c8b33912548b6e}
+      \strng{namehash}{303ea1dc92fd8c772eac56316b2074ef}
+      \strng{fullhash}{303ea1dc92fd8c772eac56316b2074ef}
+      \strng{bibnamehash}{303ea1dc92fd8c772eac56316b2074ef}
+      \strng{authorbibnamehash}{303ea1dc92fd8c772eac56316b2074ef}
+      \strng{authornamehash}{303ea1dc92fd8c772eac56316b2074ef}
+      \strng{authorfullhash}{303ea1dc92fd8c772eac56316b2074ef}
       \field{sortinit}{S}
       \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{378-2-545-64589-0}
-      \field{title}{Schach in der fünften Dimension kodieren}
-      \field{year}{2015}
+      \field{title}{Der Scrum Guide - Der gültige Leitfaden für Scrum, Die Spielregeln}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-German.pdf
+      \endverb
+      \verb{url}
+      \verb https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-German.pdf
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
