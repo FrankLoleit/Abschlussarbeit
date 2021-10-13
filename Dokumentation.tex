@@ -1,5 +1,5 @@
 \documentclass[11pt,toc=sectionentrywithoutdots, 
-headheight=44pt, headings=optiontoheadandtoc, hyperfootnotes=false]{scrartcl}
+headheight=44pt, headings=optiontoheadandtoc, hyperfootnotes=false, hypertexnames=false]{scrartcl}
 
 %Packages
 \usepackage{geometry}
@@ -30,6 +30,7 @@ marginparwidth=15mm
 \usepackage{nameref}
 \usepackage{setspace}
 \usepackage[automake]{glossaries}
+\usepackage[export]{adjustbox}
 
 
 
@@ -140,9 +141,15 @@ citestyle=authoryear
 	name=Product Owner,
 	description={\glqq Der:die Product Owner:in ist ergebnisverantwortlich für die Maximierung des Wertes des Produkts, der
 sich aus der Arbeit des Scrum Teams ergibt. Wie dies geschieht, kann je nach Organisation, Scrum Team
-und Individuum sehr unterschiedlich sein\grqq\footnote{Entnommen aus \cite{SchwaberSutherland2020}} 
+und Individuum sehr unterschiedlich sein\grqq\footnote{Entnommen aus \cite{SchwaberSutherland2020}}}
 }
+
+\newglossaryentry{IntelliSense}
+{
+	name=IntelliSense,
+	description={Von Microsoft entwickeltes Werkzeug für die integrierten Entwicklungsumgebungen Visual Studio und Visual Studio Code, welches der Programmiererin während beim Entwickeln eine Übersicht darüber gibt, welche Variablen, Klassen und Methoden an der gerade zu bearbeiteten Stelle im Code zur Verfügung stehen}
 }
+
 
 
  
@@ -151,8 +158,9 @@ und Individuum sehr unterschiedlich sein\grqq\footnote{Entnommen aus \cite{Schwa
 \begin{document}
 
 
-
+\pagenumbering{Roman}
 \thispagestyle{empty}
+
 \cfoot[]{}
 %\ofoot{Seite \thepage\:von \pageref{LastPage}}
 \ofoot{\thepage}
@@ -300,20 +308,20 @@ In diesem Projekt wird das Ziel verfolgt, die Datenbankkommunikation einer Deskt
 Ausgangspunkt der Arbeit ist die Desktopapplikation \glqq Arche\grqq{}, entwickelt im .NET-Framework\footnote{\cite{Microsoft2020}} 3.5 mit WinForms-\acs{GUI}. Das Debugging gestaltet sich teils als recht aufwändig, da alle Funktionen umgangen werden müssen, die Kundendaten generieren, verändern oder löschen. Grund dafür ist das Fehlen von Mechanismen, durch die sich Datenbankoperationen, die von Kunden und Entwicklern vorgenommen werden, jeweils voneinander abgrenzen lassen. Auch das Implementieren von neuen datenbanksensiblen Features gestaltet sich als umständlich, da es kein einheitliches Prinzip für die Datenbankkommunikation gibt. Viel mehr hat jeder einzelne Workflow jeweils eine eigene Klasse für die Datenbankkommunikation, die sich inhaltlich aber kaum unterscheiden, sondern im Wesentlichen voneinander kopiert wurden und das \acs{DRY}-Prinzip wenig Berücksichtigung findet. Daher soll ein Modul entwickelt werden, dass die Kommunikation mit der Datenbank kapselt.\newline Zunächst soll es möglich sein, dass eine \gls{Query}, die ein beliebiger Workflow an den Datenbankserver übergibt, zurückgehalten werden kann und somit nicht Gefahr zu laufen, unerwünschte Änderungen an Datenbankeinträgen vorzunehmen. Dabei soll in einer für Entwickler bestimmten GUI die entsprechende Query mit sinnvoller Hervorhebung entsprechender Keywords erfolgen. Zudem soll der Entwickler frei entscheiden können, ob die Query verarbeitet, zurückgehalten oder in ein \acs{SQL}-Management-System übertragen werden soll. Im Anschluss soll die uneinheitliche Datenbankkommuniktation durch eine globale Logik mit Hilfe von Datenbankmodellen ersetzt werden. Aus diesen Modellen soll schlussendlich ein einheitliches Verfahren abgeleitet werden können, das die Datenbankanbindung auf ein einziges \gls{Assembly} des Projektes konzentriert und somit eine langfristige Arbeitserleichterung schafft.
 
 \subsection{Projektziel}
-Nach Abschluss des Projektes muss es möglich sein, in Arche Insert-, Update- und Delete-Funktionen auszulösen, ohne dabei Kundendaten zu beeinträchtigen. Ist das zu entwickelnde Modul aktiv und es wird in der GUI von Arche ein Speichern- oder Löschen-Button geklickt, soll Arche angehalten und stattdessen ein Fenster öffnen, das nur für Entwickler bestimmt ist. Dieses gibt nun die Query aus, welche an den Datenbankserver geschickt worden wäre. Die Möglichkeit, die Query mit einem Klick umgehend nach \acs{SSMS} zu versenden muss ebenfalls gegeben sein, wie die Funktion, frei entscheiden zu könnnen, ob die Query von Arche ausgeführt wird oder nicht. Die Entwickler müssen die Möglichkeit erhalten die Datenbank lokal zu simulieren und die entsprechenden Queries lokal auszuführen. Zudem muss ein einheitliches auf Datenbankmodellen basierendes Prinzip implementiert werden, über welches jedwede Insert-, Update- und Delete-Query mit entsprechenden Parametern generiert werden kann.%keine Unstimmigkeiten mit dem 
+Nach Abschluss des Projektes muss es möglich sein, in Arche Insert-, Update- und Delete-Funktionen auszulösen, ohne dabei Kundendaten zu beeinträchtigen. Ist das zu entwickelnde Modul aktiv und es wird in der GUI von Arche ein Speichern- oder Löschen-Button geklickt, soll Arche angehalten und stattdessen ein Fenster öffnen, das nur für Entwickler bestimmt ist. Dieses gibt nun die Query aus, welche an den Datenbankserver geschickt worden wäre. Die Möglichkeit, die Query mit einem Klick umgehend nach \acs{SSMS} zu versenden muss ebenfalls gegeben sein, wie die Funktion, frei entscheiden zu können, ob die Query von Arche ausgeführt wird oder nicht. Die Entwickler müssen die Möglichkeit erhalten die Datenbank lokal zu simulieren und die entsprechenden Queries lokal auszuführen. Zudem muss ein einheitliches auf Datenbankmodellen basierendes Prinzip implementiert werden, über welches jedwede Insert-, Update- und Delete-Query mit entsprechenden Parametern generiert werden kann.%keine Unstimmigkeiten mit dem 
 %Webinterface auftreten. Die \acs{ADI} ist daher bemüht weitere Schritte %einzuleiten. Man hat sich entschieden \acs{XAML} zu verwenden. Auch %Mathematisch ist dies wichtig\footnote{vgl. \cite{GeraldTeschl2008}}.
 
 \subsection{Projektumfeld}
 Argus Data Insights (im Folgenden \glqq Argus\grqq{} genannt) ist darauf spezialisiert, Print- , Video- und Onlinemedien - insbesondere Zeitungen, Fernsehen und soziale Netzwerke - für angefragte Zeiträume und Themen zu durchsuchen und dem Kunden skalierbare Dossiers mit Informationen zur eigenen Person, Firma oder Einrichtung zu geben. Die Kunden erlangen auf diese Weise einen detaillierten Einblick darüber, wie viel Aufmerksamkeit der Kunde in den Medien allgemein erhält, welche Themen mit dem Kunden assoziiert werden und und die Berichterstattung tendenziell positiv, negativ oder neutral ausfällt. Die Redaktionssoftware Arche wird sowohl zum Digitalisieren, Annotieren, Aufbereiten und Versenden der für den Kunden angefertigten Dossiers verwendet. Dabei werden vor allem Print- und Onlineinhalte unterschieden. Die verschiedenen Medieninhalte werden in Fileservern abgelegt, deren Pfade sowie zahlreiche Medienparameter in Datenbanktabellen gespeichert. Darüber hinaus gibt es eine umfangreiche Kundendatenbank. Datenbankzugriffe erfolgen nicht einheitlich, sondern von verschiedenen \gls{Persistenz}-Klassen aus, deren interne Logik von jeweils der zuletzt angelegten Persistenzklasse kopiert ist (nicht vererbt).
 
 \subsection{Projektbegründung}
-Die Gründe für das Projekt liegen in der erschwerten Wartung der Software, sowie dem erhöhten Aufwand, neue datenbanksensible Komponenten hinzuzufügen. Muss ein Ticket\footnote{Bei Argus wird das \gls{Kanban}-Board \href{https://www.atlassian.com/software/jira}{Atlassian Jira} verwendet.} bearbeitet werden, bei dem ein Problem mit Query und oder Datenbank vermutet wird, müssen beim Debugging sehr früh Breakpoints gesetzt werden, um nicht Gefahr zu laufen, Kundendaten irreversibel zu verändern. Es fehlt die Möglichkeit, global die Ausführung von Datenbankprozessen zurückzuhalten. Darüber hinaus ist es äußerst kompliziert, die entsprechende Query zu erhalten, welche es für das jeweilige Ticket zu analysieren gilt. Daran anschließend ist kein einheitlicher Prozess vorhanden, der die Kommunikation von .NET und MSSQL steuert. Um sowohl Wartbarkeit, als auch einfache Erweiterbarkeit zu gewährleisten, ist dieses Projekt in Absprache mit den \gls{Product Owner}n entstanden.
+Die Gründe für das Projekt liegen in der erschwerten Wartung der Software, sowie dem erhöhten Aufwand, neue datenbanksensible Komponenten hinzuzufügen. Muss ein Ticket\footnote{Bei Argus wird das \gls{Kanban}-Board \href{https://www.atlassian.com/software/jira}{Atlassian Jira} verwendet.} bearbeitet werden, bei dem ein Problem mit Query und/oder Datenbank vermutet wird, müssen beim Debugging sehr früh Breakpoints gesetzt werden, um nicht Gefahr zu laufen, Kundendaten irreversibel zu verändern. Es fehlt die Möglichkeit, global die Ausführung von Datenbankprozessen zurückzuhalten. Darüber hinaus ist es äußerst kompliziert, die entsprechende Query zu erhalten, welche es für das jeweilige Ticket zu analysieren gilt. Daran anschließend ist kein einheitlicher Prozess vorhanden, der die Kommunikation von .NET und MSSQL steuert. Um sowohl Wartbarkeit, als auch einfache Erweiterbarkeit zu gewährleisten, ist dieses Projekt in Absprache mit den \gls{Product Owner}n entstanden.
 
 \subsection{Projektabgrenzung}
-Durch die komponentenorientierte Arbeitsweise in .NET lässt sich das zu entwickelnde Modul gut von bereits fertigen Projekten innerhalb der Kernapplikation Arche abgrenzen \autoref{fig:Assemblies}
+Was die technische Abgrenzung anbelangt, ist durch die komponentenorientierte Arbeitsweise in .NET das zu entwickelnde Modul gut von bereits fertigen Projekten innerhalb der Kernapplikation getrennt. Konkret bedeutet das, dass das neue Modul \glqq DBEncapsulation\grqq{} und dessen Testmodul \glqq DBEncapsulationTests\grqq{}\footnote{Siehe \hyperref[fig:Assemblies]{Auszug Projektabgrenzung}} per se isoliert und interagieren nur dann mit der Hauptapplikation Arche, wenn eine Referenz zu einem anderen Modul hergestellt wird. Wird eine Variable oder Methode aus DBEncapsulation als öffentlich deklariert, ist sie dennoch vorerst in keinem der anderen Module verfügbar und trägt nicht zur Überlastung der \gls{IntelliSense} bei. Soll das Modul aus einem bereits entwickelten Modul verfügbar sein, muss dessen Projektdatei zunächst eine Referenz auf DBEncapsulation hinzugefügt werden. Im nächsten Schritt kann denjenigen Klassen, welche datenbankrelevante Prozesse implementieren ein \glqq using\grqq{}-Statement hinzugefügt werden. Erst unter diesen Voraussetzungen, sind in der entsprechenden Klasse Daten verfügbar, die als öffentlich deklariert sind.\newline Bezüglich der inhaltlichen Abgrenzung ist festzuhalten, dass aufgrund der hohen Vielfalt an Datenbankoperationen zunächst Insert- Update- und Delete im Vordergrund stehen werden. Da Select-Operationen keine Beeinträchtigungen von Kundendaten zur Folge haben können, wird für diese Fälle vor allem im Vordergrund steht den Entwicklern ein korrektes Feedback darüber zu geben, welche Tabellen und Spalten nach welcher Abfragelogik an die Datenbank übermittelt wurden. Da Select-Operationen stark heterogen sind, wird hier kein einheitlicher Prozess für angestrebt. Jedoch soll es für die Fälle Update, Insert und Delete grundsätzlich nicht mehr nötig sein, neue Logiken für neue Module zu entwerfen und lediglich durch Referenzierung auf DBEncapsulation entsprechende Funktionalitäten bereit gestellt werden.
 
 \section{Projektplanung}
-Eine sinnvolle Planung für das Projekt ist natürlich wichtig. Aber man sollte es auch nicht übertreiben.
+Für die Planung ist wesentlich, dass das Tagesgeschäft der Entwicklerinnen bei Argus nicht unterbrochen wird, sondern parallel zum hier dokumentierten Projekt mit allen zeitlichen und finanziellen Aufwendungen weiterläuft. 
 
 \subsection{Projektphasen}
 Das Projekt wurde in einem Zeitraum von 70 Stunden umgesetzt. 
@@ -497,7 +505,7 @@ Momentan kann Arche nur
 
 
 
-\label{myLastPage}
+%\label{myLastPage}
 
 \newpage
 
@@ -505,15 +513,21 @@ Momentan kann Arche nur
 
 \setcounter{page}{1}
 \setcounter{secnumdepth}{2}
-\setcounter{section}{1}
+
+
 \renewcommand{\thesection}{A}
+\setcounter{section}{1}
+
 
 
 \ofoot{\thepage}
 
 
 
+
+
 \section{Anhang}
+
 
 \subsection{Detaillierte Zeitplanung}
 
@@ -578,18 +592,14 @@ Momentan kann Arche nur
 
 %\subsection{Projektkosten Details}
 %\blindtext\blindtext
-\subsection{Auszüge Assemblies}
+\subsection{Auszug Projektabgrenzung}
 Einige Komponenten aus Arche mit den Komponenten DBEncapsulation und DBEncapsulationTests:
- \begin{figure}[h]
+ \begin{figure}[htp]
  \centering
-
-
-
  \label{fig:Assemblies}
 	\includegraphics[scale=0.7]{Assemblies.png}
-	 \caption{Assemblies}
+	 \caption{Assemblies und Referenzierung}
  \end{figure}
-
 
 \subsection{Anwendungsfalldiagramm}
 \blindtext\blindtext
