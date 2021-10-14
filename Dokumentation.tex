@@ -31,6 +31,8 @@ marginparwidth=15mm
 \usepackage{setspace}
 \usepackage[automake]{glossaries}
 \usepackage[export]{adjustbox}
+\usepackage{wrapfig,lipsum,booktabs}
+%\captionsetup[wraptable]{margin=x cm, width= y cm}
 
 
 
@@ -144,11 +146,24 @@ sich aus der Arbeit des Scrum Teams ergibt. Wie dies geschieht, kann je nach Org
 und Individuum sehr unterschiedlich sein\grqq\footnote{Entnommen aus \cite{SchwaberSutherland2020}}}
 }
 
+\newglossaryentry{Refactoring}
+{
+	name=Refactoring,
+	description={\glqq Code-Refactoring ist der Prozess der Umstrukturierung bestehenden Quellcodes ohne dessen externes Verhalten zu ändern. Refactoring verbessert keine funktionalen Attribute der Software. Die Vorteile von Refactoring umfassen verbesserte Lesbarkeit des Codes und reduzierte Komplexität\grqq\footnote{Entnommen aus \cite{Kranz2021}}}
+}
+
 \newglossaryentry{IntelliSense}
 {
 	name=IntelliSense,
 	description={Von Microsoft entwickeltes Werkzeug für die integrierten Entwicklungsumgebungen Visual Studio und Visual Studio Code, welches der Programmiererin während beim Entwickeln eine Übersicht darüber gibt, welche Variablen, Klassen und Methoden an der gerade zu bearbeiteten Stelle im Code zur Verfügung stehen}
 }
+
+\newglossaryentry{Legacy Code}
+{
+	name=Legacy Code,
+	description={Code, der von mittlerweile nicht mehr kontaktierbaren Entwicklern \glqq geerbt\grqq wurde, nicht mehr in allen Aspekten dem aktuellen Stand der Technik entspricht und darüber hinaus nicht umfassend dokumentiert ist.}
+}
+
 
 
 
@@ -321,12 +336,10 @@ Die Gründe für das Projekt liegen in der erschwerten Wartung der Software, sow
 Was die technische Abgrenzung anbelangt, ist durch die komponentenorientierte Arbeitsweise in .NET das zu entwickelnde Modul gut von bereits fertigen Projekten innerhalb der Kernapplikation getrennt. Konkret bedeutet das, dass das neue Modul \glqq DBEncapsulation\grqq{} und dessen Testmodul \glqq DBEncapsulationTests\grqq{}\footnote{Siehe \hyperref[fig:Assemblies]{Auszug Projektabgrenzung}} per se isoliert und interagieren nur dann mit der Hauptapplikation Arche, wenn eine Referenz zu einem anderen Modul hergestellt wird. Wird eine Variable oder Methode aus DBEncapsulation als öffentlich deklariert, ist sie dennoch vorerst in keinem der anderen Module verfügbar und trägt nicht zur Überlastung der \gls{IntelliSense} bei. Soll das Modul aus einem bereits entwickelten Modul verfügbar sein, muss dessen Projektdatei zunächst eine Referenz auf DBEncapsulation hinzugefügt werden. Im nächsten Schritt kann denjenigen Klassen, welche datenbankrelevante Prozesse implementieren ein \glqq using\grqq{}-Statement hinzugefügt werden. Erst unter diesen Voraussetzungen, sind in der entsprechenden Klasse Daten verfügbar, die als öffentlich deklariert sind.\newline Bezüglich der inhaltlichen Abgrenzung ist festzuhalten, dass aufgrund der hohen Vielfalt an Datenbankoperationen zunächst Insert- Update- und Delete im Vordergrund stehen werden. Da Select-Operationen keine Beeinträchtigungen von Kundendaten zur Folge haben können, wird für diese Fälle vor allem im Vordergrund steht den Entwicklern ein korrektes Feedback darüber zu geben, welche Tabellen und Spalten nach welcher Abfragelogik an die Datenbank übermittelt wurden. Da Select-Operationen stark heterogen sind, wird hier kein einheitlicher Prozess für angestrebt. Jedoch soll es für die Fälle Update, Insert und Delete grundsätzlich nicht mehr nötig sein, neue Logiken für neue Module zu entwerfen und lediglich durch Referenzierung auf DBEncapsulation entsprechende Funktionalitäten bereit gestellt werden.
 
 \section{Projektplanung}
-Für die Planung ist wesentlich, dass das Tagesgeschäft der Entwicklerinnen bei Argus nicht unterbrochen wird, sondern parallel zum hier dokumentierten Projekt mit allen zeitlichen und finanziellen Aufwendungen weiterläuft. 
+Für die Planung ist wesentlich, dass das Tagesgeschäft der Entwicklerinnen bei Argus nicht unterbrochen wird, sondern parallel zum hier dokumentierten Projekt mit allen zeitlichen und finanziellen Aufwendungen weiterläuft. Das heißt, bei der Projektplanung ist ein sinnvolles Verhältnis von Recherche, selbstständigem Kodieren und eigenverantwortlichen Entscheidungen einerseits, sowie zielgerichtete Unterstützung durch Ausbilder und Kolleginnen andererseits. Um den stetigen Austausch zu gewährleisten, wird der Fortschritt dieses Projektes im täglichen Meeting mit Vorgesetzten und Teammitgliedern geteilt. Zudem werden regelmäßige sowie spontane 1:1-Gespräche mit dem Ausbilder durchgeführt.
 
 \subsection{Projektphasen}
-Das Projekt wurde in einem Zeitraum von 70 Stunden umgesetzt. 
-Dabei wurde die gesamte Stundenanzahl wurde wie folgt aufgeteilt:
-
+Das Projekt wurde in einem Zeitraum von 70 Stunden umgesetzt. Dabei wurde die gesamte Stundenanzahl wie folgt aufgeteilt\footnote{Siehe \hyperref[sec:Detaillierte Zeitplanung]{Detailliert Zeitplanung}}:%
 
 \begin{table}[ht]
 	\begin{center}
@@ -335,10 +348,10 @@ Dabei wurde die gesamte Stundenanzahl wurde wie folgt aufgeteilt:
 			\textbf{Projektphase} 		& \textbf{Geplante Zeit} \\
 			\hline
 
-			Analysephase 				& 8 h	 		\\
+			Analysephase 				& 7 h	 		\\
 			Entwurfsphase				& 11 h	 		\\
 			Implementierungsphase 		& 40 h	 		\\
-			Abnahme und Einführung		& 11 h 			\\
+			Abnahme und Einführung		& 2 h 			\\
 			Erstellen der Dokumentation & 10 h 			\\
 			\hline
 			\textbf{Gesamt}	 			& \textbf{70 h}	\\
@@ -347,11 +360,12 @@ Dabei wurde die gesamte Stundenanzahl wurde wie folgt aufgeteilt:
 		\end{tabular}
 		\caption{Zeitplanung}
 	\end{center}
-\end{table}	
-
+\end{table}
+Für den Einstieg in das Projekt ist zu erwähnen, dass es sich bei dem Projekt Arche um \gls{Legacy Code} handelt, dessen Funktionsweise nur begrenzt objektorientiert aufgebaut ist. Sowohl bei Analyse, Entwurf und Implementierung ist daher immer das Nachvollziehen des Codes durch Recherche, Debugging und Rücksprache mit erfahrenen Mitarbeitern entscheidend.
 
 \subsection{Ressourcenplanung}
-\blindtext\
+%Die notwendigen Ressourcen für das Projekt sind sowohl monetärer als auch nicht-monetärer Art. Nicht monetäre Ressourcen umfassen vor allem zeitliche Aufwendungen von Ausbilder und Kolleginnen, %sowie Recherche
+Bei dem Ressourcenplan kann zwischen Hardware- und Softwareressourcen, wie auch zwischen monetärem und nicht-monetärem Aufwand unterschieden werden.
 
 \subsection{Entwicklungsprozess}
 \blindtext\
@@ -530,60 +544,62 @@ Momentan kann Arche nur
 
 
 \subsection{Detaillierte Zeitplanung}
-
+\label{sec:Detaillierte Zeitplanung}
 \begin{table}[ht]
 	\begin{center}
 		\begin{tabular}{ ||l|r|| }
 			\hline
 			
-			\textbf{Analysephase} 										& \textbf{8 h}	\\
+			\textbf{Analysephase} 										& \textbf{7 h}	\\
 			\hline			
 			1. Ist-Analyse												& 5 h			\\
-			2. Wirtschaftlichkeitsprüfung								& 2 h			\\		
+			2. Kostenanalyse            								& 2 h			\\		
 			3. Kommunikation mit dem Fachbereich						& 1 h			\\
 			\hline
 
 			\textbf{Entwurfphase} 										& \textbf{11 h}	\\
 			\hline
-			1. Frameworks auswählen										& 1 h			\\
-			2. Projektbesprechung mit Tutoren							& 2 h			\\		
+			1. Datenbanken sichten										& 1 h			\\
+			2. Programmiersprachen und Frameworks auswählen				& 2 h			\\		
 			3. Graphische Benutzeroberfläche skizzieren					& 2 h			\\
-			4. Datenbankmodell entwerfen								& 3 h			\\
-			5. Geschäftslogik ausformulieren							& 3 h			\\			
+			4. Logik für Datenbankmodelle entwerfen						& 3 h			\\
+			5. Konvertierungslogik der Datentypen erarbeiten            & 1.5 h			\\	
+			6. Logiken für SQL-Command-Generierung skizzieren            & 1.5 h			\\	
 			\hline
 
 			\textbf{Implementierungsphase} 								& \textbf{40 h}	\\
 			\hline
-			1. Datenbank aufsetzen										& 11 h 			\\
-			2. Modelle einpflegen und testen							& 11 h 			\\
-			3. Komponenten erstellen 									& 11 h 			\\
-			4. ViewModels programmieren	und an GUI andocken				& 11 h 			\\
-			5. Controller anlegen										& 11 h 			\\
-			6.1 Python-Skripte einpflegen								& 11 h 			\\
-			6.2 C\# Properties anlegen									& 11 h 			\\
-			6.3 Debuggen												& 11 h 			\\
-			6.4 Tests ausführen											& 11 h 			\\
-			6.4 Pull Requests bearbeiten								& 11 h 			\\			
+			1. GUI designen										            & 3 h 			\\
+			2. Textformatierung einpflegen							        & 5 h 			\\
+			3. Query-Verarbeitung programmieren 							& 4 h 			\\
+			4. Andockstellen im bestehenden Code identifizieren			    & 2 h 			\\
+			5. Query-Request-Klasse programmieren							& 6 h 			\\
+			6. Skripte für das Generieren von Datenbankmodellen schreiben	& 7 h 			\\
+			8. Query-Generator implementieren                               & 5 h 			\\
+			9. Datenkonvertierung einbinden    						        & 4 h 			\\
+			10. Refaktorierung der bestehenden Datenbanklogik               & 2 h 			\\
+			11. Test der neuen Datenbankkommunikation						& 2 h 			\\			
 			\hline
 
 			\textbf{Abnahme und Schulung}		 						& \textbf{2 h}	\\
 			\hline
-			1. Abnahme durch Fachabteilung								& 11 h 			\\
-			2. Installation												& 11 h 			\\
+			1. Abnahme durch Fachabteilung								& 1 h 			\\
+			2. Installation												& 1 h 			\\
 			\hline
 
 			\textbf{Erstellen der Dokumentation} 						& \textbf{10 h}	\\
 			\hline
-			1. Erstellen der Projektdokumentation						& 11 h 			\\
-			2. Erstellen der Entwicklerdokumentation					& 11 h 			\\
-			3. Erstellen Benutzerdokumentation							& 11 h 			\\
+			1. Erstellen der Projektdokumentation						& 8 h 			\\
+			2. Erstellen der Entwicklerdokumentation					& 2 h 			\\
+			
 			\hline
 
 			\textbf{Gesamt}	 											& \textbf{70 h}	\\
 			\hline
 
 		\end{tabular}
-		%\caption{Zeitplanung}
+		\caption{Detaillierte Zeitplanung}
+		
 	\end{center}
 \end{table}	
 
@@ -593,10 +609,11 @@ Momentan kann Arche nur
 %\subsection{Projektkosten Details}
 %\blindtext\blindtext
 \subsection{Auszug Projektabgrenzung}
+ \label{fig:Assemblies}
 Einige Komponenten aus Arche mit den Komponenten DBEncapsulation und DBEncapsulationTests:
  \begin{figure}[htp]
  \centering
- \label{fig:Assemblies}
+
 	\includegraphics[scale=0.7]{Assemblies.png}
 	 \caption{Assemblies und Referenzierung}
  \end{figure}
