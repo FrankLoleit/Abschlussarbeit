@@ -32,6 +32,7 @@ marginparwidth=15mm
 \usepackage[automake]{glossaries}
 \usepackage[export]{adjustbox}
 \usepackage{wrapfig,lipsum,booktabs}
+\usepackage{placeins}
 %\captionsetup[wraptable]{margin=x cm, width= y cm}
 
 
@@ -358,14 +359,15 @@ Das Projekt wurde in einem Zeitraum von 70 Stunden umgesetzt. Dabei wurde die ge
 			
 			\hline
 		\end{tabular}
-		\caption{Zeitplanung}
+		%\caption{Zeitplanung}
 	\end{center}
-\end{table}
-Für den Einstieg in das Projekt ist zu erwähnen, dass es sich bei dem Projekt Arche um \gls{Legacy Code} handelt, dessen Funktionsweise nur begrenzt objektorientiert aufgebaut ist. Sowohl bei Analyse, Entwurf und Implementierung ist daher immer das Nachvollziehen des Codes durch Recherche, Debugging und Rücksprache mit erfahrenen Mitarbeitern entscheidend.
+\end{table}%
+
+Den Einstieg in das Projekts betreffend ist zu erwähnen, dass es sich bei dem Projekt Arche um \gls{Legacy Code} handelt, dessen Funktionsweise nur begrenzt objektorientiert aufgebaut ist. Sowohl bei Analyse, Entwurf und Implementierung ist daher immer das Nachvollziehen des Codes durch Recherche, Debugging und Rücksprache mit erfahrenen Mitarbeitern entscheidend.
 
 \subsection{Ressourcenplanung}
 %Die notwendigen Ressourcen für das Projekt sind sowohl monetärer als auch nicht-monetärer Art. Nicht monetäre Ressourcen umfassen vor allem zeitliche Aufwendungen von Ausbilder und Kolleginnen, %sowie Recherche
-Bei dem Ressourcenplan kann zwischen Hardware- und Softwareressourcen, wie auch zwischen monetärem und nicht-monetärem Aufwand unterschieden werden.
+Bei der Planung der Ressourcen\footnote{Siehe \hyperref[sec:Ressourcenplan]{Ressourcenplan}} kann zwischen Hardware- und Softwareressourcen unterschieden werden, welche gänzlich von Unternehmen und Bildungseinrichtung zur Verfügung gestellt wurden. 
 
 \subsection{Entwicklungsprozess}
 \blindtext\
@@ -539,7 +541,7 @@ Momentan kann Arche nur
 
 
 
-
+\FloatBarrier
 \section{Anhang}
 
 
@@ -552,45 +554,45 @@ Momentan kann Arche nur
 			
 			\textbf{Analysephase} 										& \textbf{7 h}	\\
 			\hline			
-			1. Ist-Analyse												& 5 h			\\
-			2. Kostenanalyse            								& 2 h			\\		
-			3. Kommunikation mit dem Fachbereich						& 1 h			\\
+			\quad 1. Ist-Analyse												& 5 h			\\
+			\quad 2. Kostenanalyse            								& 2 h			\\		
+			\quad 3. Kommunikation mit dem Fachbereich						& 1 h			\\
 			\hline
 
-			\textbf{Entwurfphase} 										& \textbf{11 h}	\\
+			\textbf{Entwurfsphase} 										& \textbf{11 h}	\\
 			\hline
-			1. Datenbanken sichten										& 1 h			\\
-			2. Programmiersprachen und Frameworks auswählen				& 2 h			\\		
-			3. Graphische Benutzeroberfläche skizzieren					& 2 h			\\
-			4. Logik für Datenbankmodelle entwerfen						& 3 h			\\
-			5. Konvertierungslogik der Datentypen erarbeiten            & 1.5 h			\\	
-			6. Logiken für SQL-Command-Generierung skizzieren            & 1.5 h			\\	
+			\quad 1. Datenbanken sichten										& 1 h			\\
+			\quad 2. Programmiersprachen und Frameworks auswählen				& 2 h			\\		
+			\quad 3. Graphische Benutzeroberfläche skizzieren					& 2 h			\\
+			\quad 4. Logik für Datenbankmodelle entwerfen						& 3 h			\\
+			\quad 5. Konvertierungslogik der Datentypen erarbeiten            & 1.5 h			\\	
+			\quad 6. Logiken für SQL-Command-Generierung skizzieren            & 1.5 h			\\	
 			\hline
 
 			\textbf{Implementierungsphase} 								& \textbf{40 h}	\\
 			\hline
-			1. GUI designen										            & 3 h 			\\
-			2. Textformatierung einpflegen							        & 5 h 			\\
-			3. Query-Verarbeitung programmieren 							& 4 h 			\\
-			4. Andockstellen im bestehenden Code identifizieren			    & 2 h 			\\
-			5. Query-Request-Klasse programmieren							& 6 h 			\\
-			6. Skripte für das Generieren von Datenbankmodellen schreiben	& 7 h 			\\
-			8. Query-Generator implementieren                               & 5 h 			\\
-			9. Datenkonvertierung einbinden    						        & 4 h 			\\
-			10. Refaktorierung der bestehenden Datenbanklogik               & 2 h 			\\
-			11. Test der neuen Datenbankkommunikation						& 2 h 			\\			
+			\quad 1. GUI designen										            & 3 h 			\\
+			\quad 2. Textformatierung einpflegen							        & 5 h 			\\
+			\quad 3. Query-Verarbeitung programmieren 							& 4 h 			\\
+			\quad 4. Andockstellen im bestehenden Code identifizieren			    & 2 h 			\\
+			\quad 5. Query-Request-Klasse programmieren							& 6 h 			\\
+			\quad 6. Skripte für das Generieren von Datenbankmodellen schreiben	& 7 h 			\\
+			\quad 7. Query-Generator implementieren                               & 5 h 			\\
+			\quad 8. Datenkonvertierung einbinden    						        & 4 h 			\\
+			\quad 9. Refactoring der bestehenden Datenbanklogik               & 2 h 			\\
+			\quad 10. Test der neuen Datenbankkommunikation						& 2 h 			\\			
 			\hline
 
 			\textbf{Abnahme und Schulung}		 						& \textbf{2 h}	\\
 			\hline
-			1. Abnahme durch Fachabteilung								& 1 h 			\\
-			2. Installation												& 1 h 			\\
+			\quad 1. Abnahme durch Fachabteilung								& 1 h 			\\
+			\quad 2. Installation												& 1 h 			\\
 			\hline
 
 			\textbf{Erstellen der Dokumentation} 						& \textbf{10 h}	\\
 			\hline
-			1. Erstellen der Projektdokumentation						& 8 h 			\\
-			2. Erstellen der Entwicklerdokumentation					& 2 h 			\\
+			\quad 1. Erstellen der Projektdokumentation						& 8 h 			\\
+			\quad 2. Erstellen der Entwicklerdokumentation					& 2 h 			\\
 			
 			\hline
 
@@ -602,12 +604,60 @@ Momentan kann Arche nur
 		
 	\end{center}
 \end{table}	
+\clearpage
 
+\FloatBarrier
 \subsection{Ressourcenplan}
+\label{sec:Ressourcenplan}
+\begin{table}[ht]
+	%\begin{center}
+		\begin{tabular}{ l }
+			%\hline
+			
+			\textbf{Hardware} 										\\
+					
+			\quad 1. Rechner für die Softwareentwicklung (bereitgestellt durch Argus)														\\
+			\quad 2. Rechner für die Dokumentation (bereitgestellt durch das bfw)            									\\		
+			%\hline
+
+			\textbf{Software} 										\\
+			
+			\quad 1. Microsoft Visual Studio 2019 Professional											\\
+			\quad 2. Microsoft Visual Studio Code						\\		
+			\quad 3. Microsoft SQL Server Management Studio 18						\\
+			\quad 4. Pascal Brachet TexMaker 2021									\\
+			\quad 5. Pluralsight Lernplattform (bereitgestellt durch Argus)		          			\\	
+			\quad 6. Atlassian Source Tree    			\\	
+			\quad 7. Draw.io (UML-Designer) \\
+			
+			%\hline
+
+			\textbf{Programmiersprachen und Frameworks} 								\\
+			
+			\quad 1. .NET Framework 3.5										           		\\
+			\quad 2. Python 3.9.7					       			\\
+			\quad 3. pyodbc (Framework für die Anbindung von Python an MSSQL)\\
+			\quad 4. WinForms (Grafische Benututzeroberfläche)\\
+			%5. WinForms (Grafische Benututzeroberfläche)\\
+			
+			%\hline
+
+			\textbf{Personal}		 							\\
+			\quad 1. Entwickler\\
+			\quad 2. Administratoren\\
+			\quad 3. Ausbilder\\
+			\quad 4. Praktikant\\
+			%\hline
+			\end{tabular}
+		\caption{Ressourcenplan}
+		
+	%\end{center}
+\end{table}	
+
+
+\subsection{Projektkosten Details}
 \blindtext\blindtext
 
-%\subsection{Projektkosten Details}
-%\blindtext\blindtext
 \subsection{Auszug Projektabgrenzung}
  \label{fig:Assemblies}
 Einige Komponenten aus Arche mit den Komponenten DBEncapsulation und DBEncapsulationTests:
@@ -617,6 +667,7 @@ Einige Komponenten aus Arche mit den Komponenten DBEncapsulation und DBEncapsula
 	\includegraphics[scale=0.7]{Assemblies.png}
 	 \caption{Assemblies und Referenzierung}
  \end{figure}
+ \clearpage
 
 \subsection{Anwendungsfalldiagramm}
 \blindtext\blindtext
