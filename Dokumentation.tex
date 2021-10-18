@@ -137,7 +137,7 @@ citestyle=authoryear
 \newglossaryentry{Kanban}
 {
 	name=Kanban,
-	description={Prinzip für das Abarbeiten von Aufgaben im Team, bei dem alle anfallenden Aufgaben mit einer Karte visualisiert werden, die in Säulen von festgelegter maximaler Stückzahl abgelegt sind. Steigt eine Aufgabe im Bearbeitungsstadium auf, wird sie von links nach rechts \glqq gepullt\grqq. Die rechteste Säule trägt immer den Namen \glqq Done\grqq}
+	description={Prinzip für das Abarbeiten von Aufgaben im Team, bei dem alle anfallenden Aufgaben mit einer Karte visualisiert werden, die in Säulen von festgelegter maximaler Stückzahl abgelegt sind. Steigt eine Aufgabe im Bearbeitungsstadium auf, wird sie von links nach rechts \glqq gepullt\grqq{}. Die rechteste Säule trägt immer den Namen \glqq Done\grqq}
 }
 \newglossaryentry{Product Owner}
 {
@@ -145,6 +145,12 @@ citestyle=authoryear
 	description={\glqq Der:die Product Owner:in ist ergebnisverantwortlich für die Maximierung des Wertes des Produkts, der
 sich aus der Arbeit des Scrum Teams ergibt. Wie dies geschieht, kann je nach Organisation, Scrum Team
 und Individuum sehr unterschiedlich sein\grqq\footnote{Entnommen aus \cite{SchwaberSutherland2020}}}
+}
+
+\newglossaryentry{Pain Driven Development}
+{
+	name=Pain Driven Development,
+	description={\glqq Pain Driven Development, or PDD, is the practice of writing software in such a way that you only \glq fix\grq{} problems when they are causing pain, rather than trying to preempt every possible issue\grqq\footnote{Entnommen aus \cite{Smith2017}}}
 }
 
 \newglossaryentry{Refactoring}
@@ -162,8 +168,25 @@ und Individuum sehr unterschiedlich sein\grqq\footnote{Entnommen aus \cite{Schwa
 \newglossaryentry{Legacy Code}
 {
 	name=Legacy Code,
-	description={Code, der von mittlerweile nicht mehr kontaktierbaren Entwicklern \glqq geerbt\grqq wurde, nicht mehr in allen Aspekten dem aktuellen Stand der Technik entspricht und darüber hinaus nicht umfassend dokumentiert ist.}
+	description={Code, der von mittlerweile nicht mehr kontaktierbaren Entwicklern \glqq geerbt\grqq wurde, nicht mehr in allen Aspekten dem aktuellen Stand der Technik entspricht und darüber hinaus nicht umfassend dokumentiert ist}
 }
+\newglossaryentry{Open Source}
+{
+	name=Open Source,
+	description={Software, die von den Entwickler öffentlich zur Verfügung gestellt wird, ohne dass dabei Kosten für Interessenten anfallen. Die entsprechende Software kann für jeden erdenklichen Zweck verwendet, also auch erweitert oder modifiziert werden. Ebenso kann Open-Source-Software für kommerzielle Zwecke verwendet werden}
+}
+\newglossaryentry{Breakpoint}
+{
+	name=Breakpoint,
+	description={Markierung am Rand der Zeile im Programmcode, an der die Ausführung des Programms an eben dieser Stelle angehalten wird. Nach dem Anhalten kann im Code-Editor bzw. der integrierten Entwicklungsumgebung der aktuelle Status von Variablen abgefragt werden und bei Bedarf Zeile für Zeile weiter ausgeführt werden}
+}
+\newglossaryentry{Single Responsibility Principle}
+{
+	name=Single Responsibility Principle,
+	description={Das erste Prinzip aus den fünf vom Softwareentwickler Robert C. Martin formulierten \glq SOLID\grq{}-Prinzipien, welches besagt, das ein Modul nur einen einzigen Grund haben sollte, sich zu ändern. Beispielsweise kann sich ein Modul entweder in Hinblick auf die GUI ändern oder in Hinblick auf die Datenbankkommunikation, aber niemals mal das eine, mal das andere.}
+}
+
+
 
 
 
@@ -321,7 +344,7 @@ Gneisenaustr. 66\linebreak
 In diesem Projekt wird das Ziel verfolgt, die Datenbankkommunikation einer Desktopanwendung zu vereinheitlichen und die Arbeit der Entwickler von der Arbeit der Nutzer abzugrenzen. Obgleich es sich bei dem entwickelten Modul um ein Werkzeug handelt, das nur von Entwicklern geöffnet und verwendet werden kann, steht der Kunde im Vordergrund aller Bemühungen. Denn sowohl das Auffinden und Lösen von Programmfehlern, wie auch das Implementieren von neuen Komponenten kann durch die Vereinheitlichung und Separierung der Datenbankoperationen deutlich effizienter werden. Der Kunde erhält dadurch nicht nur ein tendenziell stabileres System, sondern kann auch damit rechnen, dass neue gewünschte Funktionalitäten schneller umgesetzt werden. In diesem Sinne steht bei allen Bemühumgen dieses Projektes stets die \gls{Customer Obsession} im Vordergrund.
 
 \subsection{Projektbeschreibung}
-Ausgangspunkt der Arbeit ist die Desktopapplikation \glqq Arche\grqq{}, entwickelt im .NET-Framework\footnote{\cite{Microsoft2020}} 3.5 mit WinForms-\acs{GUI}. Das Debugging gestaltet sich teils als recht aufwändig, da alle Funktionen umgangen werden müssen, die Kundendaten generieren, verändern oder löschen. Grund dafür ist das Fehlen von Mechanismen, durch die sich Datenbankoperationen, die von Kunden und Entwicklern vorgenommen werden, jeweils voneinander abgrenzen lassen. Auch das Implementieren von neuen datenbanksensiblen Features gestaltet sich als umständlich, da es kein einheitliches Prinzip für die Datenbankkommunikation gibt. Viel mehr hat jeder einzelne Workflow jeweils eine eigene Klasse für die Datenbankkommunikation, die sich inhaltlich aber kaum unterscheiden, sondern im Wesentlichen voneinander kopiert wurden und das \acs{DRY}-Prinzip wenig Berücksichtigung findet. Daher soll ein Modul entwickelt werden, dass die Kommunikation mit der Datenbank kapselt.\newline Zunächst soll es möglich sein, dass eine \gls{Query}, die ein beliebiger Workflow an den Datenbankserver übergibt, zurückgehalten werden kann und somit nicht Gefahr zu laufen, unerwünschte Änderungen an Datenbankeinträgen vorzunehmen. Dabei soll in einer für Entwickler bestimmten GUI die entsprechende Query mit sinnvoller Hervorhebung entsprechender Keywords erfolgen. Zudem soll der Entwickler frei entscheiden können, ob die Query verarbeitet, zurückgehalten oder in ein \acs{SQL}-Management-System übertragen werden soll. Im Anschluss soll die uneinheitliche Datenbankkommuniktation durch eine globale Logik mit Hilfe von Datenbankmodellen ersetzt werden. Aus diesen Modellen soll schlussendlich ein einheitliches Verfahren abgeleitet werden können, das die Datenbankanbindung auf ein einziges \gls{Assembly} des Projektes konzentriert und somit eine langfristige Arbeitserleichterung schafft.
+Ausgangspunkt der Arbeit ist die Desktopapplikation \glqq Arche\grqq{}, entwickelt im .NET-Framework\footnote{\cite{Microsoft2020}} 3.5 mit WinForms-\acs{GUI}. Das Debugging gestaltet sich teils als recht aufwändig, da alle Funktionen umgangen werden müssen, die Kundendaten generieren, verändern oder löschen. Grund dafür ist das Fehlen von Mechanismen, durch die sich Datenbankoperationen, die von Kunden und Entwicklern vorgenommen werden, jeweils voneinander abgrenzen lassen. Auch das Implementieren von neuen datenbanksensiblen Features gestaltet sich als umständlich, da es kein einheitliches Prinzip für die Datenbankkommunikation gibt. Viel mehr hat jeder einzelne Workflow jeweils eine eigene Klasse für die Datenbankkommunikation, die sich inhaltlich aber kaum unterscheiden, sondern im Wesentlichen voneinander kopiert wurden und das \acs{DRY}-Prinzip wenig Berücksichtigung findet. Daher soll ein Modul entwickelt werden, dass die Kommunikation mit der Datenbank kapselt.\newline\newline Zunächst soll es möglich sein, dass eine \gls{Query}, die ein beliebiger Workflow an den Datenbankserver übergibt, zurückgehalten werden kann und somit nicht Gefahr zu laufen, unerwünschte Änderungen an Datenbankeinträgen vorzunehmen. Dabei soll in einer für Entwickler bestimmten GUI die entsprechende Query mit sinnvoller Hervorhebung entsprechender Keywords erfolgen. Zudem soll der Entwickler frei entscheiden können, ob die Query verarbeitet, zurückgehalten oder in ein \acs{SQL}-Management-System übertragen werden soll. Im Anschluss soll die uneinheitliche Datenbankkommuniktation durch eine globale Logik mit Hilfe von Datenbankmodellen ersetzt werden. Aus diesen Modellen soll schlussendlich ein einheitliches Verfahren abgeleitet werden können, das die Datenbankanbindung auf ein einziges \gls{Assembly} des Projektes konzentriert und somit eine langfristige Arbeitserleichterung schafft.
 
 \subsection{Projektziel}
 Nach Abschluss des Projektes muss es möglich sein, in Arche Insert-, Update- und Delete-Funktionen auszulösen, ohne dabei Kundendaten zu beeinträchtigen. Ist das zu entwickelnde Modul aktiv und es wird in der GUI von Arche ein Speichern- oder Löschen-Button geklickt, soll Arche angehalten und stattdessen ein Fenster öffnen, das nur für Entwickler bestimmt ist. Dieses gibt nun die Query aus, welche an den Datenbankserver geschickt worden wäre. Die Möglichkeit, die Query mit einem Klick umgehend nach \acs{SSMS} zu versenden muss ebenfalls gegeben sein, wie die Funktion, frei entscheiden zu können, ob die Query von Arche ausgeführt wird oder nicht. Die Entwickler müssen die Möglichkeit erhalten die Datenbank lokal zu simulieren und die entsprechenden Queries lokal auszuführen. Zudem muss ein einheitliches auf Datenbankmodellen basierendes Prinzip implementiert werden, über welches jedwede Insert-, Update- und Delete-Query mit entsprechenden Parametern generiert werden kann.%keine Unstimmigkeiten mit dem 
@@ -334,7 +357,7 @@ Argus Data Insights (im Folgenden \glqq Argus\grqq{} genannt) ist darauf spezial
 Die Gründe für das Projekt liegen in der erschwerten Wartung der Software, sowie dem erhöhten Aufwand, neue datenbanksensible Komponenten hinzuzufügen. Muss ein Ticket\footnote{Bei Argus wird das \gls{Kanban}-Board \href{https://www.atlassian.com/software/jira}{Atlassian Jira} verwendet.} bearbeitet werden, bei dem ein Problem mit Query und/oder Datenbank vermutet wird, müssen beim Debugging sehr früh Breakpoints gesetzt werden, um nicht Gefahr zu laufen, Kundendaten irreversibel zu verändern. Es fehlt die Möglichkeit, global die Ausführung von Datenbankprozessen zurückzuhalten. Darüber hinaus ist es äußerst kompliziert, die entsprechende Query zu erhalten, welche es für das jeweilige Ticket zu analysieren gilt. Daran anschließend ist kein einheitlicher Prozess vorhanden, der die Kommunikation von .NET und MSSQL steuert. Um sowohl Wartbarkeit, als auch einfache Erweiterbarkeit zu gewährleisten, ist dieses Projekt in Absprache mit den \gls{Product Owner}n entstanden.
 
 \subsection{Projektabgrenzung}
-Was die technische Abgrenzung anbelangt, ist durch die komponentenorientierte Arbeitsweise in .NET das zu entwickelnde Modul gut von bereits fertigen Projekten innerhalb der Kernapplikation getrennt. Konkret bedeutet das, dass das neue Modul \glqq DBEncapsulation\grqq{} und dessen Testmodul \glqq DBEncapsulationTests\grqq{}\footnote{Siehe \hyperref[fig:Assemblies]{Auszug Projektabgrenzung}} per se isoliert und interagieren nur dann mit der Hauptapplikation Arche, wenn eine Referenz zu einem anderen Modul hergestellt wird. Wird eine Variable oder Methode aus DBEncapsulation als öffentlich deklariert, ist sie dennoch vorerst in keinem der anderen Module verfügbar und trägt nicht zur Überlastung der \gls{IntelliSense} bei. Soll das Modul aus einem bereits entwickelten Modul verfügbar sein, muss dessen Projektdatei zunächst eine Referenz auf DBEncapsulation hinzugefügt werden. Im nächsten Schritt kann denjenigen Klassen, welche datenbankrelevante Prozesse implementieren ein \glqq using\grqq{}-Statement hinzugefügt werden. Erst unter diesen Voraussetzungen, sind in der entsprechenden Klasse Daten verfügbar, die als öffentlich deklariert sind.\newline Bezüglich der inhaltlichen Abgrenzung ist festzuhalten, dass aufgrund der hohen Vielfalt an Datenbankoperationen zunächst Insert- Update- und Delete im Vordergrund stehen werden. Da Select-Operationen keine Beeinträchtigungen von Kundendaten zur Folge haben können, wird für diese Fälle vor allem im Vordergrund steht den Entwicklern ein korrektes Feedback darüber zu geben, welche Tabellen und Spalten nach welcher Abfragelogik an die Datenbank übermittelt wurden. Da Select-Operationen stark heterogen sind, wird hier kein einheitlicher Prozess für angestrebt. Jedoch soll es für die Fälle Update, Insert und Delete grundsätzlich nicht mehr nötig sein, neue Logiken für neue Module zu entwerfen und lediglich durch Referenzierung auf DBEncapsulation entsprechende Funktionalitäten bereit gestellt werden.
+Was die technische Abgrenzung anbelangt, ist durch die komponentenorientierte Arbeitsweise in .NET das zu entwickelnde Modul gut von bereits fertigen Projekten innerhalb der Kernapplikation getrennt. Konkret bedeutet das, dass das neue Modul \glqq DBEncapsulation\grqq{} und dessen Testmodul \glqq DBEncapsulationTests\grqq{}\footnote{Siehe \hyperref[fig:Assemblies]{Auszug Projektabgrenzung}} per se isoliert und interagieren nur dann mit der Hauptapplikation Arche, wenn eine Referenz zu einem anderen Modul hergestellt wird. Wird eine Variable oder Methode aus DBEncapsulation als öffentlich deklariert, ist sie dennoch vorerst in keinem der anderen Module verfügbar und trägt nicht zur Überlastung der \gls{IntelliSense} bei. Soll das Modul aus einem bereits entwickelten Modul verfügbar sein, muss dessen Projektdatei zunächst eine Referenz auf DBEncapsulation hinzugefügt werden. Im nächsten Schritt kann denjenigen Klassen, welche datenbankrelevante Prozesse implementieren ein \glqq using\grqq{}-Statement hinzugefügt werden. Erst unter diesen Voraussetzungen, sind in der entsprechenden Klasse Daten verfügbar, die als öffentlich deklariert sind.\newline\newline Bezüglich der inhaltlichen Abgrenzung ist festzuhalten, dass aufgrund der hohen Vielfalt an Datenbankoperationen zunächst Insert- Update- und Delete im Vordergrund stehen werden. Da Select-Operationen keine Beeinträchtigungen von Kundendaten zur Folge haben können, wird für diese Fälle vor allem im Vordergrund steht den Entwicklern ein korrektes Feedback darüber zu geben, welche Tabellen und Spalten nach welcher Abfragelogik an die Datenbank übermittelt wurden. Da Select-Operationen stark heterogen sind, wird hier kein einheitlicher Prozess für angestrebt. Jedoch soll es für die Fälle Update, Insert und Delete grundsätzlich nicht mehr nötig sein, neue Logiken für neue Module zu entwerfen und lediglich durch Referenzierung auf DBEncapsulation entsprechende Funktionalitäten bereit gestellt werden.
 
 \section{Projektplanung}
 Für die Planung ist wesentlich, dass das Tagesgeschäft der Entwicklerinnen bei Argus nicht unterbrochen wird, sondern parallel zum hier dokumentierten Projekt mit allen zeitlichen und finanziellen Aufwendungen weiterläuft. Das heißt, bei der Projektplanung ist ein sinnvolles Verhältnis von Recherche, selbstständigem Kodieren und eigenverantwortlichen Entscheidungen einerseits, sowie zielgerichtete Unterstützung durch Ausbilder und Kolleginnen andererseits. Um den stetigen Austausch zu gewährleisten, wird der Fortschritt dieses Projektes im täglichen Meeting mit Vorgesetzten und Teammitgliedern geteilt. Zudem werden regelmäßige sowie spontane 1:1-Gespräche mit dem Ausbilder durchgeführt.
@@ -367,16 +390,16 @@ Den Einstieg in das Projekts betreffend ist zu erwähnen, dass es sich bei dem P
 
 \subsection{Ressourcenplanung}
 %Die notwendigen Ressourcen für das Projekt sind sowohl monetärer als auch nicht-monetärer Art. Nicht monetäre Ressourcen umfassen vor allem zeitliche Aufwendungen von Ausbilder und Kolleginnen, %sowie Recherche
-Bei der Planung der Ressourcen\footnote{Siehe \hyperref[sec:Ressourcenplan]{Ressourcenplan}} kann zwischen Hardware- und Softwareressourcen unterschieden werden, welche gänzlich von Unternehmen und Bildungseinrichtung zur Verfügung gestellt wurden. 
+Bei der Planung der Ressourcen\footnote{Siehe \hyperref[sec:Ressourcenplan]{Ressourcenplan}} kann zwischen Hardware- und Softwareressourcen unterschieden werden. Bei der Auswahl wurde darauf geachtet, keine neuen Kosten zu generieren. Bei der Hardware kamen daher die von Unternehmen und Bildungseinrichtung bereitgestellten Computer zum Einsatz. Die eingesetzte Software ist entweder \gls{Open Source} oder es existieren bereits entsprechende Lizenzen bei Argus. Das heißt, es wurden keine Ressourcen angeschafft, die vor Beginn des Projektes nicht vorhanden gewesen wären. Bezüglich des Personals ist ebenfalls festzuhalten, dass sowohl Ausbilder als auch Kolleginnen täglich kontaktierbar oder vor Ort waren. Code-Reviews und Einarbeitungen konnten in den Arbeitsalltag so integriert werden, dass keine neuen personellen Ressourcen notwendig wurden.
 
 \subsection{Entwicklungsprozess}
-\blindtext\
+Bevor der Entwicklungsprozess starten konnte, war es nötig, den Quellcode von Arche in ausgewählten Stellen zu debuggen. Dabei ging es nicht darum, Fehler zu beheben, sondern Schritt für Schritt den Code nachzuvollziehen. Dies war aus zweierlei Hinsicht sinnvoll: Zunächst hatte ich so die Möglichkeit, Wissen über C\# und die Arbeit mit Visual Studio zu sammeln und andererseits die zu bearbeitende Software Arche besser kennenzulernen. Hier wurde zunächst so vorgegangen, dass in der GUI von Arche der Text von Buttons und Labels in die Suchmaske des Visual-Studio-Explorers eingegeben wurden. Auf diese Weise konnten diejenigen Komponenten und Klassen identifiziert werden, welche für das Frontend an der entsprechenden Stelle genutzt wurden. Anschließend wurde weit oben im Code ein \gls{Breakpoint} gesetzt und dann im Debug-Modus einen Button aus der GUI geklickt.\newline\newline Da es bei diesem Projekt um Datenbankprozesse geht, wurden vor allem Buttons mit der Aufschrift \glqq Speichern\grqq{}, \glqq Aktualisieren\grqq{} oder \glqq Hinzufügen\grqq{} gewählt. Nun wurde in Absprache mit erfahrenen Kollegen der Code immer soweit weiter ausgeführt, bis die datenbankrelevante Funktion erreicht wurde, die Ausgangspunkt für dieses Projekt sein soll. Auf diese Weise konnte nicht nur die Funktionsweise von Arche besser verstanden, sondern auch jene Stellen bestimmt werden, an denen die hier zu entwickelnde Komponente andocken soll. An dieser Stelle muss erwähnt werden, dass es vor allem zu Beginn des Projektes nicht immer gelungen ist, Veränderungen an Datenbankeinträgen rechtzeitig zu unterbinden. Ungewollte Veränderungen von Daten kamen vor allem dadurch zustande, dass nicht immer klar war, ob eine Funktion die Beeinflussung von Daten vorbereitet oder bereits ausführt. Gelegentlich mussten daher einzelne Zeilen in der Datenbank manuell wieder eingefügt oder Rücksprache mit den Kunden gehalten werden. Diese Erfahrung war prägend für die generelle Herangehensweise an das Projekt, welche als \gls{Pain Driven Development} bezeichnet werden kann.
 
 \section{Analysephase}
-\blindtext\
+Hier macht es Sinn in eine technische, sowie eine wirtschaftliche Analyse einzuteilen. In technischer Hinsicht wurde bereits angemerkt, dass das Verständnis des Codes nicht über Dokumentationen, sondern über das Debugging und das Gespräch mit Kollegen funktioniert. Häufig viel dabei auf, dass Funktionen in Arche bei niedriger Schriftgröße deutlich über eine Bildschirmseite hinausreichen können und verschiedene Softwarebereiche wie die Logik der GUI nur schwach von der Datenverwaltung, zu der auch die Datenbanklogik gehört, getrennt wurden\footnote{Siehe \hyperref[fig:Vermischung verschiedener Aufgabenbereiche]{Vermischung verschiedener Aufgabenbereiche}}. Da auch generell wenig Signaturen und keine Kommentare im Code vorhanden sind, bestand die Aufgabe darin, zunächst zu mutmaßen, welche Teile des Codes mit dem Speichern von Daten zusammenhängen könnten und welche jedwede anderen Funktionen erfüllen, die mit diesem Projekt nicht zusammenhängen.\newline Was die wirtschaftliche Analyse betrifft, ist nicht zuletzt der Zeitaufwand zu beachten, der notwendig wird, wenn wie im vorliegenden Fall das \gls{Single Responsibility Principle} nicht eingehalten wird.
 
 \subsection{IST-Zustand}
-Momentan kann Arche nur
+Die Datenbankkommunikation von Arche ist so organisiert, dass verschiedene Medienklassen (z.B. Printmedien, Onlinemedien, Socialmedia-Posts usw.) jeweils eine Persistence-Klasse zur Verfügung haben. Benannt sind diese ungefähr nach Mediumname, z.B. \glqq PrintmedienTreffer.cs\grqq{} und \glqq PrintmedienTrefferPersistence.cs\grqq{}. Erstere enthält diverse variablen und Funktionen, die mit dem entsprechenden Medium zusammenhängen
 
 \subsection{Wirtschaftlichkeitsanalyse}
 \blindtext\
@@ -637,7 +660,7 @@ Momentan kann Arche nur
 			\quad 1. .NET Framework 3.5										           		\\
 			\quad 2. Python 3.9.7					       			\\
 			\quad 3. pyodbc (Framework für die Anbindung von Python an MSSQL)\\
-			\quad 4. WinForms (Grafische Benututzeroberfläche)\\
+			\quad 4. WinForms (Grafische Benutzeroberfläche)\\
 			%5. WinForms (Grafische Benututzeroberfläche)\\
 			
 			%\hline
@@ -668,6 +691,30 @@ Einige Komponenten aus Arche mit den Komponenten DBEncapsulation und DBEncapsula
 	 \caption{Assemblies und Referenzierung}
  \end{figure}
  \clearpage
+ 
+ \subsection{Auszug PrintmedienTreffer.cs}
+ \label{fig:PrintmedienTreffer.cs}
+Mehrere Variablen aus der PrintmedienTreffer-Klasse. Manche sind noch in Benutzung, andere sind obsolet:
+ \begin{figure}[htp]
+ \centering
+
+	\includegraphics[scale=0.7]{PrintmedienTreffer.png}
+	 \caption{PrintmedienTreffer-Auszug}
+ \end{figure}
+ \clearpage
+ 
+ 
+ 
+ \subsection{Vermischung verschiedener Aufgabenbereiche}
+ \label{fig:Vermischung verschiedener Aufgabenbereiche}
+Anfang der Speichern-Funktion aus einer GUI-Klasse. Diese erstreckt sich über mehrere Bildschirmseiten und vermischt Front- und Backend-Logik:
+ \begin{figure}[htp]
+ \centering
+
+	\includegraphics[scale=0.6]{SeparationOfConcerns.png}
+	 \caption{Vermischung verschiedener Aufgabenbereiche}
+ \end{figure}
+ \clearpage
 
 \subsection{Anwendungsfalldiagramm}
 \blindtext\blindtext
@@ -686,6 +733,7 @@ Einige Komponenten aus Arche mit den Komponenten DBEncapsulation und DBEncapsula
 
 Dies ist ein Beispiel für ein UML-Klassendiagramm:\\
 
+\begin{comment}
  \begin{figure}[ht]
  \centering
  \begin{tikzpicture}
@@ -744,6 +792,8 @@ Dies ist ein Beispiel für ein UML-Klassendiagramm:\\
  \label{fig:Klassendiagramm}
 	
  \end{figure}
+
+\end{comment}
 
 \subsection{Pflichtenheft (Auszug)}
 Dies ist ein bisschen Text
