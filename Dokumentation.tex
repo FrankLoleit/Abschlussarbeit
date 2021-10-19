@@ -122,7 +122,7 @@ citestyle=authoryear
 \newglossaryentry{Assembly}
 {
 	name=Assembly,
-	description={Logische Organisationseinheit in .NET, welche einen Baustein einer größeren Anwendung darstellt. Auch \glqq Komponente\grqq oder \glqq Modul\grqq genannt}
+	description={Logische Organisationseinheit in .NET, welche einen Baustein einer größeren Anwendung darstellt. Auch \glqq Komponente\grqq{} oder \glqq Modul\grqq{} genannt}
 }
 \newglossaryentry{Persistenz}
 {
@@ -399,7 +399,7 @@ Bevor der Entwicklungsprozess starten konnte, war es nötig, den Quellcode von A
 Hier macht es Sinn in eine technische, sowie eine wirtschaftliche Analyse einzuteilen. In technischer Hinsicht wurde bereits angemerkt, dass das Verständnis des Codes nicht über Dokumentationen, sondern über das Debugging und das Gespräch mit Kollegen funktioniert. Häufig viel dabei auf, dass Funktionen in Arche bei niedriger Schriftgröße deutlich über eine Bildschirmseite hinausreichen können und verschiedene Softwarebereiche wie die Logik der GUI nur schwach von der Datenverwaltung, zu der auch die Datenbanklogik gehört, getrennt wurden\footnote{Siehe \hyperref[fig:Vermischung verschiedener Aufgabenbereiche]{Vermischung verschiedener Aufgabenbereiche}}. Da auch generell wenig Signaturen und keine Kommentare im Code vorhanden sind, bestand die Aufgabe darin, zunächst zu mutmaßen, welche Teile des Codes mit dem Speichern von Daten zusammenhängen könnten und welche jedwede anderen Funktionen erfüllen, die mit diesem Projekt nicht zusammenhängen.\newline Was die wirtschaftliche Analyse betrifft, ist nicht zuletzt der Zeitaufwand zu beachten, der notwendig wird, wenn wie im vorliegenden Fall das \gls{Single Responsibility Principle} nicht eingehalten wird.
 
 \subsection{IST-Zustand}
-Die Datenbankkommunikation von Arche ist so organisiert, dass verschiedene Medienklassen (z.B. Printmedien, Onlinemedien, Socialmedia-Posts usw.) jeweils eine Persistence-Klasse zur Verfügung haben. Benannt sind diese ungefähr nach Mediumname, z.B. \glqq PrintmedienTreffer.cs\grqq{} und \glqq PrintmedienTrefferPersistence.cs\grqq{}. Erstere enthält diverse variablen und Funktionen, die mit dem entsprechenden Medium zusammenhängen
+Die Datenbankkommunikation von Arche ist so organisiert, dass verschiedene Medienklassen (z.B. Printmedien, Onlinemedien, Socialmedia-Posts usw.) jeweils eine Persistence-Klasse zur Verfügung haben. Benannt sind diese ungefähr nach Mediumname, z.B. \glqq PrintmedienTreffer.cs\grqq{} und \glqq PrintmedienTrefferPersistence.cs\grqq{}. Erstere enthält diverse Variablen und Funktionen, die mit dem entsprechenden Medium zusammenhängen\footnote{Siehe \hyperref[fig:PrintmedienTreffer.cs]{PrintmedienTreffer.cs}}. Dabei 
 
 \subsection{Wirtschaftlichkeitsanalyse}
 \blindtext\
