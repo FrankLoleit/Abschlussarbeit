@@ -12,8 +12,8 @@ doc/*.idv
 doc/*.lg
 doc/*.tmp
 doc/*.xref
-
-
+src
+pgf-umlsd.sty
 test
 examples/*.log
 examples/*.aux

@@ -34,6 +34,10 @@ marginparwidth=15mm
 \usepackage{wrapfig,lipsum,booktabs}
 \usepackage{placeins}
 %\captionsetup[wraptable]{margin=x cm, width= y cm}
+\usepackage{caption}
+
+\newcommand\extendedref[1]{Siehe \ref{#1}}
+\newcommand\fullref[1]{\extendedref{#1} auf Seite \pageref{#1}}
 
 
 
@@ -153,9 +157,9 @@ und Individuum sehr unterschiedlich sein\grqq\footnote{Entnommen aus \cite{Schwa
 	description={\glqq Pain Driven Development, or PDD, is the practice of writing software in such a way that you only \glq fix\grq{} problems when they are causing pain, rather than trying to preempt every possible issue\grqq\footnote{Entnommen aus \cite{Smith2017}}}
 }
 
-\newglossaryentry{Refactoring}
+\newglossaryentry{Refaktorierung}
 {
-	name=Refactoring,
+	name=Refaktorierung,
 	description={\glqq Code-Refactoring ist der Prozess der Umstrukturierung bestehenden Quellcodes ohne dessen externes Verhalten zu ändern. Refactoring verbessert keine funktionalen Attribute der Software. Die Vorteile von Refactoring umfassen verbesserte Lesbarkeit des Codes und reduzierte Komplexität\grqq\footnote{Entnommen aus \cite{Kranz2021}}}
 }
 
@@ -183,7 +187,12 @@ und Individuum sehr unterschiedlich sein\grqq\footnote{Entnommen aus \cite{Schwa
 \newglossaryentry{Single Responsibility Principle}
 {
 	name=Single Responsibility Principle,
-	description={Das erste Prinzip aus den fünf vom Softwareentwickler Robert C. Martin formulierten \glq SOLID\grq{}-Prinzipien, welches besagt, das ein Modul nur einen einzigen Grund haben sollte, sich zu ändern. Beispielsweise kann sich ein Modul entweder in Hinblick auf die GUI ändern oder in Hinblick auf die Datenbankkommunikation, aber niemals mal das eine, mal das andere.}
+	description={Das erste Prinzip aus den fünf vom Softwareentwickler Robert C. Martin formulierten \glq SOLID\grq{}-Prinzipien, welches besagt, das ein Modul nur einen einzigen Grund haben sollte, sich zu ändern. Beispielsweise kann sich ein Modul entweder in Hinblick auf die GUI ändern oder in Hinblick auf die Datenbankkommunikation, aber niemals mal das eine, mal das andere}
+}
+\newglossaryentry{Abstrakte Klasse}
+{
+	name=Abstrakte Klasse,
+	description={Klasse aus der kein Objekt instanziert werden kann. Abstrakte Klassen dienen als Blaupause für weitere Klassen, welche von ihr erben.}
 }
 
 
@@ -357,13 +366,13 @@ Argus Data Insights (im Folgenden \glqq Argus\grqq{} genannt) ist darauf spezial
 Die Gründe für das Projekt liegen in der erschwerten Wartung der Software, sowie dem erhöhten Aufwand, neue datenbanksensible Komponenten hinzuzufügen. Muss ein Ticket\footnote{Bei Argus wird das \gls{Kanban}-Board \href{https://www.atlassian.com/software/jira}{Atlassian Jira} verwendet.} bearbeitet werden, bei dem ein Problem mit Query und/oder Datenbank vermutet wird, müssen beim Debugging sehr früh Breakpoints gesetzt werden, um nicht Gefahr zu laufen, Kundendaten irreversibel zu verändern. Es fehlt die Möglichkeit, global die Ausführung von Datenbankprozessen zurückzuhalten. Darüber hinaus ist es äußerst kompliziert, die entsprechende Query zu erhalten, welche es für das jeweilige Ticket zu analysieren gilt. Daran anschließend ist kein einheitlicher Prozess vorhanden, der die Kommunikation von .NET und MSSQL steuert. Um sowohl Wartbarkeit, als auch einfache Erweiterbarkeit zu gewährleisten, ist dieses Projekt in Absprache mit den \gls{Product Owner}n entstanden.
 
 \subsection{Projektabgrenzung}
-Was die technische Abgrenzung anbelangt, ist durch die komponentenorientierte Arbeitsweise in .NET das zu entwickelnde Modul gut von bereits fertigen Projekten innerhalb der Kernapplikation getrennt. Konkret bedeutet das, dass das neue Modul \glqq DBEncapsulation\grqq{} und dessen Testmodul \glqq DBEncapsulationTests\grqq{}\footnote{Siehe \hyperref[fig:Assemblies]{Auszug Projektabgrenzung}} per se isoliert und interagieren nur dann mit der Hauptapplikation Arche, wenn eine Referenz zu einem anderen Modul hergestellt wird. Wird eine Variable oder Methode aus DBEncapsulation als öffentlich deklariert, ist sie dennoch vorerst in keinem der anderen Module verfügbar und trägt nicht zur Überlastung der \gls{IntelliSense} bei. Soll das Modul aus einem bereits entwickelten Modul verfügbar sein, muss dessen Projektdatei zunächst eine Referenz auf DBEncapsulation hinzugefügt werden. Im nächsten Schritt kann denjenigen Klassen, welche datenbankrelevante Prozesse implementieren ein \glqq using\grqq{}-Statement hinzugefügt werden. Erst unter diesen Voraussetzungen, sind in der entsprechenden Klasse Daten verfügbar, die als öffentlich deklariert sind.\newline\newline Bezüglich der inhaltlichen Abgrenzung ist festzuhalten, dass aufgrund der hohen Vielfalt an Datenbankoperationen zunächst Insert- Update- und Delete im Vordergrund stehen werden. Da Select-Operationen keine Beeinträchtigungen von Kundendaten zur Folge haben können, wird für diese Fälle vor allem im Vordergrund steht den Entwicklern ein korrektes Feedback darüber zu geben, welche Tabellen und Spalten nach welcher Abfragelogik an die Datenbank übermittelt wurden. Da Select-Operationen stark heterogen sind, wird hier kein einheitlicher Prozess für angestrebt. Jedoch soll es für die Fälle Update, Insert und Delete grundsätzlich nicht mehr nötig sein, neue Logiken für neue Module zu entwerfen und lediglich durch Referenzierung auf DBEncapsulation entsprechende Funktionalitäten bereit gestellt werden.
+Was die technische Abgrenzung anbelangt, ist durch die komponentenorientierte Arbeitsweise in .NET das zu entwickelnde Modul gut von bereits fertigen Projekten innerhalb der Kernapplikation getrennt. Konkret bedeutet das, dass das neue Modul \glqq DBEncapsulation\grqq{} und dessen Testmodul \glqq DBEncapsulationTests\grqq{}\footnote{\extendedref{fig:Assemblies}} per se isoliert und interagieren nur dann mit der Hauptapplikation Arche, wenn eine Referenz zu einem anderen Modul hergestellt wird. Wird eine Variable oder Methode aus DBEncapsulation als öffentlich deklariert, ist sie dennoch vorerst in keinem der anderen Module verfügbar und trägt nicht zur Überlastung der \gls{IntelliSense} bei. Soll das Modul aus einem bereits entwickelten Modul verfügbar sein, muss dessen Projektdatei zunächst eine Referenz auf DBEncapsulation hinzugefügt werden. Im nächsten Schritt kann denjenigen Klassen, welche datenbankrelevante Prozesse implementieren ein \glqq using\grqq{}-Statement hinzugefügt werden. Erst unter diesen Voraussetzungen, sind in der entsprechenden Klasse Daten verfügbar, die als öffentlich deklariert sind.\newline\newline Bezüglich der inhaltlichen Abgrenzung ist festzuhalten, dass aufgrund der hohen Vielfalt an Datenbankoperationen zunächst Insert- Update- und Delete im Vordergrund stehen werden. Da Select-Operationen keine Beeinträchtigungen von Kundendaten zur Folge haben können, wird für diese Fälle vor allem im Vordergrund steht den Entwicklern ein korrektes Feedback darüber zu geben, welche Tabellen und Spalten nach welcher Abfragelogik an die Datenbank übermittelt wurden. Da Select-Operationen stark heterogen sind, wird hier kein einheitlicher Prozess für angestrebt. Jedoch soll es für die Fälle Update, Insert und Delete grundsätzlich nicht mehr nötig sein, neue Logiken für neue Module zu entwerfen und lediglich durch Referenzierung auf DBEncapsulation entsprechende Funktionalitäten bereit gestellt werden.
 
 \section{Projektplanung}
 Für die Planung ist wesentlich, dass das Tagesgeschäft der Entwicklerinnen bei Argus nicht unterbrochen wird, sondern parallel zum hier dokumentierten Projekt mit allen zeitlichen und finanziellen Aufwendungen weiterläuft. Das heißt, bei der Projektplanung ist ein sinnvolles Verhältnis von Recherche, selbstständigem Kodieren und eigenverantwortlichen Entscheidungen einerseits, sowie zielgerichtete Unterstützung durch Ausbilder und Kolleginnen andererseits. Um den stetigen Austausch zu gewährleisten, wird der Fortschritt dieses Projektes im täglichen Meeting mit Vorgesetzten und Teammitgliedern geteilt. Zudem werden regelmäßige sowie spontane 1:1-Gespräche mit dem Ausbilder durchgeführt.
 
 \subsection{Projektphasen}
-Das Projekt wurde in einem Zeitraum von 70 Stunden umgesetzt. Dabei wurde die gesamte Stundenanzahl wie folgt aufgeteilt\footnote{Siehe \hyperref[sec:Detaillierte Zeitplanung]{Detailliert Zeitplanung}}:%
+Das Projekt wurde in einem Zeitraum von 70 Stunden umgesetzt. Dabei wurde die gesamte Stundenanzahl wie folgt aufgeteilt\footnote{\extendedref{sec:Detaillierte Zeitplanung}}:%
 
 \begin{table}[ht]
 	\begin{center}
@@ -390,19 +399,21 @@ Den Einstieg in das Projekts betreffend ist zu erwähnen, dass es sich bei dem P
 
 \subsection{Ressourcenplanung}
 %Die notwendigen Ressourcen für das Projekt sind sowohl monetärer als auch nicht-monetärer Art. Nicht monetäre Ressourcen umfassen vor allem zeitliche Aufwendungen von Ausbilder und Kolleginnen, %sowie Recherche
-Bei der Planung der Ressourcen\footnote{Siehe \hyperref[sec:Ressourcenplan]{Ressourcenplan}} kann zwischen Hardware- und Softwareressourcen unterschieden werden. Bei der Auswahl wurde darauf geachtet, keine neuen Kosten zu generieren. Bei der Hardware kamen daher die von Unternehmen und Bildungseinrichtung bereitgestellten Computer zum Einsatz. Die eingesetzte Software ist entweder \gls{Open Source} oder es existieren bereits entsprechende Lizenzen bei Argus. Das heißt, es wurden keine Ressourcen angeschafft, die vor Beginn des Projektes nicht vorhanden gewesen wären. Bezüglich des Personals ist ebenfalls festzuhalten, dass sowohl Ausbilder als auch Kolleginnen täglich kontaktierbar oder vor Ort waren. Code-Reviews und Einarbeitungen konnten in den Arbeitsalltag so integriert werden, dass keine neuen personellen Ressourcen notwendig wurden.
+Bei der Planung der Ressourcen\footnote{\extendedref{sec:Ressourcenplan}} kann zwischen Hardware- und Softwareressourcen unterschieden werden. Bei der Auswahl wurde darauf geachtet, keine neuen Kosten zu generieren. Bei der Hardware kamen daher die von Unternehmen und Bildungseinrichtung bereitgestellten Computer zum Einsatz. Die eingesetzte Software ist entweder \gls{Open Source} oder es existieren bereits entsprechende Lizenzen bei Argus. Das heißt, es wurden keine Ressourcen angeschafft, die vor Beginn des Projektes nicht vorhanden gewesen wären. Bezüglich des Personals ist ebenfalls festzuhalten, dass sowohl Ausbilder als auch Kolleginnen täglich kontaktierbar oder vor Ort waren. Code-Reviews und Einarbeitungen konnten in den Arbeitsalltag so integriert werden, dass keine neuen personellen Ressourcen notwendig wurden.
 
 \subsection{Entwicklungsprozess}
 Bevor der Entwicklungsprozess starten konnte, war es nötig, den Quellcode von Arche in ausgewählten Stellen zu debuggen. Dabei ging es nicht darum, Fehler zu beheben, sondern Schritt für Schritt den Code nachzuvollziehen. Dies war aus zweierlei Hinsicht sinnvoll: Zunächst hatte ich so die Möglichkeit, Wissen über C\# und die Arbeit mit Visual Studio zu sammeln und andererseits die zu bearbeitende Software Arche besser kennenzulernen. Hier wurde zunächst so vorgegangen, dass in der GUI von Arche der Text von Buttons und Labels in die Suchmaske des Visual-Studio-Explorers eingegeben wurden. Auf diese Weise konnten diejenigen Komponenten und Klassen identifiziert werden, welche für das Frontend an der entsprechenden Stelle genutzt wurden. Anschließend wurde weit oben im Code ein \gls{Breakpoint} gesetzt und dann im Debug-Modus einen Button aus der GUI geklickt.\newline\newline Da es bei diesem Projekt um Datenbankprozesse geht, wurden vor allem Buttons mit der Aufschrift \glqq Speichern\grqq{}, \glqq Aktualisieren\grqq{} oder \glqq Hinzufügen\grqq{} gewählt. Nun wurde in Absprache mit erfahrenen Kollegen der Code immer soweit weiter ausgeführt, bis die datenbankrelevante Funktion erreicht wurde, die Ausgangspunkt für dieses Projekt sein soll. Auf diese Weise konnte nicht nur die Funktionsweise von Arche besser verstanden, sondern auch jene Stellen bestimmt werden, an denen die hier zu entwickelnde Komponente andocken soll. An dieser Stelle muss erwähnt werden, dass es vor allem zu Beginn des Projektes nicht immer gelungen ist, Veränderungen an Datenbankeinträgen rechtzeitig zu unterbinden. Ungewollte Veränderungen von Daten kamen vor allem dadurch zustande, dass nicht immer klar war, ob eine Funktion die Beeinflussung von Daten vorbereitet oder bereits ausführt. Gelegentlich mussten daher einzelne Zeilen in der Datenbank manuell wieder eingefügt oder Rücksprache mit den Kunden gehalten werden. Diese Erfahrung war prägend für die generelle Herangehensweise an das Projekt, welche als \gls{Pain Driven Development} bezeichnet werden kann.
 
 \section{Analysephase}
-Hier macht es Sinn in eine technische, sowie eine wirtschaftliche Analyse einzuteilen. In technischer Hinsicht wurde bereits angemerkt, dass das Verständnis des Codes nicht über Dokumentationen, sondern über das Debugging und das Gespräch mit Kollegen funktioniert. Häufig viel dabei auf, dass Funktionen in Arche bei niedriger Schriftgröße deutlich über eine Bildschirmseite hinausreichen können und verschiedene Softwarebereiche wie die Logik der GUI nur schwach von der Datenverwaltung, zu der auch die Datenbanklogik gehört, getrennt wurden\footnote{Siehe \hyperref[fig:Vermischung verschiedener Aufgabenbereiche]{Vermischung verschiedener Aufgabenbereiche}}. Da auch generell wenig Signaturen und keine Kommentare im Code vorhanden sind, bestand die Aufgabe darin, zunächst zu mutmaßen, welche Teile des Codes mit dem Speichern von Daten zusammenhängen könnten und welche jedwede anderen Funktionen erfüllen, die mit diesem Projekt nicht zusammenhängen.\newline Was die wirtschaftliche Analyse betrifft, ist nicht zuletzt der Zeitaufwand zu beachten, der notwendig wird, wenn wie im vorliegenden Fall das \gls{Single Responsibility Principle} nicht eingehalten wird.
+Hier macht es Sinn in eine technische, sowie eine wirtschaftliche Analyse einzuteilen. In technischer Hinsicht wurde bereits angemerkt, dass das Verständnis des Codes nicht über Dokumentationen, sondern über das Debugging und das Gespräch mit Kollegen funktioniert. Häufig viel dabei auf, dass Funktionen in Arche bei niedriger Schriftgröße deutlich über eine Bildschirmseite hinausreichen können und verschiedene Softwarebereiche wie die Logik der GUI nur schwach von der Datenverwaltung, zu der auch die Datenbanklogik gehört, getrennt wurden\footnote{\extendedref{fig:Vermischung verschiedener Aufgabenbereiche}}. Da auch generell wenig Signaturen und keine Kommentare im Code vorhanden sind, bestand die Aufgabe darin, zunächst zu mutmaßen, welche Teile des Codes mit dem Speichern von Daten zusammenhängen könnten und welche jedwede anderen Funktionen erfüllen, die mit diesem Projekt nicht zusammenhängen.\newline Was die wirtschaftliche Analyse betrifft, ist nicht zuletzt der Zeitaufwand zu beachten, der notwendig wird, wenn wie im vorliegenden Fall das \gls{Single Responsibility Principle} nicht eingehalten wird.
 
 \subsection{IST-Zustand}
-Die Datenbankkommunikation von Arche ist so organisiert, dass verschiedene Medienklassen (z.B. Printmedien, Onlinemedien, Socialmedia-Posts usw.) jeweils eine Persistence-Klasse zur Verfügung haben. Benannt sind diese ungefähr nach Mediumname, z.B. \glqq PrintmedienTreffer.cs\grqq{} und \glqq PrintmedienTrefferPersistence.cs\grqq{}. Erstere enthält diverse Variablen und Funktionen, die mit dem entsprechenden Medium zusammenhängen\footnote{Siehe \hyperref[fig:PrintmedienTreffer.cs]{PrintmedienTreffer.cs}}. Dabei 
+Die Datenbankkommunikation von Arche ist so organisiert, dass verschiedene Medienklassen (z.B. Printmedien, Onlinemedien, Socialmedia-Posts usw.) jeweils eine Persistence-Klasse zur Verfügung haben. Benannt sind diese ungefähr nach Mediumname, z.B. \glqq PrintmedienTreffer.cs\grqq{} und \glqq PrintmedienTrefferPersistence.cs\grqq{}. Erstere enthält diverse Variablen und Funktionen, die mit dem entsprechenden Medium zusammenhängen\footnote{\extendedref{fig:PrintmedienTreffer.cs}}. Es gibt zwar auch hier keine Dokumentation, jedoch finden sich hier und da Kommentare der Entwicklerinnen, die Aufschluss über die entsprechende Geschäftslogik geben können. Es muss jedoch davon ausgegangen werden, dann nicht alle Variablen noch immer benötigt werden und womöglich datenbankrelevante und nicht datenbankrelevante Variablen vermischt sind. Die \gls{Abstrakte Klasse} \glqq AbstractTreffer\grqq{}\footnote{\extendedref{fig:AbstractTreffer.cs}} wiederum bildet die Basis für alle Medienklassen und enthält verschiedene Parameter, wie z.B mehrere Identifikationsnummern.\newline Was die boolischen Werte anbelangt, ist zum Verständnis zu erwähnen, dass in Arche Benennungen wir \glqq deleted\grqq{} oder \glqq loaded\grqq{} nicht den aktuellen Zustand eines Objektes beschreiben, sondern ausdrücken sollen, dass ein Objekt geladen oder gelöscht werden soll. Würde man also eine Neubenennung dieser boolischen Werte anstreben, wäre eine Formulierung wie \glqq toBeDeleted/toBeLoaded\grqq{} sinnvoll. Für das vorliegende Projekt steht jedoch zunächst die \gls{Refaktorierung} der Datenbanklogik, weniger der äußeren Form, im Vordergrund.\newline\newline Nutzt man in der Klasse \glqq AbstractTreffer\grqq{} die IntelliSense-Funktion für die Referenzabfrage der Funktion \glqq abstract int savePersistent()\grqq{}, werden 799 Implementierung in zahlreichen Klassen ausgegeben. Es ist also davon auszugehen, dass diese Funktion eine zentrale Rolle für das Ablegen von Daten in der Datenbank spielt. Ebenso wird hier der Arbeitsaufwand deutlich: Da die Funktion abstrakt ist, wird nur die Signatur übergeben. Für jede Klasse, die Daten mithilfe dieser Funktion abspeichern möchte, muss eine eigene Implementierung geschrieben werden. Dies ist zwar sicherlich dem Umstand geschuldet, für unterschiedliche Medien unterschiedliche Speichermechanismen zu benötigen, jedoch wird ist auch klar, dass Arbeitsaufwand zur Weiterentwicklung der Software unverhältnismäßig hoch ist. Obgleich Argus anstrebt, langfristig auf modernere Lösungen wie ASP.NET\footnote{\href{https://dotnet.microsoft.com/apps/aspnet}{https://dotnet.microsoft.com/apps/aspnet}} oder Angular\footnote{\href{https://angular.io/}{https://angular.io/}} zu setzen, ist das Unternehmen in der Situation, an jedem Wochentag Mediendossiers an Kunden ausliefern zu müssen. Der IST-Zustand der Entwicklung von datenbankrelevanten Komponenten kann also am treffendsten mit zu hoher finanzieller und zeitlicher Belastung beschrieben werden.
 
 \subsection{Wirtschaftlichkeitsanalyse}
-\blindtext\
+%Aus den obigen Erkenntnissen müssen nun also folgende Fragen abgeleitet werden: \textit{Wie lange dauert es durchschnittlich der Anwendung eine neue Persistence-Klasse hinzuzufügen? Wie viel %Kosten fallen bei der Entwicklung einer solchen Klasse an? Wie viel Zeit und Kosten können durch das Einführen einer gekapselten Datenbankkommunikation gespart werden?} Um dabei einen %realistischen Einblick in die Kostenstruktur geben zu können, ist
+Um das vorliegende Projekt als wirtschaftlich betrachten zu können, muss also eine konkrete Reduzierung der oben genannten Zeit und Kosten erreicht werden. Zentrale Fragen dabei sind: \textit{Wie lange dauert es durchschnittlich der Anwendung eine neue Persistence-Klasse hinzuzufügen? Wie viel Kosten fallen bei der Entwicklung einer solchen Klasse an? Wie viel Zeit und Kosten können durch das Einführen einer gekapselten Datenbankkommunikation gespart werden?}\newline Hier ergibt sich die Schwierigkeit, dass unterschiedliche Persistence-Klassen natürlich auch unterschiedlich viel Zeit für die Entwicklung und somit unterschiedlich viel Entwicklungskosten mit sich bringen. Dennoch wird hier so akkurat wie möglich versuchst werden, Entlastungen für das Unternehmen mit konkreten Zeit- und Investitionseinheiten anzugeben, um einen Überblick über die Wirtschaftlichkeit des Projektes zu schaffen.
+
 
 \subsubsection{Beschaffung der Ausgangsdaten}
 \blindtext\
@@ -692,9 +703,23 @@ Einige Komponenten aus Arche mit den Komponenten DBEncapsulation und DBEncapsula
  \end{figure}
  \clearpage
  
+
+ 
+ 
+ \subsection{Vermischung verschiedener Aufgabenbereiche}
+ \label{fig:Vermischung verschiedener Aufgabenbereiche}
+Anfang der Speichern-Funktion aus bereits vorhandenen GUI-Klasse. Diese erstreckt sich über mehrere Bildschirmseiten und vermischt Front- und Backend-Logik:
+ \begin{figure}[htp]
+ \centering
+
+	\includegraphics[scale=0.6]{SeparationOfConcerns.png}
+	 \caption{Vermischung verschiedener Aufgabenbereiche}
+ \end{figure}
+ \clearpage
+
  \subsection{Auszug PrintmedienTreffer.cs}
  \label{fig:PrintmedienTreffer.cs}
-Mehrere Variablen aus der PrintmedienTreffer-Klasse. Manche sind noch in Benutzung, andere sind obsolet:
+Mehrere Variablen aus der bereits vorhandenen PrintmedienTreffer-Klasse. Manche sind noch in Benutzung, andere sind obsolet:
  \begin{figure}[htp]
  \centering
 
@@ -703,18 +728,17 @@ Mehrere Variablen aus der PrintmedienTreffer-Klasse. Manche sind noch in Benutzu
  \end{figure}
  \clearpage
  
- 
- 
- \subsection{Vermischung verschiedener Aufgabenbereiche}
- \label{fig:Vermischung verschiedener Aufgabenbereiche}
-Anfang der Speichern-Funktion aus einer GUI-Klasse. Diese erstreckt sich über mehrere Bildschirmseiten und vermischt Front- und Backend-Logik:
+  \subsection{Auszug AbstractTreffer.cs}
+ \label{fig:AbstractTreffer.cs}
+Mehrere Variablen aus der bereits vorhandenen PrintmedienTreffer-Klasse. Manche sind noch in Benutzung, andere sind obsolet:
  \begin{figure}[htp]
  \centering
 
-	\includegraphics[scale=0.6]{SeparationOfConcerns.png}
-	 \caption{Vermischung verschiedener Aufgabenbereiche}
+	\includegraphics[scale=0.7]{abstractTreffer.png}
+	 \caption{AbstractTreffer.cs}
  \end{figure}
  \clearpage
+ 
 
 \subsection{Anwendungsfalldiagramm}
 \blindtext\blindtext
