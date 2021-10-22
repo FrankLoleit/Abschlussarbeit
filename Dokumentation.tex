@@ -35,6 +35,7 @@ marginparwidth=15mm
 \usepackage{placeins}
 %\captionsetup[wraptable]{margin=x cm, width= y cm}
 \usepackage{caption}
+\usepackage{mathtools}
 
 \newcommand\extendedref[1]{Siehe \ref{#1}}
 \newcommand\fullref[1]{\extendedref{#1} auf Seite \pageref{#1}}
@@ -311,12 +312,12 @@ Gneisenaustr. 66\linebreak
 
 
 
-\newpage
+%\newpage
 
 \phantomsection
 \addcontentsline{toc}{section}{Tabellenverzeichnis}
 \listoftables
-\newpage
+%\newpage
 
 %\section{Listings}
 %\blindtext\blindtext\blindtext
@@ -336,7 +337,7 @@ Gneisenaustr. 66\linebreak
 \acro{SSMS} {SQL Server Management Studio}
 
 \end{acronym}
-\newpage
+%\newpage
 
 \phantomsection
 \addcontentsline{toc}{section}{Glossar}
@@ -415,17 +416,17 @@ Die Datenbankkommunikation von Arche ist so organisiert, dass verschiedene Medie
 Um das vorliegende Projekt als wirtschaftlich betrachten zu können, muss also eine konkrete Reduzierung der oben genannten Zeit und Kosten erreicht werden. Zentrale Fragen dabei sind: \textit{Wie lange dauert es durchschnittlich der Anwendung eine neue Persistence-Klasse hinzuzufügen? Wie viel Kosten fallen bei der Entwicklung einer solchen Klasse an? Wie viel Zeit und Kosten können durch das Einführen einer gekapselten Datenbankkommunikation gespart werden?}\newline Hier ergibt sich die Schwierigkeit, dass unterschiedliche Persistence-Klassen natürlich auch unterschiedlich viel Zeit für die Entwicklung und somit unterschiedlich viel Entwicklungskosten mit sich bringen. Dennoch wird hier so akkurat wie möglich versuchst werden, Entlastungen für das Unternehmen mit konkreten Zeit- und Investitionseinheiten anzugeben, um einen Überblick über die Wirtschaftlichkeit des Projektes zu schaffen.
 
 
-\subsubsection{Beschaffung der Ausgangsdaten}
-\blindtext\
+%\subsubsection{Beschaffung der Ausgangsdaten}
+%\blindtext\
 
-\subsubsection{Ermitteln der Kostenstruktur}
-\blindtext\
+%\subsubsection{Ermitteln der Kostenstruktur}
+%\blindtext\
 
-\subsubsection{Kostenberechnung}
-\blindtext\
+%\subsubsection{Kostenberechnung}
+%\blindtext\
 
 \subsubsection{Zusammenstellen des Kostenplans}
-\blindtext\
+Der Kostenplan{\footnote{\extendedref{sec:Projektkosten Details}}} teilt sich ein in die personelle Aufwendungen (oben) und nicht personelle Aufwendungen (unten). Es wird davon ausgegangen, dass bei einem Stundenlohn von ca. 36€ immer 2 Kolleginnen für die fachliche Unterstützung zur Verfügung stehen. Die Unterstützung erfolgt dabei in offiziellen Meetings, aber auch spontan 
 
 \subsubsection{Nicht-monetäre Vorteile}
 \blindtext\
@@ -689,8 +690,8 @@ Um das vorliegende Projekt als wirtschaftlich betrachten zu können, muss also e
 \end{table}	
 
 
-\subsection{Projektkosten Details}
-\blindtext\blindtext
+
+
 
 \subsection{Auszug Projektabgrenzung}
  \label{fig:Assemblies}
@@ -739,6 +740,55 @@ Mehrere Variablen aus der bereits vorhandenen PrintmedienTreffer-Klasse. Manche 
  \end{figure}
  \clearpage
  
+\subsection{Projektkosten Details}
+	\label{sec:Projektkosten Details}
+\begin{center}
+\begin{table}[ht]
+
+	%\hline\hline
+		\begin{tabular}{|| p{27mm} | p{23mm} | r | r | r | r | r ||}
+	    \hline	
+	    
+		\multicolumn{1}{||l|}{\textbf{Angefallen bei}}    &   \multicolumn{1}{|l|}{\textbf{Angefallen für}}  &   \multicolumn{1}{|c|}{\textbf{Std.}}  &  \multicolumn{1}{|c|}{\textbf{Lohn/Std.}}   & \multicolumn{1}{|c|}{\textbf{Lohn}} & \multicolumn{1}{|c|}{\textbf{Zschlg. 30\%}}    &   \multicolumn{1}{|c||}{\textbf{Summe}}   \\ 
+		\hline
+		
+		
+		Entwickler          & Fachliche\newline Unterstützung  &	8	& 72,00 €	& 288,00 €	    & 86,40 €	    & 374,40 €\\
+		%\hline
+		Ausbilder           &	Einarbeitung\newline Betreuung &	4	& 85,00 €	& 680,00 €	    & 204,40 €	    & 884,00 € \\
+		%\hline
+		Praktikant          &	Durchführung \newline Projekt  &	70	& 10,00 €	& 700,00 €	    & 210,00 €	    & 910,00 € \\
+		%\hline
+		PO      &	Bereitstellung\newline Kosteninfo           &	2	& 90,00 €	& 180,00 €	    & 54,00 €	    & 234,00 € \\
+		\hline%\hline
+		\sum Personal      &	                                &	84	& 257,00 €	& 1.848,00 €   & 554,40 €	    & 2.402,40 € \\
+		\hline
+		\multicolumn{6}{||l|}{Notebook für die Dokumentation}                                                                           & 72,00 €\\
+		\multicolumn{6}{||l|}{Desktop-PC für die Entwicklung}                                                                         & 69,00 €\\
+		\multicolumn{6}{||l|}{Infrastruktur Hardware (Netzwerk, VPN, Server, Verkabelung)}                                                            & 170,00 €\\
+		\multicolumn{6}{||l|}{Peripheriegeräte (Docking Station, Maus, Tastatur, Headset)}                                 & 190,00 €\\
+		\multicolumn{6}{||l|}{Infrastruktur Software (Scrum-Tools, Windowslizenz)}                                               & 60,00 €\\
+		\multicolumn{6}{||l|}{Visual Studio Professional Lizenz}                                                  & 140,00 €\\
+		\hline
+		\multicolumn{6}{||l|}{\sum Technik}                                                                    &701,00 €\\
+		\hline
+		\multicolumn{6}{||l|}{\textbf{\sum Gesamt}}                                                                    &\textbf{3.103,40 €}\\
+		\hline
+		
+			\end{tabular}
+			\caption{Projektkosten Details}
+			\end{table}
+			\end{center}
+			
+				
+			
+	
+	
+		
+		
+		%\clearpage
+
+
 
 \subsection{Anwendungsfalldiagramm}
 \blindtext\blindtext
