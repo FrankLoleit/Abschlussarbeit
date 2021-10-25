@@ -36,6 +36,7 @@ marginparwidth=15mm
 %\captionsetup[wraptable]{margin=x cm, width= y cm}
 \usepackage{caption}
 \usepackage{mathtools}
+\usepackage{eurosym}
 
 \newcommand\extendedref[1]{Siehe \ref{#1}}
 \newcommand\fullref[1]{\extendedref{#1} auf Seite \pageref{#1}}
@@ -54,8 +55,8 @@ citestyle=authoryear
 
  \usepackage{tikz,ifthen,xstring,calc,pgfkeys,pgfopts}
  \usepackage{tikz-uml}
- \usetikzlibrary{external}
- \tikzexternalize[prefix=figures/] % activate and define figures/ as cache folder
+ %\usetikzlibrary{external}
+ %\tikzexternalize[prefix=figures/] % activate and define figures/ as cache folder
 
 \usepackage{hyperref}
 \usepackage[printonlyused, withpage]{acronym}
@@ -335,6 +336,7 @@ Gneisenaustr. 66\linebreak
 \acro{DRY}{Don't Repeat Yourself}
 \acro{SQL} {Structured Query Language}
 \acro{SSMS} {SQL Server Management Studio}
+\acro{PO} {Product Owner}
 
 \end{acronym}
 %\newpage
@@ -373,7 +375,7 @@ Was die technische Abgrenzung anbelangt, ist durch die komponentenorientierte Ar
 Für die Planung ist wesentlich, dass das Tagesgeschäft der Entwicklerinnen bei Argus nicht unterbrochen wird, sondern parallel zum hier dokumentierten Projekt mit allen zeitlichen und finanziellen Aufwendungen weiterläuft. Das heißt, bei der Projektplanung ist ein sinnvolles Verhältnis von Recherche, selbstständigem Kodieren und eigenverantwortlichen Entscheidungen einerseits, sowie zielgerichtete Unterstützung durch Ausbilder und Kolleginnen andererseits. Um den stetigen Austausch zu gewährleisten, wird der Fortschritt dieses Projektes im täglichen Meeting mit Vorgesetzten und Teammitgliedern geteilt. Zudem werden regelmäßige sowie spontane 1:1-Gespräche mit dem Ausbilder durchgeführt.
 
 \subsection{Projektphasen}
-Das Projekt wurde in einem Zeitraum von 70 Stunden umgesetzt. Dabei wurde die gesamte Stundenanzahl wie folgt aufgeteilt\footnote{\extendedref{sec:Detaillierte Zeitplanung}}:%
+Das Projekt wurde in einem Zeitraum von 70 Stunden umgesetzt. Dabei wurde die gesamte Stundenanzahl wie folgt aufgeteilt\footnote{\extendedref{sec:Detaillierte Zeitplanung}}:\newline
 
 \begin{table}[ht]
 	\begin{center}
@@ -395,7 +397,6 @@ Das Projekt wurde in einem Zeitraum von 70 Stunden umgesetzt. Dabei wurde die ge
 		%\caption{Zeitplanung}
 	\end{center}
 \end{table}%
-
 Den Einstieg in das Projekts betreffend ist zu erwähnen, dass es sich bei dem Projekt Arche um \gls{Legacy Code} handelt, dessen Funktionsweise nur begrenzt objektorientiert aufgebaut ist. Sowohl bei Analyse, Entwurf und Implementierung ist daher immer das Nachvollziehen des Codes durch Recherche, Debugging und Rücksprache mit erfahrenen Mitarbeitern entscheidend.
 
 \subsection{Ressourcenplanung}
@@ -426,31 +427,49 @@ Um das vorliegende Projekt als wirtschaftlich betrachten zu können, muss also e
 %\blindtext\
 
 \subsubsection{Zusammenstellen des Kostenplans}
-Der Kostenplan{\footnote{\extendedref{sec:Projektkosten Details}}} teilt sich ein in die personelle Aufwendungen (oben) und nicht personelle Aufwendungen (unten). Es wird davon ausgegangen, dass bei einem Stundenlohn von ca. 36€ immer 2 Kolleginnen für die fachliche Unterstützung zur Verfügung stehen. Die Unterstützung erfolgt dabei in offiziellen Meetings, aber auch spontan 
+Der Kostenplan{\footnote{\extendedref{sec:Projektkosten Details}}} teilt sich ein in die personellen (oben) und nicht personelle Aufwendungen (unten). Es wird davon ausgegangen, dass bei einem Stundenlohn von ca. 40€ immer mindestens ein Kollege für die fachliche Unterstützung zur Verfügung stehen. Die Unterstützung erfolgte dabei in offiziellen Meetings, aber auch spontan im Büro, wenn Gesprächsbedarf bestand. Ebenso verhält es sich mit dem Ausbilder, der für die Betreuung während des Projektes zuständig war und einen etwas höheren Stundenlohn erhält. Dabei muss erwähnt werden, dass ich es für das Betriebsklima nicht als sinnvoll erachtet habe, jede Beteiligte nach ihrem exakten Stundenlohn zu fragen. Die Lösung war daher, den \acs{PO} nach gewöhnlichen Stundenlöhnen zu fragen, die im Unternehmen üblich sind. Obgleich ich meine Ausbildung vom Staat finanziert wird, ist es hier zielführend, einen durchschnittlichen Stundenlohn eines Praktikanten anzugeben, um zu gewährleisten, dass die Beträge auch für durchschnittliche zukünftige Projekte dieser Größenordnung aussagekräftig sind.\newline\newline Im Kostenplan wird davon ausgegangen, dass Personal nicht nur über das Gehalt Kosten generiert, sondern dass auch Betriebskosten, wie Strom, Wartung der verwendeten Technik, Heizung im Büro u. Ä. Kosten verursachen. Daher wird ein pauschaler Handlungszuschlag von 30\% auf den Lohn angenommen. Natürlich könnte man an dieser Stelle einwenden, dass der Handlungszuschlag in Wirklichkeit stark schwanken kann, dennoch macht es Sinn im Hinterkopf zu behalten, dass neben dem Lohn auch weitere Kosten für den laufenden Betrieb in der Firma anfallen. Ebenfalls ist anzuführen, dass es sich bei dem  Bei der notwendigen Hardware und Software ist zu bemerken, dass es sich bei den ermittelten Beträgen nicht um Anschaffungskosten handelt, sondern jene Kosten, die Hard- oder Software für gewöhnlich in der Zeitspanne des Projektes in Anspruch nehmen. Außerdem handelte es sich bei den unterstützenden Entwicklern um Senior-Entwickler, deren Stundenlohn verhältnismäßig hoch ist. Der Kostenplan gibt also nicht wieder, was zusätzlich für Kosten angefallen sind, sondern wie kostenintensiv das Projekt innerhalb des laufenden Betriebs ist.
 
-\subsubsection{Nicht-monetäre Vorteile}
-\blindtext\
+%\subsubsection{Nicht-monetäre Vorteile}
+%\blindtext\
+\subsubsection{Zeitersparnis}
+Zunächst musste ermittelt werden, wie viel Zeit die derzeitige Entwicklung von Arche ohne einheitliche Datenbankkommunikation angefallen ist\footnote{\extendedref{sec:Zeitersparnis}}. Hier hat sich gezeigt, dass Tickets, bei denen datenbanksensible Prozesse gewartet werden müssen, relativ häufig vorkommen. Hier kann es z.B. vorkommen, dass ein Kunde glaubt, Daten abgespeichert zu haben, die Änderungen der jene Daten jedoch nicht im System sichtbar zu sein scheinen. Für diesen recht frequenten Fall muss die entsprechende Query oft langwierig durch im Debugging-Modus isoliert werden. Es konnte herausgefunden werden, dass das Identifizieren der Queries im Debug-Modus pro Ticket immer mindestens 10 Minuten vergehen und dies etwas weniger als alle 2 Arbeitstage vorkommt.\newline\newline Zudem wird davon ausgegangen, dass monatlich 2 neue Persistence-Klassen hinzukommen bzw., da es sich um Legacy-Software handelt, gewartet werden müssen. Hierfür werden nach der bisherigen manuellen Vorgehenseweise Spaltennamen per Copy-Paste von SSMS nach Visual Studio übertragen, was für jede der beiden monatlich bearbeiteten Klassen einmal geschieht. Folgende in der Tabelle aufgeführten Arbeitsschritte müssen jeweils für Insert-, Update- und Delete-Queries ausgeführt durchgeführt werden, wodurch diese jeweils 6 mal pro Monat durchgeführt werden. Durch das Automatisieren der genannten Prozesse konnte der meiste zeitliche Aufwand reduziert werden und insgesamt 778 Minuten pro Monat an Einsparungen errechnet werden.
 
-\subsection{Anwendungsfälle}
-\blindtext\
+\subsubsection{Amortisation}
+Mit der ermittelten zeitlichen Einsparung konnte nun eine Rechnung darüber erstellt werden, wann die Schuld der Projektkosten voraussichtlich getilgt ist. Beim Stundenlohn wird nun wieder das ermittelte Seniorentwicklergehalt von 40 € pro Stunde angenommen, sowie ein Handlungszuschlag von 30\%. Auch hier kann man davon ausgehen, dass für zukünftige Projekte auch Entwickler mit moderateren Gehältern beteiligt werden können. Der zufällige Vorteil dieser Konstellation ist jedoch, dass vergleichbare Projekte tendenziell günstiger werden als teurer. Wenn nun also davon ausgegangen wird, dass das Projekt insgesamt 2443,00 € betragen, die reguläre Entwicklung jedoch 8091,20 €/Jahr kostet, dann ist davon auszugehen, dass die Projektkosten nach etwa 3 1/2 Monaten wieder wett sind:\clearpage
 
-\subsection{Lastenheft}
-\blindtext\
+\begin{align}
+    778\frac{Minuten}{Monat}\cdot 12\frac{Monate}{Jahr}&=9336\frac{Minuten}{Jahr}=155,6\frac{Stunden}{Jahr}
+\end{align}
+\begin{align}
+    155,6\frac{Stunden}{Jahr}\cdot(40 \text{\euro} + 12 \text{\euro})&=8091,20\frac{\text{\euro}}{Jahr}
+\end{align}
+\begin{align}
+    \frac{2443,00 \text{ \euro}}{8091,20 \frac{\text{\euro}}{Jahr}}=0,30 \text{ Jahre}
+    \approx 3 \text{ Monate}, 18 \text{ Tage}
+\end{align}
+%
+Auch hier muss realistischer Weise eingeschränkt werden: Natürlich ist dieses IHK-Projekt eines von mehreren Optimierungsvorhaben, die an Arche vorgenommen werden. Wie bereits erwähnt, wird ein langfristiges Vorhaben sein, die App in eine ASP.NET-Architektur zu überführen, was ebenfalls mit Änderungen Zeit und Kosten einhergeht. Die Amortisationsrechnung stellt also eine Annäherung an die wirtschaftlichen Verhältnisse dar, die durch das Projekt beeinflusst werden.
 
-\subsection{Risikomanagement}
-\blindtext\
+%\subsection{Anwendungsfälle}
+%\blindtext\
 
-\subsubsection{Risikoerkennung}
-\blindtext\
+%\subsection{Lastenheft}
+%\blindtext\
 
-\subsubsection{Risikoanalyse}
-\blindtext\
+%\subsection{Risikomanagement}
+%\blindtext\
 
-\subsubsection{Risikominimierung}
-\blindtext\
+%\subsubsection{Risikoerkennung}
+%\blindtext\
+
+%\subsubsection{Risikoanalyse}
+%\blindtext\
+
+%\subsubsection{Risikominimierung}
+%\blindtext\
 
 \section{Entwurfsphase}
-\blindtext\
+Die Entwurfphase,
 
 \subsection{Zielplattform}
 \blindtext\
@@ -753,26 +772,26 @@ Mehrere Variablen aus der bereits vorhandenen PrintmedienTreffer-Klasse. Manche 
 		\hline
 		
 		
-		Entwickler          & Fachliche\newline Unterstützung  &	8	& 72,00 €	& 288,00 €	    & 86,40 €	    & 374,40 €\\
+		Entwickler          & Fachliche\newline Unterstützung   &	4	& 40,00 €	& 160,00 €	    & 48,00 €	    & 208,00 €\\
 		%\hline
-		Ausbilder           &	Einarbeitung\newline Betreuung &	4	& 85,00 €	& 680,00 €	    & 204,40 €	    & 884,00 € \\
+		Ausbilder           &	Einarbeitung\newline Betreuung  &	8	& 45,00 €	& 360,00 €	    & 108,00 €	    & 468,00 €\\
 		%\hline
-		Praktikant          &	Durchführung \newline Projekt  &	70	& 10,00 €	& 700,00 €	    & 210,00 €	    & 910,00 € \\
+		Praktikant          &	Durchführung \newline Projekt   &	70	& 10,00 €	& 700,00 €	    & 210,00 €	    & 910,00 €\\
 		%\hline
-		PO      &	Bereitstellung\newline Kosteninfo           &	2	& 90,00 €	& 180,00 €	    & 54,00 €	    & 234,00 € \\
+		PO      &	Bereitstellung\newline Kosteninfo           &	2	& 60,00 €	& 120,00 €	    & 36,00 €	    & 156,00 €\\
 		\hline%\hline
-		\sum Personal      &	                                &	84	& 257,00 €	& 1.848,00 €   & 554,40 €	    & 2.402,40 € \\
+		Personal            &	                                &	84	& 155,00 €	& 1.340,00 €    & 402,00 €	    & 1.742,00 €\\
 		\hline
-		\multicolumn{6}{||l|}{Notebook für die Dokumentation}                                                                           & 72,00 €\\
-		\multicolumn{6}{||l|}{Desktop-PC für die Entwicklung}                                                                         & 69,00 €\\
-		\multicolumn{6}{||l|}{Infrastruktur Hardware (Netzwerk, VPN, Server, Verkabelung)}                                                            & 170,00 €\\
-		\multicolumn{6}{||l|}{Peripheriegeräte (Docking Station, Maus, Tastatur, Headset)}                                 & 190,00 €\\
-		\multicolumn{6}{||l|}{Infrastruktur Software (Scrum-Tools, Windowslizenz)}                                               & 60,00 €\\
-		\multicolumn{6}{||l|}{Visual Studio Professional Lizenz}                                                  & 140,00 €\\
+		\multicolumn{6}{||l|}{Notebook für die Dokumentation}                                                       & 72,00 €\\
+		\multicolumn{6}{||l|}{Desktop-PC für die Entwicklung}                                                       & 69,00 €\\
+		\multicolumn{6}{||l|}{Infrastruktur Hardware (Netzwerk, VPN, Server, Verkabelung)}                          & 170,00 €\\
+		\multicolumn{6}{||l|}{Peripheriegeräte (Docking Station, Maus, Tastatur, Headset)}                          & 190,00 €\\
+		\multicolumn{6}{||l|}{Infrastruktur Software (Scrum-Tools, Windowslizenz)}                                  & 60,00 €\\
+		\multicolumn{6}{||l|}{Visual Studio Professional Lizenz}                                                    & 140,00 €\\
 		\hline
-		\multicolumn{6}{||l|}{\sum Technik}                                                                    &701,00 €\\
+		\multicolumn{6}{||l|}{Technik}                                                                              & 701,00 €\\
 		\hline
-		\multicolumn{6}{||l|}{\textbf{\sum Gesamt}}                                                                    &\textbf{3.103,40 €}\\
+		\multicolumn{6}{||l|}{\textbf{Gesamt}}                                                                      &\textbf{2.443,00 €}\\
 		\hline
 		
 			\end{tabular}
@@ -788,6 +807,33 @@ Mehrere Variablen aus der bereits vorhandenen PrintmedienTreffer-Klasse. Manche 
 		
 		%\clearpage
 
+\subsection{Zeitersparnis}
+	\label{sec:Zeitersparnis}
+%\begin{center}
+\begin{table}[ht]
+\centering
+	%\hline\hline
+		\begin{tabular}{|| l | r | r | r | r ||}
+	    \hline
+	    
+		\textbf{Arbeitsschritt}                                     & \textbf{Mntl.} &\textbf{vorher} & \textbf{nachher} &\textbf{Gespart}\\
+		\hline
+		Identifizierung von Queries (Debug)                         & 36        & 10 min         & 2 min	         & 288 min\\
+		Übertragen von Spaltennamen von SSMS nach VS2019            & 2         & 20 min         & 0 min	         & 40 min\\
+		Verfassen der Insert-, Update- und Delete-Query             & 6         & 10 min         & 0 min	         & 60 min\\
+		Manuelles Übertragen der Datentypen von SQL nach .NET       & 6         & 10 min         & 0 min	         & 60 min\\
+		Hinzufügen der SQL-Parameter zu SQL-Command                 & 6         & 15 min         & 0 min	         & 90 min\\
+		Prüfung der Daten durch Mitarbeiter                         & 6         & 40 min         & 0 min	         & 240 min\\
+		\hline		
+		\multicolumn{4}{||l|}{\textbf{Gesamtersparnis pro Monat}}                                                &\textbf{778 min}\\
+		\hline
+		
+		
+			\end{tabular}
+			\caption{Zeitersparnis}
+			\end{table}
+			%\end{center}
+			
 
 
 \subsection{Anwendungsfalldiagramm}
