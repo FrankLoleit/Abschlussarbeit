@@ -152,25 +152,21 @@ citestyle=authoryear
 sich aus der Arbeit des Scrum Teams ergibt. Wie dies geschieht, kann je nach Organisation, Scrum Team
 und Individuum sehr unterschiedlich sein\grqq\footnote{Entnommen aus \cite{SchwaberSutherland2020}}}
 }
-
 \newglossaryentry{Pain Driven Development}
 {
 	name=Pain Driven Development,
 	description={\glqq Pain Driven Development, or PDD, is the practice of writing software in such a way that you only \glq fix\grq{} problems when they are causing pain, rather than trying to preempt every possible issue\grqq\footnote{Entnommen aus \cite{Smith2017}}}
 }
-
 \newglossaryentry{Refaktorierung}
 {
 	name=Refaktorierung,
 	description={\glqq Code-Refactoring ist der Prozess der Umstrukturierung bestehenden Quellcodes ohne dessen externes Verhalten zu ändern. Refactoring verbessert keine funktionalen Attribute der Software. Die Vorteile von Refactoring umfassen verbesserte Lesbarkeit des Codes und reduzierte Komplexität\grqq\footnote{Entnommen aus \cite{Kranz2021}}}
 }
-
 \newglossaryentry{IntelliSense}
 {
 	name=IntelliSense,
 	description={Von Microsoft entwickeltes Werkzeug für die integrierten Entwicklungsumgebungen Visual Studio und Visual Studio Code, welches der Programmiererin während beim Entwickeln eine Übersicht darüber gibt, welche Variablen, Klassen und Methoden an der gerade zu bearbeiteten Stelle im Code zur Verfügung stehen}
 }
-
 \newglossaryentry{Legacy Code}
 {
 	name=Legacy Code,
@@ -194,20 +190,15 @@ und Individuum sehr unterschiedlich sein\grqq\footnote{Entnommen aus \cite{Schwa
 \newglossaryentry{Abstrakte Klasse}
 {
 	name=Abstrakte Klasse,
-	description={Klasse aus der kein Objekt instanziert werden kann. Abstrakte Klassen dienen als Blaupause für weitere Klassen, welche von ihr erben.}
+	description={Klasse aus der kein Objekt instanziert werden kann. Abstrakte Klassen dienen als Blaupause für weitere Klassen, welche von ihr erben}
 }
-
-
-
-
-
-
- 
- 
+\newglossaryentry{SqlCommand}
+{
+	name=SqlCommand,
+	description={Nicht mit \glqq Query\grqq{} zu verwechseln. Es handelt sich um eine Klasse aus .NET. Diese speichert Parameter, die für Tabellenspalten stehen, die dazugehörigen Datentypen und eine schematische Query mit Platzhaltern für Werte, die in den Spalten gespeichert werden sollen}
+}
  
 \begin{document}
-
-
 \pagenumbering{Roman}
 \thispagestyle{empty}
 
@@ -229,14 +220,11 @@ und Individuum sehr unterschiedlich sein\grqq\footnote{Entnommen aus \cite{Schwa
 		\textit\sectionRefs
 	\end{small}%
 }
-
-
 %IHK-Logo
 \begin{figure}[h]
 \includegraphics[scale=0.25]{ihkLogo}
 \centering
 \end{figure}
-
 \begin{center}
 \begin{Large}
 
@@ -289,11 +277,6 @@ Gneisenaustr. 66\linebreak
 
 
 \end{center}
-
-
-
-
-
 \newpage
 \setcounter{page}{1}
 \pagenumbering{Roman}
@@ -432,7 +415,7 @@ Der Kostenplan{\footnote{\extendedref{sec:Projektkosten Details}}} teilt sich ei
 %\subsubsection{Nicht-monetäre Vorteile}
 %\blindtext\
 \subsubsection{Zeitersparnis}
-Zunächst musste ermittelt werden, wie viel Zeit die derzeitige Entwicklung von Arche ohne einheitliche Datenbankkommunikation angefallen ist\footnote{\extendedref{sec:Zeitersparnis}}. Hier hat sich gezeigt, dass Tickets, bei denen datenbanksensible Prozesse gewartet werden müssen, relativ häufig vorkommen. Hier kann es z.B. vorkommen, dass ein Kunde glaubt, Daten abgespeichert zu haben, die Änderungen der jene Daten jedoch nicht im System sichtbar zu sein scheinen. Für diesen recht frequenten Fall muss die entsprechende Query oft langwierig durch im Debugging-Modus isoliert werden. Es konnte herausgefunden werden, dass das Identifizieren der Queries im Debug-Modus pro Ticket immer mindestens 10 Minuten vergehen und dies etwas weniger als alle 2 Arbeitstage vorkommt.\newline\newline Zudem wird davon ausgegangen, dass monatlich 2 neue Persistence-Klassen hinzukommen bzw., da es sich um Legacy-Software handelt, gewartet werden müssen. Hierfür werden nach der bisherigen manuellen Vorgehenseweise Spaltennamen per Copy-Paste von SSMS nach Visual Studio übertragen, was für jede der beiden monatlich bearbeiteten Klassen einmal geschieht. Folgende in der Tabelle aufgeführten Arbeitsschritte müssen jeweils für Insert-, Update- und Delete-Queries ausgeführt durchgeführt werden, wodurch diese jeweils 6 mal pro Monat durchgeführt werden. Durch das Automatisieren der genannten Prozesse konnte der meiste zeitliche Aufwand reduziert werden und insgesamt 778 Minuten pro Monat an Einsparungen errechnet werden.
+Zunächst musste ermittelt werden, wie viel Zeit die derzeitige Entwicklung von Arche ohne einheitliche Datenbankkommunikation angefallen ist\footnote{\extendedref{sec:Zeitersparnis}}. Hier hat sich gezeigt, dass Tickets, bei denen datenbanksensible Prozesse gewartet werden müssen, relativ häufig vorkommen. Hier kann es z.B. vorkommen, dass ein Kunde glaubt, Daten abgespeichert zu haben, die Änderungen der jene Daten jedoch nicht im System sichtbar zu sein scheinen. Für diesen recht frequenten Fall muss die entsprechende Query oft langwierig durch im Debugging-Modus isoliert werden. Es konnte herausgefunden werden, dass das Identifizieren der Queries im Debug-Modus pro Ticket immer mindestens 10 Minuten vergehen und dies etwas weniger als alle 2 Arbeitstage vorkommt.\newline\newline Zudem wird davon ausgegangen, dass monatlich 2 neue Persistence-Klassen hinzukommen bzw., da es sich um Legacy-Software handelt, gewartet werden müssen. Hierfür werden nach der bisherigen manuellen Vorgehensweise Spaltennamen per Copy-Paste von SSMS nach Visual Studio übertragen, was für jede der beiden monatlich bearbeiteten Klassen einmal geschieht. Folgende in der Tabelle aufgeführten Arbeitsschritte müssen jeweils für Insert-, Update- und Delete-Queries ausgeführt durchgeführt werden, wodurch diese jeweils 6 mal pro Monat durchgeführt werden. Durch das Automatisieren der genannten Prozesse konnte der meiste zeitliche Aufwand reduziert werden und insgesamt 778 Minuten pro Monat an Einsparungen errechnet werden.
 
 \subsubsection{Amortisation}
 Mit der ermittelten zeitlichen Einsparung konnte nun eine Rechnung darüber erstellt werden, wann die Schuld der Projektkosten voraussichtlich getilgt ist. Beim Stundenlohn wird nun wieder das ermittelte Seniorentwicklergehalt von 40 € pro Stunde angenommen, sowie ein Handlungszuschlag von 30\%. Auch hier kann man davon ausgehen, dass für zukünftige Projekte auch Entwickler mit moderateren Gehältern beteiligt werden können. Der zufällige Vorteil dieser Konstellation ist jedoch, dass vergleichbare Projekte tendenziell günstiger werden als teurer. Wenn nun also davon ausgegangen wird, dass das Projekt insgesamt 2443,00 € betragen, die reguläre Entwicklung jedoch 8091,20 €/Jahr kostet, dann ist davon auszugehen, dass die Projektkosten nach etwa 3 1/2 Monaten wieder wett sind:\clearpage
@@ -469,7 +452,7 @@ Auch hier muss realistischer Weise eingeschränkt werden: Natürlich ist dieses 
 %\blindtext\
 
 \section{Entwurfsphase}
-Die Entwurfphase,
+Für den Programmentwurf muss zunächst zwischen dem Auffinden von Queries und dem automatisierten Generieren von \gls{SqlCommand}-Objekten unterschieden werden. Das Auffinden von Queries, die zu einem bestimmten Zeitpunkt von Arche
 
 \subsection{Zielplattform}
 \blindtext\
