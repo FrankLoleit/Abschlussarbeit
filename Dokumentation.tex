@@ -197,6 +197,19 @@ und Individuum sehr unterschiedlich sein\grqq\footnote{Entnommen aus \cite{Schwa
 	name=SqlCommand,
 	description={Nicht mit \glqq Query\grqq{} zu verwechseln. Es handelt sich um eine Klasse aus .NET. Diese speichert Parameter, die für Tabellenspalten stehen, die dazugehörigen Datentypen und eine schematische Query mit Platzhaltern für Werte, die in den Spalten gespeichert werden sollen}
 }
+\newglossaryentry{Boolean}
+{
+	name=Boolean,
+	description={Standard-Datentyp aus allen bekannten Programmiersprachen, der entweder den Wert \glqq wahr\grqq{} oder \glqq falsch\grqq{} annehmen kann}
+}
+\newglossaryentry{Datenbank Management System}
+{
+	name=Datenbank Management System,
+	description={Komplexe Applikation mit ausführlicher graphischer Benutzeroberfläche, das für die Arbeit mit Datenbanken und Datenbankanfragen konzipiert ist. Obwohl diese Programme keine Voraussetzung dafür sind, mit Datenbanken zu arbeiten (denn erfahrene Informatikerinnen können dies auch manuell), arbeitet nahezu jedes Unternehmen mit einem solchen System}
+}
+
+
+
  
 \begin{document}
 \pagenumbering{Roman}
@@ -452,13 +465,16 @@ Auch hier muss realistischer Weise eingeschränkt werden: Natürlich ist dieses 
 %\blindtext\
 
 \section{Entwurfsphase}
-Für den Programmentwurf muss zunächst zwischen dem Auffinden von Queries und dem automatisierten Generieren von \gls{SqlCommand}-Objekten unterschieden werden. Das Auffinden von Queries, die zu einem bestimmten Zeitpunkt von Arche
+Für den Programmentwurf muss zunächst zwischen dem Auffinden von Queries und dem automatisierten Generieren von \gls{SqlCommand}-Objekten unterschieden werden. Beim Query-Tracing geht es darum, datenbanksensible Module schneller warten zu können und eine akkurate Rückmeldung über entsprechende Datenbankabfragen zu erhalten. Liegt hier ein Entwurf vor, wird dazu übergegangen, generell die Datenbankschnittstelle zu vereinheitlichen und mit Hilfe von Datenbankmodellen, automatisch SqlCommand-Objekte zu erzeugen. Die so entworfene Logik, soll dann global für alle Datenbankprozesse gelten.
 
-\subsection{Zielplattform}
-\blindtext\
+\subsection{Query-Tracing}
+Das Auffinden von Queries, die zu einem bestimmten Zeitpunkt von Arche an den SQL-Server geschickt werden, soll so organisiert werden, dass die Entwicklerin nicht mehr den Debug-Modus starten muss, um eine Query zu identifizieren. Allein durch einen einzigen Boolean soll sich das Query-Tracing ein- und ausschalten lassen. Sobald das Query-Tracing aktiviert ist, kann in Arche jedwede datenbanksensible Funktion ausgelöst werden, ohne dass Daten verändert werden. 
 
-\subsection{Architekturdesign}
-\blindtext\
+\subsubsection{Anwendungsfall}
+Der konkrete Anwendungsfall\footnote{\extendedref{fig:Anwendungsfalldiagramm}} sieht folgendermaßen aus: Ein dafür vorgesehener \gls{Boolean} wird vom Entwickler auf \glqq true\grqq{} gesetzt und damit das Query-Tracing aktiviert. Nun kann es sein, dass die entsprechende Persistence-Klasse, die die Datenbankkommunikation steuert, bereits ein kleines Code-Fragment enthält, durch das das Query-Tracing-Modul zum richtigen Zeitpunkt aktiviert wird. Oder es handelt sich um eine bisher noch nicht refaktorierte Klasse, und der Entwickler muss das in der Dokumentation hinterlegte Code-Fragment noch in die entsprechende Klasse einfügen. Oder es liegt der Fall vor, dass eine andere Entwicklerin bereits mit dieser Klasse gearbeitet hat und daher keine Code-Fragmente eingefügt werden müssen. Nun kann die Entwicklerin Arche in Visual Studio starten und die im zu bearbeitenden datenbanksensible Funktion\footnote{Dabei handelt es sich v. a. um \glqq Suchen\grqq{}-, \glqq Speichern\grqq{}- und \glqq Löschen\grqq{}-Buttons.} auslösen wodurch in jedem Fall ein Tracing-Fenster geöffnet wird. Dieses soll nun detaillierte Informationen über die momentane Query ausgeben. Zusätzlich stehen diverse Funktionen zur Verfügung.\newline\newline Obgleich das Modul sicherstellen soll, dass nicht ungewollt Queries an den Datenbankserver geschickt werden, kann man sich dennoch dafür entscheiden, eine Query ausführen zu lassen. Select-Queries verursachen keine Änderungen an Daten und es kann sein, dass sich der Entwickler bei Insert-, Update- oder Delete-Queries sicher ist, dass diese keine unerwünschten Folgen für die Kundin haben. Für den ersteren Fall soll das Modul den Select-Befehl automatisch erkennen und die keine Möglichkeit zum Unterdrücken der Query geben. Für die übrigen Fälle, soll man frei entscheiden können. Weiterhin kann der Entwickler sich die Query automatisch bei jeder Nutzung des Query-Trackers in die Zwischenablage kopieren lassen. Ebenfalls wichtig wird die Funktion sein, die Query nach \acs{SSMS} zu kopieren, um von dort aus mit ihr weiterarbeiten zu können\footnote{De facto soll in diesem Fall in Windows immer das Programm die Query öffnen, das in den Systemeinstellungen als Standardprogramm für .sql-Dateien vorgesehen ist. Je nach Konfiguration kann es sich also auch um ein anderes \gls{Datenbank Management System} handeln.}.\newline Möchte der Entwickler auf seinem lokalen Rechner die in Arche genutzte Datenbankstruktur nutzen, besteht die Möglichkeit durch Klick auf den entsprechenden Button, eine Query nach SSMS zu übertragen, die die Struktur des Datenbank gefiltert nach noch in Verwendung befindlichen Tabellen.
+
+\subsubsection{Architekturdesign}
+\blindtext
 
 \subsection{Entwurf des Datenmodells}
 \blindtext\
@@ -818,9 +834,19 @@ Mehrere Variablen aus der bereits vorhandenen PrintmedienTreffer-Klasse. Manche 
 			%\end{center}
 			
 
-
+\clearpage
 \subsection{Anwendungsfalldiagramm}
-\blindtext\blindtext
+In diesem Diagramm wird \glqq Query Tracer\grqq{} wie eine Person oder Firma behandelt. Dies ist insofern sinnvoll als dass die Entwicklerin nicht mit Argus, sondern mit firmeneigener Software interagiert. \glqq Lokale Datenbank erstellen\grqq{} könnte auch von \glqq Query Tracing aktivieren\grqq{} abhängen, ist andererseits aber auch ein eigenständiger Arbeitsschritt.
+ \label{fig:Anwendungsfalldiagramm}
+
+ \begin{figure}[htp]
+ %\centering
+
+	\includegraphics[scale=1.1]{Anwendungsfalldiagramm.png}
+	 \caption{Anwendungsfalldiagramm}
+ \end{figure}
+ \clearpage
+ 
 
 \subsection{Lastenheft (Auszug)}
 \blindtext\blindtext
