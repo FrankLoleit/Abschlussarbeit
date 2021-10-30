@@ -195,7 +195,7 @@ und Individuum sehr unterschiedlich sein\grqq\footnote{Entnommen aus \cite{Schwa
 \newglossaryentry{Legacy Code}
 {
 	name=Legacy Code,
-	description={Code, der von mittlerweile nicht mehr kontaktierbaren Entwicklern \glqq geerbt\grqq wurde, nicht mehr in allen Aspekten dem aktuellen Stand der Technik entspricht und darüber hinaus nicht umfassend dokumentiert ist}
+	description={Code, der von mittlerweile nicht mehr kontaktierbaren Entwicklern \glqq geerbt\grqq{} wurde, nicht mehr in allen Aspekten dem aktuellen Stand der Technik entspricht und darüber hinaus nicht umfassend dokumentiert ist}
 }
 \newglossaryentry{Open Source}
 {
@@ -246,7 +246,18 @@ und Individuum sehr unterschiedlich sein\grqq\footnote{Entnommen aus \cite{Schwa
 {
 	name=Access-Modifier,
 	description={Schlüsselwort aus der Objektorientierten Programmierung, das Sichtbarkeit von Daten außerhalb der eigenen Klasse regelt. Die wichtigsten beiden sind \glqq private\grqq{} und \glqq public \grqq{}}
+}\newglossaryentry{Komposition}
+{
+	name=Komposition,
+	description={Die Komposition zeigt eine notwendige "ist-Teil-von" Beziehung an. Das Teil kann also nicht ohne das Ganze existieren\footnote{Entnommen aus \cite{Thoma2012}}}
 }
+%\newglossaryentry{Dictionary}
+%{
+%	name=Dictionary,
+%	description={Schlüsselwort aus der Objektorientierten Programmierung, das Sichtbarkeit von Daten außerhalb der eigenen Klasse regelt. Die wichtigsten beiden sind %\glqq private\grqq{} und \glqq public \grqq{}}
+%}
+
+
 
  
 \begin{document}
@@ -261,7 +272,8 @@ und Individuum sehr unterschiedlich sein\grqq\footnote{Entnommen aus \cite{Schwa
 %\ofoot{Seite \thepage\:von \pageref{LastPage}}
 \ofoot{\thepage}
 \ifoot{© Frank Loleit}
-\ohead{\includegraphics[scale=0.125]{argusLogo}}
+%\ohead{\includegraphics[scale=0.125]{argusLogo}}
+\ohead{\includegraphics[scale=0.15]{argusLogo}}
 
 
 
@@ -270,7 +282,7 @@ und Individuum sehr unterschiedlich sein\grqq\footnote{Entnommen aus \cite{Schwa
 	\begin{small}
 	
 	
-		MODUL FÜR GEKAPSELTE DATENBANKKOMMUNIKATION%		
+		MODUL FÜR GEKAPSELTE DATENBANKKOMMUNIKATION\newline EINER DESKTOPANWENDUNG%		
 		\newline\
 		\textit\sectionRefs
 	\end{small}%
@@ -540,15 +552,15 @@ Um die Entwicklerinnen sinnvoll zu unterstützen, soll die Architektur\footnote{
 Mit Klick auf den Button \glqq Create local database...\grqq{} soll eine spezifische Query zum Erzeugen der lokalen Datenbank nach SSMS übertragen. Beim Erzeugen dieser Datenbank wird nur die Struktur der Arche-Datenbank übertragen, nicht deren Inhalt\footnote{Der Fachbereich Systemintegration von Argus geht davon aus, dass der Inhalt der Arche-Datenbank mehrere Petabytes umfasst und darüber hinaus als Verbund mehrerer Datenbanken zu verstehen ist. Daher ist nur das lokale Simulieren der Struktur sinnvoll.}. Angedacht ist, dass die Entwickler die entsprechende Query nicht mehr zu bearbeiten brauchen, sondern lediglich einen Namen und einen Speicherort vergeben müssen, um hinterher gezielt einzelne Datensätze von der Live-Datenbank auf die lokale Datenbank zu übertragen. Hinterher können die vom Query-Tracer abgefangenen Queries einfach nach SSMS kopiert werden, um diese dann auf der lokalen Umgebung auszuführen. 
 
 \subsection{Command-Generator}
-Nach dem Entwurf des obigen Knotenpunktes zur Überwachung der Queries kann nun die Architektur für den Command-Generator entworfen werden. Dieser soll Objekte der Klasse \gls{SqlCommand} erzeugen. Dabei handelt es sich um eine .NET-Klasse, die in der Lage ist, diverse datenbankrelevante Parameter\footnote{u. a. \gls{Connection String}, Servername, Datenbankname, Tabellennamen, Spaltennamen, Query.} zu speichern, die für die Datenbankkommunikation erforderlich sind. Es soll ab sofort nicht mehr notwendig sein, Update-, Insert- oder Delete-Queries manuell zu schreiben. Ebenso wenig soll es notwendig sein, die Spaltennamen und deren Datentyp zu kennen oder gar manuell von SSMS nach Visual Studio zu übertragen. Für jede noch in Benutzung befindliche Tabelle soll ein Modell erzeugt werden, dessen Klassenname dem Tabellennamen entspricht. Der SQL-Datentyp soll automatisch in einen .NET-Datentyp überführt werden und für jede Tabelle eine .cs-Datei abgespeichert werden, auf dessen Basis dann Queries und Parameter für die SqlCommand-Klasse generiert werden können.
+Nach dem Entwurf des obigen Knotenpunktes zur Überwachung der Queries kann nun die Architektur für den Command-Generator entworfen werden. Dieser soll Objekte der Klasse \gls{SqlCommand} erzeugen. Dabei handelt es sich um eine .NET-Klasse, die in der Lage ist, diverse datenbankrelevante Parameter\footnote{U. a. \gls{Connection String}, Servername, Datenbankname, Tabellennamen, Spaltennamen, Query.} zu speichern, die für die Datenbankkommunikation erforderlich sind. Es soll ab sofort nicht mehr notwendig sein, Update-, Insert- oder Delete-Queries manuell zu schreiben. Ebenso wenig soll es notwendig sein, die Spaltennamen und deren Datentyp zu kennen oder gar manuell von SSMS nach Visual Studio zu übertragen. Für jede noch in Benutzung befindliche Tabelle soll ein Modell erzeugt werden, dessen Klassenname dem Tabellennamen entspricht. Der SQL-Datentyp soll automatisch in einen .NET-Datentyp überführt werden und für jede Tabelle eine .cs-Datei abgespeichert werden, auf dessen Basis dann Queries und Parameter für die SqlCommand-Klasse generiert werden können.
 
-\subsubsection{Entwurf für das Generieren von Models}
+\subsubsection{Entwurf der Konvertierungslogik}
 Das Generieren von Models bedeutet für dieses Projekt, dass auf Basis des Datenbankschemas von Arche pro Tabelle eine .cs Datei erzeugt wird mit einer Klasse und mindestens eine Property. Diese besteht wiederum dem \gls{Access-Modifier} \glqq public\grqq{}, aus einem .NET-Datentyp, eventuell einer nullable-Information, einem Bezeichner und jeweils Getter und Setter\footnote{In .NET werden Getter und Setter nicht unabhängig von den entsprechenden Daten deklariert, sondern sind die Architektur von .NET integriert.}. Im folgenden drei Beispiele für Column-Properties mit jeweils unterschiedlichem Datentyp:
 \newline\newline
 public Guid? OID \{ get; set; \}\newline  
 public string Status \{ get; set; \}\newline
 public DateTime sys\_created \{ get; set; \}\newline\newline
-Wie erwähnt sind Getter und Setter immer gleich, selbiges gilt für den Access-Modifier. Für jede Property anders sind Datentyp, nullable (das Fragezeichen) und der Bezeichner. Die obige Übersicht soll aus der folgenden Sql-Daten konvertiert werden können:\newline
+Wie erwähnt sind Getter und Setter immer gleich, selbiges gilt für den Access-Modifier. Für jede Property anders sind Datentyp, nullable (das Fragezeichen) und der Bezeichner. Die obige Übersicht soll aus den folgenden Sql-Daten konvertiert werden können:\newline
 \begin{table}[ht]
     
     \begin{tabular}{l|l|l|l}
@@ -560,25 +572,25 @@ Wie erwähnt sind Getter und Setter immer gleich, selbiges gilt für den Access-
     %\caption{Caption}
     %\label{tab:my_label}
 \end{table}\linebreak
-Dabei muss angemerkt werden, dass .NET Strings immer als nullable ansieht und hier das Fragezeichen wegfällt. Das Python-Skript
+Dabei muss angemerkt werden, dass .NET Strings immer als nullable ansieht und hier das Fragezeichen wegfällt. Für die Konvertierung des Datenbankschemas zu .NET-Models könnte selbstverständlich auch ein in C\# geschriebenes Programm dienen. Da es sich hier jedoch nicht um eine Funktionalität handelt, die Arche später ausführen können soll (denn Arche wird nur mit den Models als .cs-Dateien arbeiten), kann auch eine andere Programmiersprache gewählt werden. Da es dabei nicht unbedingt notwendig ist, komponentenorientiert zu arbeiten und der Datentyp innerhalb des Konvertierungsskripts nicht festgelegt sein muss (der Inhalt der obigen Tabellen wird immer als string behandelt), bietet sich Python an. Der Vorteil dieser Programmiersprache liegt darin, dass kein gesondertes Projekt angelegt werden muss. Auch ist keine strikte Datenkapselung vonnöten. Viel mehr fördert der kurze lesbare Stil von Python in diesem Fall die schnelle Umsetzung des Entwurfs.
 
-\subsubsection{Entwurf Modul Extraktion}
-\blindtext\
+\subsubsection{Entwurf für das Erstellen von Models}
+Für das Struktogramm\footnote{\extendedref{fig:Struktogramm .NET-Models erzeugen}}, durch das .NET-Models erzeugt werden sollen, ist es notwendig, mit einer Liste von .NET-Properties zu arbeiten. Denn jede Klasse, die ein Model repräsentiert, enthält mindestens eine Property (analog hat jede Tabelle mindestens eine Spalte). Das Ergebnis des Datenbankschemas ist, wie oben zu sehen, so organisiert dass als erste Position immer aufs neue der Tabellenname erscheint, solange bis jeder in dieser Tabelle vorhandene Spaltenname auf der rechten Seite erschienen ist. Das Skript muss also in der Lage sein zu erkennen, welche Zeilen aus dem Ergebnis zu einer .cs-Datei gehören. Das geschieht, in dem der Tabellenname (oben \glqq AuftragDimension\grqq{}) als Variable zwischengespeichert werden soll. Sobald eine Zeile abgearbeitet ist, wird geprüft, ob der Name der temporären Tabelle mit dem Namen der folgenden Tabelle übereinstimmt.\newline\newline Ist dies der Fall, wird die Property nur zur Liste hinzugefügt und die nächste Zeile bearbeitet. Sind die Namen unterschiedlich oder die letzte Zeile ist erreicht, bedeutet dies, dass die Tabelle (und somit der Inhalt der zu erstellenden .cs-Datei) fertig bearbeitet ist. Die Liste der Properties und der Tabellenname wird nun einer weiteren Liste .NET-Models hinzugefügt. Dies soll solange geschehen, bis alle Tabellen abgearbeitet sind.
 
-\subsubsection{Entwurf Modul Laden}
-\blindtext\
+\subsubsection{Entwurf für den Query-Generator}
+Jedes Objekt der .NET-Klasse SqlCommand enthält eine Query. Dabei kann es sich um eine Query handeln, die ohne weiteres vom Datenbankserver verarbeitet werden kann oder um eine schematische Query, die nur durch Hilfsmittel, wie dem in diesem Projekt entwickelten Query-Tracers, gelesen werden kann. Die schematische Query sieht dabei so aus, dass bei der Zuweisung von Werten zu Spalten auf der linken Seite wie gewohnt die Spalte aufgeführt ist, auf der rechten Seite links vom Gleichheitszeichen jedoch kein Wert, sondern ebenfalls der Spaltenname mit einem @-Symbol davor (z.B. \glqq sys\_created=@sys\_created\grqq). D.h. die Query in SqlCommand-Objekt dient noch nicht zur Ausführung. Sie soll lediglich bereit stehen, um zum gegebenen Zeitpunkt mit Werten gefüllt zu werden, die der Nutzer in der GUI des entsprechenden Workflows eingibt. Durch die spezifische Schreibweise kann .NET dann das @-Zeichen und den folgenden Spaltennamen durch den gewünschten Wert ersetzen.\newline\newline Der Query-Generator braucht nun zwei Informationen: \textit{Welche Art von Query soll erzeugt werden (Insert, Update oder Delete)?} und \textit{Wie lautet der Tabellenname?} Der Tabellenname entspricht jeweils dem Klassennamen der entsprechenden .cs-Datei, die nach erfolgreichem Erstellen der oben beschriebenen Models vorliegen soll. Dabei ist in der Regel davon auszugehen, dass alle drei Typen erzeugt werden sollen. Es ist wichtig darauf hinzuweisen, dass es sich bei den Informationen aus den Models nicht um Werte handelt, die aus den entsprechenden Properties abgespeichert sind. Es muss für das Erstellen von SqlCommand-Objekten auch kein Objekt dieser Models erzeugt werden. Lediglich die Bezeichnung von Klasse und Properties auf String-Ebene ist hier entscheidend. Anhand dieser Informationen kann der Query-Generator entsprechende Queries erstellen. Die Klasse\footnote{\extendedref{fig:Klassendiagramm}} ist dabei so organisiert, dass mehrere Hilfsklassen als Datentypen innerhalb von QueryRequest deklariert werden. Diese werden in Lists abgelegt, die der Query-Generator iterieren kann.\newline\newline So können beispielsweise alle Spalten für eine Insert-Query iteriert werden, indem der Query-Generator zwei strings, \glqq columns\grqq{} und \glqq values\grqq{} initialisiert, die beide mit einer öffnenden Klammer beginnen. Nun sollen alle Spalten jeweils für beide Variablen iteriert werden, wobei die values Variable, die oben aufgeführte Schreibweise mit \glqq [spalte]=@[spalte]\grqq{} verwendet. Anschließend sollen beide Strings eine schließende Klammer erhalten. Die schematische Query kann dann an das SqlCommand-Objekt übergeben werden.
 
-\subsubsection{Entwurf Modul Transformation}
-\blindtext\
+%\subsubsection{Entwurf Modul Transformation}
+%\blindtext\
 
-\subsection{Roundtrip Engineering}
-\blindtext\
+%\subsection{Roundtrip Engineering}
+%\blindtext\
 
-\subsection{Pflichtenheft}
-\blindtext\
+%\subsection{Pflichtenheft}
+%\blindtext\
 
 \section{Implementierung}
-\blindtext\
+Für die Implementierung wurde so vorgegangen, dass zunächst das Query-Tracing, dann die Query-Request-Klasse und zuletzt der Command-Generator mit dem darin enthaltenen Query-Generator
 
 \subsection{Implementierung Extraktion}
 \blindtext\
@@ -950,7 +962,20 @@ Dieses Diagram stellt schematisch das Erzeugen von .NET-Models dar. Da die Model
  \end{figure}
  \clearpage
  
+\subsection{Klassendiagramm QueryRequest}
+Klassendiagramm der Klasse QueryRequest. Zu sehen sind Variablen und Methoden, sowie alle Klassen und Enumeratoren, die als Datentyp in QueryRequest verwendet werden.
+ \label{fig:Klassendiagramm}
+
+ \begin{figure}[htp]
+ \centering
+
+	\includegraphics{UML-Klasse.png}
+	 \caption{Klassendiagramm}
+ \end{figure}
+ \clearpage
  
+ 
+  
  
 
 \subsection{Quell- und Zieldatenschema}
