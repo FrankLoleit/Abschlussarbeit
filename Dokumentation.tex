@@ -3,6 +3,7 @@ headheight=44pt, headings=optiontoheadandtoc, hyperfootnotes=false, hypertexname
 
 %Packages
 \usepackage{geometry}
+\usepackage{float}
 \usepackage{setspace}
 \usepackage{wrapfig}
 \setstretch{1.5}
@@ -590,13 +591,13 @@ Jedes Objekt der .NET-Klasse SqlCommand enthält eine Query. Dabei kann es sich 
 %\blindtext\
 
 \section{Implementierung}
-Für die Implementierung wurde so vorgegangen, dass zunächst das Query-Tracing, dann die Query-Request-Klasse und zuletzt der Command-Generator mit dem darin enthaltenen Query-Generator
+Für die Implementierung wurde so vorgegangen, dass zunächst das Query-Tracing, dann die Query-Request-Klasse und zuletzt der Command-Generator mit dem darin enthaltenen Query-Generator implementiert wurde. Diese Reihenfolge wurde gewählt, um den Query-Tracer nach Fertigstellung sogleich auch als Testumgebung für die vom Query-Generator erzeugten Queries zu verwenden.
 
-\subsection{Implementierung Extraktion}
-\blindtext\
+\subsection{Implementierung des Query-Tracers}
+Die GUI\footnote{\extendedref{fig:GUI Query-Tracer}} wurde so umgesetzt, dass die Textbox, welche die Query anzeigt, den meisten Raum einnimmt. Um jedoch nicht allzu sehr andere möglicherweise noch geöffneten Fenster zu überlagern, wird die Query ab einer maximalen Länge gescrollt. Datenbankname und Serverame sind immer ersichtlich, ebenso wie der Connection String. Innerhalb der Query werden alle SQL-Keywords erkannt und farblich markiert. Die Farben wurden dabei an diejenigen aus SSMS angelehnt. Das Fenster öffnet sich immer dann, wenn eine Query von Arche an den Datenbankserver verschickt werden würde. Damit der Query-Tracer verwendet werden kann, ist ein kleines Code-Fragment\footnote{\extendedref{fig:Code zum Aktivieren des Query-Tracers}} in die Persistence-Klasse einzufügen. Im Falle von Select-Queries wird die Query immer an den Datenbankservers geschickt. Insert, Update und Delete können unterdrückt werden und führen bei Klick auf den entsprechenden dazu, dass \glqq SuppressQuery\grqq den Wert \glqq true \grqq{} annimmt und die datenbanksensible Funktion der Persistence-Klasse abgebrochen wird. Arche erhält den \glqq 0\grqq{} zurück als Anzahl der veränderten Zeilen.\newline\newline Für die Entwicklerinnen ist es von Vorteil, wenn in SSMS nicht erst die entsprechende Datenbank ausgewählt werden werden muss, um die Query in SSMS erfolgreich auszuführen\footnote{.NET übergibt den Datenbanknamen nicht in der Query, sondern in einem gesonderten Parameter.}. Daher wird der Datenbankname (hier: \glqq ArcheDB\grqq{}) an der entsprechenden Stelle eingefügt. Der Query-Tracer sucht dabei schlicht nach dem Schlüsselwort \glqq from\grqq{} und fügt den Datenbanknamen gemäß den Konventionen von SSMS mit zwei Punkten zur Query hinzu.
 
-\subsection{Implementierung Laden}
-\blindtext\
+\subsection{Implementierung der Database-Models}
+Das in \ref{fig:Struktogramm .NET-Models erzeugen} entworfene Struktogramm wurde nun in Python umgesetzt. Dabei hat sich gezeigt, dass nicht alle in klassischen Struktogrammen bekannten Konventionen in einer dynamisch geschriebenen
 
 \subsection{Implementierung der Datenstrukturen}
 \blindtext\
@@ -846,7 +847,18 @@ Mehrere Variablen aus der bereits vorhandenen PrintmedienTreffer-Klasse. Manche 
 	\includegraphics[scale=0.7]{abstractTreffer.png}
 	 \caption{AbstractTreffer.cs}
  \end{figure}
- \clearpage
+
+\subsection{Code zum Aktivieren des Query-Tracers}
+Dieses Code-Fragment wird in einer Persistence-Klasse eingefügt, an der Stelle bevor eine Query zum Datenbankserver geschickt wird. Die Variable \glqq anzahl\grqq{} stammt aus dem Legacy-Code.
+ \label{fig:Code zum Aktivieren des Query-Tracers}
+
+ \begin{figure}[H]
+ \centering
+
+	\includegraphics[scale=0.7]{snippet.png}
+	 \caption{Code zum Aktivieren des Query-Tracers}
+ \end{figure}
+\clearpage 
  
 \subsection{Projektkosten Details}
 	\label{sec:Projektkosten Details}
@@ -966,7 +978,7 @@ Dieses Diagram stellt schematisch das Erzeugen von .NET-Models dar. Da die Model
 Klassendiagramm der Klasse QueryRequest. Zu sehen sind Variablen und Methoden, sowie alle Klassen und Enumeratoren, die als Datentyp in QueryRequest verwendet werden.
  \label{fig:Klassendiagramm}
 
- \begin{figure}[htp]
+ \begin{figure}[H]
  \centering
 
 	\includegraphics{UML-Klasse.png}
@@ -974,7 +986,20 @@ Klassendiagramm der Klasse QueryRequest. Zu sehen sind Variablen und Methoden, s
  \end{figure}
  \clearpage
  
+\subsection{GUI Query-Tracer}
+%Das zugrunde liegende GUI-Framwork ist WinForms. Die Symbole neben den Buttons stammen von Argus.
+ \label{fig:GUI Query-Tracer}
+
+ \begin{figure}[H]
+ \centering
+
+	\includegraphics[scale=0.9]{gui.png}
+	 \caption{GUI Query-Tracer}
+ \end{figure}
+ \clearpage
  
+ 
+   
   
  
 
