@@ -32,7 +32,6 @@ left=25mm,
 right=25mm,
 top=35mm,
 headheight=35mm,
-
 headsep=2.5em,
 bottom=35mm,
 footskip=2.5em,
@@ -79,10 +78,10 @@ citestyle=authoryear
 
 \addbibresource{literatur.bib}
 
- \usepackage{tikz,ifthen,xstring,calc,pgfkeys,pgfopts}
- \usepackage{tikz-uml}
+ %\usepackage{tikz,ifthen,xstring,calc,pgfkeys,pgfopts}
+ %\usepackage{tikz-uml}
  %\usetikzlibrary{external}
- %\tikzexternalize[prefix=figures/] % activate and define figures/ as cache folder
+
 
 \usepackage{hyperref}
 \usepackage[printonlyused, withpage]{acronym}
@@ -252,11 +251,16 @@ und Individuum sehr unterschiedlich sein\grqq\footnote{Entnommen aus \cite{Schwa
 	name=Komposition,
 	description={Die Komposition zeigt eine notwendige "ist-Teil-von" Beziehung an. Das Teil kann also nicht ohne das Ganze existieren\footnote{Entnommen aus \cite{Thoma2012}}}
 }
-%\newglossaryentry{Dictionary}
-%{
-%	name=Dictionary,
-%	description={Schlüsselwort aus der Objektorientierten Programmierung, das Sichtbarkeit von Daten außerhalb der eigenen Klasse regelt. Die wichtigsten beiden sind %\glqq private\grqq{} und \glqq public \grqq{}}
-%}
+\newglossaryentry{dynamisch}
+{
+	name=dynamisch,
+	description={Von dynamisch geschriebenen Programmiersprachen spricht man, wenn der Datentyp erst in der Runtime durch einen Interpreter entschieden wird und sich jederzeit wieder ändern kann. In einer statisch geschriebene Programmiersprache hingegen, ist er Datentyp unveränderlich und kann sich in der Runtime nicht mehr ändern.}
+}
+\newglossaryentry{Dictionary}
+{
+	name=Dictionary,
+	description={\glqq Ein Dictionary ist mit einem Wörterburch zu vergleichen. In einem Wörterbuch finden sie unter einem Schlüsselbegriff die zugeordnete Information. So steht etwa in einem englisch-deutschen Wörterbuch unter dem Eintrag \textit{house} der zugeordnete deutsche Begriff \textit{Haus}\grqq{} \footnote{Entnommen aus \cite{Theis2014} S. 120}}
+}
 
 
 
@@ -408,20 +412,20 @@ Gneisenaustr. 66\linebreak
 In diesem Projekt wird das Ziel verfolgt, die Datenbankkommunikation einer Desktopanwendung zu vereinheitlichen und die Arbeit der Entwickler von der Arbeit der Nutzer abzugrenzen. Obgleich es sich bei dem entwickelten Modul um ein Werkzeug handelt, das nur von Entwicklern geöffnet und verwendet werden kann, steht der Kunde im Vordergrund aller Bemühungen. Denn sowohl das Auffinden und Lösen von Programmfehlern, wie auch das Implementieren von neuen Komponenten kann durch die Vereinheitlichung und Separierung der Datenbankoperationen deutlich effizienter werden. Der Kunde erhält dadurch nicht nur ein tendenziell stabileres System, sondern kann auch damit rechnen, dass neue gewünschte Funktionalitäten schneller umgesetzt werden. In diesem Sinne steht bei allen Bemühumgen dieses Projektes stets die \gls{Customer Obsession} im Vordergrund.
 
 \subsection{Projektbeschreibung}
-Ausgangspunkt der Arbeit ist die Desktopapplikation \glqq Arche\grqq{}, entwickelt im .NET-Framework\footnote{\cite{Microsoft2020}} 3.5 mit WinForms-\acs{GUI}. Das Debugging gestaltet sich teils als recht aufwändig, da alle Funktionen umgangen werden müssen, die Kundendaten generieren, verändern oder löschen. Grund dafür ist das Fehlen von Mechanismen, durch die sich Datenbankoperationen, die von Kunden und Entwicklern vorgenommen werden, jeweils voneinander abgrenzen lassen. Auch das Implementieren von neuen datenbanksensiblen Features gestaltet sich als umständlich, da es kein einheitliches Prinzip für die Datenbankkommunikation gibt. Viel mehr hat jeder einzelne Workflow jeweils eine eigene Klasse für die Datenbankkommunikation, die sich inhaltlich aber kaum unterscheiden, sondern im Wesentlichen voneinander kopiert wurden und das \acs{DRY}-Prinzip wenig Berücksichtigung findet. Daher soll ein Modul entwickelt werden, dass die Kommunikation mit der Datenbank kapselt.\newline\newline Zunächst soll es möglich sein, dass eine \gls{Query}, die ein beliebiger Workflow an den Datenbankserver übergibt, zurückgehalten werden kann und somit nicht Gefahr zu laufen, unerwünschte Änderungen an Datenbankeinträgen vorzunehmen. Dabei soll in einer für Entwickler bestimmten GUI die entsprechende Query mit sinnvoller Hervorhebung entsprechender Keywords erfolgen. Zudem soll der Entwickler frei entscheiden können, ob die Query verarbeitet, zurückgehalten oder in ein \acs{SQL}-Management-System übertragen werden soll. Im Anschluss soll die uneinheitliche Datenbankkommuniktation durch eine globale Logik mit Hilfe von Datenbankmodellen ersetzt werden. Aus diesen Modellen soll schlussendlich ein einheitliches Verfahren abgeleitet werden können, das die Datenbankanbindung auf ein einziges \gls{Assembly} des Projektes konzentriert und somit eine langfristige Arbeitserleichterung schafft.
+Ausgangspunkt der Arbeit ist die Desktopapplikation \glqq Arche\grqq{}, entwickelt im .NET-Framework\footnote{\cite{Microsoft2020}} 3.5 mit WinForms-\acs{GUI}. Das Debugging gestaltet sich teils als recht aufwändig, da alle Funktionen umgangen werden müssen, die Kundendaten generieren, verändern oder löschen. Grund dafür ist das Fehlen von Mechanismen, durch die sich Datenbankoperationen, die von Kunden und Entwicklern vorgenommen werden, jeweils voneinander abgrenzen lassen.\newline Auch das Implementieren von neuen datenbanksensiblen Features gestaltet sich als umständlich, da es kein einheitliches Prinzip für die Datenbankkommunikation gibt. Viel mehr hat jeder einzelne Workflow jeweils eine eigene Klasse für die Datenbankkommunikation, die sich inhaltlich aber kaum unterscheiden, sondern im Wesentlichen voneinander kopiert wurden und das \acs{DRY}-Prinzip wenig Berücksichtigung findet. Daher soll ein Modul entwickelt werden, dass die Kommunikation mit der Datenbank kapselt.\newline\newline Zunächst soll es möglich sein, dass eine \gls{Query}, die ein beliebiger Workflow an den Datenbankserver übergibt, zurückgehalten werden kann und somit nicht Gefahr zu laufen, unerwünschte Änderungen an Datenbankeinträgen vorzunehmen. Dabei soll in einer für Entwickler bestimmten GUI die entsprechende Query mit sinnvoller Hervorhebung entsprechender Keywords erfolgen. Zudem soll der Entwickler frei entscheiden können, ob die Query verarbeitet, zurückgehalten oder in ein \acs{SQL}-Management-System übertragen werden soll. Im Anschluss soll die uneinheitliche Datenbankkommuniktation durch eine globale Logik mit Hilfe von Datenbankmodellen ersetzt werden. Aus diesen Modellen soll schlussendlich ein einheitliches Verfahren abgeleitet werden können, das die Datenbankanbindung auf ein einziges \gls{Assembly} des Projektes konzentriert und somit eine langfristige Arbeitserleichterung schafft.
 
 \subsection{Projektziel}
 Nach Abschluss des Projektes muss es möglich sein, in Arche Insert-, Update- und Delete-Funktionen auszulösen, ohne dabei Kundendaten zu beeinträchtigen. Ist das zu entwickelnde Modul aktiv und es wird in der GUI von Arche ein Speichern- oder Löschen-Button geklickt, soll Arche angehalten und stattdessen ein Fenster öffnen, das nur für Entwickler bestimmt ist. Dieses gibt nun die Query aus, welche an den Datenbankserver geschickt worden wäre. Die Möglichkeit, die Query mit einem Klick umgehend nach \acs{SSMS} zu versenden muss ebenfalls gegeben sein, wie die Funktion, frei entscheiden zu können, ob die Query von Arche ausgeführt wird oder nicht. Die Entwickler müssen die Möglichkeit erhalten die Datenbank lokal zu simulieren und die entsprechenden Queries lokal auszuführen. Zudem muss ein einheitliches auf Datenbankmodellen basierendes Prinzip implementiert werden, über welches jedwede Insert-, Update- und Delete-Query mit entsprechenden Parametern generiert werden kann.%keine Unstimmigkeiten mit dem 
 %Webinterface auftreten. Die \acs{ADI} ist daher bemüht weitere Schritte %einzuleiten. Man hat sich entschieden \acs{XAML} zu verwenden. Auch %Mathematisch ist dies wichtig\footnote{vgl. \cite{GeraldTeschl2008}}.
 
 \subsection{Projektumfeld}
-Argus Data Insights (im Folgenden \glqq Argus\grqq{} genannt) ist darauf spezialisiert, Print- , Video- und Onlinemedien - insbesondere Zeitungen, Fernsehen und soziale Netzwerke - für angefragte Zeiträume und Themen zu durchsuchen und dem Kunden skalierbare Dossiers mit Informationen zur eigenen Person, Firma oder Einrichtung zu geben. Die Kunden erlangen auf diese Weise einen detaillierten Einblick darüber, wie viel Aufmerksamkeit der Kunde in den Medien allgemein erhält, welche Themen mit dem Kunden assoziiert werden und und die Berichterstattung tendenziell positiv, negativ oder neutral ausfällt. Die Redaktionssoftware Arche wird sowohl zum Digitalisieren, Annotieren, Aufbereiten und Versenden der für den Kunden angefertigten Dossiers verwendet. Dabei werden vor allem Print- und Onlineinhalte unterschieden. Die verschiedenen Medieninhalte werden in Fileservern abgelegt, deren Pfade sowie zahlreiche Medienparameter in Datenbanktabellen gespeichert. Darüber hinaus gibt es eine umfangreiche Kundendatenbank. Datenbankzugriffe erfolgen nicht einheitlich, sondern von verschiedenen \gls{Persistenz}-Klassen aus, deren interne Logik von jeweils der zuletzt angelegten Persistenzklasse kopiert ist (nicht vererbt).
+Argus Data Insights (im Folgenden \glqq Argus\grqq{} genannt) ist darauf spezialisiert, Print- , Video- und Onlinemedien - insbesondere Zeitungen, Fernsehen und soziale Netzwerke - für angefragte Zeiträume und Themen zu durchsuchen und dem Kunden skalierbare Dossiers mit Informationen zur eigenen Person, Firma oder Einrichtung zu geben. Die Kunden erlangen auf diese Weise einen detaillierten Einblick darüber, wie viel Aufmerksamkeit der Kunde in den Medien allgemein erhält, welche Themen mit dem Kunden assoziiert werden und und die Berichterstattung tendenziell positiv, negativ oder neutral ausfällt. Die Redaktionssoftware Arche wird sowohl zum Digitalisieren, Annotieren, Aufbereiten und Versenden der für den Kunden angefertigten Dossiers verwendet.\newline Dabei werden vor allem Print- und Onlineinhalte unterschieden. Die verschiedenen Medieninhalte werden in Fileservern abgelegt, deren Pfade sowie zahlreiche Medienparameter in Datenbanktabellen gespeichert. Darüber hinaus gibt es eine umfangreiche Kundendatenbank. Datenbankzugriffe erfolgen nicht einheitlich, sondern von verschiedenen \gls{Persistenz}-Klassen aus, deren interne Logik von jeweils der zuletzt angelegten Persistenzklasse kopiert ist (nicht vererbt).
 
 \subsection{Projektbegründung}
 Die Gründe für das Projekt liegen in der erschwerten Wartung der Software, sowie dem erhöhten Aufwand, neue datenbanksensible Komponenten hinzuzufügen. Muss ein Ticket\footnote{Bei Argus wird das \gls{Kanban}-Board \href{https://www.atlassian.com/software/jira}{Atlassian Jira} verwendet.} bearbeitet werden, bei dem ein Problem mit Query und/oder Datenbank vermutet wird, müssen beim Debugging sehr früh Breakpoints gesetzt werden, um nicht Gefahr zu laufen, Kundendaten irreversibel zu verändern. Es fehlt die Möglichkeit, global die Ausführung von Datenbankprozessen zurückzuhalten. Darüber hinaus ist es äußerst kompliziert, die entsprechende Query zu erhalten, welche es für das jeweilige Ticket zu analysieren gilt. Daran anschließend ist kein einheitlicher Prozess vorhanden, der die Kommunikation von .NET und MSSQL steuert. Um sowohl Wartbarkeit, als auch einfache Erweiterbarkeit zu gewährleisten, ist dieses Projekt in Absprache mit den \gls{Product Owner}n entstanden.
 
 \subsection{Projektabgrenzung}
-Was die technische Abgrenzung anbelangt, ist durch die komponentenorientierte Arbeitsweise in .NET das zu entwickelnde Modul gut von bereits fertigen Projekten innerhalb der Kernapplikation getrennt. Konkret bedeutet das, dass das neue Modul \glqq DBEncapsulation\grqq{} und dessen Testmodul \glqq DBEncapsulationTests\grqq{}\footnote{\extendedref{fig:Assemblies}} per se isoliert und interagieren nur dann mit der Hauptapplikation Arche, wenn eine Referenz zu einem anderen Modul hergestellt wird. Wird eine Variable oder Methode aus DBEncapsulation als öffentlich deklariert, ist sie dennoch vorerst in keinem der anderen Module verfügbar und trägt nicht zur Überlastung der \gls{IntelliSense} bei. Soll das Modul aus einem bereits entwickelten Modul verfügbar sein, muss dessen Projektdatei zunächst eine Referenz auf DBEncapsulation hinzugefügt werden. Im nächsten Schritt kann denjenigen Klassen, welche datenbankrelevante Prozesse implementieren ein \glqq using\grqq{}-Statement hinzugefügt werden. Erst unter diesen Voraussetzungen, sind in der entsprechenden Klasse Daten verfügbar, die als öffentlich deklariert sind.\newline\newline Bezüglich der inhaltlichen Abgrenzung ist festzuhalten, dass aufgrund der hohen Vielfalt an Datenbankoperationen zunächst Insert- Update- und Delete im Vordergrund stehen werden. Da Select-Operationen keine Beeinträchtigungen von Kundendaten zur Folge haben können, wird für diese Fälle vor allem im Vordergrund steht den Entwicklern ein korrektes Feedback darüber zu geben, welche Tabellen und Spalten nach welcher Abfragelogik an die Datenbank übermittelt wurden. Da Select-Operationen stark heterogen sind, wird hier kein einheitlicher Prozess für angestrebt. Jedoch soll es für die Fälle Update, Insert und Delete grundsätzlich nicht mehr nötig sein, neue Logiken für neue Module zu entwerfen und lediglich durch Referenzierung auf DBEncapsulation entsprechende Funktionalitäten bereit gestellt werden.
+Was die technische Abgrenzung anbelangt, ist durch die komponentenorientierte Arbeitsweise in .NET das zu entwickelnde Modul gut von bereits fertigen Projekten innerhalb der Kernapplikation getrennt. Konkret bedeutet das, dass das neue Modul \glqq DBEncapsulation\grqq{} und dessen Testmodul \glqq DBEncapsulationTests\grqq{}\footnote{\extendedref{fig:Assemblies}} per se isoliert und interagieren nur dann mit der Hauptapplikation Arche, wenn eine Referenz zu einem anderen Modul hergestellt wird. Wird eine Variable oder Methode aus DBEncapsulation als öffentlich deklariert, ist sie dennoch vorerst in keinem der anderen Module verfügbar und trägt nicht zur Überlastung der \gls{IntelliSense} bei. Soll das Modul aus einem bereits entwickelten Modul verfügbar sein, muss dessen Projektdatei zunächst eine Referenz auf DBEncapsulation hinzugefügt werden. Im nächsten Schritt kann denjenigen Klassen, welche datenbankrelevante Prozesse implementieren ein \glqq using\grqq{}-Statement hinzugefügt werden. Erst unter diesen Voraussetzungen, sind in der entsprechenden Klasse Daten verfügbar, die als öffentlich deklariert sind.\newline Bezüglich der inhaltlichen Abgrenzung ist festzuhalten, dass aufgrund der hohen Vielfalt an Datenbankoperationen zunächst Insert- Update- und Delete im Vordergrund stehen werden. Da Select-Operationen keine Beeinträchtigungen von Kundendaten zur Folge haben können, wird für diese Fälle vor allem im Vordergrund steht den Entwicklern ein korrektes Feedback darüber zu geben, welche Tabellen und Spalten nach welcher Abfragelogik an die Datenbank übermittelt wurden. Da Select-Operationen stark heterogen sind, wird hier kein einheitlicher Prozess für angestrebt. Jedoch soll es für die Fälle Update, Insert und Delete grundsätzlich nicht mehr nötig sein, neue Logiken für neue Module zu entwerfen und lediglich durch Referenzierung auf DBEncapsulation entsprechende Funktionalitäten bereit gestellt werden.
 
 \section{Projektplanung}
 Für die Planung ist wesentlich, dass das Tagesgeschäft der Entwicklerinnen bei Argus nicht unterbrochen wird, sondern parallel zum hier dokumentierten Projekt mit allen zeitlichen und finanziellen Aufwendungen weiterläuft. Das heißt, bei der Projektplanung ist ein sinnvolles Verhältnis von Recherche, selbstständigem Kodieren und eigenverantwortlichen Entscheidungen einerseits, sowie zielgerichtete Unterstützung durch Ausbilder und Kolleginnen andererseits. Um den stetigen Austausch zu gewährleisten, wird der Fortschritt dieses Projektes im täglichen Meeting mit Vorgesetzten und Teammitgliedern geteilt. Zudem werden regelmäßige sowie spontane 1:1-Gespräche mit dem Ausbilder durchgeführt.
@@ -496,12 +500,12 @@ Um das vorliegende Projekt als wirtschaftlich betrachten zu können, muss also e
 %\blindtext\
 
 \subsubsection{Zusammenstellen des Kostenplans}
-Der Kostenplan{\footnote{\extendedref{sec:Projektkosten Details}}} teilt sich ein in die personellen (oben) und nicht personelle Aufwendungen (unten). Es wird davon ausgegangen, dass bei einem Stundenlohn von ca. 40€ immer mindestens ein Kollege für die fachliche Unterstützung zur Verfügung stehen. Die Unterstützung erfolgte dabei in offiziellen Meetings, aber auch spontan im Büro, wenn Gesprächsbedarf bestand. Ebenso verhält es sich mit dem Ausbilder, der für die Betreuung während des Projektes zuständig war und einen etwas höheren Stundenlohn erhält. Dabei muss erwähnt werden, dass ich es für das Betriebsklima nicht als sinnvoll erachtet habe, jede Beteiligte nach ihrem exakten Stundenlohn zu fragen. Die Lösung war daher, den \acs{PO} nach gewöhnlichen Stundenlöhnen zu fragen, die im Unternehmen üblich sind. Obgleich ich meine Ausbildung vom Staat finanziert wird, ist es hier zielführend, einen durchschnittlichen Stundenlohn eines Praktikanten anzugeben, um zu gewährleisten, dass die Beträge auch für durchschnittliche zukünftige Projekte dieser Größenordnung aussagekräftig sind.\newline\newline Im Kostenplan wird davon ausgegangen, dass Personal nicht nur über das Gehalt Kosten generiert, sondern dass auch Betriebskosten, wie Strom, Wartung der verwendeten Technik, Heizung im Büro u. Ä. Kosten verursachen. Daher wird ein pauschaler Handlungszuschlag von 30\% auf den Lohn angenommen. Natürlich könnte man an dieser Stelle einwenden, dass der Handlungszuschlag in Wirklichkeit stark schwanken kann, dennoch macht es Sinn im Hinterkopf zu behalten, dass neben dem Lohn auch weitere Kosten für den laufenden Betrieb in der Firma anfallen. Ebenfalls ist anzuführen, dass es sich bei dem  Bei der notwendigen Hardware und Software ist zu bemerken, dass es sich bei den ermittelten Beträgen nicht um Anschaffungskosten handelt, sondern jene Kosten, die Hard- oder Software für gewöhnlich in der Zeitspanne des Projektes in Anspruch nehmen. Außerdem handelte es sich bei den unterstützenden Entwicklern um Senior-Entwickler, deren Stundenlohn verhältnismäßig hoch ist. Der Kostenplan gibt also nicht wieder, was zusätzlich für Kosten angefallen sind, sondern wie kostenintensiv das Projekt innerhalb des laufenden Betriebs ist.
+Der Kostenplan{\footnote{\extendedref{sec:Projektkosten Details}}} teilt sich ein in die personellen (oben) und nicht personelle Aufwendungen (unten). Es wird davon ausgegangen, dass bei einem Stundenlohn von ca. 40€ immer mindestens ein Kollege für die fachliche Unterstützung zur Verfügung stehen. Die Unterstützung erfolgte dabei in offiziellen Meetings, aber auch spontan im Büro, wenn Gesprächsbedarf bestand. Ebenso verhält es sich mit dem Ausbilder, der für die Betreuung während des Projektes zuständig war und einen etwas höheren Stundenlohn erhält. Dabei muss erwähnt werden, dass ich es für das Betriebsklima nicht als sinnvoll erachtet habe, jede Beteiligte nach ihrem exakten Stundenlohn zu fragen. Die Lösung war daher, den \acs{PO} nach gewöhnlichen Stundenlöhnen zu fragen, die im Unternehmen üblich sind. Obgleich ich meine Ausbildung vom Staat finanziert wird, ist es hier zielführend, einen durchschnittlichen Stundenlohn eines Praktikanten anzugeben, um zu gewährleisten, dass die Beträge auch für durchschnittliche zukünftige Projekte dieser Größenordnung aussagekräftig sind.\newline\newline Im Kostenplan wird davon ausgegangen, dass Personal nicht nur über das Gehalt Kosten generiert, sondern dass auch Betriebskosten, wie Strom, Wartung der verwendeten Technik, Heizung im Büro u. Ä. Kosten verursachen. Daher wird ein pauschaler Handlungszuschlag von 30\% auf den Lohn angenommen. Natürlich könnte man an dieser Stelle einwenden, dass der Handlungszuschlag in Wirklichkeit stark schwanken kann, dennoch macht es Sinn im Hinterkopf zu behalten, dass neben dem Lohn auch weitere Kosten für den laufenden Betrieb in der Firma anfallen.\newline\newline Ebenfalls ist anzuführen, dass es sich bei dem  Bei der notwendigen Hardware und Software ist zu bemerken, dass es sich bei den ermittelten Beträgen nicht um Anschaffungskosten handelt, sondern jene Kosten, die Hard- oder Software für gewöhnlich in der Zeitspanne des Projektes in Anspruch nehmen. Außerdem handelte es sich bei den unterstützenden Entwicklern um Senior-Entwickler, deren Stundenlohn verhältnismäßig hoch ist. Der Kostenplan gibt also nicht wieder, was zusätzlich für Kosten angefallen sind, sondern wie kostenintensiv das Projekt innerhalb des laufenden Betriebs ist.
 
 %\subsubsection{Nicht-monetäre Vorteile}
 %\blindtext\
 \subsubsection{Zeitersparnis}
-Zunächst musste ermittelt werden, wie viel Zeit die derzeitige Entwicklung von Arche ohne einheitliche Datenbankkommunikation angefallen ist\footnote{\extendedref{sec:Zeitersparnis}}. Hier hat sich gezeigt, dass Tickets, bei denen datenbanksensible Prozesse gewartet werden müssen, relativ häufig vorkommen. Hier kann es z.B. vorkommen, dass ein Kunde glaubt, Daten abgespeichert zu haben, die Änderungen der jene Daten jedoch nicht im System sichtbar zu sein scheinen. Für diesen recht frequenten Fall muss die entsprechende Query oft langwierig durch im Debugging-Modus isoliert werden. Es konnte herausgefunden werden, dass das Identifizieren der Queries im Debug-Modus pro Ticket immer mindestens 10 Minuten vergehen und dies etwas weniger als alle 2 Arbeitstage vorkommt.\newline\newline Zudem wird davon ausgegangen, dass monatlich 2 neue Persistence-Klassen hinzukommen bzw., da es sich um Legacy-Software handelt, gewartet werden müssen. Hierfür werden nach der bisherigen manuellen Vorgehensweise Spaltennamen per Copy-Paste von SSMS nach Visual Studio übertragen, was für jede der beiden monatlich bearbeiteten Klassen einmal geschieht. Folgende in der Tabelle aufgeführten Arbeitsschritte müssen jeweils für Insert-, Update- und Delete-Queries ausgeführt durchgeführt werden, wodurch diese jeweils 6 mal pro Monat durchgeführt werden. Durch das Automatisieren der genannten Prozesse konnte der meiste zeitliche Aufwand reduziert werden und insgesamt 778 Minuten pro Monat an Einsparungen errechnet werden.
+Zunächst musste ermittelt werden, wie viel Zeit die derzeitige Entwicklung von Arche ohne einheitliche Datenbankkommunikation angefallen ist\footnote{\extendedref{sec:Zeitersparnis}}. Hier hat sich gezeigt, dass Tickets, bei denen datenbanksensible Prozesse gewartet werden müssen, relativ häufig vorkommen. Hier kann es z.B. vorkommen, dass ein Kunde glaubt, Daten abgespeichert zu haben, die Änderungen der jene Daten jedoch nicht im System sichtbar zu sein scheinen. Für diesen recht frequenten Fall muss die entsprechende Query oft langwierig durch im Debugging-Modus isoliert werden. Es konnte herausgefunden werden, dass das Identifizieren der Queries im Debug-Modus pro Ticket immer mindestens 10 Minuten vergehen und dies etwas weniger als alle zwei Arbeitstage vorkommt.\newline\newline Zudem wird davon ausgegangen, dass monatlich 2 neue Persistence-Klassen hinzukommen bzw., da es sich um Legacy-Software handelt, gewartet werden müssen. Hierfür werden nach der bisherigen manuellen Vorgehensweise Spaltennamen per Copy-Paste von SSMS nach Visual Studio übertragen, was für jede der beiden monatlich bearbeiteten Klassen einmal geschieht. Folgende in der Tabelle aufgeführten Arbeitsschritte müssen jeweils für Insert-, Update- und Delete-Queries ausgeführt durchgeführt werden, wodurch diese jeweils 6 mal pro Monat durchgeführt werden. Durch das Automatisieren der genannten Prozesse konnte der meiste zeitliche Aufwand reduziert werden und insgesamt 778 Minuten pro Monat an Einsparungen errechnet werden.
 
 \subsubsection{Amortisation}
 Mit der ermittelten zeitlichen Einsparung konnte nun eine Rechnung darüber erstellt werden, wann die Schuld der Projektkosten voraussichtlich getilgt ist. Beim Stundenlohn wird nun wieder das ermittelte Seniorentwicklergehalt von 40 € pro Stunde angenommen, sowie ein Handlungszuschlag von 30\%. Auch hier kann man davon ausgehen, dass für zukünftige Projekte auch Entwickler mit moderateren Gehältern beteiligt werden können. Der zufällige Vorteil dieser Konstellation ist jedoch, dass vergleichbare Projekte tendenziell günstiger werden als teurer. Wenn nun also davon ausgegangen wird, dass das Projekt insgesamt 2443,00 € betragen, die reguläre Entwicklung jedoch 8091,20 €/Jahr kostet, dann ist davon auszugehen, dass die Projektkosten nach etwa 3 1/2 Monaten wieder wett sind:%\clearpage
@@ -594,16 +598,17 @@ Jedes Objekt der .NET-Klasse SqlCommand enthält eine Query. Dabei kann es sich 
 Für die Implementierung wurde so vorgegangen, dass zunächst das Query-Tracing, dann die Query-Request-Klasse und zuletzt der Command-Generator mit dem darin enthaltenen Query-Generator implementiert wurde. Diese Reihenfolge wurde gewählt, um den Query-Tracer nach Fertigstellung sogleich auch als Testumgebung für die vom Query-Generator erzeugten Queries zu verwenden.
 
 \subsection{Implementierung des Query-Tracers}
-Die GUI\footnote{\extendedref{fig:GUI Query-Tracer}} wurde so umgesetzt, dass die Textbox, welche die Query anzeigt, den meisten Raum einnimmt. Um jedoch nicht allzu sehr andere möglicherweise noch geöffneten Fenster zu überlagern, wird die Query ab einer maximalen Länge gescrollt. Datenbankname und Serverame sind immer ersichtlich, ebenso wie der Connection String. Innerhalb der Query werden alle SQL-Keywords erkannt und farblich markiert. Die Farben wurden dabei an diejenigen aus SSMS angelehnt. Das Fenster öffnet sich immer dann, wenn eine Query von Arche an den Datenbankserver verschickt werden würde. Damit der Query-Tracer verwendet werden kann, ist ein kleines Code-Fragment\footnote{\extendedref{fig:Code zum Aktivieren des Query-Tracers}} in die Persistence-Klasse einzufügen. Im Falle von Select-Queries wird die Query immer an den Datenbankservers geschickt. Insert, Update und Delete können unterdrückt werden und führen bei Klick auf den entsprechenden dazu, dass \glqq SuppressQuery\grqq den Wert \glqq true \grqq{} annimmt und die datenbanksensible Funktion der Persistence-Klasse abgebrochen wird. Arche erhält den \glqq 0\grqq{} zurück als Anzahl der veränderten Zeilen.\newline\newline Für die Entwicklerinnen ist es von Vorteil, wenn in SSMS nicht erst die entsprechende Datenbank ausgewählt werden werden muss, um die Query in SSMS erfolgreich auszuführen\footnote{.NET übergibt den Datenbanknamen nicht in der Query, sondern in einem gesonderten Parameter.}. Daher wird der Datenbankname (hier: \glqq ArcheDB\grqq{}) an der entsprechenden Stelle eingefügt. Der Query-Tracer sucht dabei schlicht nach dem Schlüsselwort \glqq from\grqq{} und fügt den Datenbanknamen gemäß den Konventionen von SSMS mit zwei Punkten zur Query hinzu.
+Die GUI\footnote{\extendedref{fig:GUI Query-Tracer}} wurde so umgesetzt, dass die Textbox, welche die Query anzeigt, den meisten Raum einnimmt. Um jedoch nicht allzu sehr andere möglicherweise noch geöffneten Fenster zu überlagern, wird die Query ab einer maximalen Länge gescrollt. Datenbankname und Serverame sind immer ersichtlich, ebenso wie der Connection String. Innerhalb der Query werden alle SQL-Keywords erkannt und farblich markiert. Die Farben wurden dabei an diejenigen aus SSMS angelehnt. Das Fenster öffnet sich immer dann, wenn eine Query von Arche an den Datenbankserver verschickt werden würde. Damit der Query-Tracer verwendet werden kann, ist ein kleines Code-Fragment\footnote{\extendedref{fig:Code zum Aktivieren des Query-Tracers}} in die Persistence-Klasse einzufügen. Im Falle von Select-Queries wird die Query immer an den Datenbankservers geschickt. Insert, Update und Delete können unterdrückt werden und führen bei Klick auf den entsprechenden dazu, dass \glqq SuppressQuery\grqq den Wert \glqq true \grqq{} annimmt und die datenbanksensible Funktion der Persistence-Klasse abgebrochen wird. Arche erhält den Wert \glqq 0\grqq{} zurück als Anzahl der veränderten Zeilen.\newline\newline Für die Entwicklerinnen ist es von Vorteil, wenn in SSMS nicht erst die entsprechende Datenbank ausgewählt werden werden muss, um die Query in SSMS erfolgreich auszuführen\footnote{.NET übergibt den Datenbanknamen nicht in der Query, sondern in einem gesonderten Parameter.}. Daher wird der Datenbankname (hier: \glqq ArcheDB\grqq{}) an der entsprechenden Stelle eingefügt. Der Query-Tracer sucht dabei schlicht nach dem Schlüsselwort \glqq from\grqq{} und fügt den Datenbanknamen gemäß den Konventionen von SSMS mit zwei Punkten zur Query hinzu.
 
-\subsection{Implementierung der Database-Models}
-Das in \ref{fig:Struktogramm .NET-Models erzeugen} entworfene Struktogramm wurde nun in Python umgesetzt. Dabei hat sich gezeigt, dass nicht alle in klassischen Struktogrammen bekannten Konventionen in einer dynamisch geschriebenen
+\subsection{Kodierung der Methode zum Erzeugen von Table-Models}
+Die Methode zum Erzeugen von Table-Models wurde nun in Python kodiert\footnote{\extendedref{fig:Methode zur Erzeugung von Table-Models}}. Dabei hat sich gezeigt, dass nicht alle in klassischen Struktogrammen bekannten Konventionen in einer \gls{dynamisch} geschriebenen Programmiersprache wie Python zur Geltung kommen. So gibt es keine Unterscheidung von Deklaration und der Zuweisung von Werten. Ebenso war es nicht notwendig, jede einzelne Kontrollstruktur explizit mit \glqq if\grqq{} oder \glqq else\grqq zu kodieren. Bei booleschen Werten konnte die im Struktogramm vorliegende Verzweigung oft mit nur einer Zeile umgesetzt werden. Darüber hinaus muss im Gegensatz zum Struktogramm auch \glqq try \grqq{} und \glqq catch \grqq{} unterschieden werden\footnote{Hier beim Iterieren der Zeilen: \textit{Ist in der Zeile darunter eine andere Tabelle als die aktuell bearbeitete Tabelle?} Wenn bereits die letzte Zeile bearbeitet wird, muss eine Index-Exception abgefangen werden.}.\newline Sobald in der linken Spalte eine neue Table erscheint oder die letzte Zeile erreicht ist, werden alle gesammelten Properties in einer Liste als Parameter für die Klasse \glqq DotNetModel\footnote{\extendedref{fig:DotNetModel}}\grqq{} übergeben, dass aus den Models den C\#-Code erzeugt. Ein ursprünglich angedachtes \gls{Dictionary}, das auf der einen Seite .NET-Datentypen und auf der anderen Seite SQL-Datentypen enthalten sollte, musste hier nicht umgesetzt werden. Aufgrund der zeichenarmen Syntax von Python war es ausreichend, die Datentypen mit simplem \glqq if \grqq{} und \glqq elif \grqq{} zu assoziieren\footnote{\textit{if SqlDataType == \grq varchar\grq{}: DotNetDataType = \grq string\grq{}} usw.}. 
 
-\subsection{Implementierung der Datenstrukturen}
-\blindtext\
 
-\subsection{Implementierung Transformation}
-\blindtext\
+\subsection{Implementierung des Query-Generators}
+Nach der erfolgreichen Implementierung der oben beschriebenen Model-Generators konnte nun der Query-Tracer kodiert werden. Dieser nimmt ein Objekt der in \ref{fig:Klassendiagramm} dargestellten Query-Request-Klasse. Queries sollen mit Hilfe der nun erstellten Models für die Typen \glqq insert\footnote{\extendedref{fig:Insert-Methode}}\grqq{}, \glqq update \grqq{} und \glqq delete \grqq{} erzeugt werden. Bei der Implementierung zeigt sich ein entscheidender Vorteil der automatischen Generierung gegenüber dem manuellen Verfassen einer Query:\newline Es ist nun sowohl unmöglich geworden, falsche Bezeichnungen für Tabelle oder Spalte zu wählen. ist keine entsprechende .cs-Datei vorhanden, die die Tabelle repräsentiert, wird der entsprechende Versuch unterringelt. Spaltennamen brauchen nun ebenfalls nicht mehr von der Programmierin eingegeben werden und es kann zudem nicht vorkommen, dass die Reihenfolge Spalte und zuzuordnendem Wert nicht übereinstimmt. Es muss lediglich bekannt sein, um welche Tabelle es sich handelt und sie kann nach Eingeben der ersten Buchstaben durch die \gls{IntelliSense} ausgewählt werden.
+
+\subsection{Hinzufügen von Spalten und Datentyp zum SqlCommand-Objekt}
+Nach dem es nun möglich ist Queries zu erzeugen, können jetzt die Spalten mit ihren jeweiligem DatenTyp dem Objekt der .NET-Klasse SqlCommand hinzugefügt werden. Dazu müssen die nun im .NET-Datentyp vorliegenden Properties wieder in den Sql-Datentyp überführt werden\footnote{Für die Zuordnung von .NET-Datentyp zu SQL-Datentyp siehe \cite{Microsoft2021}.}. Dabei werden nun alle Properties iteriert, deren Bezeichnung als Parameter mit einem @-Symbol an das Objekt übergeben und der entsprechende Datentyp wieder zur SQL-Architektur umgewandelt. Auch hier ist zu bemerken, dass beim Iterieren der Models keinesfalls um der Inhalt irgendeiner Variable geht. Ausschließlich die Zeichenketten von Bezeichner und Datentyp sind hier entscheidend. Der Bezeichner der Property (z.B. \glqq enthaeltUeberschrift\grqq{}) wird mit
 
 \subsection{Implementierung Hilfsklassen und Interfaces}
 \blindtext\
@@ -963,12 +968,11 @@ In diesem Diagramm wird \glqq Query Tracer\grqq{} wie eine Person oder Firma beh
  
 
 \subsection{Struktogramm .NET-Models-Generierung}
-Dieses Diagram stellt schematisch das Erzeugen von .NET-Models dar. Da die Models mit der dynamisch geschriebenen Programmiersprache Python erzeugt wurden, kann Deklaration und Zuweisung von Werten zu Variablen zusammenfallen.
+Dieses Diagram stellt schematisch das Erzeugen von .NET-Models dar. Da die Models mit der dynamisch geschriebenen Programmiersprache Python erzeugt wurden, kann Deklaration und Zuweisung von Werten zu Variablen zusammenfallen. Die Kodierung des Struktogramms ist in \ref{fig:Methode zur Erzeugung von Table-Models} aufgeführt.
  \label{fig:Struktogramm .NET-Models erzeugen}
 
  \begin{figure}[htp]
  \centering
-
 	\includegraphics[height=500, width=430]{struktogramm.png}
 	 \caption{Struktogramm .NET-Models erzeugen}
  \end{figure}
@@ -998,6 +1002,56 @@ Klassendiagramm der Klasse QueryRequest. Zu sehen sind Variablen und Methoden, s
  \end{figure}
  \clearpage
  
+ \subsection{Methode zur Erzeugung von Table-Models}
+Kodierung des in \ref{fig:Struktogramm .NET-Models erzeugen} erarbeitetenden Struktogramms zur Erzeugung von Table-Models. 
+ \label{fig:Methode zur Erzeugung von Table-Models}
+
+ \begin{figure}[H]
+ \centering
+
+	\includegraphics[scale=0.6]{modelGenerierung.PNG}
+	 \caption{Methode zur Erzeugung von Table-Models}
+ \end{figure}
+ \clearpage
+ 
+  \subsection{Klasse DotNetModel}
+Objekte der Klasse DotNetModels beinhalten den C\#-Code für jeweils eine zu erzeugende Datei:
+ \label{fig:DotNetModel}
+
+ \begin{figure}[H]
+ \centering
+
+	\includegraphics[scale=0.55]{dotNetModel.PNG}
+	 \caption{Klasse DotNetModel}
+ \end{figure}
+ \clearpage
+ 
+   \subsection{Insert-Methode}
+Ein Beispiel für das automatische Erzeugen einer Query aus der Klasse Query-Generator. Tabellen- und Spaltennamen werden beim Erzeugen eines Query-Generator-Objekts anhand der Klassen- und Property- Bezeichnung der des entsprechenden Table-Models ermittelt:
+ \label{fig:Insert-Methode}
+
+ \begin{figure}[H]
+ \centering
+
+	\includegraphics[scale=0.7]{insert.PNG}
+	 \caption{Insert-Methode}
+ \end{figure}
+ \clearpage
+ 
+    \subsection{Command-Generator Hauptmethoden}
+Wesentliche Methoden des Command-Generators. Es wird das gewünschte Table-Model übergeben, sowie der gewünschte Query-Typ aus einem Enumerator. Query und SqlParameter werden entsprechend hinzugefügt:
+ \label{fig:Command-Generator Hauptmethoden}
+
+ \begin{figure}[H]
+ %\centering
+
+	\includegraphics[scale=0.6]{commandGenerator.PNG}
+	 \caption{Command-Generator Hauptmethoden}
+ \end{figure}
+ \clearpage
+ 
+ 
+ 
  
    
   
@@ -1009,12 +1063,12 @@ Klassendiagramm der Klasse QueryRequest. Zu sehen sind Variablen und Methoden, s
 \subsection{Sequenzdiagramm}
 \blindtext
 
-
+\begin{comment}
 \subsection{Klassendiagramm}
 
 Dies ist ein Beispiel für ein UML-Klassendiagramm:\\
 
-\begin{comment}
+
  \begin{figure}[ht]
  \centering
  \begin{tikzpicture}

@@ -13,7 +13,7 @@ doc/*.lg
 doc/*.tmp
 doc/*.xref
 
-pgf-umlsd.sty
+
 test
 examples/*.log
 examples/*.aux
