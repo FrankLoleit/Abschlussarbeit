@@ -971,9 +971,9 @@ In diesem Diagramm wird \glqq Query Tracer\grqq{} wie eine Person oder Firma beh
 Dieses Diagram stellt schematisch das Erzeugen von .NET-Models dar. Da die Models mit der dynamisch geschriebenen Programmiersprache Python erzeugt wurden, kann Deklaration und Zuweisung von Werten zu Variablen zusammenfallen. Die Kodierung des Struktogramms ist in \ref{fig:Methode zur Erzeugung von Table-Models} aufgeführt.
  \label{fig:Struktogramm .NET-Models erzeugen}
 
- \begin{figure}[htp]
+ \begin{figure}[H]
  \centering
-	\includegraphics[height=500, width=430]{struktogramm.png}
+	\includegraphics[height=560, width=470]{struktogramm.png}
 	 \caption{Struktogramm .NET-Models erzeugen}
  \end{figure}
  \clearpage
@@ -985,7 +985,7 @@ Klassendiagramm der Klasse QueryRequest. Zu sehen sind Variablen und Methoden, s
  \begin{figure}[H]
  \centering
 
-	\includegraphics{UML-Klasse.png}
+	\includegraphics[scale=1.2]{UML-Klasse.png}
 	 \caption{Klassendiagramm}
  \end{figure}
  \clearpage
@@ -1007,12 +1007,12 @@ Kodierung des in \ref{fig:Struktogramm .NET-Models erzeugen} erarbeitetenden Str
  \label{fig:Methode zur Erzeugung von Table-Models}
 
  \begin{figure}[H]
- \centering
+ %\centering
 
-	\includegraphics[scale=0.6]{modelGenerierung.PNG}
+	\includegraphics[scale=0.5]{modelGenerierung.PNG}
 	 \caption{Methode zur Erzeugung von Table-Models}
  \end{figure}
- \clearpage
+% \clearpage
  
   \subsection{Klasse DotNetModel}
 Objekte der Klasse DotNetModels beinhalten den C\#-Code für jeweils eine zu erzeugende Datei:
@@ -1049,6 +1049,19 @@ Wesentliche Methoden des Command-Generators. Es wird das gewünschte Table-Model
 	 \caption{Command-Generator Hauptmethoden}
  \end{figure}
  \clearpage
+ 
+\subsection{Sequenzdiagramm Entwicklung und Tests}
+%Wesentliche Methoden des Command-Generators. Es wird das gewünschte Table-Model übergeben, sowie der gewünschte Query-Typ aus einem Enumerator. Query und SqlParameter werden entsprechend hinzugefügt:
+ \label{fig:Sequenzdiagramm Entwicklung und Tests}
+
+ \begin{figure}[H]
+ %\centering
+
+	\includegraphics[scale=0.85]{Einfaches Sequenzdiagramm_2.png}
+	 \caption{Sequenzdiagramm Entwicklung und Tests}
+ \end{figure}
+ \clearpage
+ 
  
  
  
