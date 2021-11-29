@@ -227,6 +227,12 @@ und Individuum sehr unterschiedlich sein\grqq\footnote{Entnommen aus \cite{Schwa
 	name=Boolean,
 	description={Standard-Datentyp aus allen bekannten Programmiersprachen, der entweder den Wert \glqq wahr\grqq{} oder \glqq falsch\grqq{} annehmen kann}
 }
+\newglossaryentry{Pull Request}
+{
+name=Pull Request,
+description={
+\glqq A pull request is a method of submitting contributions to an open development project. It is often the preferred way of submitting contributions to a project using a distributed version control system (DVCS) such as Git\grqq{}\footnote{Entnommen aus \cite{Johnson2013}}}
+}
 \newglossaryentry{Datenbank Management System}
 {
 	name=Datenbank Management System,
@@ -251,9 +257,9 @@ und Individuum sehr unterschiedlich sein\grqq\footnote{Entnommen aus \cite{Schwa
 	name=Komposition,
 	description={Die Komposition zeigt eine notwendige "ist-Teil-von" Beziehung an. Das Teil kann also nicht ohne das Ganze existieren\footnote{Entnommen aus \cite{Thoma2012}}}
 }
-\newglossaryentry{dynamisch}
+\newglossaryentry{Dynamisch}
 {
-	name=dynamisch,
+	name=Dynamisch,
 	description={Von dynamisch geschriebenen Programmiersprachen spricht man, wenn der Datentyp erst in der Runtime durch einen Interpreter entschieden wird und sich jederzeit wieder ändern kann. In einer statisch geschriebene Programmiersprache hingegen, ist er Datentyp unveränderlich und kann sich in der Runtime nicht mehr ändern.}
 }
 \newglossaryentry{Dictionary}
@@ -601,62 +607,73 @@ Für die Implementierung wurde so vorgegangen, dass zunächst das Query-Tracing,
 Die GUI\footnote{\extendedref{fig:GUI Query-Tracer}} wurde so umgesetzt, dass die Textbox, welche die Query anzeigt, den meisten Raum einnimmt. Um jedoch nicht allzu sehr andere möglicherweise noch geöffneten Fenster zu überlagern, wird die Query ab einer maximalen Länge gescrollt. Datenbankname und Serverame sind immer ersichtlich, ebenso wie der Connection String. Innerhalb der Query werden alle SQL-Keywords erkannt und farblich markiert. Die Farben wurden dabei an diejenigen aus SSMS angelehnt. Das Fenster öffnet sich immer dann, wenn eine Query von Arche an den Datenbankserver verschickt werden würde. Damit der Query-Tracer verwendet werden kann, ist ein kleines Code-Fragment\footnote{\extendedref{fig:Code zum Aktivieren des Query-Tracers}} in die Persistence-Klasse einzufügen. Im Falle von Select-Queries wird die Query immer an den Datenbankservers geschickt. Insert, Update und Delete können unterdrückt werden und führen bei Klick auf den entsprechenden dazu, dass \glqq SuppressQuery\grqq den Wert \glqq true \grqq{} annimmt und die datenbanksensible Funktion der Persistence-Klasse abgebrochen wird. Arche erhält den Wert \glqq 0\grqq{} zurück als Anzahl der veränderten Zeilen.\newline\newline Für die Entwicklerinnen ist es von Vorteil, wenn in SSMS nicht erst die entsprechende Datenbank ausgewählt werden werden muss, um die Query in SSMS erfolgreich auszuführen\footnote{.NET übergibt den Datenbanknamen nicht in der Query, sondern in einem gesonderten Parameter.}. Daher wird der Datenbankname (hier: \glqq ArcheDB\grqq{}) an der entsprechenden Stelle eingefügt. Der Query-Tracer sucht dabei schlicht nach dem Schlüsselwort \glqq from\grqq{} und fügt den Datenbanknamen gemäß den Konventionen von SSMS mit zwei Punkten zur Query hinzu.
 
 \subsection{Kodierung der Methode zum Erzeugen von Table-Models}
-Die Methode zum Erzeugen von Table-Models wurde nun in Python kodiert\footnote{\extendedref{fig:Methode zur Erzeugung von Table-Models}}. Dabei hat sich gezeigt, dass nicht alle in klassischen Struktogrammen bekannten Konventionen in einer \gls{dynamisch} geschriebenen Programmiersprache wie Python zur Geltung kommen. So gibt es keine Unterscheidung von Deklaration und der Zuweisung von Werten. Ebenso war es nicht notwendig, jede einzelne Kontrollstruktur explizit mit \glqq if\grqq{} oder \glqq else\grqq zu kodieren. Bei booleschen Werten konnte die im Struktogramm vorliegende Verzweigung oft mit nur einer Zeile umgesetzt werden. Darüber hinaus muss im Gegensatz zum Struktogramm auch \glqq try \grqq{} und \glqq catch \grqq{} unterschieden werden\footnote{Hier beim Iterieren der Zeilen: \textit{Ist in der Zeile darunter eine andere Tabelle als die aktuell bearbeitete Tabelle?} Wenn bereits die letzte Zeile bearbeitet wird, muss eine Index-Exception abgefangen werden.}.\newline Sobald in der linken Spalte eine neue Table erscheint oder die letzte Zeile erreicht ist, werden alle gesammelten Properties in einer Liste als Parameter für die Klasse \glqq DotNetModel\footnote{\extendedref{fig:DotNetModel}}\grqq{} übergeben, dass aus den Models den C\#-Code erzeugt. Ein ursprünglich angedachtes \gls{Dictionary}, das auf der einen Seite .NET-Datentypen und auf der anderen Seite SQL-Datentypen enthalten sollte, musste hier nicht umgesetzt werden. Aufgrund der zeichenarmen Syntax von Python war es ausreichend, die Datentypen mit simplem \glqq if \grqq{} und \glqq elif \grqq{} zu assoziieren\footnote{\textit{if SqlDataType == \grq varchar\grq{}: DotNetDataType = \grq string\grq{}} usw.}. 
+Die Methode zum Erzeugen von Table-Models wurde nun in Python kodiert\footnote{\extendedref{fig:Methode zur Erzeugung von Table-Models}}. Dabei hat sich gezeigt, dass nicht alle in klassischen Struktogrammen bekannten Konventionen in einer \gls{Dynamisch} geschriebenen Programmiersprache wie Python zur Geltung kommen. So gibt es keine Unterscheidung von Deklaration und der Zuweisung von Werten. Ebenso war es nicht notwendig, jede einzelne Kontrollstruktur explizit mit \glqq if\grqq{} oder \glqq else\grqq zu kodieren. Bei booleschen Werten konnte die im Struktogramm vorliegende Verzweigung oft mit nur einer Zeile umgesetzt werden. Darüber hinaus muss im Gegensatz zum Struktogramm auch \glqq try \grqq{} und \glqq catch \grqq{} unterschieden werden\footnote{Hier beim Iterieren der Zeilen: \textit{Ist in der Zeile darunter eine andere Tabelle als die aktuell bearbeitete Tabelle?} Wenn bereits die letzte Zeile bearbeitet wird, muss eine Index-Exception abgefangen werden.}.\newline Sobald in der linken Spalte eine neue Table erscheint oder die letzte Zeile erreicht ist, werden alle gesammelten Properties in einer Liste als Parameter für die Klasse \glqq DotNetModel\footnote{\extendedref{fig:DotNetModel}}\grqq{} übergeben, dass aus den Models den C\#-Code erzeugt. Ein ursprünglich angedachtes \gls{Dictionary}, das auf der einen Seite .NET-Datentypen und auf der anderen Seite SQL-Datentypen enthalten sollte, musste hier nicht umgesetzt werden. Aufgrund der zeichenarmen Syntax von Python war es ausreichend, die Datentypen mit simplem \glqq if \grqq{} und \glqq elif \grqq{} zu assoziieren\footnote{\textit{if SqlDataType == \grq varchar\grq{}: DotNetDataType = \grq string\grq{}} usw.}. 
 
 
 \subsection{Implementierung des Query-Generators}
 Nach der erfolgreichen Implementierung der oben beschriebenen Model-Generators konnte nun der Query-Tracer kodiert werden. Dieser nimmt ein Objekt der in \ref{fig:Klassendiagramm} dargestellten Query-Request-Klasse. Queries sollen mit Hilfe der nun erstellten Models für die Typen \glqq insert\footnote{\extendedref{fig:Insert-Methode}}\grqq{}, \glqq update \grqq{} und \glqq delete \grqq{} erzeugt werden. Bei der Implementierung zeigt sich ein entscheidender Vorteil der automatischen Generierung gegenüber dem manuellen Verfassen einer Query:\newline Es ist nun sowohl unmöglich geworden, falsche Bezeichnungen für Tabelle oder Spalte zu wählen. ist keine entsprechende .cs-Datei vorhanden, die die Tabelle repräsentiert, wird der entsprechende Versuch unterringelt. Spaltennamen brauchen nun ebenfalls nicht mehr von der Programmierin eingegeben werden und es kann zudem nicht vorkommen, dass die Reihenfolge Spalte und zuzuordnendem Wert nicht übereinstimmt. Es muss lediglich bekannt sein, um welche Tabelle es sich handelt und sie kann nach Eingeben der ersten Buchstaben durch die \gls{IntelliSense} ausgewählt werden.
 
 \subsection{Hinzufügen von Spalten und Datentyp zum SqlCommand-Objekt}
-Nach dem es nun möglich ist Queries zu erzeugen, können jetzt die Spalten mit ihren jeweiligem DatenTyp dem Objekt der .NET-Klasse SqlCommand hinzugefügt werden. Dazu müssen die nun im .NET-Datentyp vorliegenden Properties wieder in den Sql-Datentyp überführt werden\footnote{Für die Zuordnung von .NET-Datentyp zu SQL-Datentyp siehe \cite{Microsoft2021}.}. Dabei werden nun alle Properties iteriert, deren Bezeichnung als Parameter mit einem @-Symbol an das Objekt übergeben und der entsprechende Datentyp wieder zur SQL-Architektur umgewandelt. Auch hier ist zu bemerken, dass beim Iterieren der Models keinesfalls um der Inhalt irgendeiner Variable geht. Ausschließlich die Zeichenketten von Bezeichner und Datentyp sind hier entscheidend. Der Bezeichner der Property (z.B. \glqq enthaeltUeberschrift\grqq{}) wird mit
+Nachdem es nun möglich ist, Queries zu erzeugen, können jetzt die Spalten mit ihrem jeweiligen Datentyp dem Objekt der .NET-Klasse SqlCommand hinzugefügt werden. Dazu müssen die nun im .NET-Datentyp vorliegenden Properties wieder in den Sql-Datentyp überführt werden\footnote{Für die Zuordnung von .NET-Datentyp zu SQL-Datentyp siehe \cite{Microsoft2021}.}. Dabei werden nun alle Properties iteriert, deren Bezeichnung als Parameter mit einem @-Symbol an das Objekt übergeben und der entsprechende Datentyp wieder zur Sql-Architektur hinzugefügt. Auch hier ist zu bemerken, dass es beim Iterieren der Models keinesfalls um den Inhalt irgendeiner Variable geht. Ausschließlich die Zeichenketten von Bezeichner und Datentyp sind hier entscheidend. Der Bezeichner der Property (z.B. \glqq enthaeltUeberschrift\grqq{}) entspricht also der gleichnamigen Tabelle in der Datenbank. Der .NET-Datentyp \glqq Boolean\grqq{} wird durch ein entprechendes \gls{Dictionary} in den Datentyp \glqq bit\grqq{} überführt.
 
-\subsection{Implementierung Hilfsklassen und Interfaces}
-\blindtext\
+%\subsection{Implementierung Hilfsklassen und Interfaces}
+%\blindtext\
 
-\section{Qualitätssicherung}
-\blindtext\
+\section{Qualitätssicherung und Abnahme}
+Um höchstmögliche Qualität bei der Datenbankkommunikation zu gewährleisten, war es sinnvoll, sowohl eine erfahrene Entwicklerin, als auch die in der Firma zuständige Datenbankexpertin, sowie den \gls{PO} in den Prozess der Qualitätssicherung\footnote{\extendedref{fig:Sequenzdiagramm Entwicklung und Tests}} mit einzubeziehen. Grundsätzlich wird davon ausgegangen, dass die erfahrene Entwicklerin besonders im Bereich .NET unterstützend eingreifen kann, während die Datenbankexpertin natürlich die Qualität des entwickelten Moduls im Bereich SQL prüfen kann. Zunächst wird so vorgegangen, dass der Entwickler (der Praktikant) eigenständig die in dieser Dokumentation dargestellten Features entwickelt. In unregelmäßigen Abständen werden die Ergebnisse der erfahrenen Entwicklerin präsentiert, die die Funktionalität innerhalb von .NET bewerten kann und Rückmeldung bezüglich Bugs und Kodierstil geben kann.\newline\newline Dieser Vorgang wird so oft durchgeführt wie Entwicklungsbedarf vorhanden ist. Sobald das Modul innerhalb von .NET die gewünschte Qualität erreicht hat, kann der Entwickler Stichproben der mit dem Command-Generator erstellten Objekte von der Datenbankexpertin bewerten lassen. Diese kann die nun automatisch generierten Sql-Command-Objekte mit manuell kodierten Objekten vergleichen. Der QueryTracer\footnote{\extendedref{fig:GUI Query-Tracer}} dient dabei als Hilfsmittel, um manuell automatisch generierte und und manuell geschriebene Queries zu vergleichen. Alle übrigen Attribute des Sql-Command-Objekts werden mit Hilfe der \gls{Intellisense} geprüft. Ist die Prüfung durch die Datenbankexpertin abgeschlossen, wird vom Entwickler ein \gls{Pull Request} erstellt, welcher von der erfahrenen Entwicklerin bearbeitet wird. Auch diese Arbeitsschritte werden so lange durchgeführt, bis sowohl die erfahrene Entwicklerin, als auch die Datenbankexpertin zufrieden sind. Sind beide Schleifen durchlaufen wird der PO über die Ergebnisse unterrichtet. Er hat nun auch die Möglichkeit mit der Datenbankexpertin im 4-Augen-Gespräch zu entscheiden, ob das neue Modul in den Mainbranch integriert wird.
 
-\subsection{Systemtest}
-\blindtext\
+\begin{comment}
 
-\subsection{Tests gegen das System}
-\blindtext\
 
-\subsection{Testprotokolle}
-\blindtext\
+%\subsection{Systemtest}
+%\blindtext\
 
-\section{Abnahme}
-\blindtext\
+%\subsection{Tests gegen das System}
+%\blindtext\
 
-\subsection{Soll/Ist-Vergleich}
-\blindtext\
+%\subsection{Testprotokolle}
+%\blindtext\
 
-\subsection{Abnahme durch den technischen Leiter}
-\blindtext\
+%\section{Abnahme}
+%\blindtext\
 
-\section{Dokumentation}
-\blindtext\
+%\subsection{Soll/Ist-Vergleich}
+%\blindtext\
 
-\subsection{Technische Dokumentation}
-\blindtext\
+%\subsection{Abnahme durch den technischen Leiter}
+%\blindtext\
+\end{comment}
 
-\subsection{Nutzerdokumentation}
-\blindtext\
+\section{Entwickler-Dokumentation}
+Für die Entwickler-Dokumentation\footnote{\extendedref{fig:Dokumentation}} des Moduls wurde die Markiersprache Markdown gewählt. Diese ist leicht zu erlernen und kann zudem einfach in Web-Oberflächen wie Confluence oder Jira eingebunden werden. Zum Erstellen der Markdown-Datei wurde mit Visual Studio Code gearbeitet. Wird ein entsprechendes Mark-Down Plugin als Erweiterung installiert, kann auf der linken Seite das Markdown-Skript bearbeitet werden. Auf der rechten Seite kann die Entwickler-Dokumentation eingesehen werden, so wie sie die Entwickler sehen werden. Die Mitarbeiterinnen und Mitarbeiter von Argus bilden ein internationales Team, das auf Englisch kommuniziert (es sei denn, es sind gerade nur deutschsprachige Kommunikationsteilnehmer zugegen).\newline Die Entwickler-Dokumentation ist entsprechend ebenfalls auf Englisch. Sie unterscheidet, wie diese Projektdokumentation, zwischen dem Query-Tracer und dem Command-Generator. Im Falle des Query-Tracers sind neben dem Text auch einzelne Screenshots aus der GUI verfügbar. Beim Command-Generator sind zudem mehrere Code-Fragmente vorhanden, die für die Erstellung neuer Persistence-Klassen benötigt werden. Das in dieser Projektdokumentation dargestellte Verfahren, nach dem der Command-Generator funktioniert, ist in verkürzter, handlungsorientierter Form in der Entwickler-Dokumentation auf Englisch mit enthalten.
+
+%\subsection{Technische Dokumentation}
+%\blindtext\
+
+%\subsection{Nutzerdokumentation}
+%\blindtext\
 
 \section{Fazit}
-\blindtext\
+Im Laufe des Projektes sind mal mehr technische, mal mehr organisatorische Herausforderungen in den Vordergrund gerückt. Im Folgenden soll ein Überblick über den Soll- und Ist-Zustand am Ende des Projektes, sowie mögliche Erweiterungen für die Zukunft gegeben werden.
 
-\subsection{Im Laufe des Projektes gewonnene Erkenntnisse}
-\blindtext\
+\subsection{Abschließende Bewertung des Projekts}
+Im Wesentliches hat es sich als sehr nützlich herausgestellt, die Expertise von Kolleginnen und Kollegen in das Projekt mit einfließen zu lassen. Unterm Strich konnte so die in \ref{fig:Sequenzdiagramm Entwicklung und Tests} aufgeführte Vorgehensweise eine vollwertige Kapselung der Datenbankkommunikation gewährleisten. Dennoch muss bei den angestrebten Funktionalitäten differenziert werden. Es ist zwar möglich, einen Simulationsmodus mit Hilfe des Query-Tracers aufzubauen, jedoch setzt dieser mehr technisches Wissen vom Entwickler voraus, als zu Beginn des Projektes angedacht. Dies ist zwar grundsätzlich kein großes Problem, denn der Umgang mit SSMS und SQL im Allgemeinen ist den Mitarbeitern bekannt, doch konnte durch die teils manuelle Einrichtung des Simulationsmodus nicht der Komfort erreicht werden, der ursprünglich angedacht war. 
 
 \subsection{Ausblick}
-\blindtext\
+\blindtext
 
-\subsubsection{Von Anfang an geplante Weiterentwicklung}
-\blindtext\
+%\subsection{Im Laufe des Projektes gewonnene Erkenntnisse}
+%\blindtext
 
-\subsubsection{Im Laufe des Projektes erkannter Weiterentwicklungsbedarf}
-\blindtext\
+%\subsection{Ausblick}
+%\blindtext
+
+%\subsubsection{Von Anfang an geplante Weiterentwicklung}
+
+
+%\subsubsection{Im Laufe des Projektes erkannter Weiterentwicklungsbedarf}
+%\blindtext
+
 
 
 \newpage
@@ -1037,7 +1054,7 @@ Ein Beispiel für das automatische Erzeugen einer Query aus der Klasse Query-Gen
 	 \caption{Insert-Methode}
  \end{figure}
  \clearpage
- 
+
     \subsection{Command-Generator Hauptmethoden}
 Wesentliche Methoden des Command-Generators. Es wird das gewünschte Table-Model übergeben, sowie der gewünschte Query-Typ aus einem Enumerator. Query und SqlParameter werden entsprechend hinzugefügt:
  \label{fig:Command-Generator Hauptmethoden}
@@ -1048,117 +1065,25 @@ Wesentliche Methoden des Command-Generators. Es wird das gewünschte Table-Model
 	\includegraphics[scale=0.6]{commandGenerator.PNG}
 	 \caption{Command-Generator Hauptmethoden}
  \end{figure}
- \clearpage
+
  
-\subsection{Sequenzdiagramm Entwicklung und Tests}
-%Wesentliche Methoden des Command-Generators. Es wird das gewünschte Table-Model übergeben, sowie der gewünschte Query-Typ aus einem Enumerator. Query und SqlParameter werden entsprechend hinzugefügt:
+\subsection{Sequenzdiagramm Qualitätssicherung}
  \label{fig:Sequenzdiagramm Entwicklung und Tests}
 
  \begin{figure}[H]
- %\centering
-
-	\includegraphics[scale=0.85]{Einfaches Sequenzdiagramm_2.png}
-	 \caption{Sequenzdiagramm Entwicklung und Tests}
- \end{figure}
- \clearpage
- 
- 
- 
- 
- 
-   
-  
- 
-
-\subsection{Quell- und Zieldatenschema}
-\blindtext\blindtext
-
-\subsection{Sequenzdiagramm}
-\blindtext
-
-\begin{comment}
-\subsection{Klassendiagramm}
-
-Dies ist ein Beispiel für ein UML-Klassendiagramm:\\
-
-
- \begin{figure}[ht]
  \centering
- \begin{tikzpicture}
+	\includegraphics[scale=0.85]{Einfaches Sequenzdiagramm_2.png}
+	 \caption{Sequenzdiagramm Qualitätssicherung}
+\end{figure}%
+\subsection{Auszug Dokumentation}
+ \label{fig:Dokumentation}
+ \begin{figure}[H]
+ \centering
 
- 	\umlclass[x=5, y= 0]{Person}	
- 		{
- 			- vorerkrankungen : String\\
- 			- religion : string\\
- 			+ alter : int\\
- 			+ name : String\\
- 			+ geschlecht : String\\
-			
- 		}
- 		{
- 			+ halloSagen() : void		\\	
- 			+ freundlichLaecheln() : void		\\	
- 		}
-		
-		
- 	\umlclass[x=0, y= -6]{Kind}	
- 		{
- 			- kinderGarten: String\\
- 			+ hobbys : String \\
- 			+ magNutella : bool \\
- 		}
- 		{
- 			- inDieSchuleGehen() : void	\\
- 			- dreiradFahren() : void\\
- 			+ getKindergarten() : String\\
-			
- 		}	
-		
-		
- 	\umlclass[x=10, y= -6]{Erwachsener}	
- 		{
- 			- beruf: String\\
- 			- kontostand : double\\
- 			+ hatKinder : bool\\
- 		}
- 		{
- 			- zurArbeitGehen() : void	\\
- 			- autoFahren() : void\\
- 			+ getBeruf() : String\\
-			
- 		}
-		
- 		\umlnote{Person}{Dies ist offensichtlich eine Klasse}		
- 		\umlinherit[geometry=|-]{Erwachsener}{Person}
- 		\umlinherit[geometry=-|]{Kind}{Person}
- 		\umldep[very thick, arg1=0..*, arg2=1..*, pos1=0.05, pos2=0.52,anchor1=-20, anchor2=-20]{Kind}{Erwachsener}
-
-	
- \end{tikzpicture}
-
- \caption{Klassendiagramm}
- \label{fig:Klassendiagramm}
-	
+	\includegraphics[height=610, width=380]{doku.png}
+	 \caption{Dokumentation}
  \end{figure}
 
-\end{comment}
 
-\subsection{Pflichtenheft (Auszug)}
-Dies ist ein bisschen Text
-
-\subsection{Laufzeitdiagnose}
-\blindtext
-
-\subsection{Ganttdiagramm}
-\blindtext
-
-\subsection{Projektstrukturplan}
-\blindtext
-
-\subsection{Arbeitspakete}
-\blindtext
-
-\subsection{Arbeitspaketressourcen im Detail}
-\blindtext
 
 \end{document}
