@@ -1,12 +1,19 @@
+
+
 \documentclass[11pt,toc=sectionentrywithoutdots, 
 headheight=44pt, headings=optiontoheadandtoc, hyperfootnotes=false, hypertexnames=false]{scrartcl}
+
+
 
 %Packages
 \usepackage{geometry}
 \usepackage{float}
 \usepackage{setspace}
 \usepackage{wrapfig}
+\usepackage{pdfpages}
 \setstretch{1.5}
+
+
 
 %%%%%%%%%%%%%%%%%% OLD GEOMETRTRY
 
@@ -112,6 +119,8 @@ citestyle=authoryear
 
 %\usetikzlibrary{external}
 %\tikzexternalize %
+
+
 
 %Function for getting sectionName---------------------------------------------------
 
@@ -270,8 +279,10 @@ description={
 
 
 
- 
+
 \begin{document}
+\includepdf{erklaerung.pdf}
+
 
 \setlength{\parindent}{0em} % Einrückung
 \setlength{\parskip}{0em} % Abstand zwischen Absätzen
@@ -327,7 +338,7 @@ Dokumentation der betrieblichen Projektarbeit
 %Erfassung von\linebreak Meldungen in sozialen Netzwerken
 %\linebreak
 
-Abgabetermin: 22.11.2021
+Abgabetermin: 09.12.2021
 \linebreak\linebreak
 \begin{bfseries}
 Auszubildender:\linebreak
@@ -399,9 +410,10 @@ Gneisenaustr. 66\linebreak
 \acro{SSMS} {SQL Server Management Studio}
 \acro{PO} {Product Owner}
 \acro{UML} {Unified Modeling Language}
+\acro{IDE} {Integrated Development Environment}
 
 \end{acronym}
-%\newpage
+\clearpage
 
 \phantomsection
 \addcontentsline{toc}{section}{Glossar}
@@ -483,7 +495,7 @@ Den Einstieg in das Projekts betreffend ist zu erwähnen, dass es sich bei dem P
 Bei der Planung der Ressourcen\footnote{\extendedref{sec:Ressourcenplan}} kann zwischen Hardware- und Softwareressourcen unterschieden werden. Bei der Auswahl wurde darauf geachtet, keine neuen Kosten zu generieren. Bei der Hardware kamen daher die von Unternehmen und Bildungseinrichtung bereitgestellten Computer zum Einsatz. Die eingesetzte Software ist entweder \gls{Open Source} oder es existieren bereits entsprechende Lizenzen bei Argus. Das heißt, es wurden keine Ressourcen angeschafft, die vor Beginn des Projektes nicht vorhanden gewesen wären. Bezüglich des Personals ist ebenfalls festzuhalten, dass sowohl Ausbilder als auch Kolleginnen täglich kontaktierbar oder vor Ort waren. Code-Reviews und Einarbeitungen konnten in den Arbeitsalltag so integriert werden, dass keine neuen personellen Ressourcen notwendig wurden.
 
 \subsection{Entwicklungsprozess}
-Bevor der Entwicklungsprozess starten konnte, war es nötig, den Quellcode von Arche in ausgewählten Stellen zu debuggen. Dabei ging es nicht darum, Fehler zu beheben, sondern Schritt für Schritt den Code nachzuvollziehen. Dies war aus zweierlei Hinsicht sinnvoll: Zunächst hatte ich so die Möglichkeit, Wissen über C\# und die Arbeit mit Visual Studio zu sammeln und andererseits die zu bearbeitende Software Arche besser kennenzulernen. Hier wurde zunächst so vorgegangen, dass in der GUI von Arche der Text von Buttons und Labels in die Suchmaske des Visual-Studio-Explorers eingegeben wurden. Auf diese Weise konnten diejenigen Komponenten und Klassen identifiziert werden, welche für das Frontend an der entsprechenden Stelle genutzt wurden. Anschließend wurde weit oben im Code ein \gls{Breakpoint} gesetzt und dann im Debug-Modus einen Button aus der GUI geklickt.\newline\newline Da es bei diesem Projekt um Datenbankprozesse geht, wurden vor allem Buttons mit der Aufschrift \glqq Speichern\grqq{}, \glqq Aktualisieren\grqq{} oder \glqq Hinzufügen\grqq{} gewählt. Nun wurde in Absprache mit erfahrenen Kollegen der Code immer soweit weiter ausgeführt, bis die datenbankrelevante Funktion erreicht wurde, die Ausgangspunkt für dieses Projekt sein soll. Auf diese Weise konnte nicht nur die Funktionsweise von Arche besser verstanden, sondern auch jene Stellen bestimmt werden, an denen die hier zu entwickelnde Komponente andocken soll. An dieser Stelle muss erwähnt werden, dass es vor allem zu Beginn des Projektes nicht immer gelungen ist, Veränderungen an Datenbankeinträgen rechtzeitig zu unterbinden. Ungewollte Veränderungen von Daten kamen vor allem dadurch zustande, dass nicht immer klar war, ob eine Funktion die Beeinflussung von Daten vorbereitet oder bereits ausführt. Gelegentlich mussten daher einzelne Zeilen in der Datenbank manuell wieder eingefügt oder Rücksprache mit den Kunden gehalten werden. Diese Erfahrung war prägend für die generelle Herangehensweise an das Projekt, welche als \gls{Pain Driven Development} bezeichnet werden kann.
+Bevor der Entwicklungsprozess starten konnte, war es nötig, den Quellcode von Arche in ausgewählten Stellen zu debuggen. Dabei ging es nicht darum, Fehler zu beheben, sondern Schritt für Schritt den Code nachzuvollziehen. Dies war aus zweierlei Hinsicht sinnvoll: Zunächst hatte ich so die Möglichkeit, Wissen über C\# und die Arbeit mit Visual Studio\footnote{In die Auswahl geeigneter \acs{IDE}s kamen Visual Studio, JetBrains Rider und Monodevelop. Nähere Informationen \extendedref{sec:Auswahl der Integrierten Entwicklungsumgebung}} zu sammeln und andererseits die zu bearbeitende Software Arche besser kennenzulernen. Hier wurde zunächst so vorgegangen, dass in der GUI von Arche der Text von Buttons und Labels in die Suchmaske des Visual-Studio-Explorers eingegeben wurden. Auf diese Weise konnten diejenigen Komponenten und Klassen identifiziert werden, welche für das Frontend an der entsprechenden Stelle genutzt wurden. Anschließend wurde weit oben im Code ein \gls{Breakpoint} gesetzt und dann im Debug-Modus einen Button aus der GUI geklickt.\newline\newline Da es bei diesem Projekt um Datenbankprozesse geht, wurden vor allem Buttons mit der Aufschrift \glqq Speichern\grqq{}, \glqq Aktualisieren\grqq{} oder \glqq Hinzufügen\grqq{} gewählt. Nun wurde in Absprache mit erfahrenen Kollegen der Code immer soweit weiter ausgeführt, bis die datenbankrelevante Funktion erreicht wurde, die Ausgangspunkt für dieses Projekt sein soll. Auf diese Weise konnte nicht nur die Funktionsweise von Arche besser verstanden, sondern auch jene Stellen bestimmt werden, an denen die hier zu entwickelnde Komponente andocken soll. An dieser Stelle muss erwähnt werden, dass es vor allem zu Beginn des Projektes nicht immer gelungen ist, Veränderungen an Datenbankeinträgen rechtzeitig zu unterbinden. Ungewollte Veränderungen von Daten kamen vor allem dadurch zustande, dass nicht immer klar war, ob eine Funktion die Beeinflussung von Daten vorbereitet oder bereits ausführt. Gelegentlich mussten daher einzelne Zeilen in der Datenbank manuell wieder eingefügt oder Rücksprache mit den Kunden gehalten werden. Diese Erfahrung war prägend für die generelle Herangehensweise an das Projekt, welche als \gls{Pain Driven Development} bezeichnet werden kann.
 
 \section{Analysephase}
 Hier macht es Sinn in eine technische, sowie eine wirtschaftliche Analyse einzuteilen. In technischer Hinsicht wurde bereits angemerkt, dass das Verständnis des Codes nicht über Dokumentationen, sondern über das Debugging und das Gespräch mit Kollegen funktioniert. Häufig viel dabei auf, dass Funktionen in Arche bei niedriger Schriftgröße deutlich über eine Bildschirmseite hinausreichen können und verschiedene Softwarebereiche wie die Logik der GUI nur schwach von der Datenverwaltung, zu der auch die Datenbanklogik gehört, getrennt wurden\footnote{\extendedref{fig:Vermischung verschiedener Aufgabenbereiche}}. Da auch generell wenig Signaturen und keine Kommentare im Code vorhanden sind, bestand die Aufgabe darin, zunächst zu mutmaßen, welche Teile des Codes mit dem Speichern von Daten zusammenhängen könnten und welche jedwede anderen Funktionen erfüllen, die mit diesem Projekt nicht zusammenhängen.\newline Was die wirtschaftliche Analyse betrifft, ist nicht zuletzt der Zeitaufwand zu beachten, der notwendig wird, wenn wie im vorliegenden Fall das \gls{Single Responsibility Principle} nicht eingehalten wird.
@@ -657,10 +669,10 @@ Für die Entwickler-Dokumentation\footnote{\extendedref{fig:Dokumentation}} des 
 Im Laufe des Projektes sind mal mehr technische, mal mehr organisatorische Herausforderungen in den Vordergrund gerückt. Im Folgenden soll ein Überblick über den Soll- und Ist-Zustand am Ende des Projektes, sowie mögliche Erweiterungen für die Zukunft gegeben werden.
 
 \subsection{Abschließende Bewertung des Projekts}
-Im Wesentliches hat es sich als sehr nützlich herausgestellt, die Expertise von Kolleginnen und Kollegen in das Projekt mit einfließen zu lassen. Unterm Strich konnte so die in \ref{fig:Sequenzdiagramm Entwicklung und Tests} aufgeführte Vorgehensweise eine vollwertige Kapselung der Datenbankkommunikation gewährleisten. Dennoch muss bei den angestrebten Funktionalitäten differenziert werden. Es ist zwar möglich, einen Simulationsmodus mit Hilfe des Query-Tracers aufzubauen, jedoch setzt dieser mehr technisches Wissen vom Entwickler voraus, als zu Beginn des Projektes angedacht. Dies ist zwar grundsätzlich kein großes Problem, denn der Umgang mit SSMS und SQL im Allgemeinen ist den Mitarbeitern bekannt, doch konnte durch die teils manuelle Einrichtung des Simulationsmodus nicht der Komfort erreicht werden, der ursprünglich angedacht war. 
+Im Wesentlichen hat es sich als sehr nützlich herausgestellt, die Expertise von Kolleginnen und Kollegen in das Projekt mit einfließen zu lassen. Unterm Strich konnte so die in \ref{fig:Sequenzdiagramm Entwicklung und Tests} aufgeführte Vorgehensweise eine vollwertige Kapselung der Datenbankkommunikation gewährleisten. Dennoch muss bei den angestrebten Funktionalitäten differenziert werden. Es ist zwar möglich, einen Simulationsmodus mit Hilfe des Query-Tracers aufzubauen, jedoch setzt dieser mehr technisches Wissen vom Entwickler voraus, als zu Beginn des Projektes angedacht. Dies ist zwar grundsätzlich kein großes Problem, denn der Umgang mit SSMS und SQL im Allgemeinen ist den Mitarbeitern bekannt, doch konnte durch die teils manuelle Einrichtung des Simulationsmodus nicht der Komfort erreicht werden, der ursprünglich angedacht war. 
 
 \subsection{Ausblick}
-\blindtext
+Während die Datenbankkommunikation nun zu großen Teilen auf Models basiert, ist die generelle Architektur von Arche noch nicht einheitlich für die Verwendung von Models konzipiert. Es besteht weiterhin das in \ref{fig:PrintmedienTreffer.cs} aufgeführte Problem der uneinheitlichen Speicherung verschiedener Daten an verschiedenen Stellen im Code, mit Bezeichnern, die nicht gänzlich mit Tabellen- oder Spaltennamen übereinstimmen. Eine wichtige Aufgabe für den geplanten Übergang von WinForms nach ASP.NET und Angular wird also sein, alle persistenten Daten, immer mit Hilfe von Models zu speichern, die vorher aus dem entsprechenden Datenbankschema generiert wurden. Darüber hinaus ist es sinnvoll, mittelfristig eine Logik zu erarbeiten, wie das Frontend über ein einheitliches Prinzip, die Models ansteuert, ohne sich allzuviel mit dem Backendcode beschäftigen zu müssen. Was die Unternehmenskultur anbelangt, wird es Sinn machen, den Fachbereich Datenbanken noch stärker mit dem Fachbereich Entwicklung zu verknüpfen.
 
 %\subsection{Im Laufe des Projektes gewonnene Erkenntnisse}
 %\blindtext
@@ -713,29 +725,29 @@ Im Wesentliches hat es sich als sehr nützlich herausgestellt, die Expertise von
 \subsection{Detaillierte Zeitplanung}
 \label{sec:Detaillierte Zeitplanung}
 \begin{table}[ht]
-	\begin{center}
-		\begin{tabular}{ ||l|r|| }
-			\hline
+	%\begin{center}
+		\begin{tabular}{ l r }
+			%\hline
 			
 			\textbf{Analysephase} 										& \textbf{7 h}	\\
-			\hline			
+			%\hline			
 			\quad 1. Ist-Analyse												& 5 h			\\
 			\quad 2. Kostenanalyse            								& 2 h			\\		
 			\quad 3. Kommunikation mit dem Fachbereich						& 1 h			\\
-			\hline
+			%\hline
 
 			\textbf{Entwurfsphase} 										& \textbf{11 h}	\\
-			\hline
+			%\hline
 			\quad 1. Datenbanken sichten										& 1 h			\\
 			\quad 2. Programmiersprachen und Frameworks auswählen				& 2 h			\\		
 			\quad 3. Graphische Benutzeroberfläche skizzieren					& 2 h			\\
 			\quad 4. Logik für Datenbankmodelle entwerfen						& 3 h			\\
 			\quad 5. Konvertierungslogik der Datentypen erarbeiten            & 1.5 h			\\	
 			\quad 6. Logiken für SQL-Command-Generierung skizzieren            & 1.5 h			\\	
-			\hline
+			%\hline
 
 			\textbf{Implementierungsphase} 								& \textbf{40 h}	\\
-			\hline
+			%\hline
 			\quad 1. GUI designen										            & 3 h 			\\
 			\quad 2. Textformatierung einpflegen							        & 5 h 			\\
 			\quad 3. Query-Verarbeitung programmieren 							& 4 h 			\\
@@ -746,28 +758,28 @@ Im Wesentliches hat es sich als sehr nützlich herausgestellt, die Expertise von
 			\quad 8. Datenkonvertierung einbinden    						        & 4 h 			\\
 			\quad 9. Refactoring der bestehenden Datenbanklogik               & 2 h 			\\
 			\quad 10. Test der neuen Datenbankkommunikation						& 2 h 			\\			
-			\hline
+			%\hline
 
 			\textbf{Abnahme und Schulung}		 						& \textbf{2 h}	\\
-			\hline
+			%\hline
 			\quad 1. Abnahme durch Fachabteilung								& 1 h 			\\
 			\quad 2. Installation												& 1 h 			\\
-			\hline
+			%\hline
 
 			\textbf{Erstellen der Dokumentation} 						& \textbf{10 h}	\\
-			\hline
+			%\hline
 			\quad 1. Erstellen der Projektdokumentation						& 8 h 			\\
 			\quad 2. Erstellen der Entwicklerdokumentation					& 2 h 			\\
 			
-			\hline
+			%\hline
 
 			\textbf{Gesamt}	 											& \textbf{70 h}	\\
-			\hline
+			%\hline
 
 		\end{tabular}
 		\caption{Detaillierte Zeitplanung}
 		
-	\end{center}
+	%\end{center}
 \end{table}	
 \clearpage
 
@@ -820,67 +832,49 @@ Im Wesentliches hat es sich als sehr nützlich herausgestellt, die Expertise von
 	%\end{center}
 \end{table}	
 
-\clearpage
+\subsection{Auswahl der Integrierten Entwicklungsumgebung}
+	\label{sec:Auswahl der Integrierten Entwicklungsumgebung}
+\begin{center}
+\begin{table}[ht]
+
+	%\hline\hline
+		\begin{tabular}{|| l | c | c | c | c | c | c | c ||}
+	    \hline	
+	    
+	    \multicolumn{2}{||c|}{} & \multicolumn{2}{|c|}{Visual Studio 2019}  & \multicolumn{2}{|c|}{JetBrains Rider}  & \multicolumn{2}{|c||}{MonoDevelop}   \\
+	    \hline
+	    Kriterium & Gewichtung & Punkte & Gewichtet  & Punkte & Gewichtet & Punkte & Gewichtet \\
+	    \hline
+	    Preis & 20 & 1 & 20 & 2 & 40 & 5 & 100 \\
+	    YouTube-Inhalte & 10 & 1,75 & 17,5 & 0,25 & 2,5 & 0,1 & 1 \\
+	    Foreneinträge & 5 & 1 & 5 & 1 & 5 & 0,1 & 0,5 \\
+	    Leichte Erlernbarkeit & 15 & 0,25 & 3,75 & 1 & 15 & 3,7 & 55,5 \\
+	    Verbreitung & 30 & 4 & 120 & 2 & 60 & 0,1 & 3 \\
+	    Mitgelieferte Features & 20 & 2 & 40 & 3,75 & 75 & 1 & 20 \\
+	    \hline
+	    Summe & 100 & 10 & \textbf{206,25} & 10 & 197,5 & 10 & 180 \\
+	    
+		\hline
+		
+		
+	
+		
+			\end{tabular}
+			\caption{Auswahl der Integrierten Entwicklungsumgebung}
+			\end{table}
+			\end{center}
+		\clearpage
 
 
 
-\subsection{Auszug Projektabgrenzung}
- \label{fig:Assemblies}
-Einige Komponenten aus Arche mit den Komponenten DBEncapsulation und DBEncapsulationTests:
- \begin{figure}[htp]
- \centering
 
-	\includegraphics[scale=0.7]{Assemblies.png}
-	 \caption{Assemblies und Referenzierung}
- \end{figure}
- \clearpage
+ 
  
 
  
  
- \subsection{Vermischung verschiedener Aufgabenbereiche}
- \label{fig:Vermischung verschiedener Aufgabenbereiche}
-Anfang der Speichern-Funktion aus bereits vorhandenen GUI-Klasse. Diese erstreckt sich über mehrere Bildschirmseiten und vermischt Front- und Backend-Logik:
- \begin{figure}[htp]
- \centering
 
-	\includegraphics[scale=0.6]{SeparationOfConcerns.png}
-	 \caption{Vermischung verschiedener Aufgabenbereiche}
- \end{figure}
- \clearpage
 
- \subsection{Auszug PrintmedienTreffer.cs}
- \label{fig:PrintmedienTreffer.cs}
-Mehrere Variablen aus der bereits vorhandenen PrintmedienTreffer-Klasse. Manche sind noch in Benutzung, andere sind obsolet:
- \begin{figure}[htp]
- \centering
-
-	\includegraphics[scale=0.7]{PrintmedienTreffer.png}
-	 \caption{PrintmedienTreffer-Auszug}
- \end{figure}
- \clearpage
- 
-  \subsection{Auszug AbstractTreffer.cs}
- \label{fig:AbstractTreffer.cs}
-Mehrere Variablen aus der bereits vorhandenen PrintmedienTreffer-Klasse. Manche sind noch in Benutzung, andere sind obsolet:
- \begin{figure}[htp]
- \centering
-
-	\includegraphics[scale=0.7]{abstractTreffer.png}
-	 \caption{AbstractTreffer.cs}
- \end{figure}
-
-\subsection{Code zum Aktivieren des Query-Tracers}
-Dieses Code-Fragment wird in einer Persistence-Klasse eingefügt, an der Stelle bevor eine Query zum Datenbankserver geschickt wird. Die Variable \glqq anzahl\grqq{} stammt aus dem Legacy-Code.
- \label{fig:Code zum Aktivieren des Query-Tracers}
-
- \begin{figure}[H]
- \centering
-
-	\includegraphics[scale=0.7]{snippet.png}
-	 \caption{Code zum Aktivieren des Query-Tracers}
- \end{figure}
-\clearpage 
  
 \subsection{Projektkosten Details}
 	\label{sec:Projektkosten Details}
@@ -930,6 +924,8 @@ Dieses Code-Fragment wird in einer Persistence-Klasse eingefügt, an der Stelle 
 		
 		%\clearpage
 
+
+
 \subsection{Zeitersparnis}
 	\label{sec:Zeitersparnis}
 %\begin{center}
@@ -966,7 +962,7 @@ In diesem Diagramm wird \glqq Query Tracer\grqq{} wie eine Person oder Firma beh
  \begin{figure}[htp]
  %\centering
 
-	\includegraphics[scale=1.1]{Anwendungsfalldiagramm.png}
+	\includegraphics[scale=1.1]{Anwendungsfalldiagramm_2.png}
 	 \caption{Anwendungsfalldiagramm}
  \end{figure}
  \clearpage
@@ -1019,17 +1015,140 @@ Klassendiagramm der Klasse QueryRequest. Zu sehen sind Variablen und Methoden, s
  \end{figure}
  \clearpage
  
- \subsection{Methode zur Erzeugung von Table-Models}
+ 
+ 
+ 
+   
+
+    
+
+ 
+\subsection{Sequenzdiagramm Qualitätssicherung}
+ \label{fig:Sequenzdiagramm Entwicklung und Tests}
+
+ \begin{figure}[H]
+ \centering
+	\includegraphics[scale=0.85]{Einfaches Sequenzdiagramm_2.png}
+	 \caption{Sequenzdiagramm Qualitätssicherung}
+\end{figure}%
+\subsection{Auszug Entwickler-Dokumentation}
+ \label{fig:Dokumentation}
+ \begin{figure}[H]
+ \centering
+
+	\includegraphics[height=610, width=380]{doku.png}
+	 \caption{Auszug Entwickler-Dokumentation}
+ \end{figure}
+
+\subsection{Auszug Projektabgrenzung}
+ \label{fig:Assemblies}
+Einige Komponenten aus Arche mit den Komponenten DBEncapsulation und DBEncapsulationTests:
+ \begin{figure}[htp]
+ \centering
+
+	\includegraphics[scale=0.7]{Assemblies.png}
+	 \caption{Assemblies und Referenzierung}
+ \end{figure}
+ \clearpage
+
+ 
+
+ \subsection{Auszug PrintmedienTreffer.cs}
+ \label{fig:PrintmedienTreffer.cs}
+Mehrere Variablen aus der bereits vorhandenen PrintmedienTreffer-Klasse. Manche sind noch in Benutzung, andere sind obsolet:
+ \begin{figure}[htp]
+ \centering
+
+	\includegraphics[scale=0.7]{PrintmedienTreffer.png}
+	 \caption{PrintmedienTreffer-Auszug}
+ \end{figure}
+ \clearpage 
+
+
+ 
+ 
+
+\subsection{Methode zur Erzeugung von Table-Models}
 Kodierung des in \ref{fig:Struktogramm .NET-Models erzeugen} erarbeitetenden Struktogramms zur Erzeugung von Table-Models. 
  \label{fig:Methode zur Erzeugung von Table-Models}
 
  \begin{figure}[H]
  %\centering
 
-	\includegraphics[scale=0.5]{modelGenerierung.PNG}
+	\includegraphics[scale=0.6]{modelGenerierung.PNG}
 	 \caption{Methode zur Erzeugung von Table-Models}
  \end{figure}
-% \clearpage
+ \clearpage
+
+\subsection{Command-Generator Hauptmethoden}
+Wesentliche Methoden des Command-Generators. Es wird das gewünschte Table-Model übergeben, sowie der gewünschte Query-Typ aus einem Enumerator. Query und SqlParameter werden entsprechend hinzugefügt:
+ \label{fig:Command-Generator Hauptmethoden}
+
+ \begin{figure}[H]
+ %\centering
+
+	\includegraphics[scale=0.6]{commandGenerator.PNG}
+	 \caption{Command-Generator Hauptmethoden}
+ \end{figure}
+ 
+ \subsection{Code zum Aktivieren des Query-Tracers}
+Dieses Code-Fragment wird in einer Persistence-Klasse eingefügt, an der Stelle bevor eine Query zum Datenbankserver geschickt wird. Die Variable \glqq anzahl\grqq{} stammt aus dem Legacy-Code.
+ \label{fig:Code zum Aktivieren des Query-Tracers}
+
+ \begin{figure}[H]
+ \centering
+
+	\includegraphics[scale=0.7]{snippet.png}
+	 \caption{Code zum Aktivieren des Query-Tracers}
+ \end{figure}
+%\clearpage 
+
+
+ 
+ \subsection{Vermischung verschiedener Aufgabenbereiche}
+ \label{fig:Vermischung verschiedener Aufgabenbereiche}
+Anfang der Speichern-Funktion aus bereits vorhandenen GUI-Klasse. Diese erstreckt sich über mehrere Bildschirmseiten und vermischt Front- und Backend-Logik:
+ \begin{figure}[htp]
+ \centering
+
+	\includegraphics[scale=0.6]{SeparationOfConcerns.png}
+	 \caption{Vermischung verschiedener Aufgabenbereiche}
+ \end{figure}
+ \clearpage
+ 
+  \subsection{Auszug AbstractTreffer.cs}
+ \label{fig:AbstractTreffer.cs}
+Mehrere Variablen aus der bereits vorhandenen PrintmedienTreffer-Klasse. Manche sind noch in Benutzung, andere sind obsolet:
+ \begin{figure}[htp]
+ \centering
+
+	\includegraphics[scale=0.7]{abstractTreffer.png}
+	 \caption{AbstractTreffer.cs}
+ \end{figure}
+ 
+ \subsection{Klasse DotNetModel}
+Objekte der Klasse DotNetModels beinhalten den C\#-Code für jeweils eine zu erzeugende Datei:
+ \label{fig:DotNetModel}
+
+ \begin{figure}[H]
+ \centering
+
+	\includegraphics[scale=0.55]{dotNetModel.PNG}
+	 \caption{Klasse DotNetModel}
+ \end{figure}
+ \clearpage
+ 
+ \subsection{Insert-Methode}
+Ein Beispiel für das automatische Erzeugen einer Query aus der Klasse Query-Generator. Tabellen- und Spaltennamen werden beim Erzeugen eines Query-Generator-Objekts anhand der Klassen- und Property- Bezeichnung der des entsprechenden Table-Models ermittelt:
+ \label{fig:Insert-Methode}
+
+ \begin{figure}[H]
+ \centering
+
+	\includegraphics[scale=0.7]{insert.PNG}
+	 \caption{Insert-Methode}
+ \end{figure}
+ \clearpage
  
   \subsection{Klasse DotNetModel}
 Objekte der Klasse DotNetModels beinhalten den C\#-Code für jeweils eine zu erzeugende Datei:
@@ -1043,47 +1162,5 @@ Objekte der Klasse DotNetModels beinhalten den C\#-Code für jeweils eine zu erz
  \end{figure}
  \clearpage
  
-   \subsection{Insert-Methode}
-Ein Beispiel für das automatische Erzeugen einer Query aus der Klasse Query-Generator. Tabellen- und Spaltennamen werden beim Erzeugen eines Query-Generator-Objekts anhand der Klassen- und Property- Bezeichnung der des entsprechenden Table-Models ermittelt:
- \label{fig:Insert-Methode}
-
- \begin{figure}[H]
- \centering
-
-	\includegraphics[scale=0.7]{insert.PNG}
-	 \caption{Insert-Methode}
- \end{figure}
- \clearpage
-
-    \subsection{Command-Generator Hauptmethoden}
-Wesentliche Methoden des Command-Generators. Es wird das gewünschte Table-Model übergeben, sowie der gewünschte Query-Typ aus einem Enumerator. Query und SqlParameter werden entsprechend hinzugefügt:
- \label{fig:Command-Generator Hauptmethoden}
-
- \begin{figure}[H]
- %\centering
-
-	\includegraphics[scale=0.6]{commandGenerator.PNG}
-	 \caption{Command-Generator Hauptmethoden}
- \end{figure}
-
- 
-\subsection{Sequenzdiagramm Qualitätssicherung}
- \label{fig:Sequenzdiagramm Entwicklung und Tests}
-
- \begin{figure}[H]
- \centering
-	\includegraphics[scale=0.85]{Einfaches Sequenzdiagramm_2.png}
-	 \caption{Sequenzdiagramm Qualitätssicherung}
-\end{figure}%
-\subsection{Auszug Dokumentation}
- \label{fig:Dokumentation}
- \begin{figure}[H]
- \centering
-
-	\includegraphics[height=610, width=380]{doku.png}
-	 \caption{Dokumentation}
- \end{figure}
-
-
 
 \end{document}
